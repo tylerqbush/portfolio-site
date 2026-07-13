@@ -11,8 +11,43 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <!-- Sections and nav added in later tasks -->
-  <main id="main-content"></main>
+  <main id="main-content">
+    <canvas id="hero-canvas"></canvas>
+
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="sidenav" id="sidenav">
+      <ul class="sidenav__list">
+        <li><a href="#home" class="sidenav__link" data-section="home">Home</a></li>
+        <li><a href="#about" class="sidenav__link" data-section="about">About</a></li>
+        <li><a href="#tools" class="sidenav__link" data-section="tools">Tools</a></li>
+        <li><a href="#work" class="sidenav__link" data-section="work">Work</a></li>
+        <li><a href="#contact" class="sidenav__link" data-section="contact">Contact</a></li>
+        <li><a href="assets/resume.pdf" target="_blank" rel="noopener" class="sidenav__link" id="resume-link">Resume</a></li>
+      </ul>
+    </nav>
+
+    <section id="home" class="hero">
+      <div class="hero__ghost-name" aria-hidden="true">TYLER QUACKENBUSH</div>
+      <div class="hero__content">
+        <p class="hero__label">UX UI DESIGNER</p>
+        <div class="hero__photo">
+          <img src="assets/images/headshot-placeholder.svg" alt="Tyler Quackenbush" id="headshot-img" />
+        </div>
+        <p class="hero__bio">
+          I'm a Product Designer who crafts dashboards, decision tools, and user journeys that make sense of complexity.
+          I turn ambiguity into clean, intuitive experiences&mdash;aligning user needs with business goals.
+          Whether it's streamlining workflows or visualizing data, I bring order to chaos and design that gets out of the way.
+        </p>
+        <div class="hero__ctas">
+          <a href="#work" class="btn btn--primary">My Work</a>
+          <a href="assets/resume.pdf" target="_blank" rel="noopener" class="btn btn--link">Download Resume</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
