@@ -356,3 +356,44 @@ button {
     grid-template-columns: 1fr;
   }
 }
+
+/* Tools */
+.tools__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.tools__group {
+  background: var(--color-bg-alt);
+  border-radius: 16px;
+  padding: 28px;
+}
+
+.tools__group h3 {
+  font-size: 1rem;
+  color: var(--color-text-dim);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tools__group ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 900px) {
+  .tools__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .tools__grid {
+    grid-template-columns: 1fr;
+  }
+}
