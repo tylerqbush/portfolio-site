@@ -208,26 +208,29 @@ if (window.gsap && window.ScrollTrigger && !prefersReducedMotion) {
 }
 
 // ---- Stat counter (only elements with data-count-to) ----
-if (window.gsap && window.ScrollTrigger && !prefersReducedMotion) {
-  document.querySelectorAll('[data-count-to]').forEach((el) => {
-    const target = parseInt(el.dataset.countTo, 10);
-    const suffix = el.dataset.countSuffix || '';
-    const counter = { value: 0 };
+document.querySelectorAll('[data-count-to]').forEach((el) => {
+  const target = parseInt(el.dataset.countTo, 10);
+  const suffix = el.dataset.countSuffix || '';
 
-    ScrollTrigger.create({
-      trigger: el,
-      start: 'top 85%',
-      once: true,
-      onEnter: () => {
-        gsap.to(counter, {
-          value: target,
-          duration: 1.2,
-          ease: 'power1.out',
-          onUpdate: () => {
-            el.textContent = `${Math.round(counter.value)}${suffix}`;
-          },
-        });
-      },
-    });
+  if (!window.gsap || !window.ScrollTrigger || prefersReducedMotion) {
+    el.textContent = `${target}${suffix}`;
+    return;
+  }
+
+  const counter = { value: 0 };
+  ScrollTrigger.create({
+    trigger: el,
+    start: 'top 85%',
+    once: true,
+    onEnter: () => {
+      gsap.to(counter, {
+        value: target,
+        duration: 1.2,
+        ease: 'power1.out',
+        onUpdate: () => {
+          el.textContent = `${Math.round(counter.value)}${suffix}`;
+        },
+      });
+    },
   });
-}
+});
