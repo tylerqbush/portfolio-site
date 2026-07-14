@@ -13,6 +13,8 @@ if (window.gsap && window.ScrollTrigger) {
   gsap.ticker.lagSmoothing(0);
 }
 
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 // ---- Anchor links use Lenis scrollTo ----
 document.querySelectorAll('.sidenav__link[href^="#"]').forEach((link) => {
   link.addEventListener('click', (e) => {
@@ -91,7 +93,7 @@ window.addEventListener('scroll', checkBottomOfPage, { passive: true });
 checkBottomOfPage();
 
 // ---- Hero entrance animation ----
-if (window.gsap) {
+if (window.gsap && !prefersReducedMotion) {
   gsap.set(['.hero__label', '.hero__ghost-name', '.hero__photo', '.hero__bio', '.hero__ctas .btn'], {
     opacity: 0,
     y: 24,
@@ -107,7 +109,7 @@ if (window.gsap) {
 }
 
 // ---- Generic scroll reveal for grouped elements ----
-if (window.gsap && window.ScrollTrigger) {
+if (window.gsap && window.ScrollTrigger && !prefersReducedMotion) {
   document.querySelectorAll('.reveal-group').forEach((group) => {
     gsap.from(group, {
       opacity: 0,
@@ -190,7 +192,7 @@ if (sliderTrack && sliderHandle) {
 }
 
 // ---- Case study image reveal (clip-path wipe) ----
-if (window.gsap && window.ScrollTrigger) {
+if (window.gsap && window.ScrollTrigger && !prefersReducedMotion) {
   document.querySelectorAll('.reveal-image img').forEach((img) => {
     gsap.set(img, { clipPath: 'inset(0 0 100% 0)' });
     gsap.to(img, {
@@ -206,7 +208,7 @@ if (window.gsap && window.ScrollTrigger) {
 }
 
 // ---- Stat counter (only elements with data-count-to) ----
-if (window.gsap && window.ScrollTrigger) {
+if (window.gsap && window.ScrollTrigger && !prefersReducedMotion) {
   document.querySelectorAll('[data-count-to]').forEach((el) => {
     const target = parseInt(el.dataset.countTo, 10);
     const suffix = el.dataset.countSuffix || '';
