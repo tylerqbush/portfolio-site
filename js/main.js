@@ -169,6 +169,7 @@ if (sliderTrack && sliderHandle) {
 // ---- Case study image reveal (clip-path wipe) ----
 if (window.gsap && window.ScrollTrigger) {
   document.querySelectorAll('.reveal-image img').forEach((img) => {
+    gsap.set(img, { clipPath: 'inset(0 0 100% 0)' });
     gsap.to(img, {
       clipPath: 'inset(0 0 0% 0)',
       duration: 1,
