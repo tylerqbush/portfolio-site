@@ -203,7 +203,7 @@ button {
   padding: 14px 28px;
   border-radius: 999px;
   font-size: 0.95rem;
-  transition: transform var(--transition-fast), background var(--transition-fast);
+  transition: background var(--transition-fast);
 }
 
 .btn--primary {
