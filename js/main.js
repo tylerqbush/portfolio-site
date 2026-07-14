@@ -54,8 +54,21 @@ function setActiveLink(sectionId) {
   });
 }
 
+// Short final sections (e.g. Contact) can be too small to ever enter the
+// IntersectionObserver's center band once the page hits max scroll, so they'd
+// never get highlighted by the observer alone. Treat "scrolled to the bottom"
+// as an override that always wins, regardless of what the observer reports.
+const lastSectionId = sections[sections.length - 1].id;
+
+function checkBottomOfPage() {
+  const atBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
+  if (atBottom) setActiveLink(lastSectionId);
+  return atBottom;
+}
+
 const spyObserver = new IntersectionObserver(
   (entries) => {
+    if (checkBottomOfPage()) return;
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         setActiveLink(entry.target.id);
@@ -66,6 +79,10 @@ const spyObserver = new IntersectionObserver(
 );
 
 sections.forEach((section) => spyObserver.observe(section));
+
+window.addEventListener('scroll', checkBottomOfPage, { passive: true });
+lenis.on('scroll', checkBottomOfPage);
+checkBottomOfPage();
 
 // ---- Hero entrance animation ----
 if (window.gsap) {
