@@ -80,5 +80,5 @@ if (window.gsap) {
     .to('.hero__ghost-name', { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' }, '-=0.5')
     .to('.hero__photo', { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.5')
     .to('.hero__bio', { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.4')
-    .to('.hero__ctas .btn', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out', stagger: 0.15 }, '-=0.3');
+    .to('.hero__ctas .btn', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out', stagger: 0.15, clearProps: 'transform' }, '-=0.3');
 }
