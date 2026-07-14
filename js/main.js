@@ -66,3 +66,19 @@ const spyObserver = new IntersectionObserver(
 );
 
 sections.forEach((section) => spyObserver.observe(section));
+
+// ---- Hero entrance animation ----
+if (window.gsap) {
+  gsap.set(['.hero__label', '.hero__ghost-name', '.hero__photo', '.hero__bio', '.hero__ctas .btn'], {
+    opacity: 0,
+    y: 24,
+  });
+
+  const heroTl = gsap.timeline({ delay: 0.2 });
+  heroTl
+    .to('.hero__label', { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' })
+    .to('.hero__ghost-name', { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' }, '-=0.5')
+    .to('.hero__photo', { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.5')
+    .to('.hero__bio', { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.4')
+    .to('.hero__ctas .btn', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out', stagger: 0.15 }, '-=0.3');
+}
