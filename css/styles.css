@@ -261,6 +261,7 @@ button {
   }
 }
 
+/* About */
 .section-heading {
   font-size: clamp(2rem, 4vw, 3rem);
   color: var(--color-text-dim);
