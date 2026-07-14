@@ -417,6 +417,12 @@ button {
   overflow: hidden;
 }
 
+.case-study__media img {
+  width: 100%;
+  aspect-ratio: 8 / 5;
+  object-fit: cover;
+}
+
 .case-study__eyebrow {
   color: var(--color-text-dim);
   font-family: var(--font-heading);
