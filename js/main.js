@@ -98,3 +98,35 @@ if (window.gsap && window.ScrollTrigger) {
     });
   });
 }
+
+// ---- Introvert/Extrovert draggable slider ----
+const sliderTrack = document.getElementById('ie-slider-track');
+const sliderHandle = document.getElementById('ie-slider-handle');
+
+if (sliderTrack && sliderHandle) {
+  let dragging = false;
+
+  function setHandlePosition(clientX) {
+    const rect = sliderTrack.getBoundingClientRect();
+    let ratio = (clientX - rect.left) / rect.width;
+    ratio = Math.min(1, Math.max(0, ratio));
+    sliderHandle.style.left = `${ratio * 100}%`;
+  }
+
+  sliderHandle.addEventListener('pointerdown', (e) => {
+    dragging = true;
+    sliderHandle.setPointerCapture(e.pointerId);
+  });
+
+  sliderTrack.addEventListener('pointerdown', (e) => {
+    setHandlePosition(e.clientX);
+  });
+
+  window.addEventListener('pointermove', (e) => {
+    if (dragging) setHandlePosition(e.clientX);
+  });
+
+  window.addEventListener('pointerup', () => {
+    dragging = false;
+  });
+}
