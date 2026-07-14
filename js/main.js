@@ -58,14 +58,19 @@ function setActiveLink(sectionId) {
 // IntersectionObserver's center band once the page hits max scroll, so they'd
 // never get highlighted by the observer alone. Treat "scrolled to the bottom"
 // as an override that always wins, regardless of what the observer reports.
-const lastSectionId = sections[sections.length - 1].id;
+const lastSectionId = sections.length ? sections[sections.length - 1].id : null;
 
 function checkBottomOfPage() {
+  if (!lastSectionId) return false;
   const atBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
   if (atBottom) setActiveLink(lastSectionId);
   return atBottom;
 }
 
+// Note: the equivalent "section too short for the rootMargin band" bug on the
+// leading edge (Home) is currently prevented only because .hero has
+// min-height: 100vh in css/styles.css — if that changes, this same class of
+// bug could resurface on the first section with no override to catch it.
 const spyObserver = new IntersectionObserver(
   (entries) => {
     if (checkBottomOfPage()) return;
@@ -80,8 +85,9 @@ const spyObserver = new IntersectionObserver(
 
 sections.forEach((section) => spyObserver.observe(section));
 
+// Lenis (initialized without wrapper/content) drives native window scrolling,
+// so the listener below already fires for every Lenis-driven scroll change.
 window.addEventListener('scroll', checkBottomOfPage, { passive: true });
-lenis.on('scroll', checkBottomOfPage);
 checkBottomOfPage();
 
 // ---- Hero entrance animation ----
