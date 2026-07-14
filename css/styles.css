@@ -532,6 +532,11 @@ button {
   text-underline-offset: 4px;
 }
 
+.contact__row:hover,
+.contact__row:focus-visible {
+  color: var(--color-text-dim);
+}
+
 .contact__icon {
   font-size: 1.4rem;
 }
