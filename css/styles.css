@@ -506,3 +506,7 @@ button {
     grid-template-columns: 1fr;
   }
 }
+
+.reveal-image img {
+  clip-path: inset(0 0 100% 0);
+}

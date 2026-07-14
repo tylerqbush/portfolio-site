@@ -165,3 +165,43 @@ if (sliderTrack && sliderHandle) {
     }
   });
 }
+
+// ---- Case study image reveal (clip-path wipe) ----
+if (window.gsap && window.ScrollTrigger) {
+  document.querySelectorAll('.reveal-image img').forEach((img) => {
+    gsap.to(img, {
+      clipPath: 'inset(0 0 0% 0)',
+      duration: 1,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: img,
+        start: 'top 80%',
+      },
+    });
+  });
+}
+
+// ---- Stat counter (only elements with data-count-to) ----
+if (window.gsap && window.ScrollTrigger) {
+  document.querySelectorAll('[data-count-to]').forEach((el) => {
+    const target = parseInt(el.dataset.countTo, 10);
+    const suffix = el.dataset.countSuffix || '';
+    const counter = { value: 0 };
+
+    ScrollTrigger.create({
+      trigger: el,
+      start: 'top 85%',
+      once: true,
+      onEnter: () => {
+        gsap.to(counter, {
+          value: target,
+          duration: 1.2,
+          ease: 'power1.out',
+          onUpdate: () => {
+            el.textContent = `${Math.round(counter.value)}${suffix}`;
+          },
+        });
+      },
+    });
+  });
+}
