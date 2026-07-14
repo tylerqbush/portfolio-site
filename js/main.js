@@ -105,17 +105,25 @@ const sliderHandle = document.getElementById('ie-slider-handle');
 
 if (sliderTrack && sliderHandle) {
   let dragging = false;
+  let activePointerId = null;
+
+  function setHandleRatio(ratio) {
+    ratio = Math.min(1, Math.max(0, ratio));
+    sliderHandle.style.left = `${ratio * 100}%`;
+    sliderHandle.setAttribute('aria-valuenow', String(Math.round(ratio * 100)));
+  }
 
   function setHandlePosition(clientX) {
     const rect = sliderTrack.getBoundingClientRect();
-    let ratio = (clientX - rect.left) / rect.width;
-    ratio = Math.min(1, Math.max(0, ratio));
-    sliderHandle.style.left = `${ratio * 100}%`;
+    const ratio = (clientX - rect.left) / rect.width;
+    setHandleRatio(ratio);
   }
 
   sliderHandle.addEventListener('pointerdown', (e) => {
     dragging = true;
+    activePointerId = e.pointerId;
     sliderHandle.setPointerCapture(e.pointerId);
+    e.stopPropagation();
   });
 
   sliderTrack.addEventListener('pointerdown', (e) => {
@@ -123,10 +131,37 @@ if (sliderTrack && sliderHandle) {
   });
 
   window.addEventListener('pointermove', (e) => {
-    if (dragging) setHandlePosition(e.clientX);
+    if (dragging && e.pointerId === activePointerId) setHandlePosition(e.clientX);
   });
 
-  window.addEventListener('pointerup', () => {
-    dragging = false;
+  function endDrag(e) {
+    if (e.pointerId === activePointerId) {
+      dragging = false;
+      activePointerId = null;
+    }
+  }
+  window.addEventListener('pointerup', endDrag);
+  window.addEventListener('pointercancel', endDrag);
+
+  const currentRatio = () => {
+    const value = parseFloat(sliderHandle.getAttribute('aria-valuenow'));
+    return (Number.isNaN(value) ? 55 : value) / 100;
+  };
+
+  sliderHandle.addEventListener('keydown', (e) => {
+    const step = e.shiftKey ? 0.1 : 0.02;
+    if (e.key === 'ArrowRight' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      setHandleRatio(currentRatio() + step);
+    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') {
+      e.preventDefault();
+      setHandleRatio(currentRatio() - step);
+    } else if (e.key === 'Home') {
+      e.preventDefault();
+      setHandleRatio(0);
+    } else if (e.key === 'End') {
+      e.preventDefault();
+      setHandleRatio(1);
+    }
   });
 }
