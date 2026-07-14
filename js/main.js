@@ -82,3 +82,19 @@ if (window.gsap) {
     .to('.hero__bio', { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.4')
     .to('.hero__ctas .btn', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out', stagger: 0.15, clearProps: 'transform' }, '-=0.3');
 }
+
+// ---- Generic scroll reveal for grouped elements ----
+if (window.gsap && window.ScrollTrigger) {
+  document.querySelectorAll('.reveal-group').forEach((group) => {
+    gsap.from(group, {
+      opacity: 0,
+      y: 32,
+      duration: 0.8,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: group,
+        start: 'top 85%',
+      },
+    });
+  });
+}

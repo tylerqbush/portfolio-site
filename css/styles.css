@@ -260,3 +260,93 @@ button {
     justify-content: center;
   }
 }
+
+.section-heading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--color-text-dim);
+  margin-bottom: 48px;
+}
+
+.about,
+.tools,
+.work,
+.contact {
+  margin-left: var(--nav-width);
+  padding: var(--section-padding-y) var(--section-padding-x);
+}
+
+.about__card {
+  background: var(--color-bg-alt);
+  border-radius: 20px;
+  padding: clamp(24px, 4vw, 56px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 32px;
+}
+
+.about__col {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.about__item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.about__item p {
+  color: var(--color-text-dim);
+}
+
+.about__slider {
+  margin-top: 8px;
+}
+
+.about__slider-labels {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-heading);
+  margin-bottom: 12px;
+}
+
+.about__slider-track {
+  position: relative;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--color-border);
+  cursor: pointer;
+}
+
+.about__slider-handle {
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-text);
+  transform: translate(-50%, -50%);
+  touch-action: none;
+}
+
+.about__statement {
+  background: var(--color-bg-card);
+  border-radius: 20px;
+  padding: clamp(24px, 3vw, 40px);
+  font-size: 1.1rem;
+}
+
+@media (max-width: 900px) {
+  .about,
+  .tools,
+  .work,
+  .contact {
+    margin-left: 0;
+  }
+
+  .about__card {
+    grid-template-columns: 1fr;
+  }
+}
