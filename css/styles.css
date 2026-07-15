@@ -419,14 +419,25 @@ button {
   align-items: start;
 }
 
+.tools__intro {
+  color: var(--color-ink-dim);
+  max-width: 520px;
+  margin-bottom: 32px;
+}
+
 .tools__group {
   background: var(--color-card);
-  border-radius: 16px;
+  border-left: 3px solid var(--color-accent);
+  border-radius: 4px 16px 16px 4px;
   padding: 28px;
 }
 
 .tools__group h3 {
-  font-size: 1.1rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-accent);
   margin-bottom: 16px;
 }
 
