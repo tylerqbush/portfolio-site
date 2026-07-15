@@ -3,7 +3,7 @@
   --color-ink: #2a2420;
   --color-ink-dim: #6b5d47;
   --color-card: #ffffff;
-  --color-accent: #c9542c; /* used starting Task 2 (hero stamp badge) */
+  --color-accent: #a8451f; /* used starting Task 2 (hero stamp badge); darkened from #c9542c for WCAG AA contrast when used as badge background */
   --color-accent-wine: #3a1a1a; /* temporary: old dark-theme value, kept only until Task 11 restyles Contact and removes this token */
   --color-border: rgba(42, 36, 32, 0.12);
   --color-ink-ghost: rgba(42, 36, 32, 0.06);
