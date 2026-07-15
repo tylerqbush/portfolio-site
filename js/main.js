@@ -93,6 +93,13 @@ window.addEventListener('scroll', checkBottomOfPage, { passive: true });
 checkBottomOfPage();
 
 // ---- Hero entrance animation ----
+// Note: clearProps: 'transform' on .hero__label/.hero__photo leaves a tiny
+// decomposed-rotation residual (e.g. rotate(-2.00003deg)) in the inline style
+// rather than a truly empty string, since both have a CSS-authored
+// transform: rotate(...) that gsap.set() bakes in before the tween starts.
+// Harmless today (visually identical, no rule currently touches their
+// transform), but an inline style still beats any future :hover/media rule
+// on these two elements — revisit if a transform-based effect is ever added.
 if (window.gsap && !prefersReducedMotion) {
   gsap.set(['.hero__label', '.hero__ghost-name', '.hero__photo', '.hero__bio', '.hero__ctas .btn'], {
     opacity: 0,
