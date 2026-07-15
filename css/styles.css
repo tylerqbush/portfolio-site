@@ -173,19 +173,36 @@ button {
 }
 
 .hero__label {
-  font-family: var(--font-heading);
-  font-size: clamp(2rem, 5vw, 4rem);
-  color: var(--color-ink-dim);
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-bg);
+  background: var(--color-accent);
+  padding: 8px 16px;
+  border-radius: 4px;
+  transform: rotate(-2deg);
   margin-bottom: 24px;
 }
 
 .hero__photo {
+  position: relative;
   width: min(320px, 60vw);
   margin-left: auto;
   margin-bottom: 24px;
-  border-radius: 12px;
-  overflow: hidden;
-  filter: grayscale(1);
+  padding: 12px;
+  background: var(--color-card);
+  border-radius: 4px;
+  box-shadow: 0 12px 32px rgba(42, 36, 32, 0.18);
+  transform: rotate(-3deg);
+}
+
+.hero__photo img {
+  display: block;
+  width: 100%;
+  border-radius: 2px;
 }
 
 .hero__bio {
