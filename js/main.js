@@ -132,6 +132,12 @@ if (window.gsap && window.ScrollTrigger && !prefersReducedMotion) {
 }
 
 // ---- About index-card scatter-to-grid reveal ----
+// Note: gsap.to() leaves a permanent inline transform on each .about__item
+// after this animation completes. Harmless today (no CSS rule sets transform
+// on .about__item), but if a hover/transform effect is ever added to these
+// cards, it'll need clearProps: 'transform' added to the gsap.to() call below
+// to avoid the same inline-style-blocks-CSS issue documented on the hero
+// entrance animation above.
 if (window.gsap && window.ScrollTrigger && !prefersReducedMotion) {
   const aboutItems = document.querySelectorAll('.about__card .about__item');
   const tilts = [
@@ -139,6 +145,9 @@ if (window.gsap && window.ScrollTrigger && !prefersReducedMotion) {
     { rotate: 2, x: 7, y: -5 },
     { rotate: -1.5, x: 4, y: 6 },
     { rotate: 2.5, x: -7, y: -4 },
+    { rotate: -2.5, x: 6, y: -6 },
+    { rotate: 1.5, x: -5, y: 7 },
+    { rotate: -2, x: 3, y: -3 },
   ];
   aboutItems.forEach((item, i) => {
     const tilt = tilts[i % tilts.length];
