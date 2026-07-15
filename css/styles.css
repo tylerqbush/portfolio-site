@@ -292,6 +292,7 @@ button {
 
 .about,
 .tools,
+.ai,
 .work,
 .contact {
   margin-left: var(--nav-width);
@@ -381,6 +382,7 @@ button {
 @media (max-width: 900px) {
   .about,
   .tools,
+  .ai,
   .work,
   .contact {
     margin-left: 0;
@@ -389,6 +391,24 @@ button {
   .about__card {
     grid-template-columns: 1fr;
   }
+}
+
+/* How I Use AI */
+.ai__card {
+  background: var(--color-card);
+  border-radius: 20px;
+  padding: clamp(24px, 4vw, 56px);
+  max-width: 720px;
+}
+
+.ai__card p {
+  color: var(--color-ink-dim);
+  font-size: 1.05rem;
+  margin-bottom: 20px;
+}
+
+.ai__card p:last-child {
+  margin-bottom: 0;
 }
 
 /* Tools */
