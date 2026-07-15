@@ -410,6 +410,17 @@ button {
   margin-bottom: 0;
 }
 
+.ai__card p a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.ai__card p a:hover,
+.ai__card p a:focus-visible {
+  color: var(--color-ink);
+}
+
 /* Tools */
 .tools__grid {
   display: grid;
