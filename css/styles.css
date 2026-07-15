@@ -299,13 +299,21 @@ button {
 }
 
 .about__card {
-  background: var(--color-card);
+  background: var(--color-bg);
+  border: 1px dashed var(--color-border);
   border-radius: 20px;
   padding: clamp(24px, 4vw, 56px);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 48px;
   margin-bottom: 32px;
+}
+
+.about__item {
+  background: var(--color-card);
+  border-radius: 8px;
+  padding: 16px 20px;
+  box-shadow: 0 4px 12px rgba(42, 36, 32, 0.1);
 }
 
 .about__col {
@@ -330,7 +338,11 @@ button {
 .about__slider-labels {
   display: flex;
   justify-content: space-between;
-  font-family: var(--font-heading);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-ink-dim);
   margin-bottom: 12px;
 }
 

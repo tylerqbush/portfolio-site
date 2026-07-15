@@ -131,6 +131,34 @@ if (window.gsap && window.ScrollTrigger && !prefersReducedMotion) {
   });
 }
 
+// ---- About index-card scatter-to-grid reveal ----
+if (window.gsap && window.ScrollTrigger && !prefersReducedMotion) {
+  const aboutItems = document.querySelectorAll('.about__card .about__item');
+  const tilts = [
+    { rotate: -3, x: -6, y: 8 },
+    { rotate: 2, x: 7, y: -5 },
+    { rotate: -1.5, x: 4, y: 6 },
+    { rotate: 2.5, x: -7, y: -4 },
+  ];
+  aboutItems.forEach((item, i) => {
+    const tilt = tilts[i % tilts.length];
+    gsap.set(item, { opacity: 0, rotate: tilt.rotate, x: tilt.x, y: tilt.y });
+  });
+  gsap.to(aboutItems, {
+    opacity: 1,
+    rotate: 0,
+    x: 0,
+    y: 0,
+    duration: 0.7,
+    ease: 'power2.out',
+    stagger: 0.07,
+    scrollTrigger: {
+      trigger: '.about__card',
+      start: 'top 80%',
+    },
+  });
+}
+
 // ---- Introvert/Extrovert draggable slider ----
 const sliderTrack = document.getElementById('ie-slider-track');
 const sliderHandle = document.getElementById('ie-slider-handle');
