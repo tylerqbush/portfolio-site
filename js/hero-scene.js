@@ -36,7 +36,7 @@ function initHeroScene(canvas) {
     const geometry = new THREE.BufferGeometry();
     geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
     const material = new THREE.LineBasicMaterial({
-      color: 0xffffff,
+      color: 0x2a2420,
       transparent: true,
       opacity: 0.06 + (index % 5) * 0.01,
     });
