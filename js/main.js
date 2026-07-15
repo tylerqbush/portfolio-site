@@ -1,8 +1,10 @@
 // ---- Smooth scroll (Lenis) ----
-const lenis = new Lenis({
-  duration: 1.1,
-  smoothWheel: true,
-});
+// Fall back to a no-op stand-in if the Lenis CDN script failed to load, so the
+// rest of this file (nav, scroll-spy, slider, etc.) still runs. Native scroll
+// still works without Lenis — you just lose the smoothing/easing.
+const lenis = window.Lenis
+  ? new Lenis({ duration: 1.1, smoothWheel: true })
+  : { scrollTo: (target) => target?.scrollIntoView({ behavior: 'smooth' }), raf: () => {}, on: () => {} };
 
 if (window.gsap && window.ScrollTrigger) {
   gsap.registerPlugin(ScrollTrigger);
