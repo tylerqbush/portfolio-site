@@ -4,7 +4,6 @@
   --color-ink-dim: #6b5d47; /* passes AA on --color-bg/--color-card with room to spare, but only 4.71:1 on --color-kraft (Work section case-study body text) — a thin margin above the 4.5:1 floor, so don't darken --color-kraft or lighten this without re-checking */
   --color-card: #ffffff;
   --color-accent: #8f3a1a; /* darkened again from #a8451f for WCAG AA contrast when used as text on --color-kraft backgrounds (upcoming Work section restyle); still passes as badge background text/bg and as text on white/cream */
-  --color-accent-wine: #3a1a1a; /* temporary: old dark-theme value, kept only until Task 11 restyles Contact and removes this token */
   --color-border: rgba(42, 36, 32, 0.12);
   --color-ink-ghost: rgba(42, 36, 32, 0.06);
   --color-kraft: #e8dcc4;
@@ -640,10 +639,18 @@ button {
 /* Contact */
 .contact {
   position: relative;
-  background: var(--color-accent-wine);
+  background: var(--color-kraft);
   background-image:
-    repeating-linear-gradient(0deg, rgba(245,245,245,0.05) 0 1px, transparent 1px 64px),
-    repeating-linear-gradient(90deg, rgba(245,245,245,0.05) 0 1px, transparent 1px 64px);
+    repeating-linear-gradient(0deg, rgba(42,36,32,0.05) 0 1px, transparent 1px 64px),
+    repeating-linear-gradient(90deg, rgba(42,36,32,0.05) 0 1px, transparent 1px 64px);
+}
+
+.contact__inner {
+  background: var(--color-card);
+  border-radius: 16px;
+  padding: clamp(24px, 4vw, 56px);
+  max-width: 520px;
+  box-shadow: 0 12px 32px rgba(42, 36, 32, 0.12);
 }
 
 .contact__heading {
