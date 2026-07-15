@@ -576,6 +576,7 @@ button {
 }
 
 .case-study__exhibits {
+  list-style: none;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
@@ -589,22 +590,30 @@ button {
   box-shadow: 0 8px 20px rgba(42, 36, 32, 0.1);
 }
 
+.exhibit figure {
+  margin: 0;
+}
+
 .exhibit img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
 
-.exhibit h4 {
-  font-family: var(--font-heading);
-  font-size: 0.95rem;
-  padding: 14px 16px 4px;
+.exhibit figcaption {
+  padding: 14px 16px 16px;
 }
 
-.exhibit p {
+.exhibit figcaption strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.exhibit figcaption p {
   color: var(--color-ink-dim);
   font-size: 0.85rem;
-  padding: 0 16px 16px;
 }
 
 .case-study__reflection {
