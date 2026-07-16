@@ -172,7 +172,7 @@ button {
 /* Hero */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: calc(100vh - var(--nav-height));
   display: flex;
   align-items: center;
   padding: var(--section-padding-y) var(--section-padding-x);
