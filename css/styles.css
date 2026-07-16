@@ -58,6 +58,14 @@ body {
   overflow-x: hidden;
 }
 
+main {
+  padding-top: var(--nav-height);
+}
+
+main section[id] {
+  scroll-margin-top: var(--nav-height);
+}
+
 h1, h2, h3, h4 {
   font-family: var(--font-heading);
   font-weight: 500;
@@ -331,7 +339,6 @@ button {
 .ai,
 .work,
 .contact {
-  margin-left: var(--nav-width);
   padding: var(--section-padding-y) var(--section-padding-x);
 }
 
@@ -535,7 +542,7 @@ button {
 }
 
 .case-study__body {
-  background: var(--color-kraft);
+  background: var(--color-muted-bg);
   border-radius: var(--radius-xl);
   padding: clamp(24px, 3vw, 40px);
 }
@@ -680,7 +687,7 @@ button {
 /* Contact */
 .contact {
   position: relative;
-  background: var(--color-kraft);
+  background: var(--color-muted-bg);
   background-image:
     repeating-linear-gradient(0deg, rgba(18,21,27,0.05) 0 1px, transparent 1px 64px),
     repeating-linear-gradient(90deg, rgba(18,21,27,0.05) 0 1px, transparent 1px 64px);
