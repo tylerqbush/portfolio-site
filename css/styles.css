@@ -302,6 +302,7 @@ button {
   align-items: flex-end;
   justify-content: space-between;
   gap: 32px;
+  margin-bottom: 48px;
 }
 
 .about__intro .section-heading {
@@ -316,7 +317,6 @@ button {
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-lg-strong);
   transform: rotate(3deg);
-  margin-bottom: 48px;
 }
 
 .about__photo img {
