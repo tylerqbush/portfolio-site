@@ -297,6 +297,35 @@ button {
   margin-bottom: 48px;
 }
 
+.about__intro {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.about__intro .section-heading {
+  margin-bottom: 0;
+}
+
+.about__photo {
+  flex-shrink: 0;
+  width: 140px;
+  padding: 8px;
+  background: var(--color-card);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-lg-strong);
+  transform: rotate(3deg);
+  margin-bottom: 48px;
+}
+
+.about__photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-xs);
+}
+
 .about,
 .tools,
 .ai,
@@ -387,12 +416,10 @@ button {
 }
 
 @media (max-width: 900px) {
-  .about,
-  .tools,
-  .ai,
-  .work,
-  .contact {
-    margin-left: 0;
+  .about__intro {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
   }
 
   .about__card {
