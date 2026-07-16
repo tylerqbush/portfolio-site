@@ -90,15 +90,6 @@ button {
   color: inherit;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  white-space: nowrap;
-}
-
 /* Shared mono "eyebrow" label text (see --label-size/--label-tracking) */
 .label-mono {
   font-family: var(--font-mono);
