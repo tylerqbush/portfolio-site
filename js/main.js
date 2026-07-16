@@ -1,29 +1,19 @@
-// ---- Smooth scroll (Lenis) ----
-// Fall back to a no-op stand-in if the Lenis CDN script failed to load, so the
-// rest of this file (nav, scroll-spy, slider, etc.) still runs. Native scroll
-// still works without Lenis — you just lose the smoothing/easing.
-const lenis = window.Lenis
-  ? new Lenis({ duration: 1.1, smoothWheel: true })
-  : { scrollTo: (target) => target?.scrollIntoView({ behavior: 'smooth' }), raf: () => {}, on: () => {} };
-
+// ---- Scroll & motion setup ----
+// Lenis (forced smooth-scroll) has been removed — this site now uses native
+// browser scroll. ScrollTrigger works fine off native scroll events on its own.
 if (window.gsap && window.ScrollTrigger) {
   gsap.registerPlugin(ScrollTrigger);
-  lenis.on('scroll', ScrollTrigger.update);
-  gsap.ticker.add((time) => {
-    lenis.raf(time * 1000);
-  });
-  gsap.ticker.lagSmoothing(0);
 }
 
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-// ---- Anchor links use Lenis scrollTo ----
-document.querySelectorAll('.sidenav__link[href^="#"]').forEach((link) => {
+// ---- Anchor links scroll natively ----
+document.querySelectorAll('.topnav__link[href^="#"]').forEach((link) => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
     const target = document.querySelector(link.getAttribute('href'));
     if (target) {
-      lenis.scrollTo(target, { offset: 0 });
+      target.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth' });
     }
     closeMobileNav();
   });
@@ -31,26 +21,26 @@ document.querySelectorAll('.sidenav__link[href^="#"]').forEach((link) => {
 
 // ---- Mobile hamburger menu ----
 const hamburger = document.getElementById('hamburger');
-const sidenav = document.getElementById('sidenav');
+const topnavList = document.getElementById('topnav-list');
 
 function openMobileNav() {
-  sidenav.classList.add('is-open');
+  topnavList.classList.add('is-open');
   hamburger.setAttribute('aria-expanded', 'true');
 }
 
 function closeMobileNav() {
-  sidenav.classList.remove('is-open');
+  topnavList.classList.remove('is-open');
   hamburger.setAttribute('aria-expanded', 'false');
 }
 
 hamburger.addEventListener('click', () => {
-  const isOpen = sidenav.classList.contains('is-open');
+  const isOpen = topnavList.classList.contains('is-open');
   isOpen ? closeMobileNav() : openMobileNav();
 });
 
 // ---- Scroll-spy: highlight active nav link ----
 const sections = document.querySelectorAll('main section[id]');
-const navLinks = document.querySelectorAll('.sidenav__link[data-section]');
+const navLinks = document.querySelectorAll('.topnav__link[data-section]');
 
 function setActiveLink(sectionId) {
   navLinks.forEach((link) => {
@@ -89,8 +79,6 @@ const spyObserver = new IntersectionObserver(
 
 sections.forEach((section) => spyObserver.observe(section));
 
-// Lenis (initialized without wrapper/content) drives native window scrolling,
-// so the listener below already fires for every Lenis-driven scroll change.
 window.addEventListener('scroll', checkBottomOfPage, { passive: true });
 checkBottomOfPage();
 

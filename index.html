@@ -26,20 +26,20 @@
   <main id="main-content">
     <canvas id="hero-canvas"></canvas>
 
-    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-
-    <nav class="sidenav" id="sidenav">
-      <ul class="sidenav__list">
-        <li><a href="#home" class="sidenav__link" data-section="home">Home</a></li>
-        <li><a href="#about" class="sidenav__link" data-section="about">About</a></li>
-        <li><a href="#ai" class="sidenav__link" data-section="ai">How I Use AI</a></li>
-        <li><a href="#tools" class="sidenav__link" data-section="tools">Tools</a></li>
-        <li><a href="#work" class="sidenav__link" data-section="work">Work</a></li>
-        <li><a href="#contact" class="sidenav__link" data-section="contact">Contact</a></li>
-        <li><a href="assets/resume.pdf" target="_blank" rel="noopener" class="sidenav__link" id="resume-link">Resume</a></li>
+    <nav class="topnav" id="topnav">
+      <a href="#home" class="topnav__mark">TQ</a>
+      <ul class="topnav__list" id="topnav-list">
+        <li><a href="#home" class="topnav__link" data-section="home">Home</a></li>
+        <li><a href="#about" class="topnav__link" data-section="about">About</a></li>
+        <li><a href="#ai" class="topnav__link" data-section="ai">How I Use AI</a></li>
+        <li><a href="#tools" class="topnav__link" data-section="tools">Tools</a></li>
+        <li><a href="#work" class="topnav__link" data-section="work">Work</a></li>
+        <li><a href="#contact" class="topnav__link" data-section="contact">Contact</a></li>
+        <li><a href="assets/resume.pdf" target="_blank" rel="noopener" class="topnav__link" id="resume-link">Resume</a></li>
       </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="topnav-list">
+        <span></span><span></span><span></span>
+      </button>
     </nav>
 
     <section id="home" class="hero">
@@ -372,7 +372,6 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
   <script type="module" src="js/hero-scene.js"></script>
   <script src="js/main.js"></script>
 </body>

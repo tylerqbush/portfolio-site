@@ -48,7 +48,7 @@
 }
 
 html {
-  scroll-behavior: auto; /* Lenis takes over smooth scroll in JS */
+  scroll-behavior: auto; /* JS drives smooth scroll via scrollIntoView() so anchor clicks aren't double-smoothed */
 }
 
 body {
@@ -101,61 +101,65 @@ button {
   color: var(--color-accent);
 }
 
-/* Sidebar nav */
-.sidenav {
+/* Top nav */
+.topnav {
   position: fixed;
   top: 0;
   left: 0;
-  width: var(--nav-width);
-  height: 100vh;
+  right: 0;
+  height: var(--nav-height);
+  background: var(--color-ink);
   display: flex;
   align-items: center;
-  padding-left: clamp(24px, 4vw, 64px);
+  justify-content: space-between;
+  padding: 0 clamp(20px, 4vw, 48px);
   z-index: 50;
 }
 
-.sidenav__list {
+.topnav__mark {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--color-bg);
+}
+
+.topnav__list {
   list-style: none;
   display: flex;
-  flex-direction: column;
-  gap: 28px;
+  align-items: center;
+  gap: 32px;
 }
 
-.sidenav__link {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  color: var(--color-ink-dim);
-  transition: color var(--transition-fast);
+.topnav__link {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-bg);
+  opacity: 0.75;
+  transition: opacity var(--transition-fast), color var(--transition-fast);
 }
 
-.sidenav__link.active,
-.sidenav__link:hover {
-  color: var(--color-ink);
-  font-weight: 700;
+.topnav__link.active,
+.topnav__link:hover {
+  opacity: 1;
+  color: var(--color-accent-on-dark);
 }
 
 .hamburger {
   display: none;
-  position: fixed;
-  top: 20px;
-  left: 20px;
   z-index: 60;
-  width: 44px;
-  height: 44px;
+  width: 32px;
+  height: 32px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 5px;
-  background: var(--color-card);
-  border-radius: var(--radius-lg);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
 }
 
 .hamburger span {
   display: block;
-  width: 24px;
+  width: 22px;
   height: 2px;
-  background: var(--color-ink);
+  background: var(--color-bg);
 }
 
 /* Hero */
@@ -273,15 +277,36 @@ button {
 }
 
 @media (max-width: 900px) {
-  .sidenav {
-    transform: translateX(-100%);
-    background: var(--color-bg);
-    transition: transform var(--transition-medium);
-    width: 260px;
+  .topnav__list {
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    background: var(--color-ink);
+    padding: 8px clamp(20px, 4vw, 48px) 24px;
+    transform: translateY(-8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition-fast), transform var(--transition-fast);
   }
 
-  .sidenav.is-open {
-    transform: translateX(0);
+  .topnav__list.is-open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .topnav__list li {
+    width: 100%;
+    padding: 12px 0;
+    border-top: 1px solid rgba(245, 246, 248, 0.1);
+  }
+
+  .topnav__list li:first-child {
+    border-top: none;
   }
 
   .hamburger {
