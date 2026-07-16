@@ -8,7 +8,7 @@ if (window.gsap && window.ScrollTrigger) {
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 // ---- Anchor links scroll natively ----
-document.querySelectorAll('.topnav__link[href^="#"]').forEach((link) => {
+document.querySelectorAll('.topnav__link[href^="#"], .topnav__mark[href^="#"]').forEach((link) => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
     const target = document.querySelector(link.getAttribute('href'));
