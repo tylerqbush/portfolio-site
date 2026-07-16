@@ -117,9 +117,8 @@ if (window.gsap && window.ScrollTrigger && !prefersReducedMotion) {
 // Note: gsap.to() leaves a permanent inline transform on each .about__item
 // after this animation completes. Harmless today (no CSS rule sets transform
 // on .about__item), but if a hover/transform effect is ever added to these
-// cards, it'll need clearProps: 'transform' added to the gsap.to() call below
-// to avoid the same inline-style-blocks-CSS issue documented on the hero
-// entrance animation above.
+// cards, add clearProps: 'transform' to the gsap.to() call below to avoid
+// an inline style silently overriding that future CSS rule.
 if (window.gsap && window.ScrollTrigger && !prefersReducedMotion) {
   const aboutItems = document.querySelectorAll('.about__card .about__item');
   const tilts = [

@@ -6,7 +6,6 @@
   --color-accent: #0b63c4; /* ~5.4:1 on --color-bg, ~5.8:1 on --color-card as text — for use as text/fill on light surfaces only */
   --color-accent-on-dark: #4a9eff; /* lighter tint for the accent on --color-ink surfaces (e.g. active top-nav link on the dark bar) — flat --color-accent only hits ~3.1:1 there, below the 4.5:1 AA floor for normal text */
   --color-border: rgba(18, 21, 27, 0.12);
-  --color-ink-ghost: rgba(18, 21, 27, 0.05);
   --color-muted-bg: #e9ebef;
 
   --font-heading: 'Bricolage Grotesque', sans-serif;
@@ -186,6 +185,7 @@ button {
   position: relative;
   z-index: 2;
   max-width: 900px;
+  min-width: 0;
 }
 
 .hero__name {
@@ -198,7 +198,7 @@ button {
 
 .hero__name-line {
   display: block;
-  font-size: clamp(3rem, 11vw, 8rem);
+  font-size: clamp(2.5rem, 11vw, 8rem);
 }
 
 .hero__name-accent {
