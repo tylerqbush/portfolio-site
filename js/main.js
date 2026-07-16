@@ -83,26 +83,18 @@ window.addEventListener('scroll', checkBottomOfPage, { passive: true });
 checkBottomOfPage();
 
 // ---- Hero entrance animation ----
-// Note: clearProps: 'transform' on .hero__label/.hero__photo leaves a tiny
-// decomposed-rotation residual (e.g. rotate(-2.00003deg)) in the inline style
-// rather than a truly empty string, since both have a CSS-authored
-// transform: rotate(...) that gsap.set() bakes in before the tween starts.
-// Harmless today (visually identical, no rule currently touches their
-// transform), but an inline style still beats any future :hover/media rule
-// on these two elements — revisit if a transform-based effect is ever added.
 if (window.gsap && !prefersReducedMotion) {
-  gsap.set(['.hero__label', '.hero__ghost-name', '.hero__photo', '.hero__bio', '.hero__ctas .btn'], {
+  gsap.set(['.hero__name-line', '.hero__label', '.hero__bio', '.hero__ctas .btn'], {
     opacity: 0,
     y: 24,
   });
 
   const heroTl = gsap.timeline({ delay: 0.2 });
   heroTl
-    .to('.hero__label', { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', clearProps: 'transform' })
-    .to('.hero__ghost-name', { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' }, '-=0.5')
-    .to('.hero__photo', { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', clearProps: 'transform' }, '-=0.5')
-    .to('.hero__bio', { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.4')
-    .to('.hero__ctas .btn', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out', stagger: 0.15, clearProps: 'transform' }, '-=0.3');
+    .to('.hero__name-line', { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out', stagger: 0.12 })
+    .to('.hero__label', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, '-=0.4')
+    .to('.hero__bio', { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.35')
+    .to('.hero__ctas .btn', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out', stagger: 0.15 }, '-=0.3');
 }
 
 // ---- Generic scroll reveal for grouped elements ----

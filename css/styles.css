@@ -166,7 +166,6 @@ button {
 .hero {
   position: relative;
   min-height: 100vh;
-  margin-left: var(--nav-width);
   display: flex;
   align-items: center;
   padding: var(--section-padding-y) var(--section-padding-x);
@@ -183,73 +182,50 @@ button {
   pointer-events: none;
 }
 
-.hero__ghost-name {
-  position: absolute;
-  top: 38%;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  font-family: var(--font-heading);
-  font-size: clamp(1.4rem, 9vw, 7rem);
-  color: var(--color-ink-ghost);
-  white-space: nowrap;
-  z-index: 1;
-  pointer-events: none;
-}
-
 .hero__content {
   position: relative;
   z-index: 2;
-  max-width: 720px;
-  margin-left: auto;
-  text-align: right;
+  max-width: 900px;
+}
+
+.hero__name {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  color: var(--color-ink);
+}
+
+.hero__name-line {
+  display: block;
+  font-size: clamp(3rem, 11vw, 8rem);
+}
+
+.hero__name-accent {
+  color: var(--color-accent);
 }
 
 .hero__label {
-  display: inline-block;
+  display: block;
   font-family: var(--font-mono);
   font-size: var(--label-size);
-  font-weight: 500;
   letter-spacing: var(--label-tracking);
   text-transform: uppercase;
-  color: var(--color-bg);
-  background: var(--color-accent);
-  padding: 8px 16px;
-  border-radius: var(--radius-sm);
-  transform: rotate(-2deg);
+  color: var(--color-ink-dim);
+  margin-top: 20px;
   margin-bottom: 24px;
-}
-
-.hero__photo {
-  position: relative;
-  width: min(320px, 60vw);
-  margin-left: auto;
-  margin-bottom: 24px;
-  padding: 12px;
-  background: var(--color-card);
-  border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-lg-strong);
-  transform: rotate(-3deg);
-}
-
-.hero__photo img {
-  display: block;
-  width: 100%;
-  border-radius: var(--radius-xs);
 }
 
 .hero__bio {
-  color: var(--color-ink);
+  color: var(--color-ink-dim);
   font-size: 1.05rem;
-  max-width: 520px;
-  margin-left: auto;
+  max-width: 560px;
   margin-bottom: 32px;
 }
 
 .hero__ctas {
   display: flex;
   gap: 24px;
-  justify-content: flex-end;
   align-items: center;
 }
 
@@ -311,29 +287,6 @@ button {
 
   .hamburger {
     display: flex;
-  }
-
-  .hero {
-    margin-left: 0;
-    padding-top: 100px;
-    text-align: center;
-  }
-
-  .hero__content {
-    text-align: center;
-    margin: 0 auto;
-  }
-
-  .hero__photo {
-    margin: 0 auto 24px;
-  }
-
-  .hero__bio {
-    margin: 0 auto 32px;
-  }
-
-  .hero__ctas {
-    justify-content: center;
   }
 }
 
