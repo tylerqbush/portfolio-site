@@ -1,18 +1,19 @@
 :root {
-  --color-bg: #f4efe6;
-  --color-ink: #2a2420;
-  --color-ink-dim: #6b5d47; /* passes AA on --color-bg/--color-card with room to spare, but only 4.71:1 on --color-kraft (Work section case-study body text) — a thin margin above the 4.5:1 floor, so don't darken --color-kraft or lighten this without re-checking */
+  --color-bg: #f5f6f8;
+  --color-ink: #12151b;
+  --color-ink-dim: #5b6470; /* ~5.5:1 on --color-bg/--color-card, ~4.9:1 on --color-muted-bg — thin-ish margin on muted-bg, don't darken it or lighten this without re-checking */
   --color-card: #ffffff;
-  --color-accent: #8f3a1a; /* darkened again from #a8451f for WCAG AA contrast when used as text on --color-kraft backgrounds (upcoming Work section restyle); still passes as badge background text/bg and as text on white/cream */
-  --color-border: rgba(42, 36, 32, 0.12);
-  --color-ink-ghost: rgba(42, 36, 32, 0.06);
-  --color-kraft: #e8dcc4;
+  --color-accent: #0b63c4; /* ~5.4:1 on --color-bg, ~5.8:1 on --color-card as text — for use as text/fill on light surfaces only */
+  --color-accent-on-dark: #4a9eff; /* lighter tint for the accent on --color-ink surfaces (e.g. active top-nav link on the dark bar) — flat --color-accent only hits ~3.1:1 there, below the 4.5:1 AA floor for normal text */
+  --color-border: rgba(18, 21, 27, 0.12);
+  --color-ink-ghost: rgba(18, 21, 27, 0.05);
+  --color-muted-bg: #e9ebef;
 
-  --font-heading: 'Fraunces', serif;
-  --font-body: 'Inter', sans-serif;
-  --font-mono: 'IBM Plex Mono', monospace;
+  --font-heading: 'Bricolage Grotesque', sans-serif;
+  --font-body: 'Instrument Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 
-  --nav-width: 220px;
+  --nav-height: 72px;
   --section-padding-x: clamp(24px, 6vw, 96px);
   --section-padding-y: clamp(64px, 10vh, 120px);
 
@@ -29,13 +30,13 @@
   --radius-pill: 999px;
 
   /* Shadow scale (all on --color-ink at varying opacity/spread) */
-  --shadow-sm: 0 4px 12px rgba(42, 36, 32, 0.1);
-  --shadow-md: 0 8px 20px rgba(42, 36, 32, 0.1);
-  --shadow-lg: 0 12px 32px rgba(42, 36, 32, 0.12);
-  --shadow-lg-strong: 0 12px 32px rgba(42, 36, 32, 0.18);
+  --shadow-sm: 0 4px 12px rgba(18, 21, 27, 0.1);
+  --shadow-md: 0 8px 20px rgba(18, 21, 27, 0.1);
+  --shadow-lg: 0 12px 32px rgba(18, 21, 27, 0.12);
+  --shadow-lg-strong: 0 12px 32px rgba(18, 21, 27, 0.18);
 
   /* Mono "eyebrow" label text (case-study eyebrows, tool group headings,
-     process steps, slider labels, hero badge) */
+     process steps, hero label) */
   --label-size: 0.8rem;
   --label-tracking: 0.06em;
 }
@@ -676,8 +677,8 @@ button {
   position: relative;
   background: var(--color-kraft);
   background-image:
-    repeating-linear-gradient(0deg, rgba(42,36,32,0.05) 0 1px, transparent 1px 64px),
-    repeating-linear-gradient(90deg, rgba(42,36,32,0.05) 0 1px, transparent 1px 64px);
+    repeating-linear-gradient(0deg, rgba(18,21,27,0.05) 0 1px, transparent 1px 64px),
+    repeating-linear-gradient(90deg, rgba(18,21,27,0.05) 0 1px, transparent 1px 64px);
 }
 
 .contact__inner {
