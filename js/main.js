@@ -201,3 +201,15 @@ document.querySelectorAll('[data-count-to]').forEach((el) => {
     },
   });
 });
+
+// ---- Case study gallery arrows ----
+document.querySelectorAll('.case-gallery').forEach((gallery) => {
+  const track = gallery.querySelector('.case-gallery__track');
+  const prev = gallery.querySelector('.case-gallery__arrow--prev');
+  const next = gallery.querySelector('.case-gallery__arrow--next');
+  if (!track || !prev || !next) return;
+
+  const scrollAmount = () => track.clientWidth * 0.8;
+  prev.addEventListener('click', () => track.scrollBy({ left: -scrollAmount(), behavior: 'smooth' }));
+  next.addEventListener('click', () => track.scrollBy({ left: scrollAmount(), behavior: 'smooth' }));
+});
