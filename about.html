@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Tyler Quackenbush</title>
+  <meta name="description" content="About Tyler Quackenbush — UX/UI Designer background, working style, and how he thinks about the job." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="About | Tyler Quackenbush" />
+  <meta property="og:description" content="About Tyler Quackenbush — UX/UI Designer background, working style, and how he thinks about the job." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About | Tyler Quackenbush" />
+  <meta name="twitter:description" content="About Tyler Quackenbush — UX/UI Designer background, working style, and how he thinks about the job." />
+  <meta name="twitter:image" content="assets/images/og-image.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <main id="main-content">
+    <nav class="topnav" id="topnav">
+      <a href="index.html" class="topnav__mark">TQ</a>
+      <ul class="topnav__list" id="topnav-list">
+        <li><a href="index.html" class="topnav__link">Home</a></li>
+        <li><a href="about.html" class="topnav__link active">About</a></li>
+        <li><a href="ai.html" class="topnav__link">How I Use AI</a></li>
+        <li><a href="tools.html" class="topnav__link">Tools</a></li>
+        <li><a href="work.html" class="topnav__link">Work</a></li>
+        <li><a href="contact.html" class="topnav__link">Contact</a></li>
+        <li><a href="assets/resume.pdf" target="_blank" rel="noopener" class="topnav__link" id="resume-link">Resume</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="topnav-list">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <section class="about">
+      <div class="about__intro">
+        <h2 class="section-heading">About Me</h2>
+        <div class="about__photo">
+          <img src="assets/images/Headshot.jpeg" alt="Tyler Quackenbush" id="headshot-img" width="640" height="640" />
+        </div>
+      </div>
+      <div class="about__card">
+        <div class="about__col">
+          <div class="about__item">
+            <h3>Superpower</h3>
+            <p>I can walk into a mess, a spreadsheet with fourteen tabs, a Slack thread that never resolved, and find the one decision that makes everything else fall into place. Usually by asking the question everyone else was too embarrassed to ask.</p>
+          </div>
+          <div class="about__item">
+            <h3>Weakness</h3>
+            <p>I'll polish a Figma file for four hours before admitting the real problem is I haven't started the part that actually matters.</p>
+          </div>
+          <div class="about__item">
+            <h3>Favorite tools</h3>
+            <p>Airtable, ChatGPT, Figma, and a bullet journal that's seen better days.</p>
+          </div>
+          <div class="about__item">
+            <h3>Favorite part</h3>
+            <p>Taking something scattered across six different tools and three people's heads and turning it into one thing that makes sense on its own.</p>
+          </div>
+        </div>
+        <div class="about__col">
+          <div class="about__item">
+            <h3>Best time of day/place to be productive</h3>
+            <p>Early morning, coffee, before anyone's slacked me a &ldquo;quick question.&rdquo; Otherwise: whenever I'm actually focused on the outcome instead of performing the process.</p>
+          </div>
+          <div class="about__item">
+            <h3>I want to be good at</h3>
+            <p>Trusting timing while I'm still in motion. Also, writing that actually convinces someone, not just describes the thing.</p>
+          </div>
+          <div class="about__item">
+            <h3>I don't want to be good at</h3>
+            <p>Doing something a certain way just because that's how it's always been done. I'll ask why every single time, even when it's annoying.</p>
+          </div>
+          <div class="about__slider">
+            <div class="about__slider-labels">
+              <span>Introvert</span>
+              <span>Extrovert</span>
+            </div>
+            <div class="about__slider-track" id="ie-slider-track">
+              <div class="about__slider-handle" id="ie-slider-handle" role="slider" tabindex="0" aria-label="Introvert to extrovert scale" aria-valuemin="0" aria-valuemax="100" aria-valuenow="55"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about__statement reveal-group">
+        <p>
+          I'm nosy in a useful way. Hand me something confusing (an outdated wiki, a form nobody quite
+          remembers the purpose of) and I'll ask enough annoying questions to figure out what it's actually
+          supposed to do. I've made peace with being the person who asks the dumb question in the room,
+          because usually it's the one nobody else wanted to ask, and everyone leaves the meeting actually
+          agreeing on what happens next. That's the job, as far as I'm concerned.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
