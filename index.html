@@ -25,14 +25,14 @@
 <body>
   <main id="main-content">
     <nav class="topnav" id="topnav">
-      <a href="#home" class="topnav__mark">TQ</a>
+      <a href="index.html" class="topnav__mark">TQ</a>
       <ul class="topnav__list" id="topnav-list">
-        <li><a href="#home" class="topnav__link" data-section="home">Home</a></li>
-        <li><a href="#about" class="topnav__link" data-section="about">About</a></li>
-        <li><a href="#ai" class="topnav__link" data-section="ai">How I Use AI</a></li>
-        <li><a href="#tools" class="topnav__link" data-section="tools">Tools</a></li>
-        <li><a href="#work" class="topnav__link" data-section="work">Work</a></li>
-        <li><a href="#contact" class="topnav__link" data-section="contact">Contact</a></li>
+        <li><a href="index.html" class="topnav__link active">Home</a></li>
+        <li><a href="about.html" class="topnav__link">About</a></li>
+        <li><a href="ai.html" class="topnav__link">How I Use AI</a></li>
+        <li><a href="tools.html" class="topnav__link">Tools</a></li>
+        <li><a href="work.html" class="topnav__link">Work</a></li>
+        <li><a href="contact.html" class="topnav__link">Contact</a></li>
         <li><a href="assets/resume.pdf" target="_blank" rel="noopener" class="topnav__link" id="resume-link">Resume</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="topnav-list">
@@ -40,7 +40,7 @@
       </button>
     </nav>
 
-    <section id="home" class="hero">
+    <section class="hero">
       <div class="hero__content">
         <h1 class="hero__name">
           <span class="hero__name-line"><span class="hero__name-accent">T</span>YLER</span>
@@ -55,319 +55,35 @@
           from restarting every sprint. Give me the mess. I'll hand you back something that makes sense.
         </p>
         <div class="hero__ctas">
-          <a href="#work" class="btn btn--primary">My Work</a>
+          <a href="work.html" class="btn btn--primary">My Work</a>
           <a href="assets/resume.pdf" target="_blank" rel="noopener" class="btn btn--link">Download Resume</a>
         </div>
       </div>
     </section>
 
-    <section id="about" class="about">
-      <div class="about__intro">
-        <h2 class="section-heading">About Me</h2>
-        <div class="about__photo">
-          <img src="assets/images/Headshot.jpeg" alt="Tyler Quackenbush" id="headshot-img" width="640" height="640" />
-        </div>
-      </div>
-      <div class="about__card">
-        <div class="about__col">
-          <div class="about__item">
-            <h3>Superpower</h3>
-            <p>I can walk into a mess, a spreadsheet with fourteen tabs, a Slack thread that never resolved, and find the one decision that makes everything else fall into place. Usually by asking the question everyone else was too embarrassed to ask.</p>
+    <section class="work-teaser">
+      <p class="label-mono work-teaser__label">Some of My Latest Work</p>
+      <div class="work-grid">
+        <a href="work/discovery-practice.html" class="work-card">
+          <div class="work-card__media">
+            <img src="assets/images/exhibit-threat-readiness.svg" alt="Concept dashboard exhibit from the UX Discovery practice" />
           </div>
-          <div class="about__item">
-            <h3>Weakness</h3>
-            <p>I'll polish a Figma file for four hours before admitting the real problem is I haven't started the part that actually matters.</p>
-          </div>
-          <div class="about__item">
-            <h3>Favorite tools</h3>
-            <p>Airtable, ChatGPT, Figma, and a bullet journal that's seen better days.</p>
-          </div>
-          <div class="about__item">
-            <h3>Favorite part</h3>
-            <p>Taking something scattered across six different tools and three people's heads and turning it into one thing that makes sense on its own.</p>
-          </div>
-        </div>
-        <div class="about__col">
-          <div class="about__item">
-            <h3>Best time of day/place to be productive</h3>
-            <p>Early morning, coffee, before anyone's slacked me a &ldquo;quick question.&rdquo; Otherwise: whenever I'm actually focused on the outcome instead of performing the process.</p>
-          </div>
-          <div class="about__item">
-            <h3>I want to be good at</h3>
-            <p>Trusting timing while I'm still in motion. Also, writing that actually convinces someone, not just describes the thing.</p>
-          </div>
-          <div class="about__item">
-            <h3>I don't want to be good at</h3>
-            <p>Doing something a certain way just because that's how it's always been done. I'll ask why every single time, even when it's annoying.</p>
-          </div>
-          <div class="about__slider">
-            <div class="about__slider-labels">
-              <span>Introvert</span>
-              <span>Extrovert</span>
-            </div>
-            <div class="about__slider-track" id="ie-slider-track">
-              <div class="about__slider-handle" id="ie-slider-handle" role="slider" tabindex="0" aria-label="Introvert to extrovert scale" aria-valuemin="0" aria-valuemax="100" aria-valuenow="55"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="about__statement reveal-group">
-        <p>
-          I'm nosy in a useful way. Hand me something confusing (an outdated wiki, a form nobody quite
-          remembers the purpose of) and I'll ask enough annoying questions to figure out what it's actually
-          supposed to do. I've made peace with being the person who asks the dumb question in the room,
-          because usually it's the one nobody else wanted to ask, and everyone leaves the meeting actually
-          agreeing on what happens next. That's the job, as far as I'm concerned.
-        </p>
-      </div>
-    </section>
-
-    <section id="ai" class="ai">
-      <h2 class="section-heading">How I Use AI, Actually</h2>
-      <div class="ai__card reveal-group">
-        <p>I'll say the thing everyone's dancing around: working with AI mostly feels solo, and calling it a &ldquo;team&rdquo; flattens something real. My mentor Russ Unger writes about this better than I do (<a href="https://russunger.com" target="_blank" rel="noopener noreferrer">go read him</a>). The short version I've landed on through my own work: AI gets you to a rough, working draft fast. Embarrassingly fast. Getting from that draft to something you'd put your name on is still the job, and no model does that part for you.</p>
-        <p>I test this against my own work, not just theory. This site went through a written plan, then every task got implemented, then reviewed twice (once for whether it matched the spec, once for whether the code itself held up) before I'd call it done. That second pass caught real bugs: a slider that snapped where it shouldn't, images that would've gone permanently invisible if a script failed to load. Nobody catches those by trusting the first draft.</p>
-        <p>That's the workflow at Agile Defense too. We build concept prototypes fast, sometimes in days, because the fastest way to find out if an idea holds up is to put it in front of someone who actually knows the problem. AI gets the prototype into someone's hands quickly. My job (and my team's) is reviewing what comes out before it goes anywhere near a client, same judgment, just applied earlier.</p>
-        <p>Land to Land Holdings runs the same principle at a smaller scale: AI drafts the listing copy and social content, and I read every word before it goes out. That's the actual workflow. Nothing ships without a human, me, reading it first.</p>
-      </div>
-    </section>
-
-    <section id="tools" class="tools">
-      <h2 class="section-heading">Tools</h2>
-      <p class="tools__intro">The stuff I actually reach for, sorted the way I'd sort it in real life, not the way a resume wants it sorted.</p>
-      <div class="tools__grid reveal-group">
-        <div class="tools__group">
-          <h3>Design &amp; Prototyping</h3>
-          <ul>
-            <li>Figma</li>
-            <li>Webflow</li>
-            <li>Photoshop</li>
-            <li>Illustrator</li>
-          </ul>
-        </div>
-        <div class="tools__group">
-          <h3>AI-Assisted Workflow</h3>
-          <ul>
-            <li>Claude</li>
-            <li>ChatGPT</li>
-          </ul>
-        </div>
-        <div class="tools__group">
-          <h3>Research &amp; Ops</h3>
-          <ul>
-            <li>Airtable</li>
-            <li>Jira</li>
-            <li>Confluence</li>
-          </ul>
-        </div>
-        <div class="tools__group">
-          <h3>Front-End Basics</h3>
-          <ul>
-            <li>HTML &amp; CSS</li>
-            <li>GitHub</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="work" class="work">
-      <h2 class="section-heading">Work</h2>
-
-      <article class="case-study" data-case="novant">
-        <div class="case-study__media reveal-image">
-          <img src="assets/images/novant-mockup.jpg" alt="Novant Health maternity care services page, desktop view" width="1200" height="679" />
-        </div>
-        <div class="case-study__body">
-          <p class="label-mono case-study__eyebrow">Novant Health &middot; Done in Figma</p>
-          <h3>System-Wide Website Redesign</h3>
-          <p class="case-study__desc">
-            Novant Health had a scheduling flow that technically worked, the way a filing cabinet technically
-            works if you already know which drawer everything's in. Patients didn't have that internal map.
-            Providers weren't much better off.
-          </p>
-          <p class="case-study__desc">
-            I redesigned the pieces that mattered most: appointment scheduling, provider search, the pages
-            people hit when they're anxious and one thumb away from giving up. Tested with real prototypes,
-            rolled out in phases, built to survive contact with an actual dev team.
-          </p>
-          <div class="case-study__highlights">
-            <div class="highlight">
-              <span class="highlight__stat">Streamlined Appointment Flow</span>
-              <p>Fewer people gave up mid-booking once the path stopped assuming everyone already knew where to look.</p>
-            </div>
-            <div class="highlight">
-              <span class="highlight__stat">Recognized by Internal UX Team</span>
-              <p>The system I built got reused by other teams, which is the only compliment that actually matters to me.</p>
-            </div>
-          </div>
-          <ol class="case-study__process">
-            <li><span>01</span><h4>UX Audit</h4><p>Reviewed data and identified user pain points</p></li>
-            <li><span>02</span><h4>Team Alignment</h4><p>Facilitated design priorities across departments</p></li>
-            <li><span>03</span><h4>Journey Mapping</h4><p>Focused on care search and scheduling flows</p></li>
-            <li><span>04</span><h4>Accessibility Design</h4><p>Ensured WCAG compliance from the start</p></li>
-            <li><span>05</span><h4>Modular UI</h4><p>Built scalable, dev-ready design components</p></li>
-            <li><span>06</span><h4>QA &amp; Rollout</h4><p>Tested live environments and supported implementation</p></li>
-          </ol>
-        </div>
-      </article>
-
-      <article class="case-study" data-case="acct">
-        <div class="case-study__media reveal-image">
-          <img src="assets/images/acct-placeholder.svg" alt="ACCT International brand redesign mockup" />
-        </div>
-        <div class="case-study__body">
-          <p class="label-mono case-study__eyebrow">ACCT International &middot; Done in Figma</p>
-          <h3>Brand Redesign</h3>
-          <p class="case-study__desc">
-            ACCT teaches people to build and inspect challenge courses (the ropes-and-ziplines kind, where a
-            mistake is not hypothetical). Their brand looked like a hobbyist forum. That's a trust problem, not
-            just a design one.
-          </p>
-          <p class="case-study__desc">
-            I rebuilt the identity system from the ground up (logo, type, the whole language) so it could hold
-            up next to industry regulators and insurance auditors, without losing the part of ACCT that's
-            genuinely about adventure.
-          </p>
-          <div class="case-study__highlights">
-            <div class="highlight">
-              <span class="highlight__stat">Unified Diverse Stakeholders</span>
-              <p>Board members, safety regulators, and industry veterans do not agree on much. They agreed on this.</p>
-            </div>
-            <div class="highlight">
-              <span class="highlight__stat">&ldquo;The first time we've ever felt truly professional.&rdquo;</span>
-              <p>A board member said that after rollout. I'm still thinking about what the brand must have looked like before.</p>
-            </div>
-          </div>
-          <ol class="case-study__process">
-            <li><span>01</span><h4>Discovery</h4><p>Captured voice, values, and vision from board and staff</p></li>
-            <li><span>02</span><h4>Brand Audit</h4><p>Assessed gaps in visual identity and brand perception</p></li>
-            <li><span>03</span><h4>Strategy Definition</h4><p>Clarified core themes: trust, structure, adventure</p></li>
-            <li><span>04</span><h4>Visual Design</h4><p>Created scalable identity system and brand assets</p></li>
-            <li><span>05</span><h4>Brand Rollout</h4><p>Applied across print, digital, and event materials</p></li>
-            <li><span>06</span><h4>Delivery</h4><p>Finalized toolkit for consistent brand use</p></li>
-          </ol>
-        </div>
-      </article>
-
-      <article class="case-study" data-case="adventure">
-        <div class="case-study__media reveal-image">
-          <img src="assets/images/adventure-placeholder.svg" alt="Adventure Careers website and brand mockup" />
-        </div>
-        <div class="case-study__body">
-          <p class="label-mono case-study__eyebrow">Adventure Careers &middot; Done in Figma</p>
-          <h3>Website and Brand</h3>
-          <p class="case-study__desc">
-            Adventure Careers needed to look like a real company before it quite was one yet. Job boards for
-            outdoor and experiential-ed work tend to look like a Craigslist post that got ambitious.
-          </p>
-          <p class="case-study__desc">
-            I built the brand and the site at the same time, mobile-first, because the actual users were
-            checking listings between shifts, not sitting at a desk.
-          </p>
-          <div class="case-study__highlights">
-            <div class="highlight">
-              <span class="highlight__stat" data-count-to="40" data-count-suffix="%">0%</span>
-              <p>Reduced bounce rate. Clean navigation and a site that didn't feel like homework got people past the first click.</p>
-            </div>
-            <div class="highlight">
-              <span class="highlight__stat">&ldquo;It looks and feels like a real company now.&rdquo;</span>
-              <p>Founder's words, not mine. I'll take it.</p>
-            </div>
-          </div>
-          <ol class="case-study__process">
-            <li><span>01</span><h4>Audience Insights</h4><p>Spoke to users on both sides of the job platform</p></li>
-            <li><span>02</span><h4>Brand Design</h4><p>Built a bold, youthful identity system</p></li>
-            <li><span>03</span><h4>Site Architecture</h4><p>Planned intuitive, mobile-first job flow</p></li>
-            <li><span>04</span><h4>UI Design</h4><p>Crafted clean, energetic interface mockups</p></li>
-            <li><span>05</span><h4>Dev Collaboration</h4><p>Provided assets, specs, and live support</p></li>
-            <li><span>06</span><h4>Launch Review</h4><p>Analyzed usage and optimized post-launch</p></li>
-          </ol>
-        </div>
-      </article>
-
-      <article class="case-study case-study--flagship" data-case="discovery-practice">
-        <div class="case-study__media reveal-image">
-          <img src="assets/images/exhibit-threat-readiness.svg" alt="Concept dashboard exhibit from the UX Discovery practice" />
-        </div>
-        <div class="case-study__body">
-          <p class="label-mono case-study__eyebrow">Agile Defense (formerly IntelliBridge) &middot; UX Discovery Practice</p>
-          <h3>Designing the Discovery Practice</h3>
-          <p class="case-study__desc">
-            Federal agencies don't hand out multi-month discovery engagements on spec. If you want to win the
-            work, you have to show, not tell, and you have to do it in about the time it takes most teams to
-            schedule a kickoff call.
-          </p>
-          <p class="case-study__desc">
-            I helped build and run the practice that solved that: a repeatable way to go from &ldquo;here's a
-            rough problem&rdquo; to a working, clickable concept prototype in around ten days, used across
-            defense readiness, federal law enforcement, and crisis-response engagements. Every one of them
-            helped win the contract it was built to pitch.
-          </p>
-          <ol class="case-study__process">
-            <li><span>01</span><h4>Mission Orientation</h4><p>Get honest about what the environment can actually support, before promising anything.</p></li>
-            <li><span>02</span><h4>Mission Calibration</h4><p>Workshop the real need against value, speed, and cost, with the people who'll live with the answer.</p></li>
-            <li><span>03</span><h4>Research &amp; Investigation</h4><p>Map the journey, sketch the personas, find where the legacy system is actually failing people.</p></li>
-            <li><span>04</span><h4>Analysis &amp; Modeling</h4><p>Turn findings into something with edges: a prototype, not a slide.</p></li>
-            <li><span>05</span><h4>Synthesis Alignment</h4><p>Bring it back to leadership as a strategic case, not just a screen.</p></li>
-            <li><span>06</span><h4>Mission Validation</h4><p>Test it against the roadmap and the room. If it survives that, it's ready to pitch.</p></li>
-          </ol>
-          <ul class="case-study__exhibits">
-            <li class="exhibit">
-              <figure>
-                <img src="assets/images/exhibit-threat-readiness.svg" alt="Threat Readiness concept dashboard" />
-                <figcaption>
-                  <strong>Exhibit A &mdash; Threat Readiness</strong>
-                  <p>A concept dashboard for a federal defense client, built to make threat and readiness data legible to leadership in one screen instead of six reports.</p>
-                </figcaption>
-              </figure>
-            </li>
-            <li class="exhibit">
-              <figure>
-                <img src="assets/images/exhibit-dreams.svg" alt="DREAMS concept HR platform" />
-                <figcaption>
-                  <strong>Exhibit B &mdash; DREAMS</strong>
-                  <p>A concept HR platform for federal law enforcement recruiting, turning a fragmented hiring pipeline into one dashboard leadership could actually read.</p>
-                </figcaption>
-              </figure>
-            </li>
-            <li class="exhibit">
-              <figure>
-                <img src="assets/images/exhibit-guard.svg" alt="GUARD concept crisis response dashboard" />
-                <figcaption>
-                  <strong>Exhibit C &mdash; GUARD</strong>
-                  <p>A crisis-response concept unifying health, infrastructure, and cyber risk data that used to live in three separate systems nobody cross-checked.</p>
-                </figcaption>
-              </figure>
-            </li>
-            <li class="exhibit">
-              <figure>
-                <img src="assets/images/exhibit-comply.svg" alt="COMPLY concept compliance tracker" />
-                <figcaption>
-                  <strong>Exhibit D &mdash; COMPLY</strong>
-                  <p>A compliance and threat-assessment tracker built to surface the one &ldquo;not compliant&rdquo; flag that actually mattered, out of thousands of records.</p>
-                </figcaption>
-              </figure>
-            </li>
-          </ul>
-          <p class="case-study__desc case-study__reflection">
-            Every one of these stayed a concept prototype until it won the room. That's the actual metric I
-            care about: not whether it looked good in a deck, but whether it was specific enough for someone to
-            say &ldquo;yes, build that.&rdquo;
-          </p>
-        </div>
-      </article>
-    </section>
-
-    <section id="contact" class="contact">
-      <div class="contact__inner reveal-group">
-        <h2 class="section-heading contact__heading">You can reach me at</h2>
-        <a href="mailto:tyler.qbush@gmail.com" class="contact__row">
-          <span class="contact__icon" aria-hidden="true">&#9993;&#65038;</span>
-          <span>tyler.qbush@gmail.com</span>
+          <h3 class="work-card__title">Designing the Discovery Practice</h3>
+          <p class="work-card__category">UX Discovery Practice</p>
         </a>
-        <a href="tel:+16784514471" class="contact__row">
-          <span class="contact__icon" aria-hidden="true">&#9742;&#65038;</span>
-          <span>(678) 451-4471</span>
+        <a href="work/novant-health.html" class="work-card">
+          <div class="work-card__media">
+            <img src="assets/images/novant-mockup.jpg" alt="Novant Health maternity care services page, desktop view" />
+          </div>
+          <h3 class="work-card__title">System-Wide Website Redesign</h3>
+          <p class="work-card__category">Website Redesign</p>
+        </a>
+        <a href="work/acct-international.html" class="work-card">
+          <div class="work-card__media">
+            <img src="assets/images/acct-placeholder.svg" alt="ACCT International brand redesign mockup" />
+          </div>
+          <h3 class="work-card__title">Brand Redesign</h3>
+          <p class="work-card__category">Brand Redesign</p>
         </a>
       </div>
     </section>
