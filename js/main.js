@@ -25,7 +25,7 @@ hamburger.addEventListener('click', () => {
 });
 
 // ---- Hero entrance animation ----
-if (window.gsap && !prefersReducedMotion) {
+if (window.gsap && !prefersReducedMotion && document.querySelector('.hero__name')) {
   gsap.set(['.hero__name-line', '.hero__label', '.hero__bio', '.hero__ctas .btn'], {
     opacity: 0,
     y: 24,
@@ -61,7 +61,7 @@ if (window.gsap && window.ScrollTrigger && !prefersReducedMotion) {
 // on .about__item), but if a hover/transform effect is ever added to these
 // cards, add clearProps: 'transform' to the gsap.to() call below to avoid
 // an inline style silently overriding that future CSS rule.
-if (window.gsap && window.ScrollTrigger && !prefersReducedMotion) {
+if (window.gsap && window.ScrollTrigger && !prefersReducedMotion && document.querySelector('.about__card')) {
   const aboutItems = document.querySelectorAll('.about__card .about__item');
   const tilts = [
     { rotate: -3, x: -6, y: 8 },
