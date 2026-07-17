@@ -1,23 +1,9 @@
 // ---- Scroll & motion setup ----
-// Lenis (forced smooth-scroll) has been removed — this site now uses native
-// browser scroll. ScrollTrigger works fine off native scroll events on its own.
 if (window.gsap && window.ScrollTrigger) {
   gsap.registerPlugin(ScrollTrigger);
 }
 
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-// ---- Anchor links scroll natively ----
-document.querySelectorAll('.topnav__link[href^="#"], .topnav__mark[href^="#"]').forEach((link) => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
-    const target = document.querySelector(link.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth' });
-    }
-    closeMobileNav();
-  });
-});
 
 // ---- Mobile hamburger menu ----
 const hamburger = document.getElementById('hamburger');
@@ -37,50 +23,6 @@ hamburger.addEventListener('click', () => {
   const isOpen = topnavList.classList.contains('is-open');
   isOpen ? closeMobileNav() : openMobileNav();
 });
-
-// ---- Scroll-spy: highlight active nav link ----
-const sections = document.querySelectorAll('main section[id]');
-const navLinks = document.querySelectorAll('.topnav__link[data-section]');
-
-function setActiveLink(sectionId) {
-  navLinks.forEach((link) => {
-    link.classList.toggle('active', link.dataset.section === sectionId);
-  });
-}
-
-// Short final sections (e.g. Contact) can be too small to ever enter the
-// IntersectionObserver's center band once the page hits max scroll, so they'd
-// never get highlighted by the observer alone. Treat "scrolled to the bottom"
-// as an override that always wins, regardless of what the observer reports.
-const lastSectionId = sections.length ? sections[sections.length - 1].id : null;
-
-function checkBottomOfPage() {
-  if (!lastSectionId) return false;
-  const atBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
-  if (atBottom) setActiveLink(lastSectionId);
-  return atBottom;
-}
-
-// Note: the equivalent "section too short for the rootMargin band" bug on the
-// leading edge (Home) is currently prevented only because .hero has
-// min-height: 100vh in css/styles.css — if that changes, this same class of
-// bug could resurface on the first section with no override to catch it.
-const spyObserver = new IntersectionObserver(
-  (entries) => {
-    if (checkBottomOfPage()) return;
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        setActiveLink(entry.target.id);
-      }
-    });
-  },
-  { rootMargin: '-45% 0px -45% 0px', threshold: 0 }
-);
-
-sections.forEach((section) => spyObserver.observe(section));
-
-window.addEventListener('scroll', checkBottomOfPage, { passive: true });
-checkBottomOfPage();
 
 // ---- Hero entrance animation ----
 if (window.gsap && !prefersReducedMotion) {

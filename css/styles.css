@@ -62,10 +62,6 @@ main {
   padding-top: var(--nav-height);
 }
 
-main section[id] {
-  scroll-margin-top: var(--nav-height);
-}
-
 h1, h2, h3, h4 {
   font-family: var(--font-heading);
   font-weight: 500;
