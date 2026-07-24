@@ -454,3 +454,13 @@ button {
     transform: rotate(90deg);
   }
 }
+
+/* ---- Work index page (standalone page, not homepage teaser) ---- */
+.work-list--page {
+  padding-top: var(--section-padding-y);
+}
+
+.work-list__page-title {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  margin-bottom: 8px;
+}
