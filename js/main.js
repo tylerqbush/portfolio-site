@@ -1,17 +1,28 @@
 // ---- Mobile hamburger menu ----
 const hamburger = document.getElementById('hamburger');
 const navList = document.getElementById('site-nav-list');
+const mobileNavQuery = window.matchMedia('(max-width: 780px)');
+
+function syncNavInert() {
+  if (!navList) return;
+  const shouldBeInert = mobileNavQuery.matches && !navList.classList.contains('is-open');
+  if (shouldBeInert) {
+    navList.setAttribute('inert', '');
+  } else {
+    navList.removeAttribute('inert');
+  }
+}
 
 function openMobileNav() {
   navList.classList.add('is-open');
   hamburger.setAttribute('aria-expanded', 'true');
-  navList.removeAttribute('inert');
+  syncNavInert();
 }
 
 function closeMobileNav() {
   navList.classList.remove('is-open');
   hamburger.setAttribute('aria-expanded', 'false');
-  navList.setAttribute('inert', '');
+  syncNavInert();
 }
 
 if (hamburger && navList) {
@@ -19,6 +30,8 @@ if (hamburger && navList) {
     const isOpen = navList.classList.contains('is-open');
     isOpen ? closeMobileNav() : openMobileNav();
   });
+  mobileNavQuery.addEventListener('change', syncNavInert);
+  syncNavInert();
 }
 
 // ---- Stat counter (elements with data-count-to; suffix via data-count-suffix) ----
