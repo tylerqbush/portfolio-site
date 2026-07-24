@@ -135,6 +135,10 @@ Standard Super Pages sections, generated from the real production CSS once it ex
 
 Given the target roles explicitly value 508/WCAG compliance, treat AA as a hard floor: contrast-check every color pairing before ship (amber-on-white in particular), full keyboard navigation, meaningful alt text on the headshot (the only photo on the site), semantic heading order (one h1 per page, already a stated convention from the prior redesign's commit history), visible focus states.
 
+## Deployment
+
+Cloudflare Pages, connected to this repo's GitHub remote (matches the pattern used for other sites) — push to `main` auto-deploys. Static site, no build step: build command empty, output directory the repo root. This repo has no GitHub remote yet; connecting one is part of implementation, and any push to GitHub needs explicit sign-off before it happens. The domain itself is being purchased separately through Cloudflare and isn't part of this build.
+
 ## Resolved decisions
 
 1. **Text-only, everywhere, no exceptions.** Case study detail pages carry no supporting screenshots or exhibit images — same treatment as the homepage/index list, matching gabbyhon.com's case-study pages exactly. The existing Novant Health gallery images and ACCT exhibit SVGs are not used in the rebuild.
