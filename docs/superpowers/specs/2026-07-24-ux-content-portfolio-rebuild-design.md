@@ -5,7 +5,7 @@
 
 ## Goal
 
-Rebuild tylerquackenbush.com (working title) from scratch as a portfolio for UX Content Designer / Senior Content Writer roles — driven immediately by an application to AT&T's Senior Content Writer, B2B role, and durable for the broader job search. Full rebuild: new visual system, new brand identity, new copy, reconsidered case study lineup. Nothing from the current site's visual design carries forward, though some existing case-study prose and supporting images may be reused where noted below.
+Rebuild tylerquackenbush.com (working title) from scratch as a portfolio for UX Content Designer / Senior Content Writer roles — driven immediately by an application to AT&T's Senior Content Writer, B2B role, and durable for the broader job search. Full rebuild: new visual system, new brand identity, new copy, reconsidered case study lineup. Nothing from the current site's visual design or images carries forward. The whole site, including every case study, is text-forward — no photography, screenshots, or exhibit images anywhere, following the gabbyhon.com case-study format exactly. Existing case-study prose is reused only as source material for rewriting into that format, not as final copy.
 
 ## Brand concept: The Plain-Language Translator
 
@@ -60,8 +60,8 @@ Nav (5 items): **Work · About · Brand Identity · Contact**, plus the logo/hom
 | Novant Health case study | `work/novant-health.html` | Rewritten through a content lens |
 | UNG case study | `work/ung.html` | New page |
 | Microcopy & Error Messages | `work/microcopy.html` | New. Short before/after specimens: error states, button labels, empty states, status messages — answers the AT&T ask directly |
-| ACCT International | `work/acct-international.html` | Kept, demoted, copy untouched or lightly retouched for voice consistency |
-| Adventure Careers | `work/adventure-careers.html` | Kept, demoted, copy untouched or lightly retouched for voice consistency |
+| ACCT International | `work/acct-international.html` | Kept, demoted, rebuilt into the same text-only case study template (images removed) |
+| Adventure Careers | `work/adventure-careers.html` | Kept, demoted, rebuilt into the same text-only case study template (images removed) |
 | About | `about.html` | Bio, skills, tools, AI-assisted workflow (absorbed from old `ai.html`/`tools.html`), resume download |
 | Brand Identity | `brand-identity.html` | The repurposed "world-class brand identity designer" brief, applied to Tyler's own mark — idea, mark, wordmark, lockups, clear space, color, type, "in the world" mockups, rationale. Modeled on gabbyhon.com/brand-identity/ |
 | Design System | `design-system/index.html` | Super Pages–style living reference rendered from the real production CSS: tokens, type scale, spacing, buttons, cards, forms, nav, states, future components. Follows `docs/superpowers/SUPER_PAGES.md` if present, otherwise the standard pattern (color → typography → spacing → buttons → cards → forms → navigation → layout → states → future components) |
@@ -82,6 +82,23 @@ Each primary case study maps to specific resume bullets rather than being invent
 **Microcopy & Error Messages** page: a scannable gallery of short specimens (error messages, button labels, empty states, status messages), each with a one-line "why" — pulled from the AT&T posting's explicit requirement and not otherwise covered by the three narrative case studies.
 
 **Demoted work** (ACCT International, Adventure Careers): visual/brand-identity projects. Kept for range under an "Also along the way" heading on the work index, not in primary nav rotation, not featured on the homepage.
+
+## Case study template (applies to all 5 case study pages)
+
+Structure follows gabbyhon.com's individual case-study pages exactly, adapted to the locked type system (sans-serif throughout — Space Grotesk for the headline, not Gabby's serif):
+
+1. **Back link** — "← All case studies," top of page, links to `work.html`
+2. **Eyebrow** — numbered + category, mono, e.g. "01 · FEDERAL"
+3. **Headline** — sentence-case, can wrap 2–3 lines, states the reframe rather than just naming the project (Gabby's pattern: "Reshaping the operating model: turning a reactive service into a roadmapped, product-led design system," not just "Design System Project")
+4. **Metadata line** — org · role · years, mono, muted color
+5. **Stat grid** — 3–4 cards in a row, each a big number (navy, Space Grotesk) over a mono label; every number must be a real figure from the resume, never invented
+6. **Situation** — mono eyebrow label, sentence-case body paragraph(s), no images
+7. **Approach** — same pattern; this is where the actual content decisions go (what was audited, what the voice/tone guide said, what got cut and why)
+8. **Outcome** — body paragraph plus a restated bullet list of the same metrics from the stat grid, in sentence form
+9. **Next case study →** — links to the next entry in the fixed order (Agile Defense → Novant Health → UNG → back to Agile Defense; the two demoted studies link into and out of this same chain at the end)
+10. **Closing CTA** — "Want to talk about a role like this?" or similar, linking to Contact, plus a link back to All case studies
+
+No photography, screenshots, or exhibit graphics on any case study page — proof lives in the specificity of the writing and the stat grid, not in visuals. This applies uniformly, including ACCT International and Adventure Careers.
 
 ## Homepage (validated in brainstorming)
 
@@ -116,10 +133,10 @@ Standard Super Pages sections, generated from the real production CSS once it ex
 
 ## Accessibility
 
-Given the target roles explicitly value 508/WCAG compliance, treat AA as a hard floor: contrast-check every color pairing before ship (amber-on-white in particular), full keyboard navigation, meaningful alt text on the headshot and any case-study images, semantic heading order (one h1 per page, already a stated convention from the prior redesign's commit history), visible focus states.
+Given the target roles explicitly value 508/WCAG compliance, treat AA as a hard floor: contrast-check every color pairing before ship (amber-on-white in particular), full keyboard navigation, meaningful alt text on the headshot (the only photo on the site), semantic heading order (one h1 per page, already a stated convention from the prior redesign's commit history), visible focus states.
 
-## Open assumptions to confirm at spec review
+## Resolved decisions
 
-1. Case study **detail** pages (not the index/homepage list) may still use supporting screenshots/exhibits where they add real evidence (e.g., the Novant Health gallery images already tracked in git, ACCT's exhibit SVGs) — only the list/index views go fully text-forward. Flag if this should instead be text-only everywhere.
-2. ACCT International and Adventure Careers copy is kept largely as-is (already well-written, off-thesis rather than off-voice) rather than rewritten — only light voice-guide pass if needed.
+1. **Text-only, everywhere, no exceptions.** Case study detail pages carry no supporting screenshots or exhibit images — same treatment as the homepage/index list, matching gabbyhon.com's case-study pages exactly. The existing Novant Health gallery images and ACCT exhibit SVGs are not used in the rebuild.
+2. **ACCT International and Adventure Careers get rebuilt into the new case study template** (eyebrow, headline, metadata, stat grid, Situation/Approach/Outcome, Next/CTA) rather than kept as standalone pages in the old format. Existing prose is source material for that rebuild, not final copy, since the template itself is new.
 3. Resume file at `assets/resume.pdf` will be replaced with the version tailored to "Senior UX Content Writer / Content Strategist" (the one supplied during brainstorming).
