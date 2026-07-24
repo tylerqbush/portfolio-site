@@ -3,94 +3,117 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tyler Quackenbush | UX/UI Designer</title>
-  <meta name="description" content="Tyler Quackenbush — UX/UI Designer portfolio. Product design, content design, and design systems work." />
+  <title>Tyler Quackenbush | UX Content Designer</title>
+  <meta name="description" content="Tyler Quackenbush — UX content designer and UX writer. Content design, content strategy, and design systems work across healthcare, federal, and B2B products." />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <meta property="og:title" content="Tyler Quackenbush | UX/UI Designer" />
-  <meta property="og:description" content="Product design, content design, and design systems work." />
+  <meta property="og:title" content="Tyler Quackenbush | UX Content Designer" />
+  <meta property="og:description" content="Content design, content strategy, and design systems work across healthcare, federal, and B2B products." />
   <meta property="og:type" content="website" />
   <!-- og:image/twitter:image should be absolute URLs once this site has a production domain -->
   <meta property="og:image" content="assets/images/og-image.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Tyler Quackenbush | UX/UI Designer" />
-  <meta name="twitter:description" content="Product design, content design, and design systems work." />
+  <meta name="twitter:title" content="Tyler Quackenbush | UX Content Designer" />
+  <meta name="twitter:description" content="Content design, content strategy, and design systems work across healthcare, federal, and B2B products." />
   <meta name="twitter:image" content="assets/images/og-image.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <main id="main-content">
-    <nav class="topnav" id="topnav">
-      <a href="index.html" class="topnav__mark">TQ</a>
-      <ul class="topnav__list" id="topnav-list">
-        <li><a href="index.html" class="topnav__link active">Home</a></li>
-        <li><a href="about.html" class="topnav__link">About</a></li>
-        <li><a href="ai.html" class="topnav__link">How I Use AI</a></li>
-        <li><a href="tools.html" class="topnav__link">Tools</a></li>
-        <li><a href="work.html" class="topnav__link">Work</a></li>
-        <li><a href="contact.html" class="topnav__link">Contact</a></li>
-        <li><a href="assets/resume.pdf" target="_blank" rel="noopener" class="topnav__link" id="resume-link">Resume</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="topnav-list">
-        <span></span><span></span><span></span>
-      </button>
-    </nav>
+  <a href="#main-content" class="skip-link">Skip to content</a>
 
+  <nav class="site-nav">
+    <a href="index.html" class="site-nav__brand">
+      <svg class="site-nav__mark" width="34" height="34" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect width="40" height="40" rx="9" fill="#16324A"/>
+        <line x1="13" y1="10" x2="13" y2="30" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round"/>
+        <line x1="13" y1="20" x2="29" y2="20" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round"/>
+      </svg>
+      <span class="site-nav__name">Tyler Quackenbush</span>
+    </a>
+    <ul class="site-nav__list" id="site-nav-list">
+      <li><a href="work.html" class="site-nav__link">Work</a></li>
+      <li><a href="assets/resume.pdf" target="_blank" rel="noopener" class="site-nav__link">Resume</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav-list">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main id="main-content">
     <section class="hero">
-      <div class="hero__content">
-        <h1 class="hero__name">
-          <span class="hero__name-line"><span class="hero__name-accent">T</span>YLER</span>
-          <span class="hero__name-line"><span class="hero__name-accent">QUACK</span>ENBUSH</span>
-        </h1>
-        <p class="hero__label">UX / UI Designer</p>
-        <p class="hero__bio">
-          I can walk into a mess (a spreadsheet with fourteen tabs, a stakeholder meeting that raised more
-          questions than it answered) and find the one decision that makes everything else fall into place.
-          Eight years of dashboards and decision tools, for a hospital system, federal defense and law
-          enforcement agencies, and a couple of teams who just needed someone to stop the redesign meetings
-          from restarting every sprint. Give me the mess. I'll hand you back something that makes sense.
-        </p>
-        <div class="hero__ctas">
-          <a href="work.html" class="btn btn--primary">My Work</a>
-          <a href="assets/resume.pdf" target="_blank" rel="noopener" class="btn btn--link">Download Resume</a>
+      <p class="label-mono hero__eyebrow">UX Content Designer &middot; 8 Years</p>
+      <h1 class="hero__title">Jargon in.<br />Clarity out.</h1>
+      <p class="hero__lede">I'm Tyler. I take dense legal, clinical, and technical language and turn it into something a person can act on in five seconds instead of re-reading three times.</p>
+      <p class="hero__lede">Eight years doing this for hospitals, a federal contractor, and a public university. Most recently: rewriting error messages and account flows so people stop calling support to ask what a sentence meant.</p>
+      <div class="hero__ctas">
+        <a href="work.html" class="btn btn--primary">View case studies</a>
+        <a href="assets/resume.pdf" target="_blank" rel="noopener" class="btn btn--outline">Download resume</a>
+      </div>
+    </section>
+
+    <section class="proof">
+      <div class="proof__pair">
+        <div class="proof__col">
+          <p class="label-mono proof__label proof__label--before">Before &mdash; Legal Draft</p>
+          <p class="proof__text proof__text--before">"Failure to submit required documentation within the specified timeframe may result in delay or denial of the requested action."</p>
+        </div>
+        <span class="proof__arrow" aria-hidden="true">&rarr;</span>
+        <div class="proof__col">
+          <p class="label-mono proof__label">After &mdash; What Shipped</p>
+          <p class="proof__text proof__text--after">"Submit your documents by March 3, or we can't process your request."</p>
         </div>
       </div>
     </section>
 
-    <section class="work-teaser">
-      <p class="label-mono work-teaser__label">Some of My Latest Work</p>
-      <div class="work-grid">
-        <a href="work/discovery-practice.html" class="work-card">
-          <div class="work-card__media">
-            <img src="assets/images/exhibit-threat-readiness.svg" alt="Concept dashboard exhibit from the UX Discovery practice" />
-          </div>
-          <h3 class="work-card__title">Designing the Discovery Practice</h3>
-          <p class="work-card__category">UX Discovery Practice</p>
-        </a>
-        <a href="work/novant-health.html" class="work-card">
-          <div class="work-card__media">
-            <img src="assets/images/novant-mockup.jpg" alt="Novant Health maternity care services page, desktop view" />
-          </div>
-          <h3 class="work-card__title">System-Wide Website Redesign</h3>
-          <p class="work-card__category">Website Redesign</p>
-        </a>
-        <a href="work/acct-international.html" class="work-card">
-          <div class="work-card__media">
-            <img src="assets/images/acct-placeholder.svg" alt="ACCT International brand redesign mockup" />
-          </div>
-          <h3 class="work-card__title">Brand Redesign</h3>
-          <p class="work-card__category">Brand Redesign</p>
-        </a>
+    <section class="work-list">
+      <p class="label-mono">Selected Work</p>
+      <p class="work-list__intro">Three engagements, and the plain-language problem each one actually was.</p>
+
+      <article class="work-list__item">
+        <p class="label-mono work-list__eyebrow">01 &middot; Federal</p>
+        <h2 class="work-list__title">Agile Defense</h2>
+        <p class="work-list__meta">Senior Content Designer &middot; 2021&ndash;Present</p>
+        <p class="work-list__desc">Federal content has to satisfy accessibility law, legal review, and an actual human reading it, usually in that order of who complains loudest. I built the content audits, voice and tone standards, and style guide that got all three to agree.</p>
+        <p class="work-list__result"><strong>Result:</strong> 40+ initiatives delivered on time, 90% stakeholder satisfaction.</p>
+        <a href="work/agile-defense.html" class="label-mono work-list__link">Read the case study &rarr;</a>
+      </article>
+
+      <article class="work-list__item">
+        <p class="label-mono work-list__eyebrow">02 &middot; Healthcare</p>
+        <h2 class="work-list__title">Novant Health</h2>
+        <p class="work-list__meta">UX Content Designer &middot; Accrue Partners &middot; 2021</p>
+        <p class="work-list__desc">Patients hit a scheduling flow that technically worked, the way a filing cabinet works if you already know which drawer. I rewrote the patient-facing content into new templates and design-system components across the system-wide redesign.</p>
+        <p class="work-list__result"><strong>Result:</strong> 50+ content pages shipped weekly, revision cycles cut to under 10 minutes a page.</p>
+        <a href="work/novant-health.html" class="label-mono work-list__link">Read the case study &rarr;</a>
+      </article>
+
+      <article class="work-list__item work-list__item--last">
+        <p class="label-mono work-list__eyebrow">03 &middot; Higher Ed</p>
+        <h2 class="work-list__title">University of North Georgia</h2>
+        <p class="work-list__meta">Web Designer &middot; 2016&ndash;2021</p>
+        <p class="work-list__desc">A public university site grows one department at a time, for twenty years, with nobody in charge of the whole thing. Mine had 20-plus navigation menus. I decided what stayed, what merged, and what finally got cut.</p>
+        <p class="work-list__result"><strong>Result:</strong> 35% increase in engagement across a 5,000+ page site.</p>
+        <a href="work/ung.html" class="label-mono work-list__link">Read the case study &rarr;</a>
+      </article>
+    </section>
+
+    <section class="about-teaser">
+      <img src="assets/images/Headshot.jpeg" alt="Tyler Quackenbush" class="about-teaser__photo" width="88" height="88" />
+      <div class="about-teaser__body">
+        <p>Eight years in content design and UX writing &mdash; federal compliance, healthcare, now e-commerce and B2B. I use Claude for research synthesis and first-pass drafts. I still edit every line myself.</p>
       </div>
     </section>
   </main>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <footer class="site-footer">
+    <span class="site-footer__name">Tyler Quackenbush</span>
+    <a href="mailto:tyler.qbush@gmail.com" class="site-footer__email">tyler.qbush@gmail.com</a>
+  </footer>
+
   <script src="js/main.js"></script>
 </body>
 </html>
