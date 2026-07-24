@@ -5,11 +5,13 @@ const navList = document.getElementById('site-nav-list');
 function openMobileNav() {
   navList.classList.add('is-open');
   hamburger.setAttribute('aria-expanded', 'true');
+  navList.removeAttribute('inert');
 }
 
 function closeMobileNav() {
   navList.classList.remove('is-open');
   hamburger.setAttribute('aria-expanded', 'false');
+  navList.setAttribute('inert', '');
 }
 
 if (hamburger && navList) {
