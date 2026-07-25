@@ -336,7 +336,7 @@ button {
   padding: 0 var(--section-padding-x) 56px;
 }
 
-.work-intro .label-mono {
+.work-intro > .label-mono {
   margin-bottom: 14px;
 }
 
@@ -455,7 +455,7 @@ button {
   padding: 48px var(--section-padding-x) 8px;
 }
 
-.approach .label-mono {
+.approach > .label-mono {
   margin-bottom: 24px;
 }
 
@@ -517,7 +517,6 @@ button {
 .cta-band__link:focus-visible {
   color: var(--color-accent);
 }
-
 
 @media (max-width: 780px) {
   .proof__pair {
