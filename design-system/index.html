@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Design System | Tyler Quackenbush</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css?v=20260725" />
+  <style>
+    .ds-nav { position: sticky; top: var(--nav-height); background: var(--color-bg); border-bottom: 1px solid var(--color-border); padding: 12px var(--section-padding-x); display: flex; gap: 20px; overflow-x: auto; z-index: 40; }
+    .ds-nav a { font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-muted); white-space: nowrap; }
+    .ds-nav a:hover { color: var(--color-ink); }
+    .ds-row { display: flex; flex-wrap: wrap; gap: 16px; margin: 16px 0; }
+    .ds-token { background: var(--color-surface); border-radius: var(--radius-md); padding: 14px 16px; min-width: 160px; }
+    .ds-token code { font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-ink); display: block; margin-bottom: 6px; }
+    .ds-swatch { width: 100%; height: 48px; border-radius: var(--radius-sm); margin-bottom: 8px; }
+    .ds-code { background: var(--color-ink); color: #E8EEF2; font-family: var(--font-mono); font-size: 0.8rem; padding: 14px 16px; border-radius: var(--radius-md); overflow-x: auto; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <nav class="site-nav">
+    <div class="site-nav__wrap">
+      <a href="../index.html" class="site-nav__brand">
+        <svg class="site-nav__mark" width="34" height="34" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="40" height="40" rx="9" fill="#16324A"/>
+          <line x1="13" y1="10" x2="13" y2="30" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round"/>
+          <line x1="13" y1="20" x2="29" y2="20" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round"/>
+        </svg>
+        <span class="site-nav__name">Tyler Quackenbush</span>
+      </a>
+      <ul class="site-nav__list" id="site-nav-list">
+        <li><a href="../work.html" class="site-nav__link">Work</a></li>
+        <li><a href="../about.html" class="site-nav__link">About</a></li>
+        <li><a href="../brand-identity.html" class="site-nav__link">Brand Identity</a></li>
+        <li><a href="../contact.html" class="site-nav__link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav-list">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="ds-nav">
+    <a href="#color">Color</a>
+    <a href="#type">Typography</a>
+    <a href="#spacing">Spacing</a>
+    <a href="#buttons">Buttons</a>
+    <a href="#cards">Cards</a>
+    <a href="#nav">Navigation</a>
+    <a href="#states">States</a>
+    <a href="#future">Future</a>
+  </div>
+
+  <main id="main-content">
+    <section class="about-header">
+      <p class="label-mono">Design System</p>
+      <h1 class="about-header__title">The tokens and components behind this site, rendered from the real stylesheet.</h1>
+      <p class="about-header__intro">This page uses <code>css/styles.css</code> directly &mdash; nothing here is a screenshot or a separate design file. If it looks wrong here, it looks wrong in production. See the <a href="../brand-identity.html">Brand Identity</a> page for the thinking behind these choices.</p>
+    </section>
+
+    <section class="about-block" id="color">
+      <h2 class="label-mono">Color</h2>
+      <div class="ds-row">
+        <div class="ds-token"><div class="ds-swatch" style="background:#16324A;"></div><code>--color-ink</code>#16324A &middot; 13.2:1</div>
+        <div class="ds-token"><div class="ds-swatch" style="background:#4A5568;"></div><code>--color-ink-dim</code>#4A5568 &middot; 7.5:1</div>
+        <div class="ds-token"><div class="ds-swatch" style="background:#6B7680;"></div><code>--color-muted</code>#6B7680 &middot; 4.6:1</div>
+        <div class="ds-token"><div class="ds-swatch" style="background:#FFFFFF;border:1px solid var(--color-border);"></div><code>--color-bg</code>#FFFFFF</div>
+        <div class="ds-token"><div class="ds-swatch" style="background:#F7F8F9;"></div><code>--color-surface</code>#F7F8F9</div>
+        <div class="ds-token"><div class="ds-swatch" style="background:#8C5A1E;"></div><code>--color-accent</code>#8C5A1E &middot; 5.8:1</div>
+        <div class="ds-token"><div class="ds-swatch" style="background:#B5762A;"></div><code>--color-accent-strong</code>#B5762A &middot; 3.8:1, large-text only</div>
+        <div class="ds-token"><div class="ds-swatch" style="background:#EAEAEA;"></div><code>--color-border</code>#EAEAEA</div>
+      </div>
+    </section>
+
+    <section class="about-block" id="type">
+      <h2 class="label-mono">Typography</h2>
+      <div class="ds-row">
+        <div class="ds-token" style="min-width:280px;">
+          <p style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:2rem;color:var(--color-ink);">Space Grotesk</p>
+          <code>--font-heading</code>Headings, 500/600/700
+        </div>
+        <div class="ds-token" style="min-width:280px;">
+          <p style="font-family:'Public Sans',sans-serif;font-size:2rem;color:var(--color-ink);">Public Sans</p>
+          <code>--font-body</code>Body copy, 400/500/600
+        </div>
+        <div class="ds-token" style="min-width:280px;">
+          <p style="font-family:'JetBrains Mono',monospace;font-size:2rem;color:var(--color-ink);">JetBrains Mono</p>
+          <code>--font-mono</code>Eyebrows, labels
+        </div>
+      </div>
+      <div class="ds-code">.label-mono { font-family: var(--font-mono); font-size: var(--label-size); text-transform: uppercase; letter-spacing: var(--label-tracking); color: var(--color-accent); }</div>
+    </section>
+
+    <section class="about-block" id="spacing">
+      <h2 class="label-mono">Spacing &amp; Radius</h2>
+      <div class="ds-row">
+        <div class="ds-token"><code>--radius-sm</code>4px</div>
+        <div class="ds-token"><code>--radius-md</code>8px</div>
+        <div class="ds-token"><code>--radius-lg</code>12px</div>
+        <div class="ds-token"><code>--radius-xl</code>16px</div>
+        <div class="ds-token"><code>--radius-pill</code>999px</div>
+        <div class="ds-token"><code>--section-padding-x</code>clamp(24px, 6vw, 96px)</div>
+        <div class="ds-token"><code>--section-padding-y</code>clamp(56px, 9vh, 100px)</div>
+        <div class="ds-token"><code>--content-max-width</code>1120px</div>
+      </div>
+    </section>
+
+    <section class="about-block" id="buttons">
+      <h2 class="label-mono">Buttons</h2>
+      <div class="ds-row" style="align-items:center;">
+        <a href="#" class="btn btn--primary" onclick="return false;">Primary button</a>
+        <a href="#" class="btn btn--outline" onclick="return false;">Outline button</a>
+      </div>
+      <details>
+        <summary class="label-mono" style="cursor:pointer;">View markup</summary>
+        <div class="ds-code">&lt;a href="#" class="btn btn--primary"&gt;Primary button&lt;/a&gt;
+&lt;a href="#" class="btn btn--outline"&gt;Outline button&lt;/a&gt;</div>
+      </details>
+    </section>
+
+    <section class="about-block" id="cards">
+      <h2 class="label-mono">Cards</h2>
+      <div class="cs-stats" style="max-width:600px;">
+        <div class="cs-stat">
+          <span class="cs-stat__value">40+</span>
+          <p class="label-mono cs-stat__label">Stat card</p>
+        </div>
+        <div class="cs-stat">
+          <span class="cs-stat__value">90%</span>
+          <p class="label-mono cs-stat__label">Stat card</p>
+        </div>
+      </div>
+      <p class="tools-grid__value" style="margin-top:8px;">Used across case studies (<code>.cs-stat</code>) and the About/Brand Identity pages (<code>.tools-grid__col</code>).</p>
+    </section>
+
+    <section class="about-block" id="nav">
+      <h2 class="label-mono">Navigation</h2>
+      <p class="lede">Full-width bar, centered 1120px inner wrap (<code>.site-nav</code> / <code>.site-nav__wrap</code>). Mobile collapses to a hamburger-triggered dropdown below 780px, using <code>inert</code> to remove the closed menu from the tab order and accessibility tree.</p>
+    </section>
+
+    <section class="about-block" id="states">
+      <h2 class="label-mono">States &amp; Feedback</h2>
+      <p class="lede">Every interactive element (<code>.btn</code>, <code>.site-nav__link</code>, <code>.work-list__link</code>, <code>.cs-next__link</code>, <code>.cta-band__link</code>) pairs <code>:hover</code> with <code>:focus-visible</code> so keyboard users get the same feedback as mouse users. The stat counter (<code>[data-count-to]</code>) respects <code>prefers-reduced-motion</code> and jumps straight to the final value rather than animating for users who've opted out.</p>
+    </section>
+
+    <section class="about-block" id="future">
+      <h2 class="label-mono">Future Components</h2>
+      <p class="lede">Not yet built, but the visual language already implies these if they're ever needed: a form/input pattern (this site has no forms yet &mdash; contact is mailto-only, deliberately, to avoid collecting data this site has no server to handle securely), a loading/skeleton state for the stat counter's pre-animation moment, and a toast/inline-confirmation pattern for a future "copy to clipboard" affordance on the microcopy specimens.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__wrap">
+      <span class="site-footer__name">Tyler Quackenbush</span>
+      <a href="mailto:tyler.qbush@gmail.com" class="site-footer__email">tyler.qbush@gmail.com</a>
+    </div>
+  </footer>
+
+  <script src="../js/main.js?v=20260725"></script>
+</body>
+</html>
