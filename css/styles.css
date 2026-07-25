@@ -896,3 +896,58 @@ button {
   border-radius: var(--radius-md);
   padding: 18px 20px;
 }
+
+/* ---- Also along the way (work.html demoted case studies) ---- */
+.also-along {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 48px var(--section-padding-x) 64px;
+  border-top: 1px solid var(--color-border);
+}
+
+.also-along__intro {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  margin: 6px 0 24px;
+  max-width: 520px;
+}
+
+.also-along__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.also-along__item {
+  display: block;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 22px 24px;
+  transition: transform var(--transition-fast);
+}
+
+.also-along__item:hover,
+.also-along__item:focus-visible {
+  transform: translateY(-2px);
+}
+
+.also-along__eyebrow {
+  margin-bottom: 8px;
+}
+
+.also-along__title {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.also-along__desc {
+  font-size: 0.85rem;
+  color: var(--color-ink-dim);
+  line-height: 1.55;
+}
+
+@media (max-width: 700px) {
+  .also-along__grid {
+    grid-template-columns: 1fr;
+  }
+}
