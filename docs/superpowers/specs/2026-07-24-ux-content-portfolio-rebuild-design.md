@@ -161,6 +161,16 @@ Given the target roles explicitly value 508/WCAG compliance, treat AA as a hard 
 
 Cloudflare Pages, connected to this repo's GitHub remote (matches the pattern used for other sites) — push to `main` auto-deploys. Static site, no build step: build command empty, output directory the repo root. This repo has no GitHub remote yet; connecting one is part of implementation, and any push to GitHub needs explicit sign-off before it happens. The domain itself is being purchased separately through Cloudflare and isn't part of this build.
 
+## Phase 2 additions (2026-07-25)
+
+Nav correction: Phase 1 shipped `Work · About · Resume` (Resume as a direct link) because Brand Identity and Contact didn't exist yet. Now that they do, nav becomes the originally-specified **Work · About · Brand Identity · Contact** (4 links + logo/home). The standalone "Resume" nav link is dropped — resume access remains available via the hero's "Download resume" button, the About page, and the Contact page.
+
+Demoted case studies (ACCT International, Adventure Careers) don't have resume-sourced numeric bullets the way the primary three do — they're older freelance/portfolio projects, not employer resume lines. Their stat grids use only real, defensible counts pulled from the existing case-study content (e.g., "6 · Brand system phases," "3 · Stakeholder groups aligned," the pre-existing "40% · Bounce rate reduction" for Adventure Careers) rather than forcing 3-4 cards — 2 honest stats beats 4 padded ones. Their eyebrows carry no number (unlike the primary three's "01 · Federal" etc.) since they aren't part of the "three engagements" narrative the homepage tells — a number would misleadingly imply they're "case study 4 and 5" in that same sequence.
+
+The case-study "Next" chain extends to include them at the end: Agile Defense → Novant Health → UNG → ACCT International → Adventure Careers → back to Agile Defense (UNG's next-link changes from Agile Defense to ACCT International).
+
+Microcopy & Error Messages (`work/microcopy.html`) is linked from the work index (`work.html`), not from primary site nav — consistent with it being a supplementary proof-of-skill page, not a fourth "engagement." Design System (`design-system/index.html`) is linked contextually from the Brand Identity page (mirroring gabbyhon.com's own cross-link from her Brand Identity page to her Design System) plus is directly reachable by URL — it's marked `noindex, nofollow` and isn't meant to be a primary nav destination.
+
 ## Resolved decisions
 
 1. **Text-only, everywhere, no exceptions.** Case study detail pages carry no supporting screenshots or exhibit images — same treatment as the homepage/index list, matching gabbyhon.com's case-study pages exactly. The existing Novant Health gallery images and ACCT exhibit SVGs are not used in the rebuild.
