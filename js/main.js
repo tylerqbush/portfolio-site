@@ -42,7 +42,7 @@ document.querySelectorAll('[data-count-to]').forEach((el) => {
   const suffix = el.dataset.countSuffix || '';
 
   if (prefersReducedMotion || !('IntersectionObserver' in window)) {
-    el.textContent = `${target}${suffix}`;
+    el.textContent = `${target.toLocaleString('en-US')}${suffix}`;
     return;
   }
 
@@ -59,7 +59,7 @@ document.querySelectorAll('[data-count-to]').forEach((el) => {
       function tick(now) {
         const progress = Math.min((now - start) / duration, 1);
         const eased = 1 - Math.pow(1 - progress, 3);
-        el.textContent = `${Math.round(target * eased)}${suffix}`;
+        el.textContent = `${Math.round(target * eased).toLocaleString('en-US')}${suffix}`;
         if (progress < 1) requestAnimationFrame(tick);
       }
 
