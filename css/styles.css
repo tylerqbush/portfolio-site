@@ -619,6 +619,6 @@ button {
 
 @media (max-width: 700px) {
   .cs-stats {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
