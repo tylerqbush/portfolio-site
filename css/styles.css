@@ -810,6 +810,12 @@ button {
 
 .tools-grid__label {
   margin-bottom: 8px;
+  margin-top: 10px;
+}
+
+.brand-mock__name {
+  font-family: var(--font-heading);
+  font-weight: 600;
 }
 
 .tools-grid__value {
