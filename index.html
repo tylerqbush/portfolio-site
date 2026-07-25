@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20260725" />
+  <link rel="stylesheet" href="css/styles.css?v=20260725b" />
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to content</a>
@@ -48,37 +48,79 @@
   </nav>
 
   <main id="main-content">
-    <section class="hero">
-      <p class="label-mono hero__eyebrow">UX Content Designer &middot; 8 Years</p>
-      <h1 class="hero__title">Jargon in.<br />Clarity out.</h1>
+    <section class="hero hero--identity">
+      <div class="hero__eyebrow-row">
+        <span class="hero__eyebrow-line" aria-hidden="true"></span>
+        <p class="label-mono">UX Content Designer &middot; 8 Years</p>
+        <span class="hero__eyebrow-line" aria-hidden="true"></span>
+      </div>
+      <div class="hero__mark" aria-hidden="true">
+        <svg width="56" height="56" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" rx="9" fill="#16324A"/>
+          <line x1="13" y1="10" x2="13" y2="30" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round"/>
+          <line x1="13" y1="20" x2="29" y2="20" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <h1 class="hero__name">Tyler Quackenbush</h1>
+      <p class="hero__tagline">Jargon in. Clarity out.</p>
       <div class="hero__ctas">
         <a href="work.html" class="btn btn--primary">View case studies</a>
         <a href="assets/resume.pdf" target="_blank" rel="noopener" class="btn btn--outline">Download resume</a>
       </div>
     </section>
 
-    <section class="work-intro">
+    <section class="work-intro work-intro--split">
       <h2 class="label-mono">01 &middot; The Work</h2>
-      <p class="lede">I'm Tyler. I take dense legal, clinical, and technical language and turn it into something a person can act on in five seconds instead of re-reading three times.</p>
-      <p class="lede">Eight years doing this for hospitals, a federal contractor, and a public university. Most recently: rewriting error messages and account flows so people stop calling support to ask what a sentence meant.</p>
+      <div class="work-intro__grid">
+        <p class="work-intro__lede">I take dense legal, clinical, and technical language and turn it into something a person can act on in five seconds instead of re-reading three times.</p>
+        <div class="work-intro__body">
+          <p class="lede">I'm Tyler. Eight years doing this for hospitals, a federal contractor, and a public university. Most recently: rewriting error messages and account flows so people stop calling support to ask what a sentence meant.</p>
 
-      <div class="proof">
-        <div class="proof__pair">
-          <div class="proof__col">
-            <p class="label-mono proof__label">Before: Legal Draft</p>
-            <p class="proof__text proof__text--before">"Failure to submit required documentation within the specified timeframe may result in delay or denial of the requested action."</p>
-          </div>
-          <span class="proof__arrow" aria-hidden="true">&rarr;</span>
-          <div class="proof__col">
-            <p class="label-mono proof__label">After: What Shipped</p>
-            <p class="proof__text proof__text--after">"Submit your documents by March 3, or we can't process your request."</p>
+          <div class="proof">
+            <div class="proof__pair">
+              <div class="proof__col">
+                <p class="label-mono proof__label">Before: Legal Draft</p>
+                <p class="proof__text proof__text--before">"Failure to submit required documentation within the specified timeframe may result in delay or denial of the requested action."</p>
+              </div>
+              <span class="proof__arrow" aria-hidden="true">&rarr;</span>
+              <div class="proof__col">
+                <p class="label-mono proof__label">After: What Shipped</p>
+                <p class="proof__text proof__text--after">"Submit your documents by March 3, or we can't process your request."</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <section class="results-band">
+      <div class="results-band__inner">
+        <h2 class="label-mono results-band__label">02 &middot; Selected Results</h2>
+        <p class="results-band__intro">Across three engagements, in federal, healthcare, and higher-ed products.</p>
+        <div class="results-band__grid">
+          <div class="results-band__stat">
+            <span class="results-band__value" data-count-to="40" data-count-suffix="+">0+</span>
+            <p class="label-mono results-band__stat-label">Initiatives delivered</p>
+          </div>
+          <div class="results-band__stat">
+            <span class="results-band__value" data-count-to="90" data-count-suffix="%">0%</span>
+            <p class="label-mono results-band__stat-label">Stakeholder satisfaction</p>
+          </div>
+          <div class="results-band__stat">
+            <span class="results-band__value" data-count-to="50" data-count-suffix="+">0+</span>
+            <p class="label-mono results-band__stat-label">Pages shipped weekly</p>
+          </div>
+          <div class="results-band__stat">
+            <span class="results-band__value" data-count-to="35" data-count-suffix="%">0%</span>
+            <p class="label-mono results-band__stat-label">Engagement increase</p>
+          </div>
+        </div>
+        <a href="work.html" class="btn btn--outline">Read the case studies &rarr;</a>
+      </div>
+    </section>
+
     <section class="work-list">
-      <h2 class="label-mono">02 &middot; Selected Work</h2>
+      <h2 class="label-mono">03 &middot; Selected Work</h2>
       <p class="work-list__intro">Three engagements, and the plain-language problem each one actually was.</p>
 
       <article class="work-list__item">
@@ -110,28 +152,33 @@
     </section>
 
     <section class="approach">
-      <h2 class="label-mono">03 &middot; The Approach</h2>
+      <h2 class="label-mono">04 &middot; The Approach</h2>
+      <p class="approach__intro">Three steps, repeated on every engagement regardless of industry.</p>
       <div class="approach__grid">
         <div class="approach__step">
+          <p class="label-mono approach__step-num">01</p>
           <h3 class="approach__step-title">Audit</h3>
           <p class="approach__step-desc">Read what's already live and flag what's unclear, redundant, or failing an accessibility check before writing anything new.</p>
         </div>
         <div class="approach__step">
+          <p class="label-mono approach__step-num">02</p>
           <h3 class="approach__step-title">Draft</h3>
           <p class="approach__step-desc">Write the plain-language version first. Then fold back in the legal, brand, or technical requirements without losing the clarity.</p>
         </div>
         <div class="approach__step">
+          <p class="label-mono approach__step-num">03</p>
           <h3 class="approach__step-title">Ship</h3>
           <p class="approach__step-desc">Test it with the people who'll actually push back (legal, dev, a real user) and hold the line through revisions.</p>
         </div>
       </div>
+      <a href="about.html#how-i-work" class="label-mono approach__cta">How I work &rarr;</a>
     </section>
 
     <section class="cta-band">
       <h2 class="cta-band__title">There's always a clearer way to say it. Let's find it.</h2>
       <div class="cta-band__links">
         <a href="mailto:tyler.qbush@gmail.com" class="btn btn--primary">Get in touch</a>
-        <a href="about.html" class="label-mono cta-band__link">More about me &rarr;</a>
+        <a href="about.html" class="btn btn--outline">More about me &rarr;</a>
       </div>
     </section>
   </main>
@@ -143,6 +190,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20260725"></script>
+  <script src="js/main.js?v=20260725b"></script>
 </body>
 </html>
