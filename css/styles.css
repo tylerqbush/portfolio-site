@@ -829,3 +829,35 @@ button {
     grid-template-columns: 1fr;
   }
 }
+
+/* ---- Microcopy specimens (work/microcopy.html) ---- */
+.micro-specimen {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  margin-bottom: 14px;
+}
+
+.micro-specimen__label--before {
+  color: var(--color-muted);
+  margin-bottom: 4px;
+}
+
+.micro-specimen__label--after {
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+
+.micro-specimen__text {
+  font-size: 0.95rem;
+}
+
+.micro-specimen__text--before {
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+.micro-specimen__text--after {
+  color: var(--color-ink);
+  font-weight: 500;
+}
