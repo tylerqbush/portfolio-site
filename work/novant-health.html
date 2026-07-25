@@ -3,108 +3,107 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Novant Health — System-Wide Website Redesign | Tyler Quackenbush</title>
-  <meta name="description" content="Redesigning Novant Health's appointment scheduling and provider search — a case study by Tyler Quackenbush." />
+  <title>Novant Health | Tyler Quackenbush</title>
+  <meta name="description" content="Rewriting patient-facing content into new templates and design-system components for a system-wide healthcare website redesign." />
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
-  <meta property="og:title" content="Novant Health — System-Wide Website Redesign | Tyler Quackenbush" />
-  <meta property="og:description" content="Redesigning Novant Health's appointment scheduling and provider search — a case study by Tyler Quackenbush." />
+  <meta property="og:title" content="Novant Health | Tyler Quackenbush" />
+  <meta property="og:description" content="Rewriting patient-facing content into new templates and design-system components for a system-wide healthcare website redesign." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="../assets/images/og-image.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Novant Health — System-Wide Website Redesign | Tyler Quackenbush" />
-  <meta name="twitter:description" content="Redesigning Novant Health's appointment scheduling and provider search — a case study by Tyler Quackenbush." />
+  <meta name="twitter:title" content="Novant Health | Tyler Quackenbush" />
+  <meta name="twitter:description" content="Rewriting patient-facing content into new templates and design-system components for a system-wide healthcare website redesign." />
   <meta name="twitter:image" content="../assets/images/og-image.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <nav class="site-nav">
+    <a href="../index.html" class="site-nav__brand">
+      <svg class="site-nav__mark" width="34" height="34" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect width="40" height="40" rx="9" fill="#16324A"/>
+        <line x1="13" y1="10" x2="13" y2="30" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round"/>
+        <line x1="13" y1="20" x2="29" y2="20" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round"/>
+      </svg>
+      <span class="site-nav__name">Tyler Quackenbush</span>
+    </a>
+    <ul class="site-nav__list" id="site-nav-list">
+      <li><a href="../work.html" class="site-nav__link active">Work</a></li>
+      <li><a href="../assets/resume.pdf" target="_blank" rel="noopener" class="site-nav__link">Resume</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav-list">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
   <main id="main-content">
-    <nav class="topnav" id="topnav">
-      <a href="../index.html" class="topnav__mark">TQ</a>
-      <ul class="topnav__list" id="topnav-list">
-        <li><a href="../index.html" class="topnav__link">Home</a></li>
-        <li><a href="../about.html" class="topnav__link">About</a></li>
-        <li><a href="../ai.html" class="topnav__link">How I Use AI</a></li>
-        <li><a href="../tools.html" class="topnav__link">Tools</a></li>
-        <li><a href="../work.html" class="topnav__link active">Work</a></li>
-        <li><a href="../contact.html" class="topnav__link">Contact</a></li>
-        <li><a href="../assets/resume.pdf" target="_blank" rel="noopener" class="topnav__link" id="resume-link">Resume</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="topnav-list">
-        <span></span><span></span><span></span>
-      </button>
-    </nav>
+    <section class="cs">
+      <a href="../work.html" class="label-mono cs__back">&larr; All case studies</a>
+      <p class="label-mono cs__eyebrow">02 &middot; Healthcare</p>
+      <h1 class="cs__title">Turning a scheduling maze into content patients could actually follow</h1>
+      <p class="cs__meta">UX Content Designer &middot; Novant Health (via Accrue Partners) &middot; 2021</p>
 
-    <section class="case-hero">
-      <div>
-        <h1 class="case-hero__title">System-Wide Website Redesign</h1>
-        <div class="case-hero__meta">
-          <span>Novant Health</span><span>&middot;</span><span>Done in Figma</span>
+      <div class="cs-stats">
+        <div class="cs-stat">
+          <span class="cs-stat__value" data-count-to="50" data-count-suffix="+">0+</span>
+          <p class="label-mono cs-stat__label">Content pages shipped weekly</p>
         </div>
-        <p class="case-hero__desc">
-          Novant Health had a scheduling flow that technically worked, the way a filing cabinet technically
-          works if you already know which drawer everything's in. Patients didn't have that internal map.
-          Providers weren't much better off.
-        </p>
+        <div class="cs-stat">
+          <span class="cs-stat__value">&lt;10 min</span>
+          <p class="label-mono cs-stat__label">Revision cycle per page</p>
+        </div>
+        <div class="cs-stat">
+          <span class="cs-stat__value" data-count-to="75" data-count-suffix="%">0%</span>
+          <p class="label-mono cs-stat__label">Faster image asset migration</p>
+        </div>
       </div>
-      <div class="case-hero__frame reveal-image">
-        <div class="case-hero__frame-dots"><span></span><span></span><span></span></div>
-        <img src="../assets/images/novant-mockup.jpg" alt="Novant Health maternity care services page, desktop view" />
-      </div>
-    </section>
 
-    <section class="case-gallery">
-      <button class="case-gallery__arrow case-gallery__arrow--prev" aria-label="Previous image">&#8249;</button>
-      <div class="case-gallery__track">
-        <div class="case-gallery__frame">
-          <img src="../assets/images/Rectangle 29.png" alt="Novant Health mobile screen" />
-        </div>
-        <div class="case-gallery__frame">
-          <img src="../assets/images/Rectangle 30.png" alt="Novant Health mobile screen" />
-        </div>
-        <div class="case-gallery__frame">
-          <img src="../assets/images/Rectangle 30-1.png" alt="Novant Health mobile screen" />
-        </div>
-        <div class="case-gallery__frame">
-          <img src="../assets/images/1231123.png" alt="Novant Health mobile screen" />
-        </div>
+      <div class="cs-section">
+        <h2 class="label-mono cs-section__label">Situation</h2>
+        <p class="cs-section__body">Novant Health's scheduling flow technically worked, the way a filing cabinet works if you already know which drawer. Patients didn't have that map, and neither did a lot of providers. The system-wide redesign meant migrating years of patient-facing content, built by different teams at different times, into new templates and a new design system, all while keeping it accurate, accessible, and compliant.</p>
       </div>
-      <button class="case-gallery__arrow case-gallery__arrow--next" aria-label="Next image">&#8250;</button>
-    </section>
 
-    <section class="case-body">
-      <p class="case-body__desc">
-        I redesigned the pieces that mattered most: appointment scheduling, provider search, the pages
-        people hit when they're anxious and one thumb away from giving up. Tested with real prototypes,
-        rolled out in phases, built to survive contact with an actual dev team.
-      </p>
-      <div class="case-study__highlights">
-        <div class="highlight">
-          <span class="highlight__stat">Streamlined Appointment Flow</span>
-          <p>Fewer people gave up mid-booking once the path stopped assuming everyone already knew where to look.</p>
-        </div>
-        <div class="highlight">
-          <span class="highlight__stat">Recognized by Internal UX Team</span>
-          <p>The system I built got reused by other teams, which is the only compliment that actually matters to me.</p>
+      <div class="cs-section">
+        <h2 class="label-mono cs-section__label">Approach</h2>
+        <p class="cs-section__body">I worked embedded with the design team in Figma, rewriting and restructuring content page by page instead of copy-pasting the old version into a new template and calling it done. That meant deciding, for each page, what a patient actually needed to know first (can I get an appointment this week) versus what could move lower (billing codes, provider credentialing language). I also rebuilt how the team found and reused image assets, which sounds like a small thing until you're the third person that week hunting for the same photo.</p>
+      </div>
+
+      <div class="cs-section">
+        <h2 class="label-mono cs-section__label">Outcome</h2>
+        <p class="cs-section__body">Fifty-plus content pages shipped weekly, with revision cycles down to under 10 minutes a page &mdash; fast enough that stakeholders could review same-day instead of waiting on a Friday batch. Asset search time dropped 75%. The scheduling flow patients hit now reads like someone actually expected a human on the other end of it.</p>
+        <ul class="cs-outcome-list">
+          <li>50+ high-fidelity content pages built weekly in Figma</li>
+          <li>Revision cycles cut to under 10 minutes per page</li>
+          <li>75% faster image asset search and retrieval</li>
+        </ul>
+      </div>
+
+      <div class="cs-next">
+        <p class="label-mono">Next case study</p>
+        <a href="ung.html" class="cs-next__link">University of North Georgia &rarr;</a>
+      </div>
+
+      <div class="cs-cta">
+        <p>Want to talk about a role like this?</p>
+        <div class="cs-cta__links">
+          <a href="mailto:tyler.qbush@gmail.com" class="btn btn--primary">Get in touch</a>
+          <a href="../work.html" class="label-mono cs-cta__all">All case studies &rarr;</a>
         </div>
       </div>
-      <ol class="case-study__process">
-        <li><span>01</span><h4>UX Audit</h4><p>Reviewed data and identified user pain points</p></li>
-        <li><span>02</span><h4>Team Alignment</h4><p>Facilitated design priorities across departments</p></li>
-        <li><span>03</span><h4>Journey Mapping</h4><p>Focused on care search and scheduling flows</p></li>
-        <li><span>04</span><h4>Accessibility Design</h4><p>Ensured WCAG compliance from the start</p></li>
-        <li><span>05</span><h4>Modular UI</h4><p>Built scalable, dev-ready design components</p></li>
-        <li><span>06</span><h4>QA &amp; Rollout</h4><p>Tested live environments and supported implementation</p></li>
-      </ol>
     </section>
   </main>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <footer class="site-footer">
+    <span class="site-footer__name">Tyler Quackenbush</span>
+    <a href="mailto:tyler.qbush@gmail.com" class="site-footer__email">tyler.qbush@gmail.com</a>
+  </footer>
+
   <script src="../js/main.js"></script>
 </body>
 </html>
