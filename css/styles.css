@@ -696,3 +696,135 @@ button {
     grid-template-columns: 1fr;
   }
 }
+
+/* ---- About page ---- */
+.about-header {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: var(--section-padding-y) var(--section-padding-x) 40px;
+}
+
+.about-header__photo {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 24px;
+}
+
+.about-header .label-mono {
+  margin-bottom: 14px;
+}
+
+.about-header__title {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  max-width: 720px;
+  margin-bottom: 20px;
+}
+
+.about-header__intro {
+  font-size: 1.05rem;
+  color: var(--color-ink-dim);
+  max-width: 680px;
+  line-height: 1.65;
+}
+
+.about-block {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 40px var(--section-padding-x);
+  border-top: 1px solid var(--color-border);
+}
+
+.about-block > .label-mono {
+  margin-bottom: 20px;
+}
+
+.pull-quote {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--color-ink);
+  max-width: 600px;
+  margin: 24px 0 0;
+  padding-left: 20px;
+  border-left: 3px solid var(--color-accent-strong);
+}
+
+.experience-item {
+  padding: 24px 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.experience-item:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.experience-item__dates {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: var(--label-tracking);
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: 6px;
+}
+
+.experience-item__role {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.experience-item__org {
+  margin-bottom: 10px;
+}
+
+.experience-item__desc {
+  font-size: 0.95rem;
+  color: var(--color-ink-dim);
+  max-width: 680px;
+  line-height: 1.6;
+}
+
+.tag-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag-list__item {
+  background: var(--color-surface);
+  border-radius: var(--radius-pill);
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  color: var(--color-ink);
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.tools-grid__label {
+  margin-bottom: 8px;
+}
+
+.tools-grid__value {
+  font-size: 0.9rem;
+  color: var(--color-ink-dim);
+  line-height: 1.5;
+}
+
+@media (max-width: 780px) {
+  .tools-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+}
