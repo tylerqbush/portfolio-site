@@ -100,16 +100,38 @@ Structure follows gabbyhon.com's individual case-study pages exactly, adapted to
 
 No photography, screenshots, or exhibit graphics on any case study page — proof lives in the specificity of the writing and the stat grid, not in visuals. This applies uniformly, including ACCT International and Adventure Careers.
 
-## Homepage (validated in brainstorming)
+## Site-wide layout width (correction, 2026-07-24)
 
-Structure, locked:
+Post-launch review against gabbyhon.com found the deployed site inconsistent and too wide on large screens: most sections (nav, proof strip, work list, footer) had no max-width and stretched edge-to-edge, while only a couple of elements (hero, case-study body) were capped — and even those were left-aligned with padding rather than centered, so nothing balanced on a wide viewport. Measured against Gabby's site at the same 1101px viewport: her `.wrap` container caps every section at **1120px, centered**, with consistent outer padding.
 
-1. **Nav** — badge mark + "Tyler Quackenbush" wordmark, links (Work / About / Brand Identity), Contact as a filled button.
-2. **Hero** — eyebrow "UX CONTENT DESIGNER · 8 YEARS," headline "Jargon in. Clarity out.," two-sentence intro naming hospitals/federal contractor/public university and the AT&T-relevant work (error messages, account flows), two CTAs (View case studies / Download resume).
-3. **Proof strip** — a real before/after specimen (dense legal draft → plain-language rewrite) directly under the hero, before the reader even reaches case studies.
-4. **Selected work** — three case study entries in the locked order, text-forward (no thumbnail images): numbered eyebrow + category, title, role/org/dates in mono, 2–3 sentence situation/approach, bolded Result line with a real metric, "Read the case study →."
-5. **About teaser** — real headshot (`assets/images/Headshot.jpeg`), short bio paragraph ending on the AI-workflow disclosure ("I use Claude for research synthesis and first-pass drafts. I still edit every line myself."), link to About.
-6. **Footer** — name, email, dark navy field.
+Fix, applied site-wide: a `--content-max-width: 1120px` token; nav and footer get an inner wrap div (full-width background bar, centered 1120px content); hero, the new numbered homepage sections, the work list, and case-study bodies all get `max-width: var(--content-max-width); margin: 0 auto;` (case-study body text can stay narrower than 1120px for readability, but must be centered, not flush-left).
+
+## Homepage (revised, 2026-07-24 — supersedes the original brainstorming version)
+
+The original proof-strip/selected-work/about-teaser structure is replaced with gabbyhon.com's numbered-section pattern, adapted to Tyler's content:
+
+1. **Nav** — badge mark + "Tyler Quackenbush" wordmark, links (Work / About / Brand Identity), Contact as a filled button. Centered 1120px wrap inside a full-width bar.
+2. **Hero** — trimmed to eyebrow ("UX CONTENT DESIGNER · 8 YEARS") + headline ("Jargon in. Clarity out.") + the two CTAs (View case studies / Download resume) only. No body paragraphs — those move to 01.
+3. **01 · The Work** — the "who I serve / what I do" paragraphs (moved from the old hero), followed by the before/after proof strip (dense legal draft → plain-language rewrite) as this section's proof point.
+4. **02 · Selected Work** — the same three case study entries, same locked order, same text-forward pattern as before — just reframed under numbered-section styling instead of a bare "Selected Work" label.
+5. **03 · The Approach** — new. A 3-step process grid (Audit / Draft / Ship), one line each, grounded in the actual Agile Defense workflow (content audit before writing, plain-language draft first then compliance layered back in, testing with the people who'll push back).
+6. **Closing CTA band** — "There's always a clearer way to say it. Let's find it." + two links: Get in touch (mailto) and More about me (about.html).
+7. **Footer** — name, email, dark navy field.
+
+The standalone "about teaser" section is dropped from the homepage — "More about me" now lives in the closing CTA band, and About is a full page (see below), matching how Gabby's homepage has no about-teaser section at all.
+
+## About page (new, pulled forward from Phase 2 as part of the 2026-07-24 correction)
+
+Structure follows gabbyhon.com/about.html directly:
+
+1. **Header** — eyebrow "ABOUT," headline in Tyler's voice ("A writer whose job is to make hard things sound simple."), intro bio paragraph (role, years, industries, the plain-language throughline).
+2. **01 · How I Work** — two paragraphs on working style/philosophy (start from what the reader needs, not what the org wants to say; the AI-assisted-but-human-edited workflow), plus a pull-quote.
+3. **02 · Experience** — full reverse-chronological work history sourced from the resume: Agile Defense (2021–Present), Novant Health (2021), University of North Georgia (2016–2021) — role, org, dates, 2–3 sentence description each. Matches the tailored resume exactly (no Land to Land Holdings entry, consistent with what the case studies already use).
+4. **03 · Core Competencies** — tag/pill list from the resume's core-competencies line (UX Writing & Microcopy, Content Strategy, Content Audits & Inventory, B2B Content Design, E-Commerce & Account Management Flows, Information Architecture, Voice & Tone Development, Design Systems, Accessibility/508 Compliance, Agile/Scrum Collaboration, Cross-Functional Stakeholder Management).
+5. **04 · Tools & Education** — categorized tool list (Design & Prototyping; Project & Collaboration; Other) + certifications (CSM, SAFe for Teams) + education (BA English Literature, UNG), all sourced from the resume.
+6. **Closing CTA band** — "Want to talk about a role like this?" + Get in touch (mailto) / See the case studies (work.html).
+
+Since About now exists, the "About" nav link (previously omitted per Phase 1's nav-scope note, since the page didn't exist yet) is added back across every page: index.html, work.html, about.html, and all three case studies.
 
 ## Brand Identity page
 
