@@ -577,6 +577,13 @@ button {
   margin-bottom: 48px;
 }
 
+/* Demoted case studies (2 honest stats instead of 3-4) — cap card width and
+   left-align instead of stretching cards to fill the row, which looked sparse. */
+.cs-stats--compact {
+  grid-template-columns: repeat(auto-fit, minmax(140px, 200px));
+  justify-content: start;
+}
+
 .cs-stat {
   background: var(--color-surface);
   border-radius: var(--radius-md);
