@@ -712,7 +712,7 @@ button {
   margin-bottom: 24px;
 }
 
-.about-header .label-mono {
+.about-header > .label-mono {
   margin-bottom: 14px;
 }
 
@@ -759,6 +759,11 @@ button {
 .experience-item:first-of-type {
   border-top: none;
   padding-top: 0;
+}
+
+.experience-item--last {
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 24px;
 }
 
 .experience-item__dates {
