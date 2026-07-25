@@ -48,7 +48,7 @@
 }
 
 html {
-  scroll-behavior: auto; /* JS drives smooth scroll via scrollIntoView() so anchor clicks aren't double-smoothed */
+  scroll-behavior: auto; /* instant jump for same-page anchor links (e.g. design-system's sub-nav); no JS-driven smooth scroll exists on this site */
 }
 
 body {
@@ -730,6 +730,7 @@ button {
   margin: 0 auto;
   padding: 40px var(--section-padding-x);
   border-top: 1px solid var(--color-border);
+  scroll-margin-top: 130px; /* clears the fixed site-nav (72px) + design-system page's sticky sub-nav when anchor-jumped to */
 }
 
 .about-block > .label-mono {
