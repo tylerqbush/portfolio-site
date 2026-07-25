@@ -360,7 +360,7 @@ button {
 }
 
 .proof__label {
-  color: var(--color-muted);
+  color: var(--color-ink-dim);
   margin-bottom: 8px;
 }
 
@@ -369,7 +369,7 @@ button {
 }
 
 .proof__text--before {
-  color: var(--color-muted);
+  color: var(--color-ink-dim);
   font-style: italic;
 }
 
@@ -839,7 +839,7 @@ button {
 }
 
 .micro-specimen__label--before {
-  color: var(--color-muted);
+  color: var(--color-ink-dim);
   margin-bottom: 4px;
 }
 
@@ -853,7 +853,7 @@ button {
 }
 
 .micro-specimen__text--before {
-  color: var(--color-muted);
+  color: var(--color-ink-dim);
   font-style: italic;
 }
 
