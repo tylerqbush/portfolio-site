@@ -465,10 +465,6 @@ button {
   gap: 32px;
 }
 
-.approach__step-num {
-  margin-bottom: 10px;
-}
-
 .approach__step-title {
   font-size: 1.15rem;
   margin-bottom: 8px;
