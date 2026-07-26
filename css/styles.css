@@ -401,7 +401,7 @@ button {
 .results-band {
   background: var(--color-ink);
   color: #fff;
-  padding: var(--section-padding-y) 0;
+  padding: var(--section-padding-y) 0 calc(var(--section-padding-y) + 32px);
 }
 
 .results-band__inner {
