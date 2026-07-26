@@ -121,8 +121,7 @@ button {
   left: 0;
   right: 0;
   height: var(--nav-height);
-  background: var(--color-bg);
-  border-bottom: 1px solid var(--color-border);
+  background: var(--color-ink);
   z-index: 50;
 }
 
@@ -151,7 +150,7 @@ button {
   font-family: var(--font-heading);
   font-weight: 600;
   font-size: 0.95rem;
-  color: var(--color-ink);
+  color: #fff;
 }
 
 .site-nav__list {
@@ -165,8 +164,8 @@ button {
   font-family: var(--font-body);
   font-weight: 500;
   font-size: 0.9rem;
-  color: var(--color-ink);
-  opacity: 0.75;
+  color: #fff;
+  opacity: 0.7;
   transition: opacity var(--transition-fast);
 }
 
@@ -191,7 +190,7 @@ button {
   display: block;
   width: 22px;
   height: 2px;
-  background: var(--color-ink);
+  background: #fff;
 }
 
 @media (max-width: 780px) {
@@ -203,8 +202,7 @@ button {
     flex-direction: column;
     align-items: flex-start;
     gap: 0;
-    background: var(--color-bg);
-    border-bottom: 1px solid var(--color-border);
+    background: var(--color-ink);
     padding: 8px clamp(20px, 4vw, 48px) 24px;
     transform: translateY(-8px);
     opacity: 0;
@@ -221,7 +219,7 @@ button {
   .site-nav__list li {
     width: 100%;
     padding: 12px 0;
-    border-top: 1px solid var(--color-border);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
   }
 
   .site-nav__list li:first-child {
@@ -289,6 +287,24 @@ button {
   opacity: 0.85;
 }
 
+.site-footer__links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.site-footer__link {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.site-footer__link:hover,
+.site-footer__link:focus-visible {
+  opacity: 1;
+  text-decoration: underline;
+}
+
 .site-footer__email {
   font-size: 0.9rem;
 }
@@ -300,7 +316,7 @@ button {
 
 /* ---- Hero ---- */
 .hero {
-  padding: 60px var(--section-padding-x) 48px;
+  padding: 88px var(--section-padding-x) 64px;
   max-width: var(--content-max-width);
   margin: 0 auto;
 }
@@ -318,7 +334,7 @@ button {
   gap: 16px;
   width: 100%;
   max-width: 420px;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
 }
 
 .hero__eyebrow-line {
@@ -328,20 +344,25 @@ button {
 }
 
 .hero__mark {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
+}
+
+.hero__mark svg {
+  width: 72px;
+  height: 72px;
 }
 
 .hero__name {
-  font-size: clamp(2rem, 5vw, 2.8rem);
-  margin-bottom: 10px;
+  font-size: clamp(2.6rem, 7vw, 4.2rem);
+  margin-bottom: 14px;
 }
 
 .hero__tagline {
   font-family: var(--font-heading);
   font-weight: 500;
-  font-size: clamp(1.1rem, 2.4vw, 1.35rem);
+  font-size: clamp(1.2rem, 2.6vw, 1.5rem);
   color: var(--color-ink-dim);
-  margin-bottom: 28px;
+  margin-bottom: 36px;
 }
 
 .lede {
@@ -468,6 +489,49 @@ button {
 @media (max-width: 480px) {
   .results-band__grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ---- Principles band (approach.html) ---- */
+.principles-band {
+  background: var(--color-ink);
+  color: #fff;
+  padding: var(--section-padding-y) 0;
+}
+
+.principles-band__inner {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 0 var(--section-padding-x);
+}
+
+.principles-band__label {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 40px;
+}
+
+.principles-band__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 48px;
+}
+
+.principle__title {
+  font-size: 1.15rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.principle__desc {
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+  .principles-band__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 }
 
