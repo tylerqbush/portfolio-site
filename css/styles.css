@@ -903,6 +903,51 @@ button {
   margin-bottom: 20px;
 }
 
+/* Sections split into a label sidebar + content column (e.g. "01 · How I Work") */
+.about-block--split {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.about-block--split > .label-mono {
+  margin-bottom: 0;
+}
+
+.about-block__content .lede:last-of-type {
+  margin-bottom: 0;
+}
+
+@media (max-width: 780px) {
+  .about-block--split {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .about-block--split > .label-mono {
+    margin-bottom: 20px;
+  }
+}
+
+/* Two "about-block" sections placed side by side (Core Competencies + Tools & Education) */
+.about-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.about-columns__col > .label-mono {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 780px) {
+  .about-columns {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
 .pull-quote {
   font-family: var(--font-heading);
   font-size: 1.3rem;
@@ -914,28 +959,51 @@ button {
   border-left: 3px solid var(--color-accent-strong);
 }
 
-.experience-item {
+/* Experience timeline (02 · Experience) */
+.timeline {
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  left: 120px;
+  width: 1px;
+  background: var(--color-border);
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 32px;
   padding: 24px 0;
   border-top: 1px solid var(--color-border);
 }
 
-.experience-item:first-of-type {
+.timeline-item:first-child {
   border-top: none;
   padding-top: 0;
 }
 
-.experience-item--last {
-  border-bottom: 1px solid var(--color-border);
-  padding-bottom: 24px;
+.timeline-item:last-child {
+  padding-bottom: 0;
 }
 
-.experience-item__dates {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: var(--label-tracking);
-  text-transform: uppercase;
-  color: var(--color-muted);
-  margin-bottom: 6px;
+.timeline-item__dates {
+  padding-top: 2px;
+}
+
+@media (max-width: 600px) {
+  .timeline::before {
+    display: none;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
 }
 
 .experience-item__role {
@@ -1001,6 +1069,12 @@ button {
   .tools-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Single-column stacked variant, for tools-grid nested in a narrower .about-columns__col */
+.tools-grid--stacked {
+  grid-template-columns: 1fr;
+  gap: 18px;
 }
 
 /* ---- Microcopy specimens (work/microcopy.html) ---- */

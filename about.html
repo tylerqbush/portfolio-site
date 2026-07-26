@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20260725b" />
+  <link rel="stylesheet" href="css/styles.css?v=20260725c" />
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to content</a>
@@ -54,77 +54,89 @@
       <p class="about-header__intro">I'm Tyler Quackenbush. Content strategist and UX writer with 8+ years across product design, content design, and design systems, for healthcare, federal, and B2B products. I turn technical and legal jargon into plain language, then stay in the room through legal review, accessibility checks, and dev handoff until it actually ships that way.</p>
     </section>
 
-    <section class="about-block" id="how-i-work">
+    <section class="about-block about-block--split" id="how-i-work">
       <h2 class="label-mono">01 &middot; How I Work</h2>
-      <p class="lede">I start with what the reader needs on the page, not what the org wants to say about itself. Most content problems aren't writing problems. They're clarity problems that showed up as a paragraph nobody wanted to touch.</p>
-      <p class="lede">I use Claude for research synthesis and first-draft speed. I still write and edit every sentence that ships, because the judgment call about what to cut is the actual job.</p>
-      <blockquote class="pull-quote">I'd rather ship one honest sentence than five that sound impressive.</blockquote>
+      <div class="about-block__content">
+        <p class="lede">I start with what the reader needs on the page, not what the org wants to say about itself. Most content problems aren't writing problems. They're clarity problems that showed up as a paragraph nobody wanted to touch.</p>
+        <p class="lede">I use Claude for research synthesis and first-draft speed. I still write and edit every sentence that ships, because the judgment call about what to cut is the actual job.</p>
+        <blockquote class="pull-quote">I'd rather ship one honest sentence than five that sound impressive.</blockquote>
+      </div>
     </section>
 
     <section class="about-block">
       <h2 class="label-mono">02 &middot; Experience</h2>
 
-      <article class="experience-item">
-        <p class="experience-item__dates">2021&ndash;Present</p>
-        <h3 class="experience-item__role">Senior UX Designer</h3>
-        <p class="label-mono experience-item__org">Agile Defense (formerly Intellibridge)</p>
-        <p class="experience-item__desc">Lead content design and UX writing across federal and commercial digital products. Built the content audits, voice and tone standards, and style guide adopted across design teams, working directly with legal and compliance reviewers on 508 requirements.</p>
-      </article>
+      <div class="timeline">
+        <article class="timeline-item">
+          <p class="label-mono timeline-item__dates">2021&ndash;Present</p>
+          <div class="timeline-item__content">
+            <h3 class="experience-item__role">Senior UX Designer</h3>
+            <p class="label-mono experience-item__org">Agile Defense (formerly Intellibridge)</p>
+            <p class="experience-item__desc">Lead content design and UX writing across federal and commercial digital products. Built the content audits, voice and tone standards, and style guide adopted across design teams, working directly with legal and compliance reviewers on 508 requirements.</p>
+          </div>
+        </article>
 
-      <article class="experience-item">
-        <p class="experience-item__dates">2021</p>
-        <h3 class="experience-item__role">UX Content Designer</h3>
-        <p class="label-mono experience-item__org">Novant Health (via Accrue Partners)</p>
-        <p class="experience-item__desc">Embedded content designer on a system-wide healthcare website redesign. Rewrote patient-facing content into new templates and design-system components in Figma, shipping 50+ pages a week.</p>
-      </article>
+        <article class="timeline-item">
+          <p class="label-mono timeline-item__dates">2021</p>
+          <div class="timeline-item__content">
+            <h3 class="experience-item__role">UX Content Designer</h3>
+            <p class="label-mono experience-item__org">Novant Health (via Accrue Partners)</p>
+            <p class="experience-item__desc">Embedded content designer on a system-wide healthcare website redesign. Rewrote patient-facing content into new templates and design-system components in Figma, shipping 50+ pages a week.</p>
+          </div>
+        </article>
 
-      <article class="experience-item experience-item--last">
-        <p class="experience-item__dates">2016&ndash;2021</p>
-        <h3 class="experience-item__role">Web Designer</h3>
-        <p class="label-mono experience-item__org">University of North Georgia</p>
-        <p class="experience-item__desc">Led content and information architecture for a 5,000+ page public university site, consolidating 20+ navigation menus and shipping a 2FA onboarding flow for 20,000+ users.</p>
-      </article>
+        <article class="timeline-item">
+          <p class="label-mono timeline-item__dates">2016&ndash;2021</p>
+          <div class="timeline-item__content">
+            <h3 class="experience-item__role">Web Designer</h3>
+            <p class="label-mono experience-item__org">University of North Georgia</p>
+            <p class="experience-item__desc">Led content and information architecture for a 5,000+ page public university site, consolidating 20+ navigation menus and shipping a 2FA onboarding flow for 20,000+ users.</p>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <section class="about-block">
-      <h2 class="label-mono">03 &middot; Core Competencies</h2>
-      <ul class="tag-list">
-        <li class="tag-list__item">UX Writing &amp; Microcopy</li>
-        <li class="tag-list__item">Content Strategy</li>
-        <li class="tag-list__item">Content Audits &amp; Inventory</li>
-        <li class="tag-list__item">B2B Content Design</li>
-        <li class="tag-list__item">E-Commerce &amp; Account Management Flows</li>
-        <li class="tag-list__item">Information Architecture</li>
-        <li class="tag-list__item">Voice &amp; Tone Development</li>
-        <li class="tag-list__item">Design Systems</li>
-        <li class="tag-list__item">Accessibility (508 Compliance)</li>
-        <li class="tag-list__item">Agile/Scrum Collaboration</li>
-        <li class="tag-list__item">Cross-Functional Stakeholder Management</li>
-      </ul>
-    </section>
+    <section class="about-block about-columns">
+      <div class="about-columns__col">
+        <h2 class="label-mono">03 &middot; Core Competencies</h2>
+        <ul class="tag-list">
+          <li class="tag-list__item">UX Writing &amp; Microcopy</li>
+          <li class="tag-list__item">Content Strategy</li>
+          <li class="tag-list__item">Content Audits &amp; Inventory</li>
+          <li class="tag-list__item">B2B Content Design</li>
+          <li class="tag-list__item">E-Commerce &amp; Account Management Flows</li>
+          <li class="tag-list__item">Information Architecture</li>
+          <li class="tag-list__item">Voice &amp; Tone Development</li>
+          <li class="tag-list__item">Design Systems</li>
+          <li class="tag-list__item">Accessibility (508 Compliance)</li>
+          <li class="tag-list__item">Agile/Scrum Collaboration</li>
+          <li class="tag-list__item">Cross-Functional Stakeholder Management</li>
+        </ul>
+      </div>
 
-    <section class="about-block">
-      <h2 class="label-mono">04 &middot; Tools &amp; Education</h2>
-      <div class="tools-grid">
-        <div class="tools-grid__col">
-          <p class="label-mono tools-grid__label">Design &amp; Prototyping</p>
-          <p class="tools-grid__value">Figma, Photoshop, Illustrator</p>
-        </div>
-        <div class="tools-grid__col">
-          <p class="label-mono tools-grid__label">Project &amp; Collaboration</p>
-          <p class="tools-grid__value">Jira, Confluence, Webflow, Airtable, GitHub</p>
-        </div>
-        <div class="tools-grid__col">
-          <p class="label-mono tools-grid__label">Other</p>
-          <p class="tools-grid__value">CMS Platforms, Claude &amp; AI-Assisted Writing Tools, HTML/CSS</p>
-        </div>
-        <div class="tools-grid__col">
-          <p class="label-mono tools-grid__label">Certifications</p>
-          <p class="tools-grid__value">Certified ScrumMaster (CSM), SAFe for Teams Certified</p>
-        </div>
-        <div class="tools-grid__col">
-          <p class="label-mono tools-grid__label">Education</p>
-          <p class="tools-grid__value">BA English Literature, University of North Georgia</p>
+      <div class="about-columns__col">
+        <h2 class="label-mono">04 &middot; Tools &amp; Education</h2>
+        <div class="tools-grid tools-grid--stacked">
+          <div class="tools-grid__col">
+            <p class="label-mono tools-grid__label">Design &amp; Prototyping</p>
+            <p class="tools-grid__value">Figma, Photoshop, Illustrator</p>
+          </div>
+          <div class="tools-grid__col">
+            <p class="label-mono tools-grid__label">Project &amp; Collaboration</p>
+            <p class="tools-grid__value">Jira, Confluence, Webflow, Airtable, GitHub</p>
+          </div>
+          <div class="tools-grid__col">
+            <p class="label-mono tools-grid__label">Other</p>
+            <p class="tools-grid__value">CMS Platforms, Claude &amp; AI-Assisted Writing Tools, HTML/CSS</p>
+          </div>
+          <div class="tools-grid__col">
+            <p class="label-mono tools-grid__label">Certifications</p>
+            <p class="tools-grid__value">Certified ScrumMaster (CSM), SAFe for Teams Certified</p>
+          </div>
+          <div class="tools-grid__col">
+            <p class="label-mono tools-grid__label">Education</p>
+            <p class="tools-grid__value">BA English Literature, University of North Georgia</p>
+          </div>
         </div>
       </div>
     </section>
@@ -133,7 +145,7 @@
       <h2 class="cta-band__title">Want to talk about a role like this?</h2>
       <div class="cta-band__links">
         <a href="mailto:tyler.qbush@gmail.com" class="btn btn--primary">Get in touch</a>
-        <a href="work.html" class="label-mono cta-band__link">See the case studies &rarr;</a>
+        <a href="work.html" class="btn btn--outline">See the case studies &rarr;</a>
       </div>
     </section>
   </main>
@@ -145,6 +157,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20260725b"></script>
+  <script src="js/main.js?v=20260725c"></script>
 </body>
 </html>
