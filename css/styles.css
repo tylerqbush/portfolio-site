@@ -583,7 +583,7 @@ button {
 .work-list {
   max-width: var(--content-max-width);
   margin: 0 auto;
-  padding: 0 var(--section-padding-x) 8px;
+  padding: 48px var(--section-padding-x) 8px;
 }
 
 .work-list__intro {
