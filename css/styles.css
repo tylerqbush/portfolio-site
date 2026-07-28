@@ -1,24 +1,26 @@
 :root {
-  /* Color — Deep Navy / Amber / White, no paper or cream tones anywhere.
-     Contrast verified against --color-bg (#FFFFFF), sRGB relative-luminance method:
-     --color-ink      13.2:1  (AAA)
-     --color-ink-dim   7.5:1  (AAA)
-     --color-muted     4.6:1  (AA — thin margin, don't lighten further)
-     --color-accent    5.8:1  (AA — safe for body-size text/links)
-     --color-accent-strong 3.8:1 (fails AA for normal text — large/bold text and graphic
-       fills only, e.g. big stat numbers at 24px+/700 weight, which only need 3:1) */
-  --color-ink: #16324A;
-  --color-ink-dim: #4A5568;
-  --color-muted: #6B7680;
-  --color-bg: #FFFFFF;
-  --color-surface: #F7F8F9;
-  --color-accent: #8C5A1E;
-  --color-accent-strong: #B5762A;
-  --color-border: #EAEAEA;
+  /* Color — Ink / Horizon / Cloud / Sage.
+     Contrast verified sRGB relative-luminance method:
+     --color-ink              on Cloud  16.5:1  (AAA)
+     --color-ink-dim (72%)    on Cloud   6.9:1  (AAA)
+     --color-muted (60%)      on Cloud   4.6:1  (AA — thin margin, don't lighten further)
+     --color-accent           on Cloud   9.3:1  (AAA — safe at any text size, no separate
+       "strong" shade needed the way the old amber pair required)
+     --color-dark-accent (Sage) on Ink   7.9:1  (AAA — Horizon's role on dark surfaces) */
+  --color-ink: #12181B;
+  --color-ink-dim: rgba(18, 24, 27, 0.72);
+  --color-muted: rgba(18, 24, 27, 0.6);
+  --color-bg: #F5F6F5;
+  --color-surface: #FFFFFF;
+  --color-accent: #17494C;
+  --color-accent-strong: #17494C;
+  --color-dark-accent: #9CB0AC;
+  --color-border: rgba(18, 24, 27, 0.1);
 
-  --font-heading: 'Space Grotesk', sans-serif;
-  --font-body: 'Public Sans', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Poppins', sans-serif;
+  --font-label: 'Poppins', sans-serif;
+  --font-quote: 'Lora', serif;
 
   --nav-height: 72px;
   --section-padding-x: clamp(24px, 6vw, 96px);
@@ -55,6 +57,7 @@ body {
   background: var(--color-bg);
   color: var(--color-ink);
   font-family: var(--font-body);
+  font-weight: 400;
   line-height: 1.55;
   overflow-x: hidden;
 }
@@ -66,7 +69,7 @@ main {
 
 h1, h2, h3, h4 {
   font-family: var(--font-heading);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.15;
 }
 
@@ -105,9 +108,10 @@ button {
   top: 12px;
 }
 
-/* Shared mono "eyebrow" label text */
+/* Shared "eyebrow" label text — Poppins Light, wide-tracked */
 .label-mono {
-  font-family: var(--font-mono);
+  font-family: var(--font-label);
+  font-weight: 300;
   font-size: var(--label-size);
   text-transform: uppercase;
   letter-spacing: var(--label-tracking);
@@ -280,7 +284,8 @@ button {
 }
 
 .site-footer__name {
-  font-family: var(--font-mono);
+  font-family: var(--font-label);
+  font-weight: 300;
   font-size: var(--label-size);
   letter-spacing: var(--label-tracking);
   text-transform: uppercase;
@@ -352,14 +357,39 @@ button {
   height: 72px;
 }
 
-.hero__name {
+.hero__wordmark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.hero__wordmark-first {
+  display: block;
+  font-family: var(--font-label);
+  font-weight: 300;
+  font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+  margin-bottom: 4px;
+}
+
+.hero__wordmark-last {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-weight: 700;
   font-size: clamp(2.6rem, 7vw, 4.2rem);
-  margin-bottom: 14px;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  padding-bottom: 10px;
+  border-bottom: 3px solid var(--color-accent);
 }
 
 .hero__tagline {
-  font-family: var(--font-heading);
-  font-weight: 500;
+  font-family: var(--font-quote);
+  font-style: italic;
+  font-weight: 400;
   font-size: clamp(1.2rem, 2.6vw, 1.5rem);
   color: var(--color-ink-dim);
   margin-bottom: 36px;
@@ -432,12 +462,12 @@ button {
 }
 
 .results-band__label {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-dark-accent);
   margin-bottom: 14px;
 }
 
 .results-band__intro {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(245, 246, 245, 0.8);
   font-size: 0.95rem;
   max-width: 520px;
   margin-bottom: 32px;
@@ -451,7 +481,7 @@ button {
 }
 
 .results-band__stat {
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(245, 246, 245, 0.06);
   border-radius: var(--radius-md);
   padding: 20px 18px;
 }
@@ -461,23 +491,23 @@ button {
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 1.9rem;
-  color: #fff;
+  color: var(--color-dark-accent);
   margin-bottom: 6px;
 }
 
 .results-band__stat-label {
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(245, 246, 245, 0.65);
   font-size: 0.68rem;
 }
 
 .results-band .btn--outline {
-  border-color: rgba(255, 255, 255, 0.5);
+  border-color: rgba(245, 246, 245, 0.5);
   color: #fff;
 }
 
 .results-band .btn--outline:hover,
 .results-band .btn--outline:focus-visible {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(245, 246, 245, 0.08);
 }
 
 @media (max-width: 780px) {
@@ -506,7 +536,7 @@ button {
 }
 
 .principles-band__label {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-dark-accent);
   margin-bottom: 40px;
 }
 
@@ -524,7 +554,7 @@ button {
 
 .principle__desc {
   font-size: 0.92rem;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(245, 246, 245, 0.8);
   line-height: 1.6;
 }
 
@@ -612,7 +642,8 @@ button {
 }
 
 .work-list__meta {
-  font-family: var(--font-mono);
+  font-family: var(--font-label);
+  font-weight: 300;
   font-size: 0.7rem;
   letter-spacing: var(--label-tracking);
   text-transform: uppercase;
@@ -785,7 +816,8 @@ button {
 }
 
 .cs__meta {
-  font-family: var(--font-mono);
+  font-family: var(--font-label);
+  font-weight: 300;
   font-size: 0.75rem;
   letter-spacing: var(--label-tracking);
   text-transform: uppercase;
@@ -1013,9 +1045,10 @@ button {
 }
 
 .pull-quote {
-  font-family: var(--font-heading);
-  font-size: 1.3rem;
-  font-weight: 500;
+  font-family: var(--font-quote);
+  font-style: italic;
+  font-size: 1.4rem;
+  font-weight: 400;
   color: var(--color-ink);
   max-width: 600px;
   margin: 24px 0 0;

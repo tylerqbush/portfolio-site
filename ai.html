@@ -18,40 +18,68 @@
   <meta name="twitter:image" content="assets/images/og-image.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Lora:ital,wght@1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=20260726a" />
 </head>
 <body>
-  <main id="main-content">
-    <nav class="topnav" id="topnav">
-      <a href="index.html" class="topnav__mark">TQ</a>
-      <ul class="topnav__list" id="topnav-list">
-        <li><a href="index.html" class="topnav__link">Home</a></li>
-        <li><a href="about.html" class="topnav__link">About</a></li>
-        <li><a href="ai.html" class="topnav__link active">How I Use AI</a></li>
-        <li><a href="tools.html" class="topnav__link">Tools</a></li>
-        <li><a href="work.html" class="topnav__link">Work</a></li>
-        <li><a href="contact.html" class="topnav__link">Contact</a></li>
-        <li><a href="assets/resume.pdf" target="_blank" rel="noopener" class="topnav__link" id="resume-link">Resume</a></li>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <nav class="site-nav">
+    <div class="site-nav__wrap">
+      <a href="index.html" class="site-nav__brand">
+        <svg class="site-nav__mark" width="34" height="34" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="40" height="40" rx="9" fill="#17494C"/>
+          <rect x="3.4" y="16.3" width="29.7" height="7" rx="3.5" fill="#9CB0AC"/>
+          <rect x="11.7" y="4.6" width="24.9" height="6.6" rx="3.3" fill="#F5F6F5"/>
+          <rect x="11.7" y="28.8" width="24.9" height="6.6" rx="3.3" fill="#F5F6F5"/>
+          <rect x="3.4" y="4.6" width="4.8" height="30.8" rx="2.4" fill="#9CB0AC"/>
+        </svg>
+        <span class="site-nav__name">Tyler Quackenbush</span>
+      </a>
+      <ul class="site-nav__list" id="site-nav-list">
+        <li><a href="work.html" class="site-nav__link">Work</a></li>
+        <li><a href="about.html" class="site-nav__link">About</a></li>
+        <li><a href="approach.html" class="site-nav__link">Approach</a></li>
+        <li><a href="contact.html" class="site-nav__link">Contact</a></li>
       </ul>
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="topnav-list">
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav-list">
         <span></span><span></span><span></span>
       </button>
-    </nav>
+    </div>
+  </nav>
 
-    <section class="ai">
-      <h1 class="section-heading">How I Use AI, Actually</h1>
-      <div class="ai__card reveal-group">
-        <p>I'll say the thing everyone's dancing around: working with AI mostly feels solo, and calling it a &ldquo;team&rdquo; flattens something real. My mentor Russ Unger writes about this better than I do (<a href="https://russunger.com" target="_blank" rel="noopener noreferrer">go read him</a>). The short version I've landed on through my own work: AI gets you to a rough, working draft fast. Embarrassingly fast. Getting from that draft to something you'd put your name on is still the job, and no model does that part for you.</p>
-        <p>I test this against my own work, not just theory. This site went through a written plan, then every task got implemented, then reviewed twice (once for whether it matched the spec, once for whether the code itself held up) before I'd call it done. That second pass caught real bugs: a slider that snapped where it shouldn't, images that would've gone permanently invisible if a script failed to load. Nobody catches those by trusting the first draft.</p>
-        <p>That's the workflow at Agile Defense too. We build concept prototypes fast, sometimes in days, because the fastest way to find out if an idea holds up is to put it in front of someone who actually knows the problem. AI gets the prototype into someone's hands quickly. My job (and my team's) is reviewing what comes out before it goes anywhere near a client, same judgment, just applied earlier.</p>
-        <p>Land to Land Holdings runs the same principle at a smaller scale: AI drafts the listing copy and social content, and I read every word before it goes out. That's the actual workflow. Nothing ships without a human, me, reading it first.</p>
+  <main id="main-content">
+    <section class="about-header">
+      <p class="label-mono">How I Use AI</p>
+      <h1 class="about-header__title">How I Use AI, Actually</h1>
+    </section>
+
+    <section class="about-block">
+      <p class="lede">I'll say the thing everyone's dancing around: working with AI mostly feels solo, and calling it a "team" flattens something real. My mentor Russ Unger writes about this better than I do (<a href="https://russunger.com" target="_blank" rel="noopener noreferrer">go read him</a>). The short version I've landed on through my own work: AI gets you to a rough, working draft fast. Embarrassingly fast. Getting from that draft to something you'd put your name on is still the job, and no model does that part for you.</p>
+      <p class="lede">I test this against my own work, not just theory. This site went through a written plan, then every task got implemented, then reviewed twice (once for whether it matched the spec, once for whether the code itself held up) before I'd call it done. That second pass caught real bugs: a slider that snapped where it shouldn't, images that would've gone permanently invisible if a script failed to load. Nobody catches those by trusting the first draft.</p>
+      <p class="lede">That's the workflow at Agile Defense too. We build concept prototypes fast, sometimes in days, because the fastest way to find out if an idea holds up is to put it in front of someone who actually knows the problem. AI gets the prototype into someone's hands quickly. My job (and my team's) is reviewing what comes out before it goes anywhere near a client, same judgment, just applied earlier.</p>
+      <p class="lede">Land to Land Holdings runs the same principle at a smaller scale: AI drafts the listing copy and social content, and I read every word before it goes out. That's the actual workflow. Nothing ships without a human, me, reading it first.</p>
+    </section>
+
+    <section class="cta-band">
+      <h2 class="cta-band__title">Want to talk about a role like this?</h2>
+      <div class="cta-band__links">
+        <a href="mailto:tyler.qbush@gmail.com" class="btn btn--primary">Get in touch</a>
+        <a href="work.html" class="btn btn--outline">See the case studies &rarr;</a>
       </div>
     </section>
   </main>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="js/main.js"></script>
+  <footer class="site-footer">
+    <div class="site-footer__wrap">
+      <span class="site-footer__name">Tyler Quackenbush</span>
+      <div class="site-footer__links">
+        <a href="design-system/index.html" class="site-footer__link">Design System</a>
+        <a href="mailto:tyler.qbush@gmail.com" class="site-footer__email">tyler.qbush@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=20260726a"></script>
 </body>
 </html>
