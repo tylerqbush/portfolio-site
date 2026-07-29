@@ -402,6 +402,17 @@ button {
   margin-bottom: 12px;
 }
 
+.lede a {
+  color: var(--color-ink);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.lede a:hover,
+.lede a:focus-visible {
+  color: var(--color-accent);
+}
+
 .hero__ctas {
   display: flex;
   gap: 12px;
