@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Lora:ital,wght@1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/styles.css?v=20260726c" />
+  <link rel="stylesheet" href="../css/styles.css?v=20260726d" />
   <style>
     .ds-nav { position: sticky; top: var(--nav-height); background: var(--color-bg); border-bottom: 1px solid var(--color-border); padding: 12px var(--section-padding-x); display: flex; gap: 20px; overflow-x: auto; z-index: 40; }
     .ds-nav a { font-family: var(--font-label); font-weight: 300; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-muted); white-space: nowrap; }
@@ -51,9 +51,11 @@
   <div class="ds-nav">
     <a href="#color">Color</a>
     <a href="#type">Typography</a>
+    <a href="#marks">Marks</a>
     <a href="#spacing">Spacing</a>
     <a href="#buttons">Buttons</a>
     <a href="#cards">Cards</a>
+    <a href="#bands">Bands</a>
     <a href="#nav">Navigation</a>
     <a href="#states">States</a>
     <a href="#future">Future</a>
@@ -68,15 +70,16 @@
 
     <section class="about-block" id="color">
       <h2 class="label-mono">Color</h2>
+      <p class="lede">Four colors, used the same way everywhere. Ink and Cloud carry the page. Horizon is the one accent, spent on the thing that matters. Sage only shows up when Horizon would disappear against a dark surface.</p>
       <div class="ds-row">
-        <div class="ds-token"><div class="ds-swatch" style="background:#12181B;"></div><code>--color-ink</code>#12181B &middot; 16.5:1</div>
-        <div class="ds-token"><div class="ds-swatch" style="background:#525658;"></div><code>--color-ink-dim</code>Ink @ 72% &middot; 6.9:1</div>
-        <div class="ds-token"><div class="ds-swatch" style="background:#6D7172;"></div><code>--color-muted</code>Ink @ 60% &middot; 4.6:1</div>
-        <div class="ds-token"><div class="ds-swatch" style="background:#F5F6F5;border:1px solid var(--color-border);"></div><code>--color-bg</code>#F5F6F5 &middot; Cloud</div>
-        <div class="ds-token"><div class="ds-swatch" style="background:#FFFFFF;border:1px solid var(--color-border);"></div><code>--color-surface</code>#FFFFFF</div>
-        <div class="ds-token"><div class="ds-swatch" style="background:#17494C;"></div><code>--color-accent</code>#17494C &middot; Horizon &middot; 9.3:1</div>
-        <div class="ds-token"><div class="ds-swatch" style="background:#9CB0AC;"></div><code>--color-dark-accent</code>#9CB0AC &middot; Sage &middot; accent on dark surfaces only</div>
-        <div class="ds-token"><div class="ds-swatch" style="background:#DADBDB;"></div><code>--color-border</code>Ink @ 10%</div>
+        <div class="ds-token"><div class="ds-swatch" style="background:#12181B;"></div><code>--color-ink</code>#12181B &middot; 16.5:1<br>Primary text, dark surfaces.</div>
+        <div class="ds-token"><div class="ds-swatch" style="background:#525658;"></div><code>--color-ink-dim</code>Ink @ 72% &middot; 6.9:1<br>Secondary body copy.</div>
+        <div class="ds-token"><div class="ds-swatch" style="background:#6D7172;"></div><code>--color-muted</code>Ink @ 60% &middot; 4.6:1<br>Meta lines, thin margin, don't lighten further.</div>
+        <div class="ds-token"><div class="ds-swatch" style="background:#F5F6F5;border:1px solid var(--color-border);"></div><code>--color-bg</code>#F5F6F5 &middot; Cloud<br>Page background, not white.</div>
+        <div class="ds-token"><div class="ds-swatch" style="background:#FFFFFF;border:1px solid var(--color-border);"></div><code>--color-surface</code>#FFFFFF<br>Cards, sitting a step above Cloud.</div>
+        <div class="ds-token"><div class="ds-swatch" style="background:#17494C;"></div><code>--color-accent</code>#17494C &middot; Horizon &middot; 9.3:1<br>The one accent. Links, labels, the thing that changed.</div>
+        <div class="ds-token"><div class="ds-swatch" style="background:#9CB0AC;"></div><code>--color-dark-accent</code>#9CB0AC &middot; Sage &middot; 7.9:1 on Ink<br>Horizon's job, but on a dark band.</div>
+        <div class="ds-token"><div class="ds-swatch" style="background:#DADBDB;"></div><code>--color-border</code>Ink @ 10%<br>Hairlines between sections.</div>
       </div>
     </section>
 
@@ -103,6 +106,32 @@
       <div class="ds-code">.label-mono { font-family: var(--font-label); font-weight: 300; font-size: var(--label-size); text-transform: uppercase; letter-spacing: var(--label-tracking); color: var(--color-accent); }</div>
     </section>
 
+    <section class="about-block" id="marks">
+      <h2 class="label-mono">Brand Marks</h2>
+      <p class="lede">A Horizon-teal square holding a Sage "T," the spine and one bar fused into a single shape, with two Cloud bars floating near it, never touching. The mark carries its own background, so it reads the same on a light nav or a dark one.</p>
+      <div class="ds-row" style="align-items:flex-end;">
+        <div class="ds-token" style="text-align:center;">
+          <svg width="24" height="24" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" style="margin:0 auto 10px;"><rect width="40" height="40" rx="9" fill="#17494C"/><rect x="3.4" y="16.3" width="29.7" height="7" rx="3.5" fill="#9CB0AC"/><rect x="11.7" y="4.6" width="24.9" height="6.6" rx="3.3" fill="#F5F6F5"/><rect x="11.7" y="28.8" width="24.9" height="6.6" rx="3.3" fill="#F5F6F5"/><rect x="3.4" y="4.6" width="4.8" height="30.8" rx="2.4" fill="#9CB0AC"/></svg>
+          <code>24px</code>Favicon
+        </div>
+        <div class="ds-token" style="text-align:center;">
+          <svg width="34" height="34" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" style="margin:0 auto 10px;"><rect width="40" height="40" rx="9" fill="#17494C"/><rect x="3.4" y="16.3" width="29.7" height="7" rx="3.5" fill="#9CB0AC"/><rect x="11.7" y="4.6" width="24.9" height="6.6" rx="3.3" fill="#F5F6F5"/><rect x="11.7" y="28.8" width="24.9" height="6.6" rx="3.3" fill="#F5F6F5"/><rect x="3.4" y="4.6" width="4.8" height="30.8" rx="2.4" fill="#9CB0AC"/></svg>
+          <code>34px</code>Nav
+        </div>
+        <div class="ds-token" style="text-align:center;">
+          <svg width="64" height="64" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" style="margin:0 auto 10px;"><rect width="40" height="40" rx="9" fill="#17494C"/><rect x="3.4" y="16.3" width="29.7" height="7" rx="3.5" fill="#9CB0AC"/><rect x="11.7" y="4.6" width="24.9" height="6.6" rx="3.3" fill="#F5F6F5"/><rect x="11.7" y="28.8" width="24.9" height="6.6" rx="3.3" fill="#F5F6F5"/><rect x="3.4" y="4.6" width="4.8" height="30.8" rx="2.4" fill="#9CB0AC"/></svg>
+          <code>64px</code>Hero
+        </div>
+        <div class="ds-token" style="min-width:220px;">
+          <p style="text-align:center;">
+            <span style="display:block;font-family:var(--font-label);font-weight:300;font-size:0.85rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-ink);">Tyler</span>
+            <span style="display:inline-block;font-family:var(--font-heading);font-weight:700;font-size:1.6rem;letter-spacing:-0.01em;padding-bottom:5px;border-bottom:2px solid var(--color-accent);color:var(--color-ink);">Quackenbush</span>
+          </p>
+          <code style="margin-top:10px;">.hero__wordmark</code>Name lockup
+        </div>
+      </div>
+    </section>
+
     <section class="about-block" id="spacing">
       <h2 class="label-mono">Spacing &amp; Radius</h2>
       <div class="ds-row">
@@ -115,6 +144,7 @@
         <div class="ds-token"><code>--section-padding-y</code>clamp(56px, 9vh, 100px)</div>
         <div class="ds-token"><code>--content-max-width</code>1120px</div>
       </div>
+      <p class="lede" style="margin-top:4px;">Two breakpoints do almost all the work: 780px collapses multi-column grids to one and swaps the nav to its mobile dropdown, 700px (occasionally 600px, where a component needs the extra room) handles the smaller stuff, like case-study stat grids.</p>
     </section>
 
     <section class="about-block" id="buttons">
@@ -131,7 +161,7 @@
     </section>
 
     <section class="about-block" id="cards">
-      <h2 class="label-mono">Cards</h2>
+      <h2 class="label-mono">Cards &amp; Tiles</h2>
       <div class="cs-stats" style="max-width:600px;">
         <div class="cs-stat">
           <span class="cs-stat__value">40+</span>
@@ -142,7 +172,29 @@
           <p class="label-mono cs-stat__label">Stat card</p>
         </div>
       </div>
-      <p class="tools-grid__value" style="margin-top:8px;">Used across case studies (<code>.cs-stat</code>) and the About/Brand Identity pages (<code>.tools-grid__col</code>).</p>
+      <p class="tools-grid__value" style="margin:8px 0 20px;">Used across case studies (<code>.cs-stat</code>) and the homepage results band (<code>.results-band__stat</code>).</p>
+
+      <ul class="tag-list" style="margin-bottom:20px;">
+        <li class="tag-list__item">Tag pill</li>
+        <li class="tag-list__item">Also a tag pill</li>
+      </ul>
+      <p class="tools-grid__value" style="margin-bottom:20px;">Pill-shaped, <code>--color-surface</code> fill (<code>.tag-list__item</code>). Competencies, skills, anything that's a flat list of nouns.</p>
+
+      <div class="approach__step" style="max-width:320px;">
+        <p class="label-mono approach__step-num">01</p>
+        <h3 class="approach__step-title">Process card</h3>
+        <p class="approach__step-desc">White surface, numbered label, used for the Approach page's three-step grid.</p>
+      </div>
+    </section>
+
+    <section class="about-block" id="bands">
+      <h2 class="label-mono">Callout Bands</h2>
+      <p class="lede">Full-bleed dark sections break up the page rhythm: <code>--color-ink</code> background, Sage for the eyebrow label and any number that needs to stand out, everything else in white or a Cloud-tinted rgba for body text.</p>
+      <div style="background:var(--color-ink); border-radius:var(--radius-lg); padding:28px 24px;">
+        <p class="label-mono" style="color:var(--color-dark-accent); margin-bottom:10px;">Sample &middot; Band Label</p>
+        <h3 style="color:#fff; font-size:1.15rem; margin-bottom:8px;">Heading stays white</h3>
+        <p style="color:rgba(245,246,245,0.8); font-size:0.92rem;">Body copy on a dark band, used on the homepage results band and the Approach page's principles band.</p>
+      </div>
     </section>
 
     <section class="about-block" id="nav">
@@ -172,6 +224,6 @@
     </div>
   </footer>
 
-  <script src="../js/main.js?v=20260726c"></script>
+  <script src="../js/main.js?v=20260726d"></script>
 </body>
 </html>
