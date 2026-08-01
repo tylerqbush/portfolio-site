@@ -16,12 +16,14 @@ function syncNavInert() {
 function openMobileNav() {
   navList.classList.add('is-open');
   hamburger.setAttribute('aria-expanded', 'true');
+  hamburger.setAttribute('aria-label', 'Close menu');
   syncNavInert();
 }
 
 function closeMobileNav() {
   navList.classList.remove('is-open');
   hamburger.setAttribute('aria-expanded', 'false');
+  hamburger.setAttribute('aria-label', 'Open menu');
   syncNavInert();
 }
 
