@@ -3,13 +3,14 @@
      Contrast verified sRGB relative-luminance method:
      --color-ink              on Cloud  16.5:1  (AAA)
      --color-ink-dim (72%)    on Cloud   6.9:1  (AAA)
-     --color-muted (60%)      on Cloud   4.6:1  (AA — thin margin, don't lighten further)
+     --color-muted (70%)      on Cloud   6.4:1  (AAA — widened from 60%/4.6:1, was too close to the
+       4.5:1 floor for comfort)
      --color-accent (Navy)    on Cloud   8.8:1  (AAA — safe at any text size, no separate
        "strong" shade needed the way the old amber pair required)
      --color-dark-accent (Skylight) on Ink   7.7:1  (AAA — Navy's role on dark surfaces) */
   --color-ink: #12181B;
   --color-ink-dim: rgba(18, 24, 27, 0.72);
-  --color-muted: rgba(18, 24, 27, 0.6);
+  --color-muted: rgba(18, 24, 27, 0.7);
   --color-bg: #F5F6F5;
   --color-surface: #FFFFFF;
   --color-accent: #25476B;
