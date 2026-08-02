@@ -1,22 +1,20 @@
 :root {
   /* Color — Ink / Navy / Cloud / Skylight.
-     Contrast verified sRGB relative-luminance method:
-     --color-ink              on Cloud  16.5:1  (AAA)
-     --color-ink-dim (72%)    on Cloud   6.9:1  (AAA)
-     --color-muted (70%)      on Cloud   6.4:1  (AAA — widened from 60%/4.6:1, was too close to the
-       4.5:1 floor for comfort)
-     --color-accent (Navy)    on Cloud   8.8:1  (AAA — safe at any text size, no separate
-       "strong" shade needed the way the old amber pair required)
-     --color-dark-accent (Skylight) on Ink   7.7:1  (AAA — Navy's role on dark surfaces) */
-  --color-ink: #12181B;
-  --color-ink-dim: rgba(18, 24, 27, 0.72);
-  --color-muted: rgba(18, 24, 27, 0.7);
+     Maxed for contrast, not just AA/AAA compliance:
+     --color-ink              on Cloud  19.4:1  (pure black, ceiling for this bg)
+     --color-ink-dim (90%)    on Cloud  16.4:1
+     --color-muted (85%)      on Cloud  14.3:1
+     --color-accent (Navy)    on Cloud  16.8:1  (darkened near-black, still reads as navy)
+     --color-dark-accent (Skylight) on Ink  18.6:1 (lightened near-white, still reads as blue) */
+  --color-ink: #000000;
+  --color-ink-dim: rgba(0, 0, 0, 0.9);
+  --color-muted: rgba(0, 0, 0, 0.85);
   --color-bg: #F5F6F5;
   --color-surface: #FFFFFF;
-  --color-accent: #25476B;
-  --color-accent-strong: #25476B;
-  --color-dark-accent: #93ACC9;
-  --color-border: rgba(18, 24, 27, 0.1);
+  --color-accent: #0A1622;
+  --color-accent-strong: #0A1622;
+  --color-dark-accent: #EDF2F6;
+  --color-border: rgba(0, 0, 0, 0.1);
 
   --font-heading: 'Poppins', sans-serif;
   --font-body: 'Poppins', sans-serif;
