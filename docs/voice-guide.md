@@ -81,10 +81,30 @@ comprehensive, significant(ly), essential, critical, key (adjective), dynamic, i
 
 - **No concrete imagery** — if the first few sentences of a section evoke nothing visible, add a thing, place, number, or name.
 - **Proper-noun avoidance** — never "a client," "a tool," "a hospital system." Name it: Novant Health, Agile Defense, Pangram.
-- **Uniform positivity** is a tell. Let something be annoying, unresolved, or a genuine tradeoff — this site is allowed to have opinions ("that's a trust problem, not just a design one" is the target register).
+- **Uniform positivity** is a tell. Let something be annoying, unresolved, or a genuine tradeoff. This site is allowed to have opinions ("safety regulators decide whether to take you seriously before they read a single page" is the target register).
 - **Both-sidesing every claim** — commit to a position instead.
 - **Suspiciously tidy anecdotes** — real case studies have a tangent or a dead end. Keep one.
 - **Register scrubbing** — use contractions. Don't sand the voice flat.
+
+## Personal register
+
+Source: distilled from a voice guide written for a different project (a payment-processing business's social captions). The business-specific rules don't apply here, no 200-word cap, no checkmark lists, no processor/competitor framing, but the underlying voice is the same person, so the heart of it carries over.
+
+- **Funny is the delivery, trust is the point.** If a joke ever makes a real claim fuzzy, cut the joke, not the claim.
+- **The phone test.** Before finishing a sentence, imagine saying it out loud to someone who just asked a real question. If it'd sound weird coming out of your mouth, it's copy, not conversation, rewrite it or cut it.
+- **Deadpan the surprising fact.** Let the fact carry the weight. Don't editorialize on top of it, "...and that's just wild" kills the line it's trying to sell.
+- **One self-aware aside, max, per page.** A quick wink in parentheses is fine once. A wink every paragraph stops being a wink.
+- **Say the surprising thing plainly.** Don't announce you're about to make a point. Just make it.
+- **Vary sentence length on purpose.** Short line, then a longer one, then a fragment if it earns it.
+- **First-person singular.** "I," not "we." One person, not a department, even when describing a team you run.
+
+## Never (on top of the AI-tell list above)
+
+- Negative parallelism, including the softer disguised kind ("It's not about X. It's a Y thing," "It just means Y"). Delete everything before the actual claim and say the claim.
+- Open a paragraph with a listicle-style setup line ("Here's what that actually means:", "Here's the thing:"). Just say the thing.
+- End on a tagline. If the last line before a CTA sounds like it belongs on a billboard, cut it and end on the plainest true sentence instead.
+- Pad to look thorough. Shorter and true beats longer and fluffy.
+- Let a joke blur a real number, claim, or instruction. If humor and accuracy are ever in tension, accuracy wins and the joke gets cut.
 
 ## Human markers to add on purpose
 
