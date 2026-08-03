@@ -59,6 +59,7 @@
     <a href="#bands">Bands</a>
     <a href="#nav">Navigation</a>
     <a href="#states">States</a>
+    <a href="#a11y">Accessibility</a>
     <a href="#future">Future</a>
   </div>
 
@@ -73,13 +74,13 @@
       <h2 class="label-mono">Color</h2>
       <p class="lede">Four colors, used the same way everywhere. Ink and Cloud carry the page. Navy is the one accent, spent on the thing that matters. Skylight only shows up when Navy would disappear against a dark surface.</p>
       <div class="ds-row">
-        <div class="ds-token"><div class="ds-swatch" style="background:#12181B;"></div><code>--color-ink</code>#12181B &middot; 16.5:1<br>Primary text, dark surfaces.</div>
-        <div class="ds-token"><div class="ds-swatch" style="background:#525658;"></div><code>--color-ink-dim</code>Ink @ 72% &middot; 6.9:1<br>Secondary body copy.</div>
-        <div class="ds-token"><div class="ds-swatch" style="background:#6D7172;"></div><code>--color-muted</code>Ink @ 60% &middot; 4.6:1<br>Meta lines, thin margin, don't lighten further.</div>
+        <div class="ds-token"><div class="ds-swatch" style="background:#000000;"></div><code>--color-ink</code>#000000 &middot; 19.4:1<br>Primary text, dark surfaces.</div>
+        <div class="ds-token"><div class="ds-swatch" style="background:#353535;"></div><code>--color-ink-dim</code>Ink @ 78% &middot; 11.3:1<br>Secondary body copy.</div>
+        <div class="ds-token"><div class="ds-swatch" style="background:#494949;"></div><code>--color-muted</code>Ink @ 70% &middot; 8.3:1<br>Meta lines.</div>
         <div class="ds-token"><div class="ds-swatch" style="background:#F5F6F5;border:1px solid var(--color-border);"></div><code>--color-bg</code>#F5F6F5 &middot; Cloud<br>Page background, not white.</div>
         <div class="ds-token"><div class="ds-swatch" style="background:#FFFFFF;border:1px solid var(--color-border);"></div><code>--color-surface</code>#FFFFFF<br>Cards, sitting a step above Cloud.</div>
         <div class="ds-token"><div class="ds-swatch" style="background:#25476B;"></div><code>--color-accent</code>#25476B &middot; Navy &middot; 8.8:1<br>The one accent. Links, labels, the thing that changed.</div>
-        <div class="ds-token"><div class="ds-swatch" style="background:#93ACC9;"></div><code>--color-dark-accent</code>#93ACC9 &middot; Skylight &middot; 7.7:1 on Ink<br>Navy's job, but on a dark band.</div>
+        <div class="ds-token"><div class="ds-swatch" style="background:#A8C0DA;"></div><code>--color-dark-accent</code>#A8C0DA &middot; Skylight &middot; 11.2:1 on Ink<br>Navy's job, but on a dark band.</div>
         <div class="ds-token"><div class="ds-swatch" style="background:#DADBDB;"></div><code>--color-border</code>Ink @ 10%<br>Hairlines between sections.</div>
       </div>
     </section>
@@ -206,6 +207,29 @@
     <section class="about-block" id="states">
       <h2 class="label-mono">States &amp; Feedback</h2>
       <p class="lede">Every interactive element (<code>.btn</code>, <code>.site-nav__link</code>, <code>.work-list__link</code>, <code>.cs-next__link</code>, <code>.cta-band__link</code>) pairs <code>:hover</code> with <code>:focus-visible</code> so keyboard users get the same feedback as mouse users. The stat counter (<code>[data-count-to]</code>) respects <code>prefers-reduced-motion</code> and jumps straight to the final value rather than animating for users who've opted out.</p>
+    </section>
+
+    <section class="about-block" id="a11y">
+      <h2 class="label-mono">Accessibility</h2>
+      <p class="lede">Built to WCAG 2.1 AA, verified by the numbers above rather than assumed. Every text/background pairing on this site clears 4.5:1 for normal text, most clear AAA's 7:1. The one color that sat close to a floor, muted meta text, was widened from an original 4.6:1 (too close to the 4.5:1 line for comfort) to 8.3:1.</p>
+      <div class="ds-row">
+        <div class="ds-token" style="min-width:260px;">
+          <code>Focus</code>
+          Native browser outline, never suppressed. No custom focus ring anywhere on the site, because the default already works and a hand-rolled one is one more thing to get wrong.
+        </div>
+        <div class="ds-token" style="min-width:260px;">
+          <code>aria-current</code>
+          The active nav link gets an aria-current="page" attribute alongside its visual active state, so screen reader users get the same "you are here" signal sighted users get from the underline.
+        </div>
+        <div class="ds-token" style="min-width:260px;">
+          <code>Touch targets</code>
+          The mobile hamburger is 44&times;44px, and each nav row's tap target spans the full row, not just the text. An earlier version left dead space that looked clickable and wasn't.
+        </div>
+        <div class="ds-token" style="min-width:260px;">
+          <code>Reduced motion</code>
+          The stat counter checks prefers-reduced-motion and jumps straight to the final number instead of animating.
+        </div>
+      </div>
     </section>
 
     <section class="about-block" id="future">
