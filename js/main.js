@@ -36,19 +36,20 @@ if (hamburger && navList) {
   syncNavInert();
 }
 
-// ---- Stat counter (elements with data-count-to; suffix via data-count-suffix) ----
+// ---- Stat counter (elements with data-count-to; prefix via data-count-prefix, suffix via data-count-suffix) ----
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 document.querySelectorAll('[data-count-to]').forEach((el) => {
   const target = parseInt(el.dataset.countTo, 10);
   const suffix = el.dataset.countSuffix || '';
+  const prefix = el.dataset.countPrefix || '';
 
   if (prefersReducedMotion || !('IntersectionObserver' in window)) {
-    el.textContent = `${target.toLocaleString('en-US')}${suffix}`;
+    el.textContent = `${prefix}${target.toLocaleString('en-US')}${suffix}`;
     return;
   }
 
-  el.textContent = `0${suffix}`;
+  el.textContent = `${prefix}0${suffix}`;
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -61,7 +62,7 @@ document.querySelectorAll('[data-count-to]').forEach((el) => {
       function tick(now) {
         const progress = Math.min((now - start) / duration, 1);
         const eased = 1 - Math.pow(1 - progress, 3);
-        el.textContent = `${Math.round(target * eased).toLocaleString('en-US')}${suffix}`;
+        el.textContent = `${prefix}${Math.round(target * eased).toLocaleString('en-US')}${suffix}`;
         if (progress < 1) requestAnimationFrame(tick);
       }
 

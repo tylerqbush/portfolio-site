@@ -79,7 +79,7 @@ Inserted between About and Tools. Uses the `.section-heading` + `.about__stateme
 
 > **How I Use AI, Actually**
 >
-> I'll say the thing everyone's dancing around: working with AI mostly feels solo, and calling it a "team" flattens something real. My mentor Russ Unger writes about this better than I do (go read him). The short version I've landed on through my own work: AI gets you to a rough, working draft fast. Embarrassingly fast. Getting from that draft to something you'd put your name on is still the job, and no model does that part for you.
+> I'll say the thing everyone's dancing around: working with AI mostly feels solo, and calling it a "team" flattens something real. A mentor of mine writes about this better than I do. The short version I've landed on through my own work: AI gets you to a rough, working draft fast. Embarrassingly fast. Getting from that draft to something you'd put your name on is still the job, and no model does that part for you.
 >
 > I test this against my own work, not just theory. This site went through a written plan, then every task got implemented, then reviewed twice (once for whether it matched the spec, once for whether the code itself held up) before I'd call it done. That second pass caught real bugs: a slider that snapped where it shouldn't, images that would've gone permanently invisible if a script failed to load. Nobody catches those by trusting the first draft.
 >
@@ -196,7 +196,7 @@ Unchanged in function and file (`assets/resume.pdf`, `assets/resume-print.html`)
 
 ## Copyright note (for whoever implements this)
 
-The "How I Use AI" copy above is Tyler's own original writing, informed by (but not copied from) his mentor Russ Unger's LinkedIn writing on the same topic. No phrases, extended metaphors, or specific examples from Russ's posts appear in this spec — the examples used (this site's build process, Agile Defense prototyping, Land to Land Holdings) are Tyler's own real work. Do not add material from Russ's posts beyond what's captured here.
+The "How I Use AI" copy above is Tyler's own original writing, informed by (but not copied from) a mentor's writing on the same topic. No phrases, extended metaphors, or specific examples from the mentor's posts appear in this spec — the examples used (this site's build process, Agile Defense prototyping, Land to Land Holdings) are Tyler's own real work. Do not add material from the mentor's posts beyond what's captured here.
 
 ## Deferred / follow-up items (unchanged from v1, still outstanding)
 
