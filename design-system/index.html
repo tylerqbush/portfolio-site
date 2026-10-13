@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Lora:ital,wght@1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/styles.css?v=20260726d" />
+  <link rel="stylesheet" href="../css/styles.css?v=20261013a" />
   <style>
     .ds-nav { position: sticky; top: var(--nav-height); background: var(--color-bg); border-bottom: 1px solid var(--color-border); padding: 12px var(--section-padding-x); display: flex; gap: 20px; overflow-x: auto; z-index: 40; }
     .ds-nav a { font-family: var(--font-label); font-weight: 300; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-muted); white-space: nowrap; }
@@ -66,12 +66,12 @@
     <section class="about-header">
       <p class="label-mono">Design System</p>
       <h1 class="about-header__title">The tokens and components behind this site, rendered from the real stylesheet.</h1>
-      <p class="about-header__intro">This page uses <code>css/styles.css</code> directly. Nothing here is a screenshot or a separate design file. If it looks wrong here, it looks wrong in production. See the <a href="../brand-identity.html">Brand Identity</a> page for the thinking behind these choices.</p>
+      <p class="about-header__intro">This page uses <code>css/styles.css</code> directly. Every sample renders from the live stylesheet. If it looks wrong here, it looks wrong in production. See the <a href="../brand-identity.html">Brand Identity</a> page for the thinking behind these choices.</p>
     </section>
 
     <section class="about-block" id="color">
       <h2 class="label-mono">Color</h2>
-      <p class="lede">Four colors, used the same way everywhere. Ink and Cloud carry the page. Navy is the one accent, spent on the thing that matters. Skylight only shows up when Navy would disappear against a dark surface.</p>
+      <p class="lede">Four colors, used the same way everywhere. Ink and Cloud carry the page. Navy is the one accent, spent on the thing that changed. Skylight only shows up when Navy would disappear against a dark surface.</p>
       <div class="ds-row">
         <div class="ds-token"><div class="ds-swatch" style="background:#000000;"></div><code>--color-ink</code>#000000 &middot; 19.4:1<br>Primary text, dark surfaces.</div>
         <div class="ds-token"><div class="ds-swatch" style="background:#353535;"></div><code>--color-ink-dim</code>Ink @ 78% &middot; 11.3:1<br>Secondary body copy.</div>
@@ -151,7 +151,7 @@
         <div class="ds-token"><code>--section-padding-y</code>clamp(56px, 9vh, 100px)</div>
         <div class="ds-token"><code>--content-max-width</code>1120px</div>
       </div>
-      <p class="lede" style="margin-top:4px;">Two breakpoints do almost all the work: 780px collapses multi-column grids to one and swaps the nav to its mobile dropdown, 700px (occasionally 600px, where a component needs the extra room) handles the smaller stuff, like case-study stat grids.</p>
+      <p class="lede" style="margin-top:4px;">Two breakpoints do almost all the work: 780px collapses multi-column grids to one and swaps the nav to its mobile dropdown, 700px (occasionally 600px, where a component needs the extra room) handles smaller components, like case-study stat grids.</p>
     </section>
 
     <section class="about-block" id="buttons">
@@ -171,11 +171,11 @@
       <h2 class="label-mono">Cards &amp; Tiles</h2>
       <div class="cs-stats" style="max-width:600px;">
         <div class="cs-stat">
-          <span class="cs-stat__value">40+</span>
+          <span class="cs-stat__value">4</span>
           <p class="label-mono cs-stat__label">Stat card</p>
         </div>
         <div class="cs-stat">
-          <span class="cs-stat__value">90%</span>
+          <span class="cs-stat__value">~1,500</span>
           <p class="label-mono cs-stat__label">Stat card</p>
         </div>
       </div>
@@ -257,6 +257,6 @@
     </div>
   </footer>
 
-  <script src="../js/main.js?v=20260726d"></script>
+  <script src="../js/main.js?v=20261013a"></script>
 </body>
 </html>

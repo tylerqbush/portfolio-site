@@ -1186,6 +1186,11 @@ button {
   gap: 24px;
 }
 
+/* Four-up variant, for the color and type specimens on the Brand Identity page */
+.tools-grid--four {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .tools-grid__label {
   margin-bottom: 8px;
   margin-top: 10px;
