@@ -71,14 +71,14 @@
 
     <section class="about-block" id="color">
       <h2 class="label-mono">Color</h2>
-      <p class="lede">Four colors, used the same way everywhere. Ink and Cloud carry the page. Navy is the one accent, spent on the thing that changed. Skylight only shows up when Navy would disappear against a dark surface.</p>
+      <p class="lede">Four colors, used the same way everywhere. Ink and Cloud carry the page. Navy is the one accent, spent on the part that got clearer. Skylight only shows up when Navy would disappear against a dark surface.</p>
       <div class="ds-row">
         <div class="ds-token"><div class="ds-swatch" style="background:#000000;"></div><code>--color-ink</code>#000000 &middot; 19.4:1<br>Primary text, dark surfaces.</div>
         <div class="ds-token"><div class="ds-swatch" style="background:#353535;"></div><code>--color-ink-dim</code>Ink @ 78% &middot; 11.3:1<br>Secondary body copy.</div>
         <div class="ds-token"><div class="ds-swatch" style="background:#494949;"></div><code>--color-muted</code>Ink @ 70% &middot; 8.3:1<br>Meta lines.</div>
         <div class="ds-token"><div class="ds-swatch" style="background:#F5F6F5;border:1px solid var(--color-border);"></div><code>--color-bg</code>#F5F6F5 &middot; Cloud<br>Page background, not white.</div>
         <div class="ds-token"><div class="ds-swatch" style="background:#FFFFFF;border:1px solid var(--color-border);"></div><code>--color-surface</code>#FFFFFF<br>Cards, sitting a step above Cloud.</div>
-        <div class="ds-token"><div class="ds-swatch" style="background:#25476B;"></div><code>--color-accent</code>#25476B &middot; Navy &middot; 8.8:1<br>The one accent. Links, labels, the thing that changed.</div>
+        <div class="ds-token"><div class="ds-swatch" style="background:#25476B;"></div><code>--color-accent</code>#25476B &middot; Navy &middot; 8.8:1<br>The one accent. Links, labels, and the part that got clearer.</div>
         <div class="ds-token"><div class="ds-swatch" style="background:#A8C0DA;"></div><code>--color-dark-accent</code>#A8C0DA &middot; Skylight &middot; 11.2:1 on Ink<br>Navy's job, but on a dark band.</div>
         <div class="ds-token"><div class="ds-swatch" style="background:#DADBDB;"></div><code>--color-border</code>Ink @ 10%<br>Hairlines between sections.</div>
       </div>
@@ -136,7 +136,7 @@
     <section class="about-block" id="mark-process">
       <h2 class="label-mono">Mark Process</h2>
       <p class="lede">Two rectangles, equal thickness, fused where they meet: a spine and a bar. That's the whole mark, a sideways T, for Tyler. No illustrated icon, no gradient, no third color standing in for detail the shape doesn't need.</p>
-      <p class="lede">White on Navy, because the mark carries its own background and has to read at 16 pixels as clearly as it does at billboard scale. Equal stroke weight on both bars keeps it looking like a built shape instead of a hand-drawn flourish. Centered exactly, not eyeballed, the same discipline this site asks of a sentence, applied to a rectangle.</p>
+      <p class="lede">White on Navy, because the mark carries its own background and has to read at 16 pixels as clearly as it does at billboard scale. Equal stroke weight on both bars keeps it looking like a built shape. Centered exactly, the same discipline this site asks of a sentence, applied to a rectangle.</p>
     </section>
 
     <section class="about-block" id="spacing">
@@ -211,16 +211,16 @@
 
     <section class="about-block" id="states">
       <h2 class="label-mono">States &amp; Feedback</h2>
-      <p class="lede">Every interactive element (<code>.btn</code>, <code>.site-nav__link</code>, <code>.work-list__link</code>, <code>.cs-next__link</code>, <code>.cta-band__link</code>) pairs <code>:hover</code> with <code>:focus-visible</code> so keyboard users get the same feedback as mouse users. The stat counter (<code>[data-count-to]</code>) respects <code>prefers-reduced-motion</code> and jumps straight to the final value rather than animating for users who've opted out.</p>
+      <p class="lede">Every interactive element (<code>.btn</code>, <code>.site-nav__link</code>, <code>.work-list__link</code>, <code>.cs-next__link</code>, <code>.cta-band__link</code>) pairs <code>:hover</code> with <code>:focus-visible</code> so keyboard users get the same feedback as mouse users. The stat counter (<code>[data-count-to]</code>) respects <code>prefers-reduced-motion</code> and jumps straight to the final value for users who've opted out.</p>
     </section>
 
     <section class="about-block" id="a11y">
       <h2 class="label-mono">Accessibility</h2>
-      <p class="lede">Built to WCAG 2.1 AA, verified by the numbers above rather than assumed. Every text/background pairing on this site clears 4.5:1 for normal text, most clear AAA's 7:1. The one color that sat close to a floor, muted meta text, was widened from an original 4.6:1 (too close to the 4.5:1 line for comfort) to 8.3:1.</p>
+      <p class="lede">Built to WCAG 2.1 AA, verified by the numbers above. Every text/background pairing on this site clears 4.5:1 for normal text, most clear AAA's 7:1. The one color that sat close to a floor, muted meta text, was widened from an original 4.6:1 (too close to the 4.5:1 line for comfort) to 8.3:1.</p>
       <div class="ds-row">
         <div class="ds-token" style="min-width:260px;">
           <code>Focus</code>
-          Native browser outline, never suppressed. No custom focus ring anywhere on the site, because the default already works and a hand-rolled one is one more thing to get wrong.
+          Native browser outline, never suppressed. No custom focus ring anywhere on the site, because the default already works and a hand-rolled one is one more chance to get it wrong.
         </div>
         <div class="ds-token" style="min-width:260px;">
           <code>aria-current</code>
@@ -228,18 +228,18 @@
         </div>
         <div class="ds-token" style="min-width:260px;">
           <code>Touch targets</code>
-          The mobile hamburger is 44&times;44px, and each nav row's tap target spans the full row, not just the text. An earlier version left dead space that looked clickable and wasn't.
+          The mobile hamburger is 44&times;44px, and each nav row's tap target spans the full row. An earlier version left dead space that looked clickable but did nothing.
         </div>
         <div class="ds-token" style="min-width:260px;">
           <code>Reduced motion</code>
-          The stat counter checks prefers-reduced-motion and jumps straight to the final number instead of animating.
+          The stat counter checks prefers-reduced-motion and jumps straight to the final number.
         </div>
       </div>
     </section>
 
     <section class="about-block" id="future">
       <h2 class="label-mono">Future Components</h2>
-      <p class="lede">Not yet built, but the visual language already implies these if they're ever needed: a form/input pattern (this site has no forms yet: contact is mailto-only, deliberately, to avoid collecting data this site has no server to handle securely), a loading/skeleton state for the stat counter's pre-animation moment, and a toast/inline-confirmation pattern for a future "copy to clipboard" affordance on the microcopy specimens.</p>
+      <p class="lede">Not yet built, but the visual language already implies these if they're ever needed: a form/input pattern (this site has no forms yet: contact is mailto-only, deliberately, to avoid collecting data this site has no server to handle securely), a loading/skeleton state for the stat counter's pre-animation moment, and a toast/inline-confirmation pattern for a future "copy to clipboard" affordance.</p>
     </section>
   </main>
 
@@ -251,7 +251,6 @@
         <a href="../beyond-the-resume.html" class="site-footer__link">Beyond the Resume</a>
         <a href="../tools.html" class="site-footer__link">Tools</a>
         <a href="../podcast.html" class="site-footer__link">Podcast</a>
-        <a href="../work/microcopy.html" class="site-footer__link">Writing Samples</a>
         <a href="mailto:tyler.qbush@gmail.com" class="site-footer__email">tyler.qbush@gmail.com</a>
       </div>
     </div>

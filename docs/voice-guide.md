@@ -88,7 +88,7 @@ comprehensive, significant(ly), essential, critical, key (adjective), dynamic, i
 
 ## Personal register
 
-Source: distilled from a voice guide written for a different project (a payment-processing business's social captions). The business-specific rules don't apply here, no 200-word cap, no checkmark lists, no processor/competitor framing, but the underlying voice is the same person, so the heart of it carries over.
+Source: distilled from a voice guide written for a different project (a business's social captions). The business-specific rules don't apply here, no 200-word cap, no checkmark lists, no processor/competitor framing, but the underlying voice is the same person, so the heart of it carries over.
 
 - **Funny is the delivery, trust is the point.** If a joke ever makes a real claim fuzzy, cut the joke, not the claim.
 - **The phone test.** Before finishing a sentence, imagine saying it out loud to someone who just asked a real question. If it'd sound weird coming out of your mouth, it's copy, not conversation, rewrite it or cut it.
