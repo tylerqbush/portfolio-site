@@ -325,6 +325,12 @@ body.has-dialog { overflow: hidden; }
   .pipeline__step { padding: var(--s2); padding-top: 2.75rem; }
   .pipeline__step::before { left: var(--s2); top: 0.875rem; }
 }
+@media (min-width: 40rem) {
+  .pipeline--phases { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--s1); }
+  .pipeline--phases .pipeline__step { padding-inline: 0.75rem; }
+  .pipeline--phases .pipeline__step::before { left: 0.75rem; }
+  .pipeline--phases strong { overflow-wrap: anywhere; }
+}
 
 /* decisions */
 .decisions { margin-top: var(--s1); }
@@ -357,6 +363,11 @@ body.has-dialog { overflow: hidden; }
 .library__row span:nth-child(4) { clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); }
 .frames { display: flex; gap: 0.5rem; }
 .frames span { flex: 1; height: 2.75rem; border: 1px solid var(--rule-strong); }
+.compare__list { list-style: none; display: grid; gap: 0.5rem; }
+.compare__list li { padding: 0.625rem 0.75rem; border: 1px solid var(--rule-strong); font-size: 0.9375rem; line-height: 1.35; }
+.compare__list--before li { border-style: dashed; border-color: var(--rule); color: var(--ink-soft); }
+.chips { list-style: none; margin-top: var(--s2); display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+.chips .label { margin-right: 0.25rem; }
 
 /* ---- Related and contact ---- */
 .related { padding-block: var(--s6); }

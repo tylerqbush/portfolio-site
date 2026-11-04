@@ -3,177 +3,273 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Solutions Architect Jira Board | Tyler Quackenbush</title>
-  <meta name="description" content="Designing a Jira board with the Solutions Architect lead that replaced one person's Excel sheet and lets a new solutions architect join any effort at any phase." />
-  <link rel="icon" href="../assets/favicon.svg?v=20260726f" type="image/svg+xml" />
-  <meta property="og:title" content="Solutions Architect Jira Board | Tyler Quackenbush" />
-  <meta property="og:description" content="Designing a Jira board with the Solutions Architect lead that replaced one person's Excel sheet and lets a new solutions architect join any effort at any phase." />
+  <title>Replacing a one-person Excel sheet with a Jira board the whole Solutions Architect team uses | Tyler Quackenbush</title>
+  <meta name="description" content="A Jira board helped the Solutions Architect team join work in progress and find what each phase required." />
+  <meta property="og:title" content="Replacing a one-person Excel sheet with a Jira board the whole Solutions Architect team uses | Tyler Quackenbush" />
+  <meta property="og:description" content="A Jira board helped the Solutions Architect team join work in progress and find what each phase required." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="../assets/images/og-image.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Solutions Architect Jira Board | Tyler Quackenbush" />
-  <meta name="twitter:description" content="Designing a Jira board with the Solutions Architect lead that replaced one person's Excel sheet and lets a new solutions architect join any effort at any phase." />
+  <meta name="twitter:title" content="Replacing a one-person Excel sheet with a Jira board the whole Solutions Architect team uses | Tyler Quackenbush" />
+  <meta name="twitter:description" content="A Jira board helped the Solutions Architect team join work in progress and find what each phase required." />
   <meta name="twitter:image" content="../assets/images/og-image.jpg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Lora:ital,wght@1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/styles.css?v=20261103b" />
+  <link rel="icon" href="../assets/brand/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="../assets/brand/favicon.ico" sizes="48x48" />
+  <link rel="apple-touch-icon" href="../assets/brand/favicon-180.png" />
+  <link rel="preload" href="../assets/fonts/PlusJakartaSans.ttf" as="font" type="font/ttf" crossorigin />
+  <script>document.documentElement.className += ' js';</script>
+  <link rel="stylesheet" href="../css/redesign.css" />
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to content</a>
 
-  <nav class="site-nav">
-    <div class="site-nav__wrap">
-      <a href="../index.html" class="site-nav__brand">
-        <svg class="site-nav__mark" width="34" height="34" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="40" height="40" rx="9" fill="#25476B"/>
-          <rect x="6" y="17" width="28" height="6" rx="3" fill="#FFFFFF"/>
-          <rect x="6" y="6" width="6" height="28" rx="3" fill="#FFFFFF"/>
-        </svg>
-        <span class="site-nav__name">Tyler Quackenbush</span>
-      </a>
-      <ul class="site-nav__list" id="site-nav-list">
-        <li><a href="../work.html" class="site-nav__link active" aria-current="page">Work</a></li>
-        <li><a href="../about.html" class="site-nav__link">About</a></li>
-        <li><a href="../approach.html" class="site-nav__link">Approach</a></li>
-        <li><a href="../ai.html" class="site-nav__link">How I Use AI</a></li>
-        <li><a href="../contact.html" class="site-nav__link">Contact</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav-list">
-        <span></span><span></span><span></span>
-      </button>
+  <header class="site-header">
+    <div class="shell site-header__bar">
+      <a href="../index.html" class="brand" aria-label="tquack, Tyler Quackenbush, home"><img src="../assets/brand/tquack-wordmark-charcoal.svg" alt="" width="1245" height="424" /></a>
+      <nav aria-label="Main">
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav-list"><span class="nav__toggle-text">Menu</span></button>
+        <ul class="nav__list" id="site-nav-list">
+          <li><a class="nav__link" href="../work.html" aria-current="page">Work</a></li>
+          <li><a class="nav__link" href="../about.html">About</a></li>
+          <li><a class="nav__link" href="../approach.html">Approach</a></li>
+          <li><a class="nav__link" href="../ai.html">How I Use AI</a></li>
+          <li><a class="nav__link" href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </nav>
+  </header>
 
   <main id="main-content">
-    <section class="cs">
-      <a href="../work.html" class="label-mono cs__back">&larr; All case studies</a>
-      <p class="label-mono cs__eyebrow">Agile Defense &middot; Deep dive</p>
-      <h1 class="cs__title">Replacing a one-person Excel sheet with a Jira board the whole Solutions Architect team uses</h1>
-      <p class="cs__meta">Senior UX Designer &middot; Agile Defense</p>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="shell">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="../work.html">Work</a></li>
+            <li><a href="../work/agile-defense.html">Agile Defense</a></li>
+            <li><span aria-current="page">Jira board</span></li>
+          </ol>
+        </nav>
 
-      <div class="cs-stats">
-        <div class="cs-stat">
-          <span class="cs-stat__value" data-count-to="7">0</span>
-          <p class="label-mono cs-stat__label">Pipeline phases on the board</p>
-        </div>
-        <div class="cs-stat">
-          <span class="cs-stat__value">A month</span>
-          <p class="label-mono cs-stat__label">To design and build the board</p>
-        </div>
-        <div class="cs-stat">
-          <span class="cs-stat__value">Every effort</span>
-          <p class="label-mono cs-stat__label">Tracked by the whole team</p>
-        </div>
-      </div>
+        <div class="hero__grid">
+          <div class="hero__text">
+            <p class="label label--accent hero__eyebrow">Agile Defense &middot; Deep dive</p>
+            <h1 class="hero__title" id="page-title">From one spreadsheet to <em>a shared board.</em></h1>
+            <p class="hero__summary">A Jira board helped the Solutions Architect team join work in progress and find what each phase required.</p>
 
-      <div class="cs-section">
-        <h2 class="label-mono cs-section__label">Problem</h2>
-        <p class="cs-section__body">The Solutions Architect team works through efforts in phases, and more often than not, someone joins an effort that&rsquo;s already in progress. The only tracker was an Excel sheet that one person kept. It showed the team and leadership which efforts were in which phase, which were up for recompete, and which upcoming bids the company qualified for. If that person left, the team would be scrambling to find or learn what only they knew. Joining an effort in progress hit three groups: the new solutions architect, the lead onboarding them, and the team or program manager already running the effort.</p>
-      </div>
-
-      <div class="cs-section">
-        <h2 class="label-mono cs-section__label">My role</h2>
-        <p class="cs-section__body">I designed the board with the lead of the Solutions Architect team. I ran discovery and rounds of interviews with the rest of the team so it fit the whole group.</p>
-      </div>
-
-      <div class="cs-section">
-        <h2 class="label-mono cs-section__label">Process</h2>
-        <p class="cs-section__body">I started with discovery: interviews with the Solutions Architect team to find the gaps in what they knew about the process. I asked which artifacts each phase needed, whether people knew where to find them, and whether they knew what to do with them once they had them. With the lead, I tracked down the artifacts that already existed and turned them into easier-to-use, prefilled templates, so the work stays consistent and always has what it needs. The lead and I then mapped what each phase looks like, which artifact it needs at which stage, and how to fill it out. Last, I set up the Jira board. Automations create each phase&rsquo;s subtasks and attach its templates to the tickets, based on which pipeline phase an effort is in. Each phase also links to its OneDrive folder and to a reference for filling out each artifact.</p>
-
-        <figure class="cs-figure" role="group" aria-labelledby="fig-board">
-          <div class="board">
-            <p class="label-mono board__label">Pipeline phases</p>
-            <ol class="board__phases">
-              <li class="pipe__step">Identify</li>
-              <li class="pipe__step">Pursue</li>
-              <li class="pipe__step">Proposal</li>
-              <li class="pipe__step">Submitted</li>
-              <li class="pipe__step">Done / Closeout</li>
-            </ol>
-            <div class="board__side">
-              <p class="label-mono board__label">Side states</p>
-              <span class="board__chip">In-Protest</span>
-              <span class="board__chip">No Request for Solutioning</span>
-            </div>
-            <div>
-              <p class="label-mono board__label">Every phase gets four things</p>
-              <ul class="board__cards">
-                <li class="board__card"><strong>Subtasks</strong><small>Created by automation</small></li>
-                <li class="board__card"><strong>Templates</strong><small>Attached to the tickets by automation</small></li>
-                <li class="board__card"><strong>Folder link</strong><small>The phase&rsquo;s OneDrive folder</small></li>
-                <li class="board__card"><strong>Fill-out reference</strong><small>How to complete each artifact</small></li>
-              </ul>
-            </div>
+            <dl class="meta">
+              <div class="meta__row"><dt>Role</dt><dd>Senior UX Designer. I designed the board with the lead of the Solutions Architect team.</dd></div>
+              <div class="meta__row"><dt>Team</dt><dd>The Solutions Architect team and its lead</dd></div>
+              <div class="meta__row"><dt>Context</dt><dd>Efforts move through phases, and people often join one already in progress</dd></div>
+              <div class="meta__row"><dt>Tools</dt><dd>Jira with automations, plus a OneDrive folder for each phase</dd></div>
+              <div class="meta__row"><dt>Status</dt><dd>In use by the whole team on every effort</dd></div>
+            </dl>
           </div>
-          <figcaption id="fig-board" class="cs-figure__caption">The board&rsquo;s pipeline: five phases on the main path and two side states.</figcaption>
-        </figure>
+
+          <figure class="hero__artifact" role="group" aria-labelledby="fig-board-cap">
+            <div class="artifact__bar">
+              <span class="artifact__tag">Conceptual reconstruction</span>
+              <button class="artifact__open" type="button" data-lightbox="lb-board">View full size</button>
+            </div>
+            <img class="artifact__img" src="../assets/images/jira-board-1200.webp" width="1200" height="768" alt="An illustrative work-management board titled Solutions Architect Team, Pipeline Board. Five columns show the pipeline phases: Identify, Pursue, Proposal, Submitted and Done / Closeout. Each holds example effort tickets with subtask progress. Filters for In-Protest and No Request for Solutioning sit above the board. A side panel for one example ticket lists its phase subtasks, an attached template, and links to a OneDrive phase folder and an artifact completion guide. All content is example content." />
+            <figcaption class="figure-caption" id="fig-board-cap">Illustrative pipeline board with synthetic tickets and phase guidance. Not a screenshot of the real board. Effort names, categories, counts, people and interface details are example content.</figcaption>
+          </figure>
+        </div>
       </div>
+    </section>
 
-      <div class="cs-section">
-        <h2 class="label-mono cs-section__label">Decisions</h2>
-        <p class="cs-section__body">I interviewed everyone on the team, because the lead&rsquo;s sense of what people knew didn&rsquo;t always match what team members told me. In the interviews they showed me what they didn&rsquo;t actually know, and we addressed those gaps. I&rsquo;d have kept the board leaner than it ended up. After the pilot, the team asked for a couple more categories, a timeline view showing who owned what and how many efforts each person was running at once, so future work could be assigned with that in view, and a swim lane that groups tickets by POD to show each business unit. I&rsquo;d have cut some of that. I conceded because it mattered to the people using the board every day, and the team loved it.</p>
+    <section class="results" aria-labelledby="results-title">
+      <div class="shell">
+        <h2 class="sr-only" id="results-title">Results</h2>
+        <div class="results__grid">
+          <div class="results__item">
+            <p class="results__value">A month</p>
+            <p class="results__sub">To design and build the board</p>
+          </div>
+          <div class="results__item">
+            <p class="results__value">Two weeks</p>
+            <p class="results__sub">Pilot, then only minimal changes</p>
+          </div>
+          <div class="results__item">
+            <p class="results__value">Every effort</p>
+            <p class="results__sub">Tracked on the board by the whole team</p>
+          </div>
+        </div>
+        <p class="results__note">Project timeline and current use. Time savings are reported by users, not measured.</p>
       </div>
+    </section>
 
-      <div class="cs-section">
-        <h2 class="label-mono cs-section__label">Outcome</h2>
-        <p class="cs-section__body">The whole Solutions Architect team now uses the board on every effort, and it replaced the Excel sheet. A new solutions architect can join an effort already in progress, at any phase, and know what to do and where to find it, without tracking someone down to ask. The person who used to keep the Excel sheet says the board saves time and is much easier to use and read, and leadership loves it too. The board took a month to design and build. A two-week pilot followed, and it needed only minimal changes afterward.</p>
+    <section class="section" aria-labelledby="problem-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">01 &middot; The constraint</span>
+          <h2 class="section__title" id="problem-title">The tracker depended on one person.</h2>
+        </div>
+        <div>
+          <div class="prose">
+            <p>The Solutions Architect team works through efforts in phases, and more often than not, someone joins an effort that&rsquo;s already in progress.</p>
+            <p>The only tracker was an Excel sheet that one person kept. If that person left, the team would be scrambling to find or learn what only they knew.</p>
+          </div>
+          <dl class="facts">
+            <div class="facts__row"><dt>The sheet showed</dt><dd>Which efforts were in which phase, which were up for recompete, and which upcoming bids the company qualified for</dd></div>
+            <div class="facts__row"><dt>Who it affected</dt><dd>The new solutions architect, the lead onboarding them, and the team or program manager already running the effort</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
 
-        <figure class="cs-figure" role="group" aria-labelledby="fig-ba">
-          <div class="ba">
-            <div class="ba__card">
-              <p class="label-mono">Before</p>
-              <p class="ba__title">An Excel sheet that one person kept</p>
-              <ul class="ba__list">
+    <section class="section" aria-labelledby="contribution-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">02 &middot; My contribution</span>
+          <h2 class="section__title" id="contribution-title">Start with what people actually knew.</h2>
+        </div>
+        <div>
+          <div class="prose">
+            <p>I designed the board with the lead of the Solutions Architect team. I ran discovery and rounds of interviews with the rest of the team so it fit the whole group.</p>
+          </div>
+          <h3 class="subhead">How the board came together</h3>
+          <ol class="pipeline">
+            <li class="pipeline__step"><strong>Interviews</strong><span>Which artifacts does each phase need, can people find them, and do they know what to do with them?</span></li>
+            <li class="pipeline__step"><strong>Templates</strong><span>With the lead, I tracked down the artifacts that already existed and made them easier-to-use, prefilled templates</span></li>
+            <li class="pipeline__step"><strong>Phase map</strong><span>We mapped what each phase looks like, which artifact it needs at which stage, and how to fill it out</span></li>
+            <li class="pipeline__step pipeline__step--changed"><span class="pipeline__flag">What I built</span><strong>The board</strong><span>Automations create each phase&rsquo;s subtasks and attach its templates</span></li>
+          </ol>
+
+          <h3 class="subhead">What an effort gets in each phase</h3>
+          <div class="prose">
+            <p>The board follows five phases on the main path, with two side states for efforts that leave it.</p>
+          </div>
+          <ol class="pipeline pipeline--phases">
+            <li class="pipeline__step"><strong>Identify</strong></li>
+            <li class="pipeline__step"><strong>Pursue</strong></li>
+            <li class="pipeline__step"><strong>Proposal</strong></li>
+            <li class="pipeline__step"><strong>Submitted</strong></li>
+            <li class="pipeline__step"><strong>Done / Closeout</strong></li>
+          </ol>
+          <ul class="chips" aria-label="Side states">
+            <li class="label label--muted">Side states</li>
+            <li class="chip">In-Protest</li>
+            <li class="chip">No Request for Solutioning</li>
+          </ul>
+          <dl class="facts">
+            <div class="facts__row"><dt>Subtasks</dt><dd>Created by automation for the phase</dd></div>
+            <div class="facts__row"><dt>Templates</dt><dd>Attached to the tickets by automation</dd></div>
+            <div class="facts__row"><dt>Folder link</dt><dd>The phase&rsquo;s OneDrive folder</dd></div>
+            <div class="facts__row"><dt>Fill-out reference</dt><dd>How to complete each artifact</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="decisions-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">03 &middot; The decisions</span>
+          <h2 class="section__title" id="decisions-title">Let the daily users shape the final board.</h2>
+        </div>
+        <div class="decisions">
+          <div class="decision">
+            <h3 class="decision__title">Interview everyone, not only the lead</h3>
+            <p class="decision__why"><span class="label label--muted">Why</span>The lead&rsquo;s sense of what people knew didn&rsquo;t always match what team members told me. In the interviews they showed me what they didn&rsquo;t actually know, and we addressed those gaps.</p>
+          </div>
+          <div class="decision">
+            <h3 class="decision__title">Prefill the templates and automate the setup</h3>
+            <p class="decision__why"><span class="label label--muted">Why</span>The templates keep the work consistent and complete, and the automations mean each phase always has what it needs.</p>
+          </div>
+          <div class="decision">
+            <h3 class="decision__title">Add the views the team asked for after the pilot</h3>
+            <p class="decision__why"><span class="label label--accent">Tradeoff</span>I&rsquo;d have kept the board leaner than it ended up. After the pilot, the team asked for a couple more categories, a timeline view showing who owned what and how many efforts each person was running at once, so future work could be assigned with that in view, and a swim lane that groups tickets by POD to show each business unit. I&rsquo;d have cut some of that. I conceded because it mattered to the people using the board every day, and the team loved it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="outcome-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">04 &middot; The outcome</span>
+          <h2 class="section__title" id="outcome-title">The whole team now uses the board.</h2>
+        </div>
+        <div>
+          <div class="prose">
+            <p>The whole Solutions Architect team now uses the board on every effort, and it replaced the Excel sheet. A new solutions architect can join an effort already in progress, at any phase, and know what to do and where to find it, without tracking someone down to ask.</p>
+            <p>The person who used to keep the Excel sheet says the board saves time and is much easier to use and read, and leadership loves it too. The board took a month to design and build. A two-week pilot followed, and it needed only minimal changes afterward.</p>
+          </div>
+
+          <figure class="compare" role="group" aria-labelledby="fig-compare">
+            <div class="compare__panel">
+              <span class="label label--muted">Before</span>
+              <p class="compare__title">An Excel sheet that one person kept</p>
+              <ul class="compare__list compare__list--before">
                 <li>Which efforts were in which phase</li>
                 <li>Which were up for recompete</li>
                 <li>Which upcoming bids the company qualified for</li>
               </ul>
             </div>
-            <div class="ba__card ba__card--after">
-              <p class="label-mono">After</p>
-              <p class="ba__title">A Jira board the whole team uses</p>
-              <ul class="ba__list">
+            <div class="compare__panel compare__panel--after">
+              <span class="label label--accent">After</span>
+              <p class="compare__title">A Jira board the whole team uses</p>
+              <ul class="compare__list">
                 <li>Subtasks and templates created for each phase by automation</li>
                 <li>A timeline view of who owns what and how many efforts each person is running</li>
                 <li>A swim lane by POD, which shows each effort&rsquo;s business unit</li>
               </ul>
             </div>
-          </div>
-          <figcaption id="fig-ba" class="cs-figure__caption">The same job before and after the board.</figcaption>
-        </figure>
-      </div>
-
-      <div class="cs-next">
-        <p class="label-mono">Part of</p>
-        <a href="agile-defense.html" class="cs-next__link">Agile Defense &rarr;</a>
-      </div>
-
-      <div class="cs-cta">
-        <p>Want to talk about a role like this?</p>
-        <div class="cs-cta__links">
-          <a href="mailto:tyler.qbush@gmail.com" class="btn btn--primary">Get in touch</a>
-          <a href="../work.html" class="label-mono cs-cta__all">All case studies &rarr;</a>
+          </figure>
+          <p class="figure-caption" id="fig-compare">The same job before and after the board.</p>
         </div>
+      </div>
+    </section>
+
+    <section class="related" aria-labelledby="related-title">
+      <div class="shell">
+        <h2 class="label label--muted" id="related-title">More from Agile Defense</h2>
+        <ul class="related__list">
+          <li class="related__item"><a class="related__link" href="../work/figma-design-system.html"><span><span class="label label--accent">Deep dive</span>A Figma design system that took course production from one module in two weeks to three modules in three days</span><span class="related__arrow" aria-hidden="true">&rarr;</span></a></li>
+          <li class="related__item"><a class="related__link" href="../work/pre-discovery.html"><span><span class="label label--accent">Deep dive</span>Ten-day Pre-Discovery sprints, and the Fast Plays that start them</span><span class="related__arrow" aria-hidden="true">&rarr;</span></a></li>
+          <li class="related__item"><a class="related__link" href="../work/agile-defense.html"><span><span class="label label--accent">Engagement</span>Agile Defense, the full case study</span><span class="related__arrow" aria-hidden="true">&rarr;</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="contact" aria-labelledby="contact-title">
+      <div class="shell">
+        <h2 class="contact__title" id="contact-title">Have a messy problem? Let's make it simple.</h2>
+        <a class="contact__link" href="mailto:tyler.qbush@gmail.com">Get in touch</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="site-footer__wrap">
-      <span class="site-footer__name">Tyler Quackenbush</span>
-      <div class="site-footer__links">
-        <a href="../design-system/index.html" class="site-footer__link">Design System</a>
-        <a href="../beyond-the-resume.html" class="site-footer__link">Beyond the Resume</a>
-        <a href="../tools.html" class="site-footer__link">Tools</a>
-        <a href="../podcast.html" class="site-footer__link">Podcast</a>
-        <a href="mailto:tyler.qbush@gmail.com" class="site-footer__email">tyler.qbush@gmail.com</a>
-      </div>
+    <div class="shell site-footer__grid">
+      <a class="lockup" href="../index.html" aria-label="tquack, Tyler Quackenbush, home"><img src="../assets/brand/tquack-wordmark-charcoal.svg" alt="" width="1245" height="424" /><span class="lockup__name">Tyler Quackenbush</span></a>
+      <nav aria-label="Footer">
+        <ul class="site-footer__links">
+          <li><a href="../design-system/index.html">Design System</a></li>
+          <li><a href="../beyond-the-resume.html">Beyond the Resume</a></li>
+          <li><a href="../tools.html">Tools</a></li>
+          <li><a href="../podcast.html">Podcast</a></li>
+          <li><a href="mailto:tyler.qbush@gmail.com">tyler.qbush@gmail.com</a></li>
+        </ul>
+      </nav>
     </div>
   </footer>
 
-  <script src="../js/main.js?v=20261013a"></script>
+  <dialog class="lightbox" id="lb-board" aria-labelledby="lb-board-title">
+    <div class="lightbox__inner">
+      <div class="lightbox__head">
+        <h2 class="label label--muted" id="lb-board-title">Conceptual reconstruction, full size</h2>
+        <button class="lightbox__close" type="button">Close</button>
+      </div>
+      <div class="lightbox__scroll" tabindex="0" role="region" aria-label="Full-size illustration, scrolls in both directions">
+        <img data-src="../assets/images/jira-board.png" width="1568" height="1003" alt="An illustrative work-management board titled Solutions Architect Team, Pipeline Board. Five columns show the pipeline phases: Identify, Pursue, Proposal, Submitted and Done / Closeout. Each holds example effort tickets with subtask progress. Filters for In-Protest and No Request for Solutioning sit above the board. A side panel for one example ticket lists its phase subtasks, an attached template, and links to a OneDrive phase folder and an artifact completion guide. All content is example content." />
+      </div>
+      <p class="lightbox__cap">Illustrative pipeline board with synthetic tickets and phase guidance. Not a screenshot of the real board.</p>
+    </div>
+  </dialog>
+
+  <script src="../js/redesign.js"></script>
 </body>
 </html>
