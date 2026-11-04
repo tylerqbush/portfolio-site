@@ -471,3 +471,19 @@ body.has-dialog { overflow: hidden; }
 .work-item:first-child { border-top: 1px solid var(--rule-strong); }
 .work-item__name { margin-top: 0.25rem; font-size: 1.75rem; font-weight: var(--w-head); line-height: 1.1; letter-spacing: -0.03em; }
 .work-item__meta { margin-top: 0.25rem; margin-bottom: var(--s2); color: var(--ink-muted); }
+
+/* ---- About page ---- */
+.portrait { max-width: 12rem; }
+@media (min-width: 48rem) { .portrait { max-width: 20rem; } }
+.portrait img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; border: 1px solid var(--rule-strong); }
+@media (min-width: 64rem) { .portrait { justify-self: end; margin-top: var(--s6); } }
+.pullquote--plain { margin-top: var(--s4); }
+.job { display: grid; gap: var(--s1) var(--s4); padding-block: var(--s3); border-top: 1px solid var(--rule); }
+.job:first-child { border-top: 1px solid var(--rule-strong); }
+.job__dates { font-size: 0.8125rem; font-weight: var(--w-label); letter-spacing: 0.09em; text-transform: uppercase; color: var(--ink-muted); }
+.job__role { font-size: 1.375rem; font-weight: var(--w-sub); line-height: 1.25; letter-spacing: -0.02em; }
+.job__org { margin-top: 0.25rem; color: var(--ink-muted); }
+.job .prose { margin-top: var(--s2); }
+@media (min-width: 48rem) { .job { grid-template-columns: 9rem minmax(0, 1fr); } }
+.tags { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.tags li { padding: 0.5rem 0.75rem; border: 1px solid var(--rule-strong); font-size: 0.9375rem; line-height: 1.3; }

@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Tyler Quackenbush</title>
   <meta name="description" content="UX designer, project manager, and AI-adoption practitioner with over 10 years across federal and higher-ed products. Experience, competencies, and tools." />
-  <link rel="icon" href="assets/favicon.svg?v=20260726f" type="image/svg+xml" />
   <meta property="og:title" content="About | Tyler Quackenbush" />
   <meta property="og:description" content="UX designer, project manager, and AI-adoption practitioner with over 10 years across federal and higher-ed products. Experience, competencies, and tools." />
   <meta property="og:type" content="website" />
@@ -16,146 +15,165 @@
   <meta name="twitter:title" content="About | Tyler Quackenbush" />
   <meta name="twitter:description" content="UX designer, project manager, and AI-adoption practitioner with over 10 years across federal and higher-ed products. Experience, competencies, and tools." />
   <meta name="twitter:image" content="assets/images/og-image.jpg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Lora:ital,wght@1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20261013a" />
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/brand/favicon.ico" sizes="48x48" />
+  <link rel="apple-touch-icon" href="assets/brand/favicon-180.png" />
+  <link rel="preload" href="assets/fonts/PlusJakartaSans.ttf" as="font" type="font/ttf" crossorigin />
+  <script>document.documentElement.className += ' js';</script>
+  <link rel="stylesheet" href="css/redesign.css" />
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to content</a>
 
-  <nav class="site-nav">
-    <div class="site-nav__wrap">
-      <a href="index.html" class="site-nav__brand">
-        <svg class="site-nav__mark" width="34" height="34" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="40" height="40" rx="9" fill="#25476B"/>
-          <rect x="6" y="17" width="28" height="6" rx="3" fill="#FFFFFF"/>
-          <rect x="6" y="6" width="6" height="28" rx="3" fill="#FFFFFF"/>
-        </svg>
-        <span class="site-nav__name">Tyler Quackenbush</span>
-      </a>
-      <ul class="site-nav__list" id="site-nav-list">
-        <li><a href="work.html" class="site-nav__link">Work</a></li>
-        <li><a href="about.html" class="site-nav__link active" aria-current="page">About</a></li>
-        <li><a href="approach.html" class="site-nav__link">Approach</a></li>
-        <li><a href="ai.html" class="site-nav__link">How I Use AI</a></li>
-        <li><a href="contact.html" class="site-nav__link">Contact</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav-list">
-        <span></span><span></span><span></span>
-      </button>
+  <header class="site-header">
+    <div class="shell site-header__bar">
+      <a href="index.html" class="brand" aria-label="tquack, Tyler Quackenbush, home"><img src="assets/brand/tquack-wordmark-charcoal.svg" alt="" width="1245" height="424" /></a>
+      <nav aria-label="Main">
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav-list"><span class="nav__toggle-text">Menu</span></button>
+        <ul class="nav__list" id="site-nav-list">
+          <li><a class="nav__link" href="work.html">Work</a></li>
+          <li><a class="nav__link" href="about.html" aria-current="page">About</a></li>
+          <li><a class="nav__link" href="approach.html">Approach</a></li>
+          <li><a class="nav__link" href="ai.html">How I Use AI</a></li>
+          <li><a class="nav__link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </nav>
+  </header>
 
   <main id="main-content">
-    <section class="about-header">
-      <img src="assets/images/Headshot.jpeg" alt="Tyler Quackenbush" class="about-header__photo" width="96" height="96" />
-      <p class="label-mono">About</p>
-      <h1 class="about-header__title">I help decide what's worth building, then help build it, from concept prototypes to an AI course for the whole company.</h1>
-      <p class="about-header__intro">I'm Tyler Quackenbush. Ten-plus years moving between UX design, project management, and AI-adoption strategy, for a government contractor and a public university. Most recently, I help design and run the 10-day Pre-Discovery sprints that help win federal contracts, and I manage the training program teaching around 1,500 people to use AI deliberately, starting with AI Foundations. In every role, the job is the same: find what's true, cut the noise, and give the people downstream (leadership, a design team, an end user) something they can act on.</p>
-    </section>
-
-    <section class="about-block about-block--split" id="how-i-work">
-      <h2 class="label-mono">01 &middot; How I Work</h2>
-      <div class="about-block__content">
-        <p class="lede">Every project starts with a kickoff, and every involved party is in the room, even the person who shows up once and never comes back. We walk through the requirements as a group until we agree on the facts, then we make decisions from those facts, together. I borrowed the approach from how solutions architects build a solution, and I keep using it because it works: people who helped define the facts buy into the solution.</p>
-        <p class="lede">I use Claude for research synthesis and first-draft speed, on prototypes and on the training curriculum I manage at Agile Defense. I still make the final call on what ships.</p>
-        <blockquote class="pull-quote">I'll take the boring answer that's right over the clever one that needs a follow-up meeting to explain, every time.</blockquote>
-      </div>
-    </section>
-
-    <section class="about-block">
-      <h2 class="label-mono">02 &middot; Experience</h2>
-
-      <div class="timeline">
-        <article class="timeline-item">
-          <p class="label-mono timeline-item__dates">2021&ndash;Present</p>
-          <div class="timeline-item__content">
-            <h3 class="experience-item__role">Senior UX Designer</h3>
-            <p class="label-mono experience-item__org">Agile Defense (formerly Intellibridge)</p>
-            <p class="experience-item__desc">I move between hands-on design, project management, and AI-program leadership across federal and commercial digital products. I project-managed a 16-week defense data fabric pilot that went live as a working system. I help design and run 10-day Pre-Discovery sprints that put working prototypes in front of customers before competitors have a proposal, and I helped create the Fast Plays workshop toolkit and the TASK Agents that support them. I serve as project manager for a 4-person design team and manage Agile Defense University, the company's AI-native training initiative reaching around 1,500 employees, including AI Foundations.</p>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="shell">
+        <div class="hero__grid">
+          <div class="hero__text">
+            <p class="label label--accent hero__eyebrow">About</p>
+            <h1 class="hero__title" id="page-title">I help decide what's worth building, <em>then help build it.</em></h1>
+            <p class="hero__summary">From concept prototypes to an AI course for the whole company.</p>
           </div>
-        </article>
-
-        <article class="timeline-item">
-          <p class="label-mono timeline-item__dates">2016&ndash;2021</p>
-          <div class="timeline-item__content">
-            <h3 class="experience-item__role">Web Designer</h3>
-            <p class="label-mono experience-item__org">University of North Georgia</p>
-            <p class="experience-item__desc">Led UX/UI design on the redesign of a 5,000+ page public university site. Helped consolidate 20+ navigation menus and designed a 2FA landing page for 20,000+ users.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="about-block about-columns">
-      <div class="about-columns__col">
-        <h2 class="label-mono">03 &middot; Core Competencies</h2>
-        <ul class="tag-list">
-          <li class="tag-list__item">UX Research &amp; Usability Testing</li>
-          <li class="tag-list__item">AI Adoption Strategy &amp; Curriculum Development</li>
-          <li class="tag-list__item">Project &amp; Program Management</li>
-          <li class="tag-list__item">Information Architecture</li>
-          <li class="tag-list__item">Rapid Concept Prototyping</li>
-          <li class="tag-list__item">UX Writing &amp; Content Design</li>
-          <li class="tag-list__item">Agile/Scrum Delivery</li>
-          <li class="tag-list__item">Workshop Facilitation</li>
-        </ul>
-      </div>
-
-      <div class="about-columns__col">
-        <h2 class="label-mono">04 &middot; Tools &amp; Education</h2>
-        <div class="tools-grid tools-grid--stacked">
-          <div class="tools-grid__col">
-            <p class="label-mono tools-grid__label">Design &amp; Prototyping</p>
-            <p class="tools-grid__value">Figma, Photoshop, Illustrator, Mural</p>
-          </div>
-          <div class="tools-grid__col">
-            <p class="label-mono tools-grid__label">AI &amp; Workflow</p>
-            <p class="tools-grid__value">Claude (Opus, Code), ChatGPT, AI-assisted prototyping and content workflows</p>
-          </div>
-          <div class="tools-grid__col">
-            <p class="label-mono tools-grid__label">Project &amp; Collaboration</p>
-            <p class="tools-grid__value">Jira, Confluence, Webflow, Airtable, GitHub</p>
-          </div>
-          <div class="tools-grid__col">
-            <p class="label-mono tools-grid__label">Other</p>
-            <p class="tools-grid__value">CMS platforms, HTML/CSS (basic)</p>
-          </div>
-          <div class="tools-grid__col">
-            <p class="label-mono tools-grid__label">Certifications</p>
-            <p class="tools-grid__value">SAFe for Teams Certified</p>
-          </div>
-          <div class="tools-grid__col">
-            <p class="label-mono tools-grid__label">Education</p>
-            <p class="tools-grid__value">BA English Literature, University of North Georgia</p>
-          </div>
+          <figure class="portrait">
+            <img src="assets/images/Headshot.jpeg" alt="Tyler Quackenbush" width="640" height="640" />
+          </figure>
         </div>
       </div>
     </section>
 
-    <section class="cta-band">
-      <h2 class="cta-band__title">Want to talk about a role like this?</h2>
-      <div class="cta-band__links">
-        <a href="mailto:tyler.qbush@gmail.com" class="btn btn--primary">Get in touch</a>
-        <a href="work.html" class="btn btn--outline">See the case studies &rarr;</a>
+    <section class="section" aria-labelledby="who-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">01 &middot; Who I am</span>
+          <h2 class="section__title" id="who-title">Find what's true, cut the noise.</h2>
+        </div>
+        <div class="prose">
+          <p>I'm Tyler Quackenbush. Ten-plus years moving between UX design, project management, and AI-adoption strategy, for a government contractor and a public university. Most recently, I help design and run the 10-day Pre-Discovery sprints that help win federal contracts, and I manage the training program teaching around 1,500 people to use AI deliberately, starting with AI Foundations. In every role, the job is the same: find what's true, cut the noise, and give the people downstream (leadership, a design team, an end user) something they can act on.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how-i-work" aria-labelledby="how-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">02 &middot; How I work</span>
+          <h2 class="section__title" id="how-title">Agree on the facts, then decide together.</h2>
+        </div>
+        <div class="section__body">
+          <div class="prose">
+            <p>Every project starts with a kickoff, and every involved party is in the room, even the person who shows up once and never comes back. We walk through the requirements as a group until we agree on the facts, then we make decisions from those facts, together. I borrowed the approach from how solutions architects build a solution, and I keep using it because it works: people who helped define the facts buy into the solution.</p>
+            <p>I use Claude for research synthesis and first-draft speed, on prototypes and on the training curriculum I manage at Agile Defense. I still make the final call on what ships.</p>
+          </div>
+          <figure class="pullquote pullquote--plain"><blockquote><p>I'll take the boring answer that's right over the clever one that needs a follow-up meeting to explain, every time.</p></blockquote></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="experience-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">03 &middot; Experience</span>
+          <h2 class="section__title" id="experience-title">Where I've worked.</h2>
+        </div>
+        <div class="section__body">
+          <article class="job">
+            <p class="job__dates">2021&ndash;Present</p>
+            <div>
+              <h3 class="job__role">Senior UX Designer</h3>
+              <p class="job__org">Agile Defense (formerly Intellibridge)</p>
+              <div class="prose"><p>I move between hands-on design, project management, and AI-program leadership across federal and commercial digital products. I project-managed a 16-week defense data fabric pilot that went live as a working system. I help design and run 10-day Pre-Discovery sprints that put working prototypes in front of customers before competitors have a proposal, and I helped create the Fast Plays workshop toolkit and the TASK Agents that support them. I serve as project manager for a 4-person design team and manage Agile Defense University, the company's AI-native training initiative reaching around 1,500 employees, including AI Foundations.</p></div>
+            </div>
+          </article>
+          <article class="job">
+            <p class="job__dates">2016&ndash;2021</p>
+            <div>
+              <h3 class="job__role">Web Designer</h3>
+              <p class="job__org">University of North Georgia</p>
+              <div class="prose"><p>Led UX/UI design on the redesign of a 5,000+ page public university site. Helped consolidate 20+ navigation menus and designed a 2FA landing page for 20,000+ users.</p></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="skills-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">04 &middot; Core competencies</span>
+          <h2 class="section__title" id="skills-title">What I bring.</h2>
+        </div>
+        <ul class="tags">
+          <li>UX Research &amp; Usability Testing</li>
+          <li>AI Adoption Strategy &amp; Curriculum Development</li>
+          <li>Project &amp; Program Management</li>
+          <li>Information Architecture</li>
+          <li>Rapid Concept Prototyping</li>
+          <li>UX Writing &amp; Content Design</li>
+          <li>Agile/Scrum Delivery</li>
+          <li>Workshop Facilitation</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="tools-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">05 &middot; Tools &amp; education</span>
+          <h2 class="section__title" id="tools-title">What I work with.</h2>
+        </div>
+        <div class="section__body">
+          <dl class="facts">
+            <div class="facts__row"><dt>Design &amp; Prototyping</dt><dd>Figma, Photoshop, Illustrator, Mural</dd></div>
+            <div class="facts__row"><dt>AI &amp; Workflow</dt><dd>Claude (Opus, Code), ChatGPT, AI-assisted prototyping and content workflows</dd></div>
+            <div class="facts__row"><dt>Project &amp; Collaboration</dt><dd>Jira, Confluence, Webflow, Airtable, GitHub</dd></div>
+            <div class="facts__row"><dt>Other</dt><dd>CMS platforms, HTML/CSS (basic)</dd></div>
+            <div class="facts__row"><dt>Certifications</dt><dd>SAFe for Teams Certified</dd></div>
+            <div class="facts__row"><dt>Education</dt><dd>BA English Literature, University of North Georgia</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" aria-labelledby="contact-title">
+      <div class="shell">
+        <h2 class="contact__title" id="contact-title">Have a messy problem? Let's make it simple.</h2>
+        <a class="contact__link" href="mailto:tyler.qbush@gmail.com">Get in touch</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="site-footer__wrap">
-      <span class="site-footer__name">Tyler Quackenbush</span>
-      <div class="site-footer__links">
-        <a href="design-system/index.html" class="site-footer__link">Design System</a>
-        <a href="beyond-the-resume.html" class="site-footer__link">Beyond the Resume</a>
-        <a href="tools.html" class="site-footer__link">Tools</a>
-        <a href="podcast.html" class="site-footer__link">Podcast</a>
-        <a href="mailto:tyler.qbush@gmail.com" class="site-footer__email">tyler.qbush@gmail.com</a>
-      </div>
+    <div class="shell site-footer__grid">
+      <a class="lockup" href="index.html" aria-label="tquack, Tyler Quackenbush, home"><img src="assets/brand/tquack-wordmark-charcoal.svg" alt="" width="1245" height="424" /><span class="lockup__name">Tyler Quackenbush</span></a>
+      <nav aria-label="Footer">
+        <ul class="site-footer__links">
+          <li><a href="design-system/index.html">Design System</a></li>
+          <li><a href="beyond-the-resume.html">Beyond the Resume</a></li>
+          <li><a href="tools.html">Tools</a></li>
+          <li><a href="podcast.html">Podcast</a></li>
+          <li><a href="mailto:tyler.qbush@gmail.com">tyler.qbush@gmail.com</a></li>
+        </ul>
+      </nav>
     </div>
   </footer>
 
-  <script src="js/main.js?v=20261013a"></script>
+
+  <script src="js/redesign.js"></script>
 </body>
 </html>
