@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Approach | Tyler Quackenbush</title>
   <meta name="description" content="How Tyler Quackenbush turns an ambiguous problem into a decision people can act on, and holds that decision through legal review, stakeholder pushback, and every revision after." />
-  <link rel="icon" href="assets/favicon.svg?v=20260726f" type="image/svg+xml" />
   <meta property="og:title" content="Approach | Tyler Quackenbush" />
   <meta property="og:description" content="How Tyler Quackenbush turns an ambiguous problem into a decision people can act on, and holds that decision through legal review, stakeholder pushback, and every revision after." />
   <meta property="og:type" content="website" />
@@ -16,123 +15,157 @@
   <meta name="twitter:title" content="Approach | Tyler Quackenbush" />
   <meta name="twitter:description" content="How Tyler Quackenbush turns an ambiguous problem into a decision people can act on, and holds that decision through legal review, stakeholder pushback, and every revision after." />
   <meta name="twitter:image" content="assets/images/og-image.jpg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Lora:ital,wght@1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20261013a" />
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/brand/favicon.ico" sizes="48x48" />
+  <link rel="apple-touch-icon" href="assets/brand/favicon-180.png" />
+  <link rel="preload" href="assets/fonts/PlusJakartaSans.ttf" as="font" type="font/ttf" crossorigin />
+  <script>document.documentElement.className += ' js';</script>
+  <link rel="stylesheet" href="css/redesign.css" />
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to content</a>
 
-  <nav class="site-nav">
-    <div class="site-nav__wrap">
-      <a href="index.html" class="site-nav__brand">
-        <svg class="site-nav__mark" width="34" height="34" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="40" height="40" rx="9" fill="#25476B"/>
-          <rect x="6" y="17" width="28" height="6" rx="3" fill="#FFFFFF"/>
-          <rect x="6" y="6" width="6" height="28" rx="3" fill="#FFFFFF"/>
-        </svg>
-        <span class="site-nav__name">Tyler Quackenbush</span>
-      </a>
-      <ul class="site-nav__list" id="site-nav-list">
-        <li><a href="work.html" class="site-nav__link">Work</a></li>
-        <li><a href="about.html" class="site-nav__link">About</a></li>
-        <li><a href="approach.html" class="site-nav__link active" aria-current="page">Approach</a></li>
-        <li><a href="ai.html" class="site-nav__link">How I Use AI</a></li>
-        <li><a href="contact.html" class="site-nav__link">Contact</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav-list">
-        <span></span><span></span><span></span>
-      </button>
+  <header class="site-header">
+    <div class="shell site-header__bar">
+      <a href="index.html" class="brand" aria-label="tquack, Tyler Quackenbush, home"><img src="assets/brand/tquack-wordmark-charcoal.svg" alt="" width="1245" height="424" /></a>
+      <nav aria-label="Main">
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav-list"><span class="nav__toggle-text">Menu</span></button>
+        <ul class="nav__list" id="site-nav-list">
+          <li><a class="nav__link" href="work.html">Work</a></li>
+          <li><a class="nav__link" href="about.html">About</a></li>
+          <li><a class="nav__link" href="approach.html" aria-current="page">Approach</a></li>
+          <li><a class="nav__link" href="ai.html">How I Use AI</a></li>
+          <li><a class="nav__link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </nav>
+  </header>
 
   <main id="main-content">
-    <section class="about-header">
-      <p class="label-mono">Approach</p>
-      <h1 class="about-header__title">The same three moves, on every project.</h1>
-      <p class="about-header__intro">Most hard problems start as a wall of legal, regulatory, or technical constraints nobody wants to touch. My job is turning that into a decision people can act on, then holding that decision through legal review, stakeholder pushback, and every revision after. Same three moves, regardless of industry.</p>
-    </section>
-
-    <section class="approach">
-      <h2 class="label-mono">The Process</h2>
-      <div class="approach__grid">
-        <div class="approach__step">
-          <p class="label-mono approach__step-num">01</p>
-          <h3 class="approach__step-title">Audit</h3>
-          <p class="approach__step-desc">Read what's already live and flag what's unclear, redundant, or failing an accessibility check before building anything new. At Agile Defense, this is the first phase of Pre-Discovery: interviewing stakeholders.</p>
-        </div>
-        <div class="approach__step">
-          <p class="label-mono approach__step-num">02</p>
-          <h3 class="approach__step-title">Draft</h3>
-          <p class="approach__step-desc">Build the first real version, a prototype, a plan, a decision, before folding back in the legal, brand, or technical requirements. At Agile Defense, that's the concept-prototype stage of Pre-Discovery: a working dashboard built to react to, before anyone commits to the final build.</p>
-        </div>
-        <div class="approach__step">
-          <p class="label-mono approach__step-num">03</p>
-          <h3 class="approach__step-title">Ship</h3>
-          <p class="approach__step-desc">Test it with the people who'll push back (legal, dev, a real user) and hold the line through revisions. At the University of North Georgia, user testing and A/B tests of the navigation helped consolidate 20-plus menus into one structure.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="principles-band">
-      <div class="principles-band__inner">
-        <h2 class="label-mono principles-band__label">What Stays Constant</h2>
-        <div class="principles-band__grid">
-          <div class="principle">
-            <h3 class="principle__title">Clarity over cleverness</h3>
-            <p class="principle__desc">I'll take the boring answer that's right over the clever one that needs a follow-up meeting to explain, every time. Agreement is what makes an answer stick. When the whole group defines the facts at kickoff, a later pushback gets a gentle reminder of what everyone agreed to. The decision can still change, and the group sees what else the change affects.</p>
-          </div>
-          <div class="principle">
-            <h3 class="principle__title">Prove it before you promise it</h3>
-            <p class="principle__desc">Federal agencies don't sign on a pitch deck. At Agile Defense, we build working concept prototypes, real dashboards with synthetic data, before the contract exists and before we can see the real data. Real data often sits behind access restrictions at that stage, so we've gotten good at building synthetic data with enough context to show what works and what doesn't. Clients believe what they can see. The sooner they're clicking through a working dashboard, the sooner they trust us to build the real one. Some of the most useful ideas I've helped test were the ones we decided not to build.</p>
-          </div>
-          <div class="principle">
-            <h3 class="principle__title">Repeatable over one-off</h3>
-            <p class="principle__desc">I help build things other people can pick up without me. Fast Plays and the Solutions Architect Jira board are both set up so a new person can start on their own.</p>
-          </div>
-          <div class="principle">
-            <h3 class="principle__title">The last 25% is the job</h3>
-            <p class="principle__desc">A mentor of mine calls it the 75% trap: AI gets you most of the way fast, and that's exactly when it's tempting to call it done. The iteration after that is the real work. I budget for it every time.</p>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="shell">
+        <div class="hero__grid hero__grid--single">
+          <div class="hero__text">
+            <p class="label label--accent hero__eyebrow">Approach</p>
+            <h1 class="hero__title" id="page-title">The same three moves, <em>on every project.</em></h1>
+            <p class="hero__summary hero__summary--wide">Turning a wall of constraints into a decision people can act on, then holding it through every revision.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="about-block">
-      <h2 class="label-mono">Where This Shows Up</h2>
-      <ul class="tag-list">
-        <li class="tag-list__item">Rapid Concept Prototyping</li>
-        <li class="tag-list__item">AI Adoption Strategy</li>
-        <li class="tag-list__item">Cross-Functional Stakeholder Management</li>
-        <li class="tag-list__item">Agile/Scrum Collaboration</li>
-        <li class="tag-list__item">Information Architecture</li>
-        <li class="tag-list__item">Design Systems</li>
-      </ul>
+    <section class="section" aria-labelledby="job-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">01 &middot; The job</span>
+          <h2 class="section__title" id="job-title">A wall of constraints, turned into a decision.</h2>
+        </div>
+        <div class="prose">
+          <p>Most hard problems start as a wall of legal, regulatory, or technical constraints nobody wants to touch. My job is turning that into a decision people can act on, then holding that decision through legal review, stakeholder pushback, and every revision after. Same three moves, regardless of industry.</p>
+        </div>
+      </div>
     </section>
 
-    <section class="cta-band">
-      <h2 class="cta-band__title">Want someone who works this way on your team?</h2>
-      <div class="cta-band__links">
-        <a href="mailto:tyler.qbush@gmail.com" class="btn btn--primary">Get in touch</a>
-        <a href="work.html" class="btn btn--outline">See the case studies &rarr;</a>
+    <section class="section" aria-labelledby="process-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">02 &middot; The process</span>
+          <h2 class="section__title" id="process-title">Audit, draft, ship.</h2>
+        </div>
+        <div class="decisions">
+            <div class="decision">
+              <h3 class="decision__title">Audit</h3>
+              <p class="decision__why"><span class="label label--accent">Step 1</span>Read what's already live and flag what's unclear, redundant, or failing an accessibility check before building anything new. At Agile Defense, this is the first phase of Pre-Discovery: interviewing stakeholders.</p>
+            </div>
+            <div class="decision">
+              <h3 class="decision__title">Draft</h3>
+              <p class="decision__why"><span class="label label--accent">Step 2</span>Build the first real version, a prototype, a plan, a decision, before folding back in the legal, brand, or technical requirements. At Agile Defense, that's the concept-prototype stage of Pre-Discovery: a working dashboard built to react to, before anyone commits to the final build.</p>
+            </div>
+            <div class="decision">
+              <h3 class="decision__title">Ship</h3>
+              <p class="decision__why"><span class="label label--accent">Step 3</span>Test it with the people who'll push back (legal, dev, a real user) and hold the line through revisions. At the University of North Georgia, user testing and A/B tests of the navigation helped consolidate 20-plus menus into one structure.</p>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="constant-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">03 &middot; What stays constant</span>
+          <h2 class="section__title" id="constant-title">Four things I hold to.</h2>
+        </div>
+        <div class="decisions">
+            <div class="decision">
+              <h3 class="decision__title">Clarity over cleverness</h3>
+              <p class="decision__why"><span class="label label--accent">Principle</span>I'll take the boring answer that's right over the clever one that needs a follow-up meeting to explain, every time. Agreement is what makes an answer stick. When the whole group defines the facts at kickoff, a later pushback gets a gentle reminder of what everyone agreed to. The decision can still change, and the group sees what else the change affects.</p>
+            </div>
+            <div class="decision">
+              <h3 class="decision__title">Prove it before you promise it</h3>
+              <p class="decision__why"><span class="label label--accent">Principle</span>Federal agencies don't sign on a pitch deck. At Agile Defense, we build working concept prototypes, real dashboards with synthetic data, before the contract exists and before we can see the real data. Real data often sits behind access restrictions at that stage, so we've gotten good at building synthetic data with enough context to show what works and what doesn't. Clients believe what they can see. The sooner they're clicking through a working dashboard, the sooner they trust us to build the real one. Some of the most useful ideas I've helped test were the ones we decided not to build.</p>
+            </div>
+            <div class="decision">
+              <h3 class="decision__title">Repeatable over one-off</h3>
+              <p class="decision__why"><span class="label label--accent">Principle</span>I help build things other people can pick up without me. Fast Plays and the Solutions Architect Jira board are both set up so a new person can start on their own.</p>
+            </div>
+            <div class="decision">
+              <h3 class="decision__title">The last 25% is the job</h3>
+              <p class="decision__why"><span class="label label--accent">Principle</span>A mentor of mine calls it the 75% trap: AI gets you most of the way fast, and that's exactly when it's tempting to call it done. The iteration after that is the real work. I budget for it every time.</p>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="shows-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">04 &middot; Where this shows up</span>
+          <h2 class="section__title" id="shows-title">Where this shows up.</h2>
+        </div>
+        <ul class="tags">
+          <li>Rapid Concept Prototyping</li>
+          <li>AI Adoption Strategy</li>
+          <li>Cross-Functional Stakeholder Management</li>
+          <li>Agile/Scrum Collaboration</li>
+          <li>Information Architecture</li>
+          <li>Design Systems</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="related" aria-labelledby="related-title">
+      <div class="shell">
+        <h2 class="label label--muted" id="related-title">See it in practice</h2>
+        <ul class="related__list">
+          <li class="related__item"><a class="related__link" href="work.html"><span><span class="label label--accent">Work</span>See the case studies</span><span class="related__arrow" aria-hidden="true">&rarr;</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="contact" aria-labelledby="contact-title">
+      <div class="shell">
+        <h2 class="contact__title" id="contact-title">Have a messy problem? Let's make it simple.</h2>
+        <a class="contact__link" href="mailto:tyler.qbush@gmail.com">Get in touch</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="site-footer__wrap">
-      <span class="site-footer__name">Tyler Quackenbush</span>
-      <div class="site-footer__links">
-        <a href="design-system/index.html" class="site-footer__link">Design System</a>
-        <a href="beyond-the-resume.html" class="site-footer__link">Beyond the Resume</a>
-        <a href="tools.html" class="site-footer__link">Tools</a>
-        <a href="podcast.html" class="site-footer__link">Podcast</a>
-        <a href="mailto:tyler.qbush@gmail.com" class="site-footer__email">tyler.qbush@gmail.com</a>
-      </div>
+    <div class="shell site-footer__grid">
+      <a class="lockup" href="index.html" aria-label="tquack, Tyler Quackenbush, home"><img src="assets/brand/tquack-wordmark-charcoal.svg" alt="" width="1245" height="424" /><span class="lockup__name">Tyler Quackenbush</span></a>
+      <nav aria-label="Footer">
+        <ul class="site-footer__links">
+          <li><a href="design-system/index.html">Design System</a></li>
+          <li><a href="beyond-the-resume.html">Beyond the Resume</a></li>
+          <li><a href="tools.html">Tools</a></li>
+          <li><a href="podcast.html">Podcast</a></li>
+          <li><a href="mailto:tyler.qbush@gmail.com">tyler.qbush@gmail.com</a></li>
+        </ul>
+      </nav>
     </div>
   </footer>
 
-  <script src="js/main.js?v=20261013a"></script>
+
+  <script src="js/redesign.js"></script>
 </body>
 </html>
