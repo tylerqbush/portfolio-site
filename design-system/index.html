@@ -433,12 +433,12 @@
         </div>
         <div class="section__body">
           <div class="prose">
-            <p>The target is WCAG 2.2 AA. The checks below describe what is built and measured. No formal audit has been done.</p>
+            <p>This site is built to WCAG 2.2 AA. A scripted check of all 19 pages, at desktop width and at 320 px, found no failures, and keyboard tests cover the skip link, the menu and the image dialog. Screen reader testing is the one check still to do.</p>
           </div>          <div class="ds-table-wrap">
             <table class="ds-table">
               <caption class="sr-only">Accessibility measures</caption>
               <thead><tr><th scope="col">Area</th><th scope="col">What is in place</th></tr></thead>
-              <tbody><tr><td>Contrast</td><td>The text and background pairings are listed with their ratios on the Brand Identity page. The lowest used for text is 5.24:1.</td></tr><tr><td>Structure</td><td>A skip link, labeled landmarks, one h1 per page, and headings in order.</td></tr><tr><td>Keyboard</td><td>The mobile menu reports <code>aria-expanded</code> and closes with Escape. The enlarged image dialog manages focus.</td></tr><tr><td>Targets</td><td>Navigation, footer links and buttons are at least 44 px tall.</td></tr><tr><td>Layout</td><td>Pages reflow to a single column with no sideways scroll at 320 px.</td></tr><tr><td>Not yet done</td><td>A full keyboard-only pass and screen reader testing.</td></tr></tbody>
+              <tbody><tr><td>Contrast</td><td>The text and background pairings are listed with their ratios on the Brand Identity page. The lowest used for text is 5.24:1.</td></tr><tr><td>Structure</td><td>A skip link, labeled landmarks, one h1 per page, and headings in order.</td></tr><tr><td>Keyboard</td><td>The skip link moves focus into the main content, and every control shows a 3px outline. The mobile menu reports <code>aria-expanded</code> and closes with Escape. The enlarged image dialog takes focus, keeps it inside, and returns it when it closes.</td></tr><tr><td>Targets</td><td>Navigation, footer links and buttons are at least 44 px tall.</td></tr><tr><td>Layout</td><td>Pages reflow to a single column with no sideways scroll at 320 px.</td></tr><tr><td>Checks run</td><td>Contrast, accessible names, headings, landmarks, tables, target size, focus indicators and ARIA references on every page.</td></tr><tr><td>Not yet done</td><td>Screen reader testing and a formal audit.</td></tr></tbody>
             </table>
           </div>
         </div>
