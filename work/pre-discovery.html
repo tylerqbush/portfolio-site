@@ -3,150 +3,237 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pre-Discovery and Fast Plays | Tyler Quackenbush</title>
-  <meta name="description" content="Helping run ten-day Pre-Discovery sprints that end in an interactive prototype, and helping create the Fast Plays workshop templates that start them." />
-  <link rel="icon" href="../assets/favicon.svg?v=20260726f" type="image/svg+xml" />
-  <meta property="og:title" content="Pre-Discovery and Fast Plays | Tyler Quackenbush" />
-  <meta property="og:description" content="Helping run ten-day Pre-Discovery sprints that end in an interactive prototype, and helping create the Fast Plays workshop templates that start them." />
+  <title>Ten-day Pre-Discovery sprints, and the Fast Plays that start them | Tyler Quackenbush</title>
+  <meta name="description" content="Ten-day sprints turn stakeholder input into an interactive concept, supported by reusable workshop methods." />
+  <meta property="og:title" content="Ten-day Pre-Discovery sprints, and the Fast Plays that start them | Tyler Quackenbush" />
+  <meta property="og:description" content="Ten-day sprints turn stakeholder input into an interactive concept, supported by reusable workshop methods." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="../assets/images/og-image.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Pre-Discovery and Fast Plays | Tyler Quackenbush" />
-  <meta name="twitter:description" content="Helping run ten-day Pre-Discovery sprints that end in an interactive prototype, and helping create the Fast Plays workshop templates that start them." />
+  <meta name="twitter:title" content="Ten-day Pre-Discovery sprints, and the Fast Plays that start them | Tyler Quackenbush" />
+  <meta name="twitter:description" content="Ten-day sprints turn stakeholder input into an interactive concept, supported by reusable workshop methods." />
   <meta name="twitter:image" content="../assets/images/og-image.jpg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Lora:ital,wght@1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/styles.css?v=20261103c" />
+  <link rel="icon" href="../assets/brand/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="../assets/brand/favicon.ico" sizes="48x48" />
+  <link rel="apple-touch-icon" href="../assets/brand/favicon-180.png" />
+  <link rel="preload" href="../assets/fonts/PlusJakartaSans.ttf" as="font" type="font/ttf" crossorigin />
+  <script>document.documentElement.className += ' js';</script>
+  <link rel="stylesheet" href="../css/redesign.css" />
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to content</a>
 
-  <nav class="site-nav">
-    <div class="site-nav__wrap">
-      <a href="../index.html" class="site-nav__brand">
-        <svg class="site-nav__mark" width="34" height="34" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="40" height="40" rx="9" fill="#25476B"/>
-          <rect x="6" y="17" width="28" height="6" rx="3" fill="#FFFFFF"/>
-          <rect x="6" y="6" width="6" height="28" rx="3" fill="#FFFFFF"/>
-        </svg>
-        <span class="site-nav__name">Tyler Quackenbush</span>
-      </a>
-      <ul class="site-nav__list" id="site-nav-list">
-        <li><a href="../work.html" class="site-nav__link active" aria-current="page">Work</a></li>
-        <li><a href="../about.html" class="site-nav__link">About</a></li>
-        <li><a href="../approach.html" class="site-nav__link">Approach</a></li>
-        <li><a href="../ai.html" class="site-nav__link">How I Use AI</a></li>
-        <li><a href="../contact.html" class="site-nav__link">Contact</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav-list">
-        <span></span><span></span><span></span>
-      </button>
+  <header class="site-header">
+    <div class="shell site-header__bar">
+      <a href="../index.html" class="brand" aria-label="tquack, Tyler Quackenbush, home"><img src="../assets/brand/tquack-wordmark-charcoal.svg" alt="" width="1245" height="424" /></a>
+      <nav aria-label="Main">
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav-list"><span class="nav__toggle-text">Menu</span></button>
+        <ul class="nav__list" id="site-nav-list">
+          <li><a class="nav__link" href="../work.html" aria-current="page">Work</a></li>
+          <li><a class="nav__link" href="../about.html">About</a></li>
+          <li><a class="nav__link" href="../approach.html">Approach</a></li>
+          <li><a class="nav__link" href="../ai.html">How I Use AI</a></li>
+          <li><a class="nav__link" href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </nav>
+  </header>
 
   <main id="main-content">
-    <section class="cs">
-      <a href="../work.html" class="label-mono cs__back">&larr; All case studies</a>
-      <p class="label-mono cs__eyebrow">Agile Defense &middot; Deep dive</p>
-      <h1 class="cs__title">Ten-day Pre-Discovery sprints, and the Fast Plays that start them</h1>
-      <p class="cs__meta">Senior UX Designer &middot; Agile Defense</p>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="shell">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="../work.html">Work</a></li>
+            <li><a href="../work/agile-defense.html">Agile Defense</a></li>
+            <li><span aria-current="page">Pre-Discovery</span></li>
+          </ol>
+        </nav>
 
-      <div class="cs-stats">
-        <div class="cs-stat">
-          <span class="cs-stat__value" data-count-to="10">0</span>
-          <p class="label-mono cs-stat__label">Day Pre-Discovery sprint</p>
-        </div>
-        <div class="cs-stat">
-          <span class="cs-stat__value" data-count-to="20" data-count-prefix="~">~0</span>
-          <p class="label-mono cs-stat__label">Fast Plays workshop templates</p>
-        </div>
-        <div class="cs-stat">
-          <span class="cs-stat__value" data-count-to="4">0</span>
-          <p class="label-mono cs-stat__label">Concept dashboards contributed to</p>
-        </div>
-      </div>
+        <div class="hero__grid">
+          <div class="hero__text">
+            <p class="label label--accent hero__eyebrow">Agile Defense &middot; Deep dive</p>
+            <h1 class="hero__title" id="page-title">Make the idea tangible <em>before the contract.</em></h1>
+            <p class="hero__summary">Ten-day sprints turn stakeholder input into an interactive concept, supported by reusable workshop methods.</p>
 
-      <div class="cs-section">
-        <h2 class="label-mono cs-section__label">Problem</h2>
-        <p class="cs-section__body">Agile Defense wanted to show a customer how it would solve a real challenge before anything was signed, and before the customer could give access to its users or data. Pre-Discovery was the answer: a 10-day sprint that starts with stakeholder interviews and ends in an interactive prototype that can serve as the basis for the solution if the company wins the work. A win could expand an existing contract or open a new line of business. The sprint needed workshops, and plenty of workshop methods already existed. The team wanted the 20 or so most frequently used ones as quick-hit templates anyone could pick up and run on their own, with a five-minute introduction, even with a prospective customer in the room.</p>
-      </div>
-
-      <div class="cs-section">
-        <h2 class="label-mono cs-section__label">My role</h2>
-        <p class="cs-section__body">I help run Pre-Discovery sprints with our team of four, and I helped design the process with my team, workshopping it in Mural. I also helped create Fast Plays, our templated workshop methods: the team listed the ones we used most often, and I made Mural templates for them, about 20 in all, and shared them with the company. I run the workshops on our team, so I usually choose the Fast Play that fits what we know about the work. I also contributed to four concept dashboards that came out of these sprints.</p>
-      </div>
-
-      <div class="cs-section">
-        <h2 class="label-mono cs-section__label">Process</h2>
-        <p class="cs-section__body">Day one covers the workshop, the personas and the journey map. One person runs a stakeholder interview or workshop, usually one of the Discovery Fast Plays, while another fills out the personas and journey map in the background. That checks we&rsquo;re headed the right way before any prototyping and leaves most of the 10 days for building the concept. Ten days isn&rsquo;t enough time to reach real end users, so subject matter experts stand in as proxy users. On the readiness dashboard, we also agreed on what &ldquo;readiness&rdquo; meant. Then we co-create user stories in a modified Scrum process, planning in Mural. After that, we turn the user stories into sketches and then into an interactive Figma prototype, filled with synthetic data because real data is usually behind access restrictions before a contract. The sprint ends with a walkthrough of the prototype with the customer, through realistic scenarios.</p>
-
-        <figure class="cs-figure" role="group" aria-labelledby="fig-sprint">
-          <div class="spr">
-            <div class="spr__stage">
-              <p class="label-mono spr__label">Day one</p>
-              <div class="spr__tracks">
-                <div class="spr__track"><strong>One person</strong>Runs the stakeholder interview or workshop, usually a Fast Play</div>
-                <div class="spr__track"><strong>Another person</strong>Fills out the personas and journey map in the background</div>
-              </div>
-            </div>
-            <div class="spr__stage">
-              <p class="label-mono spr__label">Rest of the sprint</p>
-              <ol class="spr__steps">
-                <li>User stories, in a modified Scrum process planned in Mural</li>
-                <li>Sketches</li>
-                <li>Interactive Figma prototype, on synthetic data</li>
-              </ol>
-            </div>
-            <div class="spr__stage spr__stage--end">
-              <p class="label-mono spr__label">End of sprint</p>
-              <p class="spr__end">Walkthrough of the prototype with the customer</p>
-            </div>
+            <dl class="meta">
+              <div class="meta__row"><dt>Role</dt><dd>Senior UX Designer. I help run the sprints, helped design the process, and made the Fast Plays templates.</dd></div>
+              <div class="meta__row"><dt>Team</dt><dd>Our team of four, with subject matter experts as proxy users</dd></div>
+              <div class="meta__row"><dt>Context</dt><dd>Showing a prospective federal customer a working concept before a contract is signed</dd></div>
+              <div class="meta__row"><dt>Tools</dt><dd>Mural and Figma</dd></div>
+              <div class="meta__row"><dt>Status</dt><dd>Ongoing, with four concept dashboards so far</dd></div>
+            </dl>
           </div>
-          <figcaption id="fig-sprint" class="cs-figure__caption">A Pre-Discovery sprint, from day one to the walkthrough with the customer.</figcaption>
-        </figure>
-      </div>
 
-      <div class="cs-section">
-        <h2 class="label-mono cs-section__label">Decisions</h2>
-        <p class="cs-section__body">In 2024, we set out to template the 20 or so methods we used most often. We kept them internal at first, started with three, and tested them ourselves before sharing more widely. In practice, five to seven get used again and again, and they cover the discovery phase.</p>
-      </div>
-
-      <div class="cs-section">
-        <h2 class="label-mono cs-section__label">Outcome</h2>
-        <p class="cs-section__body">Pre-Discovery sprints have helped win federal contracts. In one engagement with a prospective client, a four-hour session built on one of the Fast Plays produced persona profiles that guide the client&rsquo;s UX strategy. The first prototypes were ready in five days and refined over two weeks. The company won that contract and did the work. Four concept dashboards came out of these sprints, each with a prototype the company can build the real solution from if it wins the work. Fast Plays let anyone at the company set up and run a discovery workshop in minutes, even before every stakeholder is known, without deep facilitation experience.</p>
-      </div>
-
-      <div class="cs-next">
-        <p class="label-mono">Part of</p>
-        <a href="agile-defense.html" class="cs-next__link">Agile Defense &rarr;</a>
-      </div>
-
-      <div class="cs-cta">
-        <p>Want to talk about a role like this?</p>
-        <div class="cs-cta__links">
-          <a href="mailto:tyler.qbush@gmail.com" class="btn btn--primary">Get in touch</a>
-          <a href="../work.html" class="label-mono cs-cta__all">All case studies &rarr;</a>
+          <figure class="hero__artifact" role="group" aria-labelledby="fig-canvas-cap">
+            <div class="artifact__bar">
+              <span class="artifact__tag">Conceptual reconstruction</span>
+              <button class="artifact__open" type="button" data-lightbox="lb-canvas">View full size</button>
+            </div>
+            <img class="artifact__img" src="../assets/images/workshop-canvas-1200.webp" width="1200" height="768" alt="An illustrative digital whiteboard titled Discovery workshop, Example canvas, laid out in three steps. Step one, Understand the challenge, holds sticky notes under the question What needs to change? Step two, Map the experience, shows an example persona and a journey map with Find, Understand and Act stages. Step three, Frame the prototype, groups ideas under Visibility, Guidance and Shared context, leading to Overview, Detail and Next action wireframes. All content is synthetic example content." />
+            <figcaption class="figure-caption" id="fig-canvas-cap">Illustrative discovery workshop layout with synthetic example notes. Not original client research, and not a reproduction of a Fast Plays template.</figcaption>
+          </figure>
         </div>
+      </div>
+    </section>
+
+    <section class="results" aria-labelledby="results-title">
+      <div class="shell">
+        <h2 class="sr-only" id="results-title">Results</h2>
+        <div class="results__grid">
+          <div class="results__item">
+            <p class="results__value">10 days</p>
+            <p class="results__sub">Pre-Discovery sprint</p>
+          </div>
+          <div class="results__item">
+            <p class="results__value">About 20</p>
+            <p class="results__sub">Fast Plays workshop templates</p>
+          </div>
+          <div class="results__item">
+            <p class="results__value">4</p>
+            <p class="results__sub">Concept dashboards I contributed to</p>
+          </div>
+        </div>
+        <p class="results__note">Contract wins are a team and company outcome, not mine alone.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="problem-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">01 &middot; The constraint</span>
+          <h2 class="section__title" id="problem-title">Prove the idea with limited access.</h2>
+        </div>
+        <div>
+          <div class="prose">
+            <p>Agile Defense wanted to show a customer how it would solve a real challenge before anything was signed, and before the customer could give access to its users or data. Pre-Discovery was the answer: a 10-day sprint that starts with stakeholder interviews and ends in an interactive prototype that can serve as the basis for the solution if the company wins the work. A win could expand an existing contract or open a new line of business.</p>
+            <p>The sprint needed workshops, and plenty of workshop methods already existed. The team wanted the 20 or so most frequently used ones as quick-hit templates anyone could pick up and run on their own, with a five-minute introduction, even with a prospective customer in the room.</p>
+          </div>
+          <dl class="facts">
+            <div class="facts__row"><dt>Time</dt><dd>Ten days, from stakeholder interviews to a prototype walkthrough</dd></div>
+            <div class="facts__row"><dt>Users</dt><dd>Subject matter experts stand in as proxy users, because ten days isn&rsquo;t enough time to reach real end users</dd></div>
+            <div class="facts__row"><dt>Data</dt><dd>Synthetic, because real data is usually behind access restrictions before a contract</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="contribution-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">02 &middot; My contribution</span>
+          <h2 class="section__title" id="contribution-title">Help shape the sprint and run the workshops.</h2>
+        </div>
+        <div>
+          <div class="prose">
+            <p>I help run Pre-Discovery sprints with our team of four, and I helped design the process with my team, workshopping it in Mural.</p>
+          </div>
+          <dl class="facts">
+            <div class="facts__row"><dt>Fast Plays</dt><dd>The team listed the methods we used most often. I made Mural templates for them, about 20 in all, and shared them with the company.</dd></div>
+            <div class="facts__row"><dt>Workshops</dt><dd>I run the workshops on our team, so I usually choose the Fast Play that fits what we know about the work.</dd></div>
+            <div class="facts__row"><dt>Dashboards</dt><dd>I contributed to four concept dashboards that came out of these sprints.</dd></div>
+          </dl>
+
+          <h3 class="subhead">How a sprint runs</h3>
+          <ol class="pipeline">
+            <li class="pipeline__step pipeline__step--changed"><span class="pipeline__flag">Day one</span><strong>Workshop and personas</strong><span>One person runs a stakeholder interview or workshop while another fills out the personas and journey map</span></li>
+            <li class="pipeline__step"><strong>User stories</strong><span>Co-created in a modified Scrum process, planned in Mural</span></li>
+            <li class="pipeline__step"><strong>Sketches to prototype</strong><span>User stories become sketches, then an interactive Figma prototype on synthetic data</span></li>
+            <li class="pipeline__step"><strong>Walkthrough</strong><span>With the customer, through realistic scenarios</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="decisions-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">03 &middot; The decisions</span>
+          <h2 class="section__title" id="decisions-title">Test a few methods before expanding the library.</h2>
+        </div>
+        <div class="decisions">
+          <div class="decision">
+            <h3 class="decision__title">Start with three templates and test them ourselves</h3>
+            <p class="decision__why"><span class="label label--muted">How</span>In 2024, we set out to template the 20 or so methods we used most often. We kept them internal at first, started with three, and tested them ourselves before sharing more widely. In practice, five to seven get used again and again, and they cover the discovery phase.</p>
+          </div>
+          <div class="decision">
+            <h3 class="decision__title">Run the workshop and fill out the personas at the same time</h3>
+            <p class="decision__why"><span class="label label--muted">Why</span>That checks we&rsquo;re headed the right way before any prototyping and leaves most of the 10 days for building the concept.</p>
+          </div>
+          <div class="decision">
+            <h3 class="decision__title">Use proxy users and synthetic data, and say so</h3>
+            <p class="decision__why"><span class="label label--muted">Why</span>Ten days isn&rsquo;t enough time to reach real end users, and real data is usually behind access restrictions before a contract. Subject matter experts stand in as proxy users, and the prototype is filled with synthetic data.</p>
+          </div>
+          <div class="decision">
+            <h3 class="decision__title">Agree on the key terms up front</h3>
+            <p class="decision__why"><span class="label label--muted">Example</span>On the readiness dashboard, we also agreed on what &ldquo;readiness&rdquo; meant.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="outcome-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">04 &middot; The outcome</span>
+          <h2 class="section__title" id="outcome-title">Give customers something they can react to.</h2>
+        </div>
+        <div class="prose">
+          <p>Pre-Discovery sprints have helped win federal contracts. In one engagement with a prospective client, a four-hour session built on one of the Fast Plays produced persona profiles that guide the client&rsquo;s UX strategy. The first prototypes were ready in five days and refined over two weeks. The company won that contract and did the work.</p>
+          <p>Four concept dashboards came out of these sprints, each with a prototype the company can build the real solution from if it wins the work. Fast Plays let anyone at the company set up and run a discovery workshop in minutes, even before every stakeholder is known, without deep facilitation experience.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="related" aria-labelledby="related-title">
+      <div class="shell">
+        <h2 class="label label--muted" id="related-title">More from Agile Defense</h2>
+        <ul class="related__list">
+          <li class="related__item"><a class="related__link" href="../work/figma-design-system.html"><span><span class="label label--accent">Deep dive</span>A Figma design system that took course production from one module in two weeks to three modules in three days</span><span class="related__arrow" aria-hidden="true">&rarr;</span></a></li>
+          <li class="related__item"><a class="related__link" href="../work/jira-board.html"><span><span class="label label--accent">Deep dive</span>Replacing a one-person Excel sheet with a Jira board the whole Solutions Architect team uses</span><span class="related__arrow" aria-hidden="true">&rarr;</span></a></li>
+          <li class="related__item"><a class="related__link" href="../work/agile-defense.html"><span><span class="label label--accent">Engagement</span>Agile Defense, the full case study</span><span class="related__arrow" aria-hidden="true">&rarr;</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="contact" aria-labelledby="contact-title">
+      <div class="shell">
+        <h2 class="contact__title" id="contact-title">Have a messy problem? Let's make it simple.</h2>
+        <a class="contact__link" href="mailto:tyler.qbush@gmail.com">Get in touch</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="site-footer__wrap">
-      <span class="site-footer__name">Tyler Quackenbush</span>
-      <div class="site-footer__links">
-        <a href="../design-system/index.html" class="site-footer__link">Design System</a>
-        <a href="../beyond-the-resume.html" class="site-footer__link">Beyond the Resume</a>
-        <a href="../tools.html" class="site-footer__link">Tools</a>
-        <a href="../podcast.html" class="site-footer__link">Podcast</a>
-        <a href="mailto:tyler.qbush@gmail.com" class="site-footer__email">tyler.qbush@gmail.com</a>
-      </div>
+    <div class="shell site-footer__grid">
+      <a class="lockup" href="../index.html" aria-label="tquack, Tyler Quackenbush, home"><img src="../assets/brand/tquack-wordmark-charcoal.svg" alt="" width="1245" height="424" /><span class="lockup__name">Tyler Quackenbush</span></a>
+      <nav aria-label="Footer">
+        <ul class="site-footer__links">
+          <li><a href="../design-system/index.html">Design System</a></li>
+          <li><a href="../beyond-the-resume.html">Beyond the Resume</a></li>
+          <li><a href="../tools.html">Tools</a></li>
+          <li><a href="../podcast.html">Podcast</a></li>
+          <li><a href="mailto:tyler.qbush@gmail.com">tyler.qbush@gmail.com</a></li>
+        </ul>
+      </nav>
     </div>
   </footer>
 
-  <script src="../js/main.js?v=20261013a"></script>
+  <dialog class="lightbox" id="lb-canvas" aria-labelledby="lb-canvas-title">
+    <div class="lightbox__inner">
+      <div class="lightbox__head">
+        <h2 class="label label--muted" id="lb-canvas-title">Conceptual reconstruction, full size</h2>
+        <button class="lightbox__close" type="button">Close</button>
+      </div>
+      <div class="lightbox__scroll" tabindex="0" role="region" aria-label="Full-size illustration, scrolls in both directions">
+        <img data-src="../assets/images/workshop-canvas.png" width="1568" height="1003" alt="An illustrative digital whiteboard titled Discovery workshop, Example canvas, laid out in three steps. Step one, Understand the challenge, holds sticky notes under the question What needs to change? Step two, Map the experience, shows an example persona and a journey map with Find, Understand and Act stages. Step three, Frame the prototype, groups ideas under Visibility, Guidance and Shared context, leading to Overview, Detail and Next action wireframes. All content is synthetic example content." />
+      </div>
+      <p class="lightbox__cap">Illustrative discovery workshop layout with synthetic example notes. Not original client research.</p>
+    </div>
+  </dialog>
+
+  <script src="../js/redesign.js"></script>
 </body>
 </html>
