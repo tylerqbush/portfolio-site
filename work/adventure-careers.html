@@ -52,13 +52,21 @@
             <li><span aria-current="page">Adventure Careers</span></li>
           </ol>
         </nav>
-        <div class="hero__grid hero__grid--single">
+        <div class="hero__grid">
           <div class="hero__text">
             <p class="label label--accent hero__eyebrow">Case study &middot; Brand and web</p>
             <h1 class="hero__title" id="page-title">Making a two-person startup look like <em>a company worth trusting.</em></h1>
             <p class="hero__summary">I built the brand and the site at once for a mobile-first outdoor-industry job board.</p>
             <dl class="meta"><div class="meta__row"><dt>Role</dt><dd>Freelance, website and brand</dd></div><div class="meta__row"><dt>Client</dt><dd>Adventure Careers</dd></div><div class="meta__row"><dt>Year</dt><dd>2024</dd></div><div class="meta__row"><dt>Focus</dt><dd>A mobile-first job-search flow for job seekers and employers</dd></div></dl>
           </div>
+          <figure class="hero__artifact" role="group" aria-labelledby="fig-ac-cap">
+            <div class="artifact__bar">
+              <span class="artifact__tag">Home page design</span>
+              <button class="artifact__open" type="button" data-lightbox="lb-ac">View full size</button>
+            </div>
+            <img class="artifact__img" src="../assets/images/ac-home-design-1200.webp" width="1200" height="600" alt="The Adventure Careers home page design. A header with the logo and a Sign Up button sits above the headline Embark on Your Next Career Adventure and a Contact Now button, beside an illustration of a facilitator guiding a group across a ropes course." />
+            <figcaption class="figure-caption" id="fig-ac-cap">The round 1 home page design for Adventure Careers.</figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -146,6 +154,19 @@
     </div>
   </footer>
 
+
+  <dialog class="lightbox" id="lb-ac" aria-labelledby="lb-ac-title">
+    <div class="lightbox__inner">
+      <div class="lightbox__head">
+        <h2 class="label label--muted" id="lb-ac-title">Home page design, full size</h2>
+        <button class="lightbox__close" type="button">Close</button>
+      </div>
+      <div class="lightbox__scroll" tabindex="0" role="region" aria-label="Full-size image, scrolls in both directions">
+        <img data-src="../assets/images/ac-home-design.webp" width="2000" height="1000" alt="The Adventure Careers home page design. A header with the logo and a Sign Up button sits above the headline Embark on Your Next Career Adventure and a Contact Now button, beside an illustration of a facilitator guiding a group across a ropes course." />
+      </div>
+      <p class="lightbox__cap">The round 1 home page design for Adventure Careers.</p>
+    </div>
+  </dialog>
 
   <script src="../js/redesign.js"></script>
 </body>

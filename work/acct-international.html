@@ -52,13 +52,21 @@
             <li><span aria-current="page">ACCT International</span></li>
           </ol>
         </nav>
-        <div class="hero__grid hero__grid--single">
+        <div class="hero__grid">
           <div class="hero__text">
             <p class="label label--accent hero__eyebrow">Case study &middot; Brand identity</p>
             <h1 class="hero__title" id="page-title">Rebuilding a brand to work like <em>a safety credential.</em></h1>
             <p class="hero__summary">I rebuilt a brand identity system that could hold up next to safety regulators and insurance auditors.</p>
             <dl class="meta"><div class="meta__row"><dt>Role</dt><dd>Freelance, brand redesign</dd></div><div class="meta__row"><dt>Client</dt><dd>ACCT International</dd></div><div class="meta__row"><dt>Year</dt><dd>2024</dd></div><div class="meta__row"><dt>Context</dt><dd>The accrediting body that sets and enforces safety and operating standards for challenge courses</dd></div></dl>
           </div>
+          <figure class="hero__artifact" role="group" aria-labelledby="fig-acct-cap">
+            <div class="artifact__bar">
+              <span class="artifact__tag">Brand guide excerpt</span>
+              <button class="artifact__open" type="button" data-lightbox="lb-acct">View full size</button>
+            </div>
+            <img class="artifact__img" src="../assets/images/acct-brand-guide-1200.webp" width="1200" height="852" alt="A page from the ACCT International brand guide titled Logo on Alternative Backgrounds. The ACCT International logo, a wordmark above a knotted rope, appears in full color on a pale mint background, in navy on a green background, and in white on a navy background." />
+            <figcaption class="figure-caption" id="fig-acct-cap">A page from the ACCT International brand guide, showing the logo on its approved background colors.</figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -150,6 +158,19 @@
     </div>
   </footer>
 
+
+  <dialog class="lightbox" id="lb-acct" aria-labelledby="lb-acct-title">
+    <div class="lightbox__inner">
+      <div class="lightbox__head">
+        <h2 class="label label--muted" id="lb-acct-title">Brand guide excerpt, full size</h2>
+        <button class="lightbox__close" type="button">Close</button>
+      </div>
+      <div class="lightbox__scroll" tabindex="0" role="region" aria-label="Full-size image, scrolls in both directions">
+        <img data-src="../assets/images/acct-brand-guide.webp" width="2400" height="1704" alt="A page from the ACCT International brand guide titled Logo on Alternative Backgrounds. The ACCT International logo, a wordmark above a knotted rope, appears in full color on a pale mint background, in navy on a green background, and in white on a navy background." />
+      </div>
+      <p class="lightbox__cap">A page from the ACCT International brand guide.</p>
+    </div>
+  </dialog>
 
   <script src="../js/redesign.js"></script>
 </body>
