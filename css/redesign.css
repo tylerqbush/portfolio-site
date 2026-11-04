@@ -487,3 +487,7 @@ body.has-dialog { overflow: hidden; }
 @media (min-width: 48rem) { .job { grid-template-columns: 9rem minmax(0, 1fr); } }
 .tags { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .tags li { padding: 0.5rem 0.75rem; border: 1px solid var(--rule-strong); font-size: 0.9375rem; line-height: 1.3; }
+
+.hero__name, .hero__role { display: block; }
+.hero__name { color: var(--color-ink); }
+.hero__role { margin-top: 0.25rem; }
