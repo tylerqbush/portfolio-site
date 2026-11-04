@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Work | Tyler Quackenbush</title>
   <meta name="description" content="Case studies in UX design, project management, and AI training: Agile Defense and the University of North Georgia." />
-  <link rel="icon" href="assets/favicon.svg?v=20260726f" type="image/svg+xml" />
   <meta property="og:title" content="Work | Tyler Quackenbush" />
   <meta property="og:description" content="Case studies in UX design, project management, and AI training: Agile Defense and the University of North Georgia." />
   <meta property="og:type" content="website" />
@@ -16,105 +15,131 @@
   <meta name="twitter:title" content="Work | Tyler Quackenbush" />
   <meta name="twitter:description" content="Case studies in UX design, project management, and AI training: Agile Defense and the University of North Georgia." />
   <meta name="twitter:image" content="assets/images/og-image.jpg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Lora:ital,wght@1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20261103e" />
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/brand/favicon.ico" sizes="48x48" />
+  <link rel="apple-touch-icon" href="assets/brand/favicon-180.png" />
+  <link rel="preload" href="assets/fonts/PlusJakartaSans.ttf" as="font" type="font/ttf" crossorigin />
+  <script>document.documentElement.className += ' js';</script>
+  <link rel="stylesheet" href="css/redesign.css" />
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to content</a>
 
-  <nav class="site-nav">
-    <div class="site-nav__wrap">
-      <a href="index.html" class="site-nav__brand">
-        <svg class="site-nav__mark" width="34" height="34" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="40" height="40" rx="9" fill="#25476B"/>
-          <rect x="6" y="17" width="28" height="6" rx="3" fill="#FFFFFF"/>
-          <rect x="6" y="6" width="6" height="28" rx="3" fill="#FFFFFF"/>
-        </svg>
-        <span class="site-nav__name">Tyler Quackenbush</span>
-      </a>
-      <ul class="site-nav__list" id="site-nav-list">
-        <li><a href="work.html" class="site-nav__link active" aria-current="page">Work</a></li>
-        <li><a href="about.html" class="site-nav__link">About</a></li>
-        <li><a href="approach.html" class="site-nav__link">Approach</a></li>
-        <li><a href="ai.html" class="site-nav__link">How I Use AI</a></li>
-        <li><a href="contact.html" class="site-nav__link">Contact</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav-list">
-        <span></span><span></span><span></span>
-      </button>
+  <header class="site-header">
+    <div class="shell site-header__bar">
+      <a href="index.html" class="brand" aria-label="tquack, Tyler Quackenbush, home"><img src="assets/brand/tquack-wordmark-charcoal.svg" alt="" width="1245" height="424" /></a>
+      <nav aria-label="Main">
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav-list"><span class="nav__toggle-text">Menu</span></button>
+        <ul class="nav__list" id="site-nav-list">
+          <li><a class="nav__link" href="work.html" aria-current="page">Work</a></li>
+          <li><a class="nav__link" href="about.html">About</a></li>
+          <li><a class="nav__link" href="approach.html">Approach</a></li>
+          <li><a class="nav__link" href="ai.html">How I Use AI</a></li>
+          <li><a class="nav__link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </nav>
+  </header>
 
   <main id="main-content">
-    <section class="work-list work-list--page">
-      <h1 class="work-list__page-title">Work</h1>
-      <p class="work-list__intro">Two engagements, and the problem each one turned out to be.</p>
-
-      <article class="work-list__item">
-        <p class="label-mono work-list__eyebrow">Federal</p>
-        <h2 class="work-list__title">Agile Defense</h2>
-        <p class="work-list__meta">Senior UX Designer &middot; 2021&ndash;Present</p>
-        <p class="work-list__desc">Federal agencies won't sign a contract on a promise. Agile Defense proves the idea first, building working concept prototypes clients can react to before competitors have written a proposal. I've contributed to four of those prototypes, project-manage a design team, and help build the AI training that reaches around 1,500 employees.</p>
-        <p class="work-list__result"><strong>Result:</strong> Contributed to 4 concept dashboards; AI training reaching around 1,500 employees company-wide.</p>
-        <a href="work/agile-defense.html" class="label-mono work-list__link">Read the case study &rarr;</a>
-        <div class="work-list__deep">
-          <p class="label-mono work-list__eyebrow">Deep dives</p>
-          <ul class="deep-dives">
-            <li><a class="deep-dive" href="work/figma-design-system.html"><span class="label-mono deep-dive__tag">Design system</span><span class="deep-dive__title">A Figma design system that took course production from one module in two weeks to three modules in three days</span><span class="deep-dive__arrow" aria-hidden="true">&rarr;</span></a></li>
-            <li><a class="deep-dive" href="work/jira-board.html"><span class="label-mono deep-dive__tag">Process</span><span class="deep-dive__title">Replacing a one-person Excel sheet with a Jira board the whole Solutions Architect team uses</span><span class="deep-dive__arrow" aria-hidden="true">&rarr;</span></a></li>
-            <li><a class="deep-dive" href="work/pre-discovery.html"><span class="label-mono deep-dive__tag">Discovery</span><span class="deep-dive__title">Ten-day Pre-Discovery sprints, and the Fast Plays that start them</span><span class="deep-dive__arrow" aria-hidden="true">&rarr;</span></a></li>
-          </ul>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="shell">
+        <div class="hero__grid hero__grid--single">
+          <div class="hero__text">
+            <p class="label label--accent hero__eyebrow">Case studies</p>
+            <h1 class="hero__title" id="page-title">Work</h1>
+            <p class="hero__summary">Two engagements, and the problem each one turned out to be.</p>
+          </div>
         </div>
-      </article>
-
-      <article class="work-list__item">
-        <p class="label-mono work-list__eyebrow">Higher Ed</p>
-        <h2 class="work-list__title">University of North Georgia</h2>
-        <p class="work-list__meta">Web Designer &middot; 2016&ndash;2021</p>
-        <p class="work-list__desc">A public university site grows one department at a time, with nobody in charge of the whole thing. Mine had 20-plus navigation menus. I helped decide what stayed, what merged, and what finally got cut.</p>
-        <p class="work-list__result"><strong>Result:</strong> 20+ navigation menus consolidated into one structure across a 5,000+ page site.</p>
-        <a href="work/ung.html" class="label-mono work-list__link">Read the case study &rarr;</a>
-      </article>
+      </div>
     </section>
 
-    <section class="also-along">
-      <h2 class="label-mono">Also Along the Way</h2>
-      <p class="also-along__intro">Three more engagements outside the federal and higher-ed work above.</p>
-      <div class="also-along__grid">
-        <a href="work/novant-health.html" class="also-along__item">
-          <p class="label-mono also-along__eyebrow">Healthcare</p>
-          <h3 class="also-along__title">Novant Health</h3>
-          <p class="also-along__desc">Prototyping about 50 page layouts a week for a healthcare website redesign and CMS migration.</p>
-        </a>
-        <a href="work/acct-international.html" class="also-along__item">
-          <p class="label-mono also-along__eyebrow">Brand Identity</p>
-          <h3 class="also-along__title">ACCT International</h3>
-          <p class="also-along__desc">Rebuilding a brand system to hold up next to safety regulators and insurance auditors.</p>
-        </a>
-        <a href="work/adventure-careers.html" class="also-along__item">
-          <p class="label-mono also-along__eyebrow">Brand &amp; Web</p>
-          <h3 class="also-along__title">Adventure Careers</h3>
-          <p class="also-along__desc">Building the brand and the site at once for a mobile-first outdoor-industry job board.</p>
-        </a>
+    <section class="section" aria-labelledby="agile-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">Federal</span>
+          <h2 class="section__title" id="agile-title">Agile Defense</h2>
+          <p class="engagement__meta">Senior UX Designer &middot; 2021&ndash;Present</p>
+        </div>
+        <div class="section__body">
+          <div class="prose">
+            <p>Federal agencies won't sign a contract on a promise. Agile Defense proves the idea first, building working concept prototypes clients can react to before competitors have written a proposal. I've contributed to four of those prototypes, project-manage a design team, and help build the AI training that reaches around 1,500 employees.</p>
+          </div>
+          <dl class="facts">
+            <div class="facts__row"><dt>Result</dt><dd>Contributed to 4 concept dashboards; AI training reaching around 1,500 employees company-wide.</dd></div>
+          </dl>
+          <a class="link-arrow" href="work/agile-defense.html">Read the case study &rarr;</a>
+          <h3 class="subhead">Deep dives</h3>
+          <ul class="related__list">
+            <li class="related__item"><a class="related__link" href="work/figma-design-system.html"><span><span class="label label--accent">Design system</span>A Figma design system that took course production from one module in two weeks to three modules in three days</span><span class="related__arrow" aria-hidden="true">&rarr;</span></a></li>
+            <li class="related__item"><a class="related__link" href="work/jira-board.html"><span><span class="label label--accent">Process</span>Replacing a one-person Excel sheet with a Jira board the whole Solutions Architect team uses</span><span class="related__arrow" aria-hidden="true">&rarr;</span></a></li>
+            <li class="related__item"><a class="related__link" href="work/pre-discovery.html"><span><span class="label label--accent">Discovery</span>Ten-day Pre-Discovery sprints, and the Fast Plays that start them</span><span class="related__arrow" aria-hidden="true">&rarr;</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="ung-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">Higher Ed</span>
+          <h2 class="section__title" id="ung-title">University of North Georgia</h2>
+          <p class="engagement__meta">Web Designer &middot; 2016&ndash;2021</p>
+        </div>
+        <div class="section__body">
+          <div class="prose">
+            <p>A public university site grows one department at a time, with nobody in charge of the whole thing. Mine had 20-plus navigation menus. I helped decide what stayed, what merged, and what finally got cut.</p>
+          </div>
+          <dl class="facts">
+            <div class="facts__row"><dt>Result</dt><dd>20+ navigation menus consolidated into one structure across a 5,000+ page site.</dd></div>
+          </dl>
+          <a class="link-arrow" href="work/ung.html">Read the case study &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="also-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <h2 class="section__title" id="also-title">Also along the way</h2>
+        </div>
+        <div class="section__body">
+          <div class="prose">
+            <p>Three more engagements outside the federal and higher-ed work above.</p>
+          </div>
+          <ul class="related__list">
+            <li class="related__item"><a class="related__link" href="work/novant-health.html"><span><span class="label label--accent">Healthcare</span>Novant Health<span class="related__desc">Prototyping about 50 page layouts a week for a healthcare website redesign and CMS migration.</span></span><span class="related__arrow" aria-hidden="true">&rarr;</span></a></li>
+            <li class="related__item"><a class="related__link" href="work/acct-international.html"><span><span class="label label--accent">Brand Identity</span>ACCT International<span class="related__desc">Rebuilding a brand system to hold up next to safety regulators and insurance auditors.</span></span><span class="related__arrow" aria-hidden="true">&rarr;</span></a></li>
+            <li class="related__item"><a class="related__link" href="work/adventure-careers.html"><span><span class="label label--accent">Brand &amp; Web</span>Adventure Careers<span class="related__desc">Building the brand and the site at once for a mobile-first outdoor-industry job board.</span></span><span class="related__arrow" aria-hidden="true">&rarr;</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" aria-labelledby="contact-title">
+      <div class="shell">
+        <h2 class="contact__title" id="contact-title">Have a messy problem? Let's make it simple.</h2>
+        <a class="contact__link" href="mailto:tyler.qbush@gmail.com">Get in touch</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="site-footer__wrap">
-      <span class="site-footer__name">Tyler Quackenbush</span>
-      <div class="site-footer__links">
-        <a href="design-system/index.html" class="site-footer__link">Design System</a>
-        <a href="beyond-the-resume.html" class="site-footer__link">Beyond the Resume</a>
-        <a href="tools.html" class="site-footer__link">Tools</a>
-        <a href="podcast.html" class="site-footer__link">Podcast</a>
-        <a href="mailto:tyler.qbush@gmail.com" class="site-footer__email">tyler.qbush@gmail.com</a>
-      </div>
+    <div class="shell site-footer__grid">
+      <a class="lockup" href="index.html" aria-label="tquack, Tyler Quackenbush, home"><img src="assets/brand/tquack-wordmark-charcoal.svg" alt="" width="1245" height="424" /><span class="lockup__name">Tyler Quackenbush</span></a>
+      <nav aria-label="Footer">
+        <ul class="site-footer__links">
+          <li><a href="design-system/index.html">Design System</a></li>
+          <li><a href="beyond-the-resume.html">Beyond the Resume</a></li>
+          <li><a href="tools.html">Tools</a></li>
+          <li><a href="podcast.html">Podcast</a></li>
+          <li><a href="mailto:tyler.qbush@gmail.com">tyler.qbush@gmail.com</a></li>
+        </ul>
+      </nav>
     </div>
   </footer>
 
-  <script src="js/main.js?v=20261013a"></script>
+
+  <script src="js/redesign.js"></script>
 </body>
 </html>
