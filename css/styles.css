@@ -1725,31 +1725,71 @@ button {
   }
 }
 
-/* ---- Work page: deep dives under a case study ---- */
+/* ---- Deep dive cards (Work page and Agile Defense page) ---- */
 .work-list__deep {
   margin-top: 20px;
   padding-top: 16px;
   border-top: 1px solid var(--color-border);
 }
 
-.work-list__deep ul {
+.deep-dives {
   list-style: none;
-  margin: 8px 0 0;
+  display: grid;
+  gap: 12px;
+  margin: 12px 0 0;
   padding: 0;
 }
 
-.work-list__deep li {
-  margin-bottom: 8px;
-}
-
-.work-list__deep a {
+.deep-dive {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 4px 20px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
   color: var(--color-ink);
-  text-decoration: underline;
-  text-decoration-color: var(--color-accent);
-  text-underline-offset: 3px;
+  text-decoration: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
-.work-list__deep a:hover,
-.work-list__deep a:focus-visible {
+.deep-dive__tag {
+  grid-column: 1;
+  margin: 0;
+}
+
+.deep-dive__title {
+  grid-column: 1;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.deep-dive__arrow {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  font-size: 1.4rem;
   color: var(--color-accent);
+  transition: transform 0.15s ease;
+}
+
+.deep-dive:hover,
+.deep-dive:focus-visible {
+  border-color: var(--color-accent);
+  box-shadow: 0 2px 10px rgba(37, 71, 107, 0.15);
+}
+
+.deep-dive:hover .deep-dive__arrow,
+.deep-dive:focus-visible .deep-dive__arrow {
+  transform: translateX(4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .deep-dive,
+  .deep-dive__arrow {
+    transition: none;
+  }
 }
