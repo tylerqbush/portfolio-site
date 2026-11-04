@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tools | Tyler Quackenbush</title>
   <meta name="description" content="The design, research, and AI tools Tyler Quackenbush uses day to day." />
-  <link rel="icon" href="assets/favicon.svg?v=20260726f" type="image/svg+xml" />
   <meta property="og:title" content="Tools | Tyler Quackenbush" />
   <meta property="og:description" content="The design, research, and AI tools Tyler Quackenbush uses day to day." />
   <meta property="og:type" content="website" />
@@ -16,87 +15,84 @@
   <meta name="twitter:title" content="Tools | Tyler Quackenbush" />
   <meta name="twitter:description" content="The design, research, and AI tools Tyler Quackenbush uses day to day." />
   <meta name="twitter:image" content="assets/images/og-image.jpg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Lora:ital,wght@1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20261013a" />
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/brand/favicon.ico" sizes="48x48" />
+  <link rel="apple-touch-icon" href="assets/brand/favicon-180.png" />
+  <link rel="preload" href="assets/fonts/PlusJakartaSans.ttf" as="font" type="font/ttf" crossorigin />
+  <script>document.documentElement.className += ' js';</script>
+  <link rel="stylesheet" href="css/redesign.css" />
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to content</a>
 
-  <nav class="site-nav">
-    <div class="site-nav__wrap">
-      <a href="index.html" class="site-nav__brand">
-        <svg class="site-nav__mark" width="34" height="34" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="40" height="40" rx="9" fill="#25476B"/>
-          <rect x="6" y="17" width="28" height="6" rx="3" fill="#FFFFFF"/>
-          <rect x="6" y="6" width="6" height="28" rx="3" fill="#FFFFFF"/>
-        </svg>
-        <span class="site-nav__name">Tyler Quackenbush</span>
-      </a>
-      <ul class="site-nav__list" id="site-nav-list">
-        <li><a href="work.html" class="site-nav__link">Work</a></li>
-        <li><a href="about.html" class="site-nav__link">About</a></li>
-        <li><a href="approach.html" class="site-nav__link">Approach</a></li>
-        <li><a href="ai.html" class="site-nav__link">How I Use AI</a></li>
-        <li><a href="contact.html" class="site-nav__link">Contact</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav-list">
-        <span></span><span></span><span></span>
-      </button>
+  <header class="site-header">
+    <div class="shell site-header__bar">
+      <a href="index.html" class="brand" aria-label="tquack, Tyler Quackenbush, home"><img src="assets/brand/tquack-wordmark-charcoal.svg" alt="" width="1245" height="424" /></a>
+      <nav aria-label="Main">
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav-list"><span class="nav__toggle-text">Menu</span></button>
+        <ul class="nav__list" id="site-nav-list">
+          <li><a class="nav__link" href="work.html">Work</a></li>
+          <li><a class="nav__link" href="about.html">About</a></li>
+          <li><a class="nav__link" href="approach.html">Approach</a></li>
+          <li><a class="nav__link" href="ai.html">How I Use AI</a></li>
+          <li><a class="nav__link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </nav>
+  </header>
 
   <main id="main-content">
-    <section class="about-header">
-      <p class="label-mono">Tools</p>
-      <h1 class="about-header__title">Tools</h1>
-      <p class="about-header__intro">The tools I use most, grouped by how I use them.</p>
-    </section>
-
-    <section class="about-block">
-      <div class="tools-grid">
-        <div class="tools-grid__col">
-          <p class="label-mono tools-grid__label">Design &amp; Prototyping</p>
-          <p class="tools-grid__value">Figma, Webflow, Photoshop, Illustrator</p>
-        </div>
-        <div class="tools-grid__col">
-          <p class="label-mono tools-grid__label">Research &amp; Ops</p>
-          <p class="tools-grid__value">Airtable, Jira, Confluence</p>
-        </div>
-        <div class="tools-grid__col">
-          <p class="label-mono tools-grid__label">AI-Assisted Workflow</p>
-          <p class="tools-grid__value">Claude, ChatGPT, Copilot, Claude Code, HeyGen</p>
-        </div>
-        <div class="tools-grid__col">
-          <p class="label-mono tools-grid__label">Front-End Basics</p>
-          <p class="tools-grid__value">HTML &amp; CSS, GitHub</p>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="shell">
+        <div class="hero__grid hero__grid--single">
+          <div class="hero__text">
+            <p class="label label--accent hero__eyebrow">Tools</p>
+            <h1 class="hero__title" id="page-title">The tools I use <em>most.</em></h1>
+            <p class="hero__summary hero__summary--wide">The design, research, and AI tools I use day to day.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="cta-band">
-      <h2 class="cta-band__title">Want to talk about a role like this?</h2>
-      <div class="cta-band__links">
-        <a href="mailto:tyler.qbush@gmail.com" class="btn btn--primary">Get in touch</a>
-        <a href="work.html" class="btn btn--outline">See the case studies &rarr;</a>
+    <section class="section" aria-labelledby="tools-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">01 &middot; By use</span>
+          <h2 class="section__title" id="tools-title">Grouped by how I use them.</h2>
+        </div>
+        <dl class="facts">
+          <div class="facts__row"><dt>Design &amp; Prototyping</dt><dd>Figma, Webflow, Photoshop, Illustrator</dd></div>
+          <div class="facts__row"><dt>Research &amp; Ops</dt><dd>Airtable, Jira, Confluence</dd></div>
+          <div class="facts__row"><dt>AI-Assisted Workflow</dt><dd>Claude, ChatGPT, Copilot, Claude Code, HeyGen</dd></div>
+          <div class="facts__row"><dt>Front-End Basics</dt><dd>HTML &amp; CSS, GitHub</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="contact" aria-labelledby="contact-title">
+      <div class="shell">
+        <h2 class="contact__title" id="contact-title">Have a messy problem? Let's make it simple.</h2>
+        <a class="contact__link" href="mailto:tyler.qbush@gmail.com">Get in touch</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="site-footer__wrap">
-      <span class="site-footer__name">Tyler Quackenbush</span>
-      <div class="site-footer__links">
-        <a href="design-system/index.html" class="site-footer__link">Design System</a>
-        <a href="beyond-the-resume.html" class="site-footer__link">Beyond the Resume</a>
-        <a href="tools.html" class="site-footer__link">Tools</a>
-        <a href="podcast.html" class="site-footer__link">Podcast</a>
-        <a href="mailto:tyler.qbush@gmail.com" class="site-footer__email">tyler.qbush@gmail.com</a>
-      </div>
+    <div class="shell site-footer__grid">
+      <a class="lockup" href="index.html" aria-label="tquack, Tyler Quackenbush, home"><img src="assets/brand/tquack-wordmark-charcoal.svg" alt="" width="1245" height="424" /><span class="lockup__name">Tyler Quackenbush</span></a>
+      <nav aria-label="Footer">
+        <ul class="site-footer__links">
+          <li><a href="design-system/index.html">Design System</a></li>
+          <li><a href="beyond-the-resume.html">Beyond the Resume</a></li>
+          <li><a href="tools.html">Tools</a></li>
+          <li><a href="podcast.html">Podcast</a></li>
+          <li><a href="mailto:tyler.qbush@gmail.com">tyler.qbush@gmail.com</a></li>
+        </ul>
+      </nav>
     </div>
   </footer>
 
-  <script src="js/main.js?v=20261013a"></script>
+
+  <script src="js/redesign.js"></script>
 </body>
 </html>
