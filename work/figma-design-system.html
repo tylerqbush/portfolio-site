@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Figma Design System | Tyler Quackenbush</title>
+  <meta name="description" content="Setting up a Figma design system that took a training course's video production from one module in two weeks to three modules in three days." />
+  <link rel="icon" href="../assets/favicon.svg?v=20260726f" type="image/svg+xml" />
+  <meta property="og:title" content="Figma Design System | Tyler Quackenbush" />
+  <meta property="og:description" content="Setting up a Figma design system that took a training course's video production from one module in two weeks to three modules in three days." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../assets/images/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Figma Design System | Tyler Quackenbush" />
+  <meta name="twitter:description" content="Setting up a Figma design system that took a training course's video production from one module in two weeks to three modules in three days." />
+  <meta name="twitter:image" content="../assets/images/og-image.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Lora:ital,wght@1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css?v=20261103a" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <nav class="site-nav">
+    <div class="site-nav__wrap">
+      <a href="../index.html" class="site-nav__brand">
+        <svg class="site-nav__mark" width="34" height="34" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="40" height="40" rx="9" fill="#25476B"/>
+          <rect x="6" y="17" width="28" height="6" rx="3" fill="#FFFFFF"/>
+          <rect x="6" y="6" width="6" height="28" rx="3" fill="#FFFFFF"/>
+        </svg>
+        <span class="site-nav__name">Tyler Quackenbush</span>
+      </a>
+      <ul class="site-nav__list" id="site-nav-list">
+        <li><a href="../work.html" class="site-nav__link active" aria-current="page">Work</a></li>
+        <li><a href="../about.html" class="site-nav__link">About</a></li>
+        <li><a href="../approach.html" class="site-nav__link">Approach</a></li>
+        <li><a href="../ai.html" class="site-nav__link">How I Use AI</a></li>
+        <li><a href="../contact.html" class="site-nav__link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav-list">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <section class="cs">
+      <a href="../work.html" class="label-mono cs__back">&larr; All case studies</a>
+      <p class="label-mono cs__eyebrow">Agile Defense &middot; Deep dive</p>
+      <h1 class="cs__title">A Figma design system that took course production from one module in two weeks to three modules in three days</h1>
+      <p class="cs__meta">Senior UX Designer &middot; Agile Defense &middot; 2026</p>
+
+      <div class="cs-stats">
+        <div class="cs-stat">
+          <span class="cs-stat__value" data-count-to="3">0</span>
+          <p class="label-mono cs-stat__label">Modules in 3 days, up from 1 in 2 weeks</p>
+        </div>
+        <div class="cs-stat">
+          <span class="cs-stat__value">&frac12; day</span>
+          <p class="label-mono cs-stat__label">To set up the design system</p>
+        </div>
+        <div class="cs-stat">
+          <span class="cs-stat__value" data-count-to="2">0</span>
+          <p class="label-mono cs-stat__label">Days ahead of schedule</p>
+        </div>
+      </div>
+
+      <div class="cs-section">
+        <h2 class="label-mono cs-section__label">Problem</h2>
+        <p class="cs-section__body">I manage the effort to build a program management training course for government contracts. It has 11 modules of about 10 minutes each, due by the end of 2026. The graphic designer on our team of four drew every graphic for the videos in Adobe Illustrator. Graphics are that designer&rsquo;s specialty, and one finished module still took two weeks. The team was behind on a strict deadline, with pressure from leadership. With one person on every graphic, progress stopped whenever they got pulled onto something else.</p>
+      </div>
+
+      <div class="cs-section">
+        <h2 class="label-mono cs-section__label">My role</h2>
+        <p class="cs-section__body">I manage the course effort and review its scripts. I set up the Figma design system with scene templates.</p>
+      </div>
+
+      <div class="cs-section">
+        <h2 class="label-mono cs-section__label">Process</h2>
+        <p class="cs-section__body">Scripts come first, reviewed by subject matter experts throughout, because the team wasn&rsquo;t expert in program management. Storyboards follow. Between storyboards and production, AI makes quick sketches of each scene, and the team builds the icons and assets that go into HeyGen for the video.</p>
+      </div>
+
+      <div class="cs-section">
+        <h2 class="label-mono cs-section__label">Decisions</h2>
+        <p class="cs-section__body">I set up the system in Figma because the team already knew it and liked working in it, so anyone could jump in. It follows atomic design principles and uses Figma components and variables. Each scene template is a visual version of a script section, made mostly of text and icons, so every on-screen asset became a drag-and-drop piece. I kept everything in one shared file, so anyone could see where everyone else was and pick up work as they had time. Setting up the framework took about half a day.</p>
+
+        <figure class="cs-figure" role="group" aria-labelledby="fig-template">
+          <div class="tmpl">
+            <div class="tmpl__lib">
+              <p class="label-mono tmpl__label">Components</p>
+              <ul class="tmpl__icons" aria-hidden="true">
+                <li class="tmpl__icon tmpl__icon--circle"></li>
+                <li class="tmpl__icon tmpl__icon--square"></li>
+                <li class="tmpl__icon tmpl__icon--triangle"></li>
+                <li class="tmpl__icon tmpl__icon--diamond"></li>
+              </ul>
+              <p class="tmpl__note">Drag into the slots</p>
+            </div>
+            <div class="tmpl__frame">
+              <p class="label-mono tmpl__label">Scene template</p>
+              <div class="tmpl__lines" aria-hidden="true">
+                <span class="tmpl__line tmpl__line--long"></span>
+                <span class="tmpl__line tmpl__line--mid"></span>
+                <span class="tmpl__line tmpl__line--short"></span>
+              </div>
+              <p class="tmpl__note">Text from the script</p>
+              <div class="tmpl__slots" aria-hidden="true">
+                <span class="tmpl__slot tmpl__slot--circle"></span>
+                <span class="tmpl__slot tmpl__slot--square"></span>
+                <span class="tmpl__slot"></span>
+              </div>
+              <p class="tmpl__note">Icon slots</p>
+            </div>
+          </div>
+          <figcaption id="fig-template" class="cs-figure__caption">A generic scene template. The components on the left drag into the slots on the right. Nothing here comes from the course.</figcaption>
+        </figure>
+      </div>
+
+      <div class="cs-section">
+        <h2 class="label-mono cs-section__label">Outcome</h2>
+        <p class="cs-section__body">After the change, the team finished three modules in three days, up from one module in two weeks, and ended two days ahead of schedule.</p>
+
+        <figure class="cs-figure" role="group" aria-labelledby="fig-pipeline">
+          <div class="pipe">
+            <div class="pipe__lane">
+              <p class="label-mono pipe__lane-label">Before</p>
+              <ol class="pipe__steps">
+                <li class="pipe__step">Script</li>
+                <li class="pipe__step">Storyboard</li>
+                <li class="pipe__step pipe__step--was">Graphics in Illustrator<small>One graphic designer</small></li>
+                <li class="pipe__step">Video in HeyGen</li>
+              </ol>
+              <p class="pipe__result">1 module in 2 weeks</p>
+            </div>
+            <div class="pipe__lane pipe__lane--after">
+              <p class="label-mono pipe__lane-label">After</p>
+              <ol class="pipe__steps">
+                <li class="pipe__step">Script</li>
+                <li class="pipe__step">Storyboard</li>
+                <li class="pipe__step pipe__step--now">Graphics in Figma<small>Anyone on the team</small></li>
+                <li class="pipe__step">Video in HeyGen</li>
+              </ol>
+              <p class="pipe__result">3 modules in 3 days</p>
+            </div>
+          </div>
+          <figcaption id="fig-pipeline" class="cs-figure__caption">The step the design system changed: how on-screen assets get made.</figcaption>
+        </figure>
+      </div>
+
+      <div class="cs-next">
+        <p class="label-mono">Part of</p>
+        <a href="agile-defense.html" class="cs-next__link">Agile Defense &rarr;</a>
+      </div>
+
+      <div class="cs-cta">
+        <p>Want to talk about a role like this?</p>
+        <div class="cs-cta__links">
+          <a href="mailto:tyler.qbush@gmail.com" class="btn btn--primary">Get in touch</a>
+          <a href="../work.html" class="label-mono cs-cta__all">All case studies &rarr;</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__wrap">
+      <span class="site-footer__name">Tyler Quackenbush</span>
+      <div class="site-footer__links">
+        <a href="../design-system/index.html" class="site-footer__link">Design System</a>
+        <a href="../beyond-the-resume.html" class="site-footer__link">Beyond the Resume</a>
+        <a href="../tools.html" class="site-footer__link">Tools</a>
+        <a href="../podcast.html" class="site-footer__link">Podcast</a>
+        <a href="mailto:tyler.qbush@gmail.com" class="site-footer__email">tyler.qbush@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js?v=20261013a"></script>
+</body>
+</html>

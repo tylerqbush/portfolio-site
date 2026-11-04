@@ -1332,3 +1332,424 @@ button {
     grid-template-columns: 1fr;
   }
 }
+
+/* ---- Case study figures: pipeline and template diagrams (work/figma-design-system.html) ---- */
+.cs-figure {
+  margin: 28px 0 8px;
+}
+
+.cs-figure__caption {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  margin-top: 12px;
+}
+
+.pipe {
+  display: grid;
+  gap: 16px;
+}
+
+.pipe__lane {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+}
+
+.pipe__lane--after {
+  border-color: var(--color-accent);
+}
+
+.pipe__lane-label {
+  margin-bottom: 14px;
+}
+
+.pipe__steps {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  margin: 0 0 16px;
+  padding: 0;
+}
+
+.pipe__step {
+  position: relative;
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  font-size: 0.9rem;
+  color: var(--color-ink);
+}
+
+.pipe__step small {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+
+.pipe__step--was {
+  background: var(--color-surface);
+  border: 2px solid var(--color-ink);
+}
+
+.pipe__step--now {
+  background: var(--color-accent);
+  color: var(--color-surface);
+}
+
+.pipe__step--now small {
+  color: var(--color-surface);
+}
+
+.pipe__step:not(:last-child)::after {
+  content: "\2192";
+  position: absolute;
+  top: 50%;
+  right: -22px;
+  transform: translateY(-50%);
+  color: var(--color-accent);
+}
+
+.pipe__result {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.tmpl {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 24px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+
+.tmpl__lib {
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
+  padding: 16px;
+}
+
+.tmpl__frame {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+  border: 2px solid var(--color-ink);
+  border-radius: var(--radius-md);
+  padding: 20px;
+}
+
+.tmpl__label {
+  margin: 0 0 4px;
+}
+
+.tmpl__note {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+
+.tmpl__icons {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 12px 0;
+  padding: 0;
+}
+
+.tmpl__icon {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  background: var(--color-surface);
+  border-radius: var(--radius-sm);
+}
+
+.tmpl__icon::before,
+.tmpl__slot::before {
+  content: "";
+  display: block;
+  width: 26px;
+  height: 26px;
+  background: var(--color-accent);
+}
+
+.tmpl__icon--circle::before,
+.tmpl__slot--circle::before { border-radius: 50%; }
+.tmpl__icon--square::before,
+.tmpl__slot--square::before { border-radius: var(--radius-sm); }
+.tmpl__icon--triangle::before { clip-path: polygon(50% 0, 100% 100%, 0 100%); }
+.tmpl__icon--diamond::before { clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); }
+
+.tmpl__lines {
+  display: grid;
+  gap: 8px;
+}
+
+.tmpl__line {
+  display: block;
+  height: 8px;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.tmpl__line--long { width: 92%; }
+.tmpl__line--mid { width: 76%; }
+.tmpl__line--short { width: 58%; }
+
+.tmpl__slots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.tmpl__slot {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1.4;
+  border: 2px dashed var(--color-accent);
+  border-radius: var(--radius-md);
+}
+
+.tmpl__slot:last-child::before { display: none; }
+
+@media (max-width: 700px) {
+  .pipe__steps { grid-template-columns: 1fr; gap: 26px; }
+  .pipe__step:not(:last-child)::after {
+    content: "\2193";
+    top: auto;
+    right: auto;
+    bottom: -23px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .tmpl { grid-template-columns: 1fr; }
+  .tmpl__icons { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* ---- Case study figures: pipeline board and before/after (work/jira-board.html) ---- */
+.board {
+  display: grid;
+  gap: 22px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+
+.board__label {
+  margin: 0 0 10px;
+}
+
+.board__phases {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.board__side {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 12px;
+}
+
+.board__side .board__label {
+  margin: 0;
+}
+
+.board__chip {
+  border: 2px dashed var(--color-ink-dim);
+  border-radius: var(--radius-pill);
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  color: var(--color-ink);
+}
+
+.board__cards {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.board__card {
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  font-size: 0.9rem;
+  color: var(--color-ink);
+}
+
+.board__card strong {
+  display: block;
+  font-weight: 700;
+}
+
+.board__card small {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+
+.ba {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.ba__card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+}
+
+.ba__card--after {
+  border-color: var(--color-accent);
+}
+
+.ba__title {
+  margin: 8px 0 12px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.ba__list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--color-ink-dim);
+  font-size: 0.9rem;
+}
+
+.ba__list li {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 700px) {
+  .board__phases { grid-template-columns: 1fr; gap: 26px; }
+  .board__cards { grid-template-columns: 1fr 1fr; }
+  .ba { grid-template-columns: 1fr; }
+}
+
+/* ---- Case study figure: sprint timeline (work/pre-discovery.html) ---- */
+.spr {
+  display: grid;
+  grid-template-columns: 1.5fr 1.15fr 1fr;
+  gap: 28px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+
+.spr__stage {
+  position: relative;
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
+  padding: 16px;
+}
+
+.spr__stage:not(:last-child)::after {
+  content: "\2192";
+  position: absolute;
+  top: 50%;
+  right: -22px;
+  transform: translateY(-50%);
+  color: var(--color-accent);
+}
+
+.spr__stage--end {
+  background: var(--color-accent);
+  color: var(--color-surface);
+}
+
+.spr__stage--end .spr__label {
+  color: var(--color-surface);
+}
+
+.spr__label {
+  margin: 0 0 10px;
+}
+
+.spr__tracks,
+.spr__steps {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.spr__track,
+.spr__steps li {
+  background: var(--color-surface);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-size: 0.85rem;
+  color: var(--color-ink);
+}
+
+.spr__track strong {
+  display: block;
+  font-weight: 700;
+}
+
+.spr__end {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 700px) {
+  .spr { grid-template-columns: 1fr; gap: 26px; }
+  .spr__stage:not(:last-child)::after {
+    content: "\2193";
+    top: auto;
+    right: auto;
+    bottom: -23px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* ---- Work page: deep dives under a case study ---- */
+.work-list__deep {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+}
+
+.work-list__deep ul {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+}
+
+.work-list__deep li {
+  margin-bottom: 8px;
+}
+
+.work-list__deep a {
+  color: var(--color-ink);
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+  text-underline-offset: 3px;
+}
+
+.work-list__deep a:hover,
+.work-list__deep a:focus-visible {
+  color: var(--color-accent);
+}

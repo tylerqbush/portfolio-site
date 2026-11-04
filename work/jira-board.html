@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solutions Architect Jira Board | Tyler Quackenbush</title>
+  <meta name="description" content="Designing a Jira board with the Solutions Architect lead that replaced one person's Excel sheet and lets a new solutions architect join any effort at any phase." />
+  <link rel="icon" href="../assets/favicon.svg?v=20260726f" type="image/svg+xml" />
+  <meta property="og:title" content="Solutions Architect Jira Board | Tyler Quackenbush" />
+  <meta property="og:description" content="Designing a Jira board with the Solutions Architect lead that replaced one person's Excel sheet and lets a new solutions architect join any effort at any phase." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../assets/images/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Solutions Architect Jira Board | Tyler Quackenbush" />
+  <meta name="twitter:description" content="Designing a Jira board with the Solutions Architect lead that replaced one person's Excel sheet and lets a new solutions architect join any effort at any phase." />
+  <meta name="twitter:image" content="../assets/images/og-image.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Lora:ital,wght@1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css?v=20261103b" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <nav class="site-nav">
+    <div class="site-nav__wrap">
+      <a href="../index.html" class="site-nav__brand">
+        <svg class="site-nav__mark" width="34" height="34" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="40" height="40" rx="9" fill="#25476B"/>
+          <rect x="6" y="17" width="28" height="6" rx="3" fill="#FFFFFF"/>
+          <rect x="6" y="6" width="6" height="28" rx="3" fill="#FFFFFF"/>
+        </svg>
+        <span class="site-nav__name">Tyler Quackenbush</span>
+      </a>
+      <ul class="site-nav__list" id="site-nav-list">
+        <li><a href="../work.html" class="site-nav__link active" aria-current="page">Work</a></li>
+        <li><a href="../about.html" class="site-nav__link">About</a></li>
+        <li><a href="../approach.html" class="site-nav__link">Approach</a></li>
+        <li><a href="../ai.html" class="site-nav__link">How I Use AI</a></li>
+        <li><a href="../contact.html" class="site-nav__link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav-list">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <section class="cs">
+      <a href="../work.html" class="label-mono cs__back">&larr; All case studies</a>
+      <p class="label-mono cs__eyebrow">Agile Defense &middot; Deep dive</p>
+      <h1 class="cs__title">Replacing a one-person Excel sheet with a Jira board the whole Solutions Architect team uses</h1>
+      <p class="cs__meta">Senior UX Designer &middot; Agile Defense</p>
+
+      <div class="cs-stats">
+        <div class="cs-stat">
+          <span class="cs-stat__value" data-count-to="7">0</span>
+          <p class="label-mono cs-stat__label">Pipeline phases on the board</p>
+        </div>
+        <div class="cs-stat">
+          <span class="cs-stat__value">A month</span>
+          <p class="label-mono cs-stat__label">To design and build the board</p>
+        </div>
+        <div class="cs-stat">
+          <span class="cs-stat__value">Every effort</span>
+          <p class="label-mono cs-stat__label">Tracked by the whole team</p>
+        </div>
+      </div>
+
+      <div class="cs-section">
+        <h2 class="label-mono cs-section__label">Problem</h2>
+        <p class="cs-section__body">The Solutions Architect team works through efforts in phases, and more often than not, someone joins an effort that&rsquo;s already in progress. The only tracker was an Excel sheet that one person kept. It showed the team and leadership which efforts were in which phase, which were up for recompete, and which upcoming bids the company qualified for. If that person left, the team would be scrambling to find or learn what only they knew. Joining an effort in progress hit three groups: the new solutions architect, the lead onboarding them, and the team or program manager already running the effort.</p>
+      </div>
+
+      <div class="cs-section">
+        <h2 class="label-mono cs-section__label">My role</h2>
+        <p class="cs-section__body">I designed the board with the lead of the Solutions Architect team. I ran discovery and rounds of interviews with the rest of the team so it fit the whole group.</p>
+      </div>
+
+      <div class="cs-section">
+        <h2 class="label-mono cs-section__label">Process</h2>
+        <p class="cs-section__body">I started with discovery: interviews with the Solutions Architect team to find the gaps in what they knew about the process. I asked which artifacts each phase needed, whether people knew where to find them, and whether they knew what to do with them once they had them. With the lead, I tracked down the artifacts that already existed and turned them into easier-to-use, prefilled templates, so the work stays consistent and always has what it needs. The lead and I then mapped what each phase looks like, which artifact it needs at which stage, and how to fill it out. Last, I set up the Jira board. Automations create each phase&rsquo;s subtasks and attach its templates to the tickets, based on which pipeline phase an effort is in. Each phase also links to its OneDrive folder and to a reference for filling out each artifact.</p>
+
+        <figure class="cs-figure" role="group" aria-labelledby="fig-board">
+          <div class="board">
+            <p class="label-mono board__label">Pipeline phases</p>
+            <ol class="board__phases">
+              <li class="pipe__step">Identify</li>
+              <li class="pipe__step">Pursue</li>
+              <li class="pipe__step">Proposal</li>
+              <li class="pipe__step">Submitted</li>
+              <li class="pipe__step">Done / Closeout</li>
+            </ol>
+            <div class="board__side">
+              <p class="label-mono board__label">Side states</p>
+              <span class="board__chip">In-Protest</span>
+              <span class="board__chip">No Request for Solutioning</span>
+            </div>
+            <div>
+              <p class="label-mono board__label">Every phase gets four things</p>
+              <ul class="board__cards">
+                <li class="board__card"><strong>Subtasks</strong><small>Created by automation</small></li>
+                <li class="board__card"><strong>Templates</strong><small>Attached to the tickets by automation</small></li>
+                <li class="board__card"><strong>Folder link</strong><small>The phase&rsquo;s OneDrive folder</small></li>
+                <li class="board__card"><strong>Fill-out reference</strong><small>How to complete each artifact</small></li>
+              </ul>
+            </div>
+          </div>
+          <figcaption id="fig-board" class="cs-figure__caption">The board&rsquo;s pipeline: five phases on the main path and two side states.</figcaption>
+        </figure>
+      </div>
+
+      <div class="cs-section">
+        <h2 class="label-mono cs-section__label">Decisions</h2>
+        <p class="cs-section__body">I interviewed everyone on the team, because the lead&rsquo;s sense of what people knew didn&rsquo;t always match what team members told me. In the interviews they showed me what they didn&rsquo;t actually know, and we addressed those gaps. I&rsquo;d have kept the board leaner than it ended up. After the pilot, the team asked for a couple more categories, a timeline view showing who owned what and how many efforts each person was running at once, so future work could be assigned with that in view, and a swim lane that groups tickets by POD to show each business unit. I&rsquo;d have cut some of that. I conceded because it mattered to the people using the board every day, and the team loved it.</p>
+      </div>
+
+      <div class="cs-section">
+        <h2 class="label-mono cs-section__label">Outcome</h2>
+        <p class="cs-section__body">The whole Solutions Architect team now uses the board on every effort, and it replaced the Excel sheet. A new solutions architect can join an effort already in progress, at any phase, and know what to do and where to find it, without tracking someone down to ask. The person who used to keep the Excel sheet says the board saves time and is much easier to use and read, and leadership loves it too. The board took a month to design and build. A two-week pilot followed, and it needed only minimal changes afterward.</p>
+
+        <figure class="cs-figure" role="group" aria-labelledby="fig-ba">
+          <div class="ba">
+            <div class="ba__card">
+              <p class="label-mono">Before</p>
+              <p class="ba__title">An Excel sheet that one person kept</p>
+              <ul class="ba__list">
+                <li>Which efforts were in which phase</li>
+                <li>Which were up for recompete</li>
+                <li>Which upcoming bids the company qualified for</li>
+              </ul>
+            </div>
+            <div class="ba__card ba__card--after">
+              <p class="label-mono">After</p>
+              <p class="ba__title">A Jira board the whole team uses</p>
+              <ul class="ba__list">
+                <li>Subtasks and templates created for each phase by automation</li>
+                <li>A timeline view of who owns what and how many efforts each person is running</li>
+                <li>A swim lane by POD, which shows each effort&rsquo;s business unit</li>
+              </ul>
+            </div>
+          </div>
+          <figcaption id="fig-ba" class="cs-figure__caption">The same job before and after the board.</figcaption>
+        </figure>
+      </div>
+
+      <div class="cs-next">
+        <p class="label-mono">Part of</p>
+        <a href="agile-defense.html" class="cs-next__link">Agile Defense &rarr;</a>
+      </div>
+
+      <div class="cs-cta">
+        <p>Want to talk about a role like this?</p>
+        <div class="cs-cta__links">
+          <a href="mailto:tyler.qbush@gmail.com" class="btn btn--primary">Get in touch</a>
+          <a href="../work.html" class="label-mono cs-cta__all">All case studies &rarr;</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__wrap">
+      <span class="site-footer__name">Tyler Quackenbush</span>
+      <div class="site-footer__links">
+        <a href="../design-system/index.html" class="site-footer__link">Design System</a>
+        <a href="../beyond-the-resume.html" class="site-footer__link">Beyond the Resume</a>
+        <a href="../tools.html" class="site-footer__link">Tools</a>
+        <a href="../podcast.html" class="site-footer__link">Podcast</a>
+        <a href="mailto:tyler.qbush@gmail.com" class="site-footer__email">tyler.qbush@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js?v=20261013a"></script>
+</body>
+</html>
