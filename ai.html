@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>How I Use AI | Tyler Quackenbush</title>
   <meta name="description" content="How Tyler Quackenbush uses AI in his design and project management work, and how he checks what it produces." />
-  <link rel="icon" href="assets/favicon.svg?v=20260726f" type="image/svg+xml" />
   <meta property="og:title" content="How I Use AI | Tyler Quackenbush" />
   <meta property="og:description" content="How Tyler Quackenbush uses AI in his design and project management work, and how he checks what it produces." />
   <meta property="og:type" content="website" />
@@ -16,73 +15,100 @@
   <meta name="twitter:title" content="How I Use AI | Tyler Quackenbush" />
   <meta name="twitter:description" content="How Tyler Quackenbush uses AI in his design and project management work, and how he checks what it produces." />
   <meta name="twitter:image" content="assets/images/og-image.jpg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Lora:ital,wght@1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20261013a" />
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/brand/favicon.ico" sizes="48x48" />
+  <link rel="apple-touch-icon" href="assets/brand/favicon-180.png" />
+  <link rel="preload" href="assets/fonts/PlusJakartaSans.ttf" as="font" type="font/ttf" crossorigin />
+  <script>document.documentElement.className += ' js';</script>
+  <link rel="stylesheet" href="css/redesign.css" />
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to content</a>
 
-  <nav class="site-nav">
-    <div class="site-nav__wrap">
-      <a href="index.html" class="site-nav__brand">
-        <svg class="site-nav__mark" width="34" height="34" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="40" height="40" rx="9" fill="#25476B"/>
-          <rect x="6" y="17" width="28" height="6" rx="3" fill="#FFFFFF"/>
-          <rect x="6" y="6" width="6" height="28" rx="3" fill="#FFFFFF"/>
-        </svg>
-        <span class="site-nav__name">Tyler Quackenbush</span>
-      </a>
-      <ul class="site-nav__list" id="site-nav-list">
-        <li><a href="work.html" class="site-nav__link">Work</a></li>
-        <li><a href="about.html" class="site-nav__link">About</a></li>
-        <li><a href="approach.html" class="site-nav__link">Approach</a></li>
-        <li><a href="ai.html" class="site-nav__link active" aria-current="page">How I Use AI</a></li>
-        <li><a href="contact.html" class="site-nav__link">Contact</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav-list">
-        <span></span><span></span><span></span>
-      </button>
+  <header class="site-header">
+    <div class="shell site-header__bar">
+      <a href="index.html" class="brand" aria-label="tquack, Tyler Quackenbush, home"><img src="assets/brand/tquack-wordmark-charcoal.svg" alt="" width="1245" height="424" /></a>
+      <nav aria-label="Main">
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav-list"><span class="nav__toggle-text">Menu</span></button>
+        <ul class="nav__list" id="site-nav-list">
+          <li><a class="nav__link" href="work.html">Work</a></li>
+          <li><a class="nav__link" href="about.html">About</a></li>
+          <li><a class="nav__link" href="approach.html">Approach</a></li>
+          <li><a class="nav__link" href="ai.html" aria-current="page">How I Use AI</a></li>
+          <li><a class="nav__link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </nav>
+  </header>
 
   <main id="main-content">
-    <section class="about-header">
-      <p class="label-mono">How I Use AI</p>
-      <h1 class="about-header__title">How I Use AI</h1>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="shell">
+        <div class="hero__grid hero__grid--single">
+          <div class="hero__text">
+            <p class="label label--accent hero__eyebrow">How I Use AI</p>
+            <h1 class="hero__title" id="page-title">Treat AI like <em>an intern.</em></h1>
+            <p class="hero__summary hero__summary--wide">How I use AI in my design and project management work, and how I check what it produces.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="about-block">
-      <p class="lede">Working with AI mostly feels solo, and calling it a "team" flattens something real. That framing is from a mentor of mine, who also named the 75% trap: the first 75% keeps getting easier, and the last 25% is where the work lives. My own projects bear it out. AI produces a rough, working draft embarrassingly fast, and getting from that draft to something I'd put my name on is still my job.</p>
-      <p class="lede">I had Claude Code build this site from a written plan, and nothing went in until it had been reviewed twice: once for whether it matched the spec, once for whether the code held up. The second review caught a slider that snapped where it shouldn't and images that would have stayed invisible if a script failed to load. Trusting the first draft would have shipped both.</p>
-      <p class="lede">Agile Defense works the same way. We build concept prototypes fast, sometimes in days, because the fastest way to find out if an idea holds up is to put it in front of someone who knows the problem firsthand. AI gets the prototype into someone's hands quickly. My job (and my team's) is reviewing what comes out before it goes anywhere near a client, the same judgment, applied earlier.</p>
-      <p class="lede">My rule is to treat AI like an intern: nobody at Agile Defense puts their name on what it gives on the first pass. I fact-check it, make it cite its sources when something doesn't sit right, and push back. (After pushback, AI sometimes swings to the opposite answer just to appease you, so the skill is knowing enough to recognize a good answer.)</p>
-      <p class="lede">One example from our program management course: the team noticed recurring patterns in how the scripts were written, and we gave our internal AI tool a skill that flags them for us or the subject matter experts to verify. It cut editing time by about half, because patterns that used to need their own review round get caught automatically.</p>
+    <section class="section" aria-labelledby="practice-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">01 &middot; In practice</span>
+          <h2 class="section__title" id="practice-title">What that looks like.</h2>
+        </div>
+        <div class="decisions">
+          <div class="decision">
+            <h3 class="decision__title">The first 75% keeps getting easier.</h3>
+            <p class="decision__why">Working with AI mostly feels solo, and calling it a "team" flattens something real. That framing is from a mentor of mine, who also named the 75% trap: the first 75% keeps getting easier, and the last 25% is where the work lives. My own projects bear it out. AI produces a rough, working draft embarrassingly fast, and getting from that draft to something I'd put my name on is still my job.</p>
+          </div>
+          <div class="decision">
+            <h3 class="decision__title">Reviewed twice before anything went in.</h3>
+            <p class="decision__why">I had Claude Code build this site from a written plan, and nothing went in until it had been reviewed twice: once for whether it matched the spec, once for whether the code held up. The second review caught a slider that snapped where it shouldn't and images that would have stayed invisible if a script failed to load. Trusting the first draft would have shipped both.</p>
+          </div>
+          <div class="decision">
+            <h3 class="decision__title">Prototypes fast, reviewed before they leave.</h3>
+            <p class="decision__why">Agile Defense works the same way. We build concept prototypes fast, sometimes in days, because the fastest way to find out if an idea holds up is to put it in front of someone who knows the problem firsthand. AI gets the prototype into someone's hands quickly. My job (and my team's) is reviewing what comes out before it goes anywhere near a client, the same judgment, applied earlier.</p>
+          </div>
+          <div class="decision">
+            <h3 class="decision__title">Treat AI like an intern.</h3>
+            <p class="decision__why">My rule is to treat AI like an intern: nobody at Agile Defense puts their name on what it gives on the first pass. I fact-check it, make it cite its sources when something doesn't sit right, and push back. (After pushback, AI sometimes swings to the opposite answer just to appease you, so the skill is knowing enough to recognize a good answer.)</p>
+          </div>
+          <div class="decision">
+            <h3 class="decision__title">Teach the tool what to flag.</h3>
+            <p class="decision__why">One example from our program management course: the team noticed recurring patterns in how the scripts were written, and we gave our internal AI tool a skill that flags them for us or the subject matter experts to verify. It cut editing time by about half, because patterns that used to need their own review round get caught automatically.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="cta-band">
-      <h2 class="cta-band__title">Want to talk about a role like this?</h2>
-      <div class="cta-band__links">
-        <a href="mailto:tyler.qbush@gmail.com" class="btn btn--primary">Get in touch</a>
-        <a href="work.html" class="btn btn--outline">See the case studies &rarr;</a>
+    <section class="contact" aria-labelledby="contact-title">
+      <div class="shell">
+        <h2 class="contact__title" id="contact-title">Have a messy problem? Let's make it simple.</h2>
+        <a class="contact__link" href="mailto:tyler.qbush@gmail.com">Get in touch</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="site-footer__wrap">
-      <span class="site-footer__name">Tyler Quackenbush</span>
-      <div class="site-footer__links">
-        <a href="design-system/index.html" class="site-footer__link">Design System</a>
-        <a href="beyond-the-resume.html" class="site-footer__link">Beyond the Resume</a>
-        <a href="tools.html" class="site-footer__link">Tools</a>
-        <a href="podcast.html" class="site-footer__link">Podcast</a>
-        <a href="mailto:tyler.qbush@gmail.com" class="site-footer__email">tyler.qbush@gmail.com</a>
-      </div>
+    <div class="shell site-footer__grid">
+      <a class="lockup" href="index.html" aria-label="tquack, Tyler Quackenbush, home"><img src="assets/brand/tquack-wordmark-charcoal.svg" alt="" width="1245" height="424" /><span class="lockup__name">Tyler Quackenbush</span></a>
+      <nav aria-label="Footer">
+        <ul class="site-footer__links">
+          <li><a href="design-system/index.html">Design System</a></li>
+          <li><a href="beyond-the-resume.html">Beyond the Resume</a></li>
+          <li><a href="tools.html">Tools</a></li>
+          <li><a href="podcast.html">Podcast</a></li>
+          <li><a href="mailto:tyler.qbush@gmail.com">tyler.qbush@gmail.com</a></li>
+        </ul>
+      </nav>
     </div>
   </footer>
 
-  <script src="js/main.js?v=20261013a"></script>
+
+  <script src="js/redesign.js"></script>
 </body>
 </html>
