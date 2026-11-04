@@ -491,3 +491,4 @@ body.has-dialog { overflow: hidden; }
 .hero__name, .hero__role { display: block; }
 .hero__name { color: var(--color-ink); }
 .hero__role { margin-top: 0.25rem; }
+.prose + .tags { margin-top: var(--s3); }
