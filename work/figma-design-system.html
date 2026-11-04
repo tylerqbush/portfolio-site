@@ -3,182 +3,265 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Figma Design System | Tyler Quackenbush</title>
-  <meta name="description" content="Setting up a Figma design system that took a training course's video production from one module in two weeks to three modules in three days." />
-  <link rel="icon" href="../assets/favicon.svg?v=20260726f" type="image/svg+xml" />
-  <meta property="og:title" content="Figma Design System | Tyler Quackenbush" />
-  <meta property="og:description" content="Setting up a Figma design system that took a training course's video production from one module in two weeks to three modules in three days." />
+  <title>A Figma design system that took course production from one module in two weeks to three modules in three days | Tyler Quackenbush</title>
+  <meta name="description" content="A reusable Figma system helped a four-person team produce training graphics together." />
+  <meta property="og:title" content="A Figma design system that took course production from one module in two weeks to three modules in three days | Tyler Quackenbush" />
+  <meta property="og:description" content="A reusable Figma system helped a four-person team produce training graphics together." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="../assets/images/og-image.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Figma Design System | Tyler Quackenbush" />
-  <meta name="twitter:description" content="Setting up a Figma design system that took a training course's video production from one module in two weeks to three modules in three days." />
+  <meta name="twitter:title" content="A Figma design system that took course production from one module in two weeks to three modules in three days | Tyler Quackenbush" />
+  <meta name="twitter:description" content="A reusable Figma system helped a four-person team produce training graphics together." />
   <meta name="twitter:image" content="../assets/images/og-image.jpg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Lora:ital,wght@1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/styles.css?v=20261103a" />
+  <link rel="icon" href="../assets/brand/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="../assets/brand/favicon.ico" sizes="48x48" />
+  <link rel="apple-touch-icon" href="../assets/brand/favicon-180.png" />
+  <link rel="preload" href="../assets/fonts/PlusJakartaSans.ttf" as="font" type="font/ttf" crossorigin />
+  <script>document.documentElement.className += ' js';</script>
+  <link rel="stylesheet" href="../css/redesign.css" />
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to content</a>
 
-  <nav class="site-nav">
-    <div class="site-nav__wrap">
-      <a href="../index.html" class="site-nav__brand">
-        <svg class="site-nav__mark" width="34" height="34" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="40" height="40" rx="9" fill="#25476B"/>
-          <rect x="6" y="17" width="28" height="6" rx="3" fill="#FFFFFF"/>
-          <rect x="6" y="6" width="6" height="28" rx="3" fill="#FFFFFF"/>
-        </svg>
-        <span class="site-nav__name">Tyler Quackenbush</span>
-      </a>
-      <ul class="site-nav__list" id="site-nav-list">
-        <li><a href="../work.html" class="site-nav__link active" aria-current="page">Work</a></li>
-        <li><a href="../about.html" class="site-nav__link">About</a></li>
-        <li><a href="../approach.html" class="site-nav__link">Approach</a></li>
-        <li><a href="../ai.html" class="site-nav__link">How I Use AI</a></li>
-        <li><a href="../contact.html" class="site-nav__link">Contact</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav-list">
-        <span></span><span></span><span></span>
-      </button>
+  <header class="site-header">
+    <div class="shell site-header__bar">
+      <a href="../index.html" class="brand" aria-label="tquack, Tyler Quackenbush, home"><img src="../assets/brand/tquack-wordmark-charcoal.svg" alt="" width="1245" height="424" /></a>
+      <nav aria-label="Main">
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav-list"><span class="nav__toggle-text">Menu</span></button>
+        <ul class="nav__list" id="site-nav-list">
+          <li><a class="nav__link" href="../work.html" aria-current="page">Work</a></li>
+          <li><a class="nav__link" href="../about.html">About</a></li>
+          <li><a class="nav__link" href="../approach.html">Approach</a></li>
+          <li><a class="nav__link" href="../ai.html">How I Use AI</a></li>
+          <li><a class="nav__link" href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </nav>
+  </header>
 
   <main id="main-content">
-    <section class="cs">
-      <a href="../work.html" class="label-mono cs__back">&larr; All case studies</a>
-      <p class="label-mono cs__eyebrow">Agile Defense &middot; Deep dive</p>
-      <h1 class="cs__title">A Figma design system that took course production from one module in two weeks to three modules in three days</h1>
-      <p class="cs__meta">Senior UX Designer &middot; Agile Defense &middot; 2026</p>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="shell">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="../work.html">Work</a></li>
+            <li><a href="../work/agile-defense.html">Agile Defense</a></li>
+            <li><span aria-current="page">Figma design system</span></li>
+          </ol>
+        </nav>
 
-      <div class="cs-stats">
-        <div class="cs-stat">
-          <span class="cs-stat__value" data-count-to="3">0</span>
-          <p class="label-mono cs-stat__label">Modules in 3 days, up from 1 in 2 weeks</p>
-        </div>
-        <div class="cs-stat">
-          <span class="cs-stat__value">&frac12; day</span>
-          <p class="label-mono cs-stat__label">To set up the design system</p>
-        </div>
-        <div class="cs-stat">
-          <span class="cs-stat__value" data-count-to="2">0</span>
-          <p class="label-mono cs-stat__label">Days ahead of schedule</p>
-        </div>
-      </div>
+        <div class="hero__grid">
+          <div class="hero__text">
+            <p class="label label--accent hero__eyebrow">Agile Defense &middot; Deep dive</p>
+            <h1 class="hero__title" id="page-title">From bottleneck to <em>shared toolkit.</em></h1>
+            <p class="hero__summary">A reusable Figma system helped a four-person team produce training graphics together.</p>
 
-      <div class="cs-section">
-        <h2 class="label-mono cs-section__label">Problem</h2>
-        <p class="cs-section__body">I manage the effort to build a program management training course for government contracts. It has 11 modules of about 10 minutes each, due by the end of 2026. The graphic designer on our team of four drew every graphic for the videos in Adobe Illustrator. Graphics are that designer&rsquo;s specialty, and one finished module still took two weeks. The team was behind on a strict deadline, with pressure from leadership. With one person on every graphic, progress stopped whenever they got pulled onto something else.</p>
-      </div>
+            <dl class="meta">
+              <div class="meta__row"><dt>Role</dt><dd>Senior UX Designer. I manage the course effort, review its scripts, and set up the design system.</dd></div>
+              <div class="meta__row"><dt>Team</dt><dd>Team of four, including the graphic designer</dd></div>
+              <div class="meta__row"><dt>Context</dt><dd>A program management training course for government contracts, produced as video in HeyGen</dd></div>
+              <div class="meta__row"><dt>Tools</dt><dd>Figma and HeyGen. Before: Adobe Illustrator</dd></div>
+              <div class="meta__row"><dt>Status</dt><dd>Course still in production</dd></div>
+            </dl>
+          </div>
 
-      <div class="cs-section">
-        <h2 class="label-mono cs-section__label">My role</h2>
-        <p class="cs-section__body">I manage the course effort and review its scripts. I set up the Figma design system with scene templates.</p>
-      </div>
-
-      <div class="cs-section">
-        <h2 class="label-mono cs-section__label">Process</h2>
-        <p class="cs-section__body">Scripts come first, reviewed by subject matter experts throughout, because the team wasn&rsquo;t expert in program management. Storyboards follow. Between storyboards and production, AI makes quick sketches of each scene, and the team builds the icons and assets that go into HeyGen for the video.</p>
-      </div>
-
-      <div class="cs-section">
-        <h2 class="label-mono cs-section__label">Decisions</h2>
-        <p class="cs-section__body">I set up the system in Figma because the team already knew it and liked working in it, so anyone could jump in. It follows atomic design principles and uses Figma components and variables. Each scene template is a visual version of a script section, made mostly of text and icons, so every on-screen asset became a drag-and-drop piece. I kept everything in one shared file, so anyone could see where everyone else was and pick up work as they had time. Setting up the framework took about half a day.</p>
-
-        <figure class="cs-figure" role="group" aria-labelledby="fig-template">
-          <div class="tmpl">
-            <div class="tmpl__lib">
-              <p class="label-mono tmpl__label">Components</p>
-              <ul class="tmpl__icons" aria-hidden="true">
-                <li class="tmpl__icon tmpl__icon--circle"></li>
-                <li class="tmpl__icon tmpl__icon--square"></li>
-                <li class="tmpl__icon tmpl__icon--triangle"></li>
-                <li class="tmpl__icon tmpl__icon--diamond"></li>
-              </ul>
-              <p class="tmpl__note">Drag into the slots</p>
+          <figure class="hero__artifact" role="group" aria-labelledby="fig-library-cap">
+            <div class="artifact__bar">
+              <span class="artifact__tag">Conceptual reconstruction</span>
+              <button class="artifact__open" type="button" data-lightbox="lb-library">View full size</button>
             </div>
-            <div class="tmpl__frame">
-              <p class="label-mono tmpl__label">Scene template</p>
-              <div class="tmpl__lines" aria-hidden="true">
-                <span class="tmpl__line tmpl__line--long"></span>
-                <span class="tmpl__line tmpl__line--mid"></span>
-                <span class="tmpl__line tmpl__line--short"></span>
-              </div>
-              <p class="tmpl__note">Text from the script</p>
-              <div class="tmpl__slots" aria-hidden="true">
-                <span class="tmpl__slot tmpl__slot--circle"></span>
-                <span class="tmpl__slot tmpl__slot--square"></span>
-                <span class="tmpl__slot"></span>
-              </div>
-              <p class="tmpl__note">Icon slots</p>
+            <img class="artifact__img" src="../assets/images/figma-library-1200.webp" width="1200" height="768" alt="A Figma-style workspace titled Video Training Graphics, open on a component library page. It has three sections: foundations, with a color palette, type samples and an icon set; reusable graphics, such as a contract, a milestone timeline, a document stack, a team scene, a cost chart and a badge; and three video scene templates built from those parts. All content is example content." />
+            <figcaption class="figure-caption" id="fig-library-cap">Illustrative Figma component library and video scene templates. Example content, not original course graphics. Colors, avatars and interface details are illustrative.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="results" aria-labelledby="results-title">
+      <div class="shell">
+        <h2 class="sr-only" id="results-title">Results</h2>
+        <div class="results__grid">
+          <div class="results__item">
+            <p class="results__value">3 modules / 3 days</p>
+            <p class="results__sub">Previously 1 module in 2 weeks</p>
+          </div>
+          <div class="results__item">
+            <p class="results__value">Half a day</p>
+            <p class="results__sub">To set up the system framework</p>
+          </div>
+          <div class="results__item">
+            <p class="results__value">2 days</p>
+            <p class="results__sub">Ahead of schedule</p>
+          </div>
+        </div>
+        <p class="results__note">Observed on this course. These are project results, not a sustained production rate.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="problem-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">01 &middot; The constraint</span>
+          <h2 class="section__title" id="problem-title">Every graphic depended on one person.</h2>
+        </div>
+        <div>
+          <div class="prose">
+            <p>I manage the effort to build a program management training course for government contracts. The graphic designer on our team of four drew every graphic for the videos in Adobe Illustrator. Graphics are that designer&rsquo;s specialty, and one finished module still took two weeks.</p>
+            <p>With one person on every graphic, progress stopped whenever they got pulled onto something else.</p>
+          </div>
+          <dl class="facts">
+            <div class="facts__row"><dt>Scope</dt><dd>11 modules of about 10 minutes each</dd></div>
+            <div class="facts__row"><dt>Deadline</dt><dd>Due by the end of 2026</dd></div>
+            <div class="facts__row"><dt>Starting rate</dt><dd>One finished module in two weeks</dd></div>
+            <div class="facts__row"><dt>Pressure</dt><dd>Behind on a strict deadline, with pressure from leadership</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="contribution-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">02 &middot; My contribution</span>
+          <h2 class="section__title" id="contribution-title">Make scene production a shared task.</h2>
+        </div>
+        <div>
+          <div class="prose">
+            <p>I manage the course effort and review its scripts. I set up the Figma design system with scene templates.</p>
+          </div>
+          <h3 class="subhead">How the course gets made</h3>
+          <div class="prose">
+            <p>Scripts come first, reviewed by subject matter experts throughout, because the team wasn&rsquo;t expert in program management. Storyboards follow. Between storyboards and production, AI makes quick sketches of each scene, and the team builds the icons and assets that go into HeyGen for the video.</p>
+          </div>
+          <ol class="pipeline">
+            <li class="pipeline__step"><strong>Scripts</strong><span>Reviewed by subject matter experts throughout</span></li>
+            <li class="pipeline__step"><strong>Storyboards</strong><span>Follow the approved scripts</span></li>
+            <li class="pipeline__step"><strong>Scene sketches</strong><span>Quick sketches made with AI</span></li>
+            <li class="pipeline__step pipeline__step--changed"><span class="pipeline__flag">The step that changed</span><strong>Icons and assets</strong><span>Built in the Figma design system</span></li>
+            <li class="pipeline__step"><strong>Video</strong><span>Assembled in HeyGen</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="decisions-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">03 &middot; The decision</span>
+          <h2 class="section__title" id="decisions-title">Use the tool the team already knew.</h2>
+        </div>
+        <div>
+          <div class="decisions">
+            <div class="decision">
+              <h3 class="decision__title">Build it in Figma</h3>
+              <p class="decision__why"><span class="label label--muted">Why</span>The team already knew it and liked working in it, so anyone could jump in.</p>
+            </div>
+            <div class="decision">
+              <h3 class="decision__title">Make scene templates drag and drop</h3>
+              <p class="decision__why"><span class="label label--muted">Why</span>Each scene template is a visual version of a script section, made mostly of text and icons, so every on-screen asset became a drag-and-drop piece.</p>
+            </div>
+            <div class="decision">
+              <h3 class="decision__title">Build it from components and variables</h3>
+              <p class="decision__why"><span class="label label--muted">How</span>The system follows atomic design principles and uses Figma components and variables.</p>
+            </div>
+            <div class="decision">
+              <h3 class="decision__title">Keep everything in one shared file</h3>
+              <p class="decision__why"><span class="label label--muted">Why</span>Anyone could see where everyone else was and pick up work as they had time. Setting up the framework took about half a day.</p>
             </div>
           </div>
-          <figcaption id="fig-template" class="cs-figure__caption">A generic scene template. The components on the left drag into the slots on the right. Nothing here comes from the course.</figcaption>
-        </figure>
-      </div>
 
-      <div class="cs-section">
-        <h2 class="label-mono cs-section__label">Outcome</h2>
-        <p class="cs-section__body">After the change, the team finished three modules in three days, up from one module in two weeks, and ended two days ahead of schedule.</p>
-
-        <figure class="cs-figure" role="group" aria-labelledby="fig-pipeline">
-          <div class="pipe">
-            <div class="pipe__lane">
-              <p class="label-mono pipe__lane-label">Before</p>
-              <ol class="pipe__steps">
-                <li class="pipe__step">Script</li>
-                <li class="pipe__step">Storyboard</li>
-                <li class="pipe__step pipe__step--was">Graphics in Illustrator<small>One graphic designer</small></li>
-                <li class="pipe__step">Video in HeyGen</li>
-              </ol>
-              <p class="pipe__result">1 module in 2 weeks</p>
+          <figure class="compare" role="group" aria-labelledby="fig-compare">
+            <div class="compare__panel">
+              <span class="label label--muted">Before</span>
+              <p class="compare__title">One specialist, one graphic at a time</p>
+              <div class="compare__visual" aria-hidden="true">
+                <span class="node node--solo">Graphic designer, Illustrator</span>
+                <span class="arrow">&darr;</span>
+                <div class="queue">
+                  <span class="chip">Graphic 1</span>
+                  <span class="chip chip--wait">Graphic 2, waiting</span>
+                  <span class="chip chip--wait">Graphic 3, waiting</span>
+                </div>
+              </div>
             </div>
-            <div class="pipe__lane pipe__lane--after">
-              <p class="label-mono pipe__lane-label">After</p>
-              <ol class="pipe__steps">
-                <li class="pipe__step">Script</li>
-                <li class="pipe__step">Storyboard</li>
-                <li class="pipe__step pipe__step--now">Graphics in Figma<small>Anyone on the team</small></li>
-                <li class="pipe__step">Video in HeyGen</li>
-              </ol>
-              <p class="pipe__result">3 modules in 3 days</p>
+            <div class="compare__panel compare__panel--after">
+              <span class="label label--accent">After</span>
+              <p class="compare__title">Several contributors, one shared library</p>
+              <div class="compare__visual" aria-hidden="true">
+                <div class="people"><span class="node">Contributor</span><span class="node">Contributor</span><span class="node">Contributor</span></div>
+                <span class="arrow">&darr;</span>
+                <div class="library"><span class="label label--muted">Shared component library</span><div class="library__row"><span></span><span></span><span></span><span></span></div></div>
+                <span class="arrow">&darr;</span>
+                <div class="frames"><span></span><span></span><span></span></div>
+              </div>
             </div>
-          </div>
-          <figcaption id="fig-pipeline" class="cs-figure__caption">The step the design system changed: how on-screen assets get made.</figcaption>
-        </figure>
-      </div>
-
-      <div class="cs-next">
-        <p class="label-mono">Part of</p>
-        <a href="agile-defense.html" class="cs-next__link">Agile Defense &rarr;</a>
-      </div>
-
-      <div class="cs-cta">
-        <p>Want to talk about a role like this?</p>
-        <div class="cs-cta__links">
-          <a href="mailto:tyler.qbush@gmail.com" class="btn btn--primary">Get in touch</a>
-          <a href="../work.html" class="label-mono cs-cta__all">All case studies &rarr;</a>
+          </figure>
+          <p class="figure-caption" id="fig-compare">Illustrative reconstruction of how the work was organized: one specialist making each graphic in turn, then several contributors building scenes from a shared library of components. No course content.</p>
         </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="outcome-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">04 &middot; The outcome</span>
+          <h2 class="section__title" id="outcome-title">Three modules in three days.</h2>
+        </div>
+        <div class="prose">
+          <p>After the change, the team finished three modules in three days, up from one module in two weeks, and ended two days ahead of schedule. The course is still in production.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="related" aria-labelledby="related-title">
+      <div class="shell">
+        <h2 class="label label--muted" id="related-title">More from Agile Defense</h2>
+        <ul class="related__list">
+          <li class="related__item"><a class="related__link" href="../work/jira-board.html"><span><span class="label label--accent">Deep dive</span>Replacing a one-person Excel sheet with a Jira board the whole Solutions Architect team uses</span><span class="related__arrow" aria-hidden="true">&rarr;</span></a></li>
+          <li class="related__item"><a class="related__link" href="../work/pre-discovery.html"><span><span class="label label--accent">Deep dive</span>Ten-day Pre-Discovery sprints, and the Fast Plays that start them</span><span class="related__arrow" aria-hidden="true">&rarr;</span></a></li>
+          <li class="related__item"><a class="related__link" href="../work/agile-defense.html"><span><span class="label label--accent">Engagement</span>Agile Defense, the full case study</span><span class="related__arrow" aria-hidden="true">&rarr;</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="contact" aria-labelledby="contact-title">
+      <div class="shell">
+        <h2 class="contact__title" id="contact-title">Have a messy problem? Let's make it simple.</h2>
+        <a class="contact__link" href="mailto:tyler.qbush@gmail.com">Get in touch</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="site-footer__wrap">
-      <span class="site-footer__name">Tyler Quackenbush</span>
-      <div class="site-footer__links">
-        <a href="../design-system/index.html" class="site-footer__link">Design System</a>
-        <a href="../beyond-the-resume.html" class="site-footer__link">Beyond the Resume</a>
-        <a href="../tools.html" class="site-footer__link">Tools</a>
-        <a href="../podcast.html" class="site-footer__link">Podcast</a>
-        <a href="mailto:tyler.qbush@gmail.com" class="site-footer__email">tyler.qbush@gmail.com</a>
-      </div>
+    <div class="shell site-footer__grid">
+      <a class="lockup" href="../index.html" aria-label="tquack, Tyler Quackenbush, home"><img src="../assets/brand/tquack-wordmark-charcoal.svg" alt="" width="1245" height="424" /><span class="lockup__name">Tyler Quackenbush</span></a>
+      <nav aria-label="Footer">
+        <ul class="site-footer__links">
+          <li><a href="../design-system/index.html">Design System</a></li>
+          <li><a href="../beyond-the-resume.html">Beyond the Resume</a></li>
+          <li><a href="../tools.html">Tools</a></li>
+          <li><a href="../podcast.html">Podcast</a></li>
+          <li><a href="mailto:tyler.qbush@gmail.com">tyler.qbush@gmail.com</a></li>
+        </ul>
+      </nav>
     </div>
   </footer>
 
-  <script src="../js/main.js?v=20261013a"></script>
+  <dialog class="lightbox" id="lb-library" aria-labelledby="lb-library-title">
+    <div class="lightbox__inner">
+      <div class="lightbox__head">
+        <h2 class="label label--muted" id="lb-library-title">Conceptual reconstruction, full size</h2>
+        <button class="lightbox__close" type="button">Close</button>
+      </div>
+      <div class="lightbox__scroll" tabindex="0" role="region" aria-label="Full-size illustration, scrolls in both directions">
+        <img data-src="../assets/images/figma-library.png" width="1568" height="1003" alt="A Figma-style workspace titled Video Training Graphics, open on a component library page. Foundations hold a color palette, type samples and an icon set. Reusable graphics include a contract, a milestone timeline, a document stack, a team scene, a cost chart and a badge. Three video scene templates are built from those parts. All content is example content." />
+      </div>
+      <p class="lightbox__cap">Illustrative Figma component library and video scene templates. Example content, not original course graphics.</p>
+    </div>
+  </dialog>
+
+  <script src="../js/redesign.js"></script>
 </body>
 </html>
