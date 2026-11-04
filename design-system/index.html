@@ -4,258 +4,483 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Design System | Tyler Quackenbush</title>
-  <meta name="robots" content="noindex, nofollow" />
-  <link rel="icon" href="../assets/favicon.svg?v=20260726f" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Lora:ital,wght@1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/styles.css?v=20261013a" />
-  <style>
-    .ds-nav { position: sticky; top: var(--nav-height); background: var(--color-bg); border-bottom: 1px solid var(--color-border); padding: 12px var(--section-padding-x); display: flex; gap: 20px; overflow-x: auto; z-index: 40; }
-    .ds-nav a { font-family: var(--font-label); font-weight: 300; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-muted); white-space: nowrap; }
-    .ds-nav a:hover { color: var(--color-ink); }
-    .ds-row { display: flex; flex-wrap: wrap; gap: 16px; margin: 16px 0; }
-    .ds-token { background: var(--color-surface); border-radius: var(--radius-md); padding: 14px 16px; min-width: 160px; }
-    .ds-token code { font-family: monospace; font-size: 0.75rem; color: var(--color-ink); display: block; margin-bottom: 6px; }
-    .ds-swatch { width: 100%; height: 48px; border-radius: var(--radius-sm); margin-bottom: 8px; }
-    .ds-code { background: var(--color-ink); color: #E8EEF2; font-family: monospace; font-size: 0.8rem; padding: 14px 16px; border-radius: var(--radius-md); overflow-x: auto; margin-top: 10px; }
-  </style>
+  <meta name="description" content="The color, type, spacing and components behind tquack.com, rendered from the live stylesheet." />
+  <meta property="og:title" content="Design System | Tyler Quackenbush" />
+  <meta property="og:description" content="The color, type, spacing and components behind tquack.com, rendered from the live stylesheet." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../assets/images/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Design System | Tyler Quackenbush" />
+  <meta name="twitter:description" content="The color, type, spacing and components behind tquack.com, rendered from the live stylesheet." />
+  <meta name="twitter:image" content="../assets/images/og-image.jpg" />
+  <link rel="icon" href="../assets/brand/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="../assets/brand/favicon.ico" sizes="48x48" />
+  <link rel="apple-touch-icon" href="../assets/brand/favicon-180.png" />
+  <link rel="preload" href="../assets/fonts/PlusJakartaSans.ttf" as="font" type="font/ttf" crossorigin />
+  <script>document.documentElement.className += ' js';</script>
+  <link rel="stylesheet" href="../css/redesign.css" />
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to content</a>
 
-  <nav class="site-nav">
-    <div class="site-nav__wrap">
-      <a href="../index.html" class="site-nav__brand">
-        <svg class="site-nav__mark" width="34" height="34" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="40" height="40" rx="9" fill="#25476B"/>
-          <rect x="6" y="17" width="28" height="6" rx="3" fill="#FFFFFF"/>
-          <rect x="6" y="6" width="6" height="28" rx="3" fill="#FFFFFF"/>
-        </svg>
-        <span class="site-nav__name">Tyler Quackenbush</span>
-      </a>
-      <ul class="site-nav__list" id="site-nav-list">
-        <li><a href="../work.html" class="site-nav__link">Work</a></li>
-        <li><a href="../about.html" class="site-nav__link">About</a></li>
-        <li><a href="../approach.html" class="site-nav__link">Approach</a></li>
-        <li><a href="../ai.html" class="site-nav__link">How I Use AI</a></li>
-        <li><a href="../contact.html" class="site-nav__link">Contact</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav-list">
-        <span></span><span></span><span></span>
-      </button>
+  <header class="site-header">
+    <div class="shell site-header__bar">
+      <a href="../index.html" class="brand" aria-label="tquack, Tyler Quackenbush, home"><img src="../assets/brand/tquack-wordmark-charcoal.svg" alt="" width="1245" height="424" /></a>
+      <nav aria-label="Main">
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav-list"><span class="nav__toggle-text">Menu</span></button>
+        <ul class="nav__list" id="site-nav-list">
+          <li><a class="nav__link" href="../work.html">Work</a></li>
+          <li><a class="nav__link" href="../about.html">About</a></li>
+          <li><a class="nav__link" href="../approach.html">Approach</a></li>
+          <li><a class="nav__link" href="../ai.html">How I Use AI</a></li>
+          <li><a class="nav__link" href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </nav>
-
-  <div class="ds-nav">
-    <a href="#color">Color</a>
-    <a href="#type">Typography</a>
-    <a href="#marks">Marks</a>
-    <a href="#mark-process">Mark Process</a>
-    <a href="#spacing">Spacing</a>
-    <a href="#buttons">Buttons</a>
-    <a href="#cards">Cards</a>
-    <a href="#bands">Bands</a>
-    <a href="#nav">Navigation</a>
-    <a href="#states">States</a>
-    <a href="#a11y">Accessibility</a>
-    <a href="#future">Future</a>
-  </div>
+  </header>
 
   <main id="main-content">
-    <section class="about-header">
-      <p class="label-mono">Design System</p>
-      <h1 class="about-header__title">The tokens and components behind this site, rendered from the real stylesheet.</h1>
-      <p class="about-header__intro">This page uses <code>css/styles.css</code> directly. Every sample renders from the live stylesheet. If it looks wrong here, it looks wrong in production. See the <a href="../brand-identity.html">Brand Identity</a> page for the thinking behind these choices.</p>
-    </section>
-
-    <section class="about-block" id="color">
-      <h2 class="label-mono">Color</h2>
-      <p class="lede">Four colors, used the same way everywhere. Ink and Cloud carry the page. Navy is the one accent, spent on the part that got clearer. Skylight only shows up when Navy would disappear against a dark surface.</p>
-      <div class="ds-row">
-        <div class="ds-token"><div class="ds-swatch" style="background:#000000;"></div><code>--color-ink</code>#000000 &middot; 19.4:1<br>Primary text, dark surfaces.</div>
-        <div class="ds-token"><div class="ds-swatch" style="background:#353535;"></div><code>--color-ink-dim</code>Ink @ 78% &middot; 11.3:1<br>Secondary body copy.</div>
-        <div class="ds-token"><div class="ds-swatch" style="background:#494949;"></div><code>--color-muted</code>Ink @ 70% &middot; 8.3:1<br>Meta lines.</div>
-        <div class="ds-token"><div class="ds-swatch" style="background:#F5F6F5;border:1px solid var(--color-border);"></div><code>--color-bg</code>#F5F6F5 &middot; Cloud<br>Page background, not white.</div>
-        <div class="ds-token"><div class="ds-swatch" style="background:#FFFFFF;border:1px solid var(--color-border);"></div><code>--color-surface</code>#FFFFFF<br>Cards, sitting a step above Cloud.</div>
-        <div class="ds-token"><div class="ds-swatch" style="background:#25476B;"></div><code>--color-accent</code>#25476B &middot; Navy &middot; 8.8:1<br>The one accent. Links, labels, and the part that got clearer.</div>
-        <div class="ds-token"><div class="ds-swatch" style="background:#A8C0DA;"></div><code>--color-dark-accent</code>#A8C0DA &middot; Skylight &middot; 11.2:1 on Ink<br>Navy's job, but on a dark band.</div>
-        <div class="ds-token"><div class="ds-swatch" style="background:#DADBDB;"></div><code>--color-border</code>Ink @ 10%<br>Hairlines between sections.</div>
-      </div>
-    </section>
-
-    <section class="about-block" id="type">
-      <h2 class="label-mono">Typography</h2>
-      <div class="ds-row">
-        <div class="ds-token" style="min-width:280px;">
-          <p style="font-family:'Poppins',sans-serif;font-weight:700;font-size:2rem;color:var(--color-ink);">Poppins Bold</p>
-          <code>--font-heading</code>Headings, wordmark weight
-        </div>
-        <div class="ds-token" style="min-width:280px;">
-          <p style="font-family:'Poppins',sans-serif;font-weight:300;font-size:2rem;color:var(--color-ink);">Poppins Light</p>
-          <code>--font-label</code>Eyebrows, labels, quiet text
-        </div>
-        <div class="ds-token" style="min-width:280px;">
-          <p style="font-family:'Poppins',sans-serif;font-weight:400;font-size:2rem;color:var(--color-ink);">Poppins Regular</p>
-          <code>--font-body</code>Body copy, 400
-        </div>
-        <div class="ds-token" style="min-width:280px;">
-          <p style="font-family:'Lora',serif;font-style:italic;font-size:2rem;color:var(--color-ink);">Lora Italic</p>
-          <code>--font-quote</code>Pull-quotes, tagline
-        </div>
-      </div>
-      <div class="ds-code">.label-mono { font-family: var(--font-label); font-weight: 300; font-size: var(--label-size); text-transform: uppercase; letter-spacing: var(--label-tracking); color: var(--color-accent); }</div>
-    </section>
-
-    <section class="about-block" id="marks">
-      <h2 class="label-mono">Brand Marks</h2>
-      <p class="lede">A Navy square holding a white T: the spine and one bar, equal weight, fused into a single shape. Nothing else. The mark carries its own background, so it reads the same on a light nav or a dark one.</p>
-      <div class="ds-row" style="align-items:flex-end;">
-        <div class="ds-token" style="text-align:center;">
-          <svg width="24" height="24" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" style="margin:0 auto 10px;"><rect width="40" height="40" rx="9" fill="#25476B"/><rect x="6" y="17" width="28" height="6" rx="3" fill="#FFFFFF"/><rect x="6" y="6" width="6" height="28" rx="3" fill="#FFFFFF"/></svg>
-          <code>24px</code>Favicon
-        </div>
-        <div class="ds-token" style="text-align:center;">
-          <svg width="34" height="34" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" style="margin:0 auto 10px;"><rect width="40" height="40" rx="9" fill="#25476B"/><rect x="6" y="17" width="28" height="6" rx="3" fill="#FFFFFF"/><rect x="6" y="6" width="6" height="28" rx="3" fill="#FFFFFF"/></svg>
-          <code>34px</code>Nav
-        </div>
-        <div class="ds-token" style="text-align:center;">
-          <svg width="64" height="64" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" style="margin:0 auto 10px;"><rect width="40" height="40" rx="9" fill="#25476B"/><rect x="6" y="17" width="28" height="6" rx="3" fill="#FFFFFF"/><rect x="6" y="6" width="6" height="28" rx="3" fill="#FFFFFF"/></svg>
-          <code>64px</code>Hero
-        </div>
-        <div class="ds-token" style="min-width:220px;">
-          <p style="text-align:center;">
-            <span style="display:block;font-family:var(--font-label);font-weight:300;font-size:0.85rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-ink);">Tyler</span>
-            <span style="display:inline-block;font-family:var(--font-heading);font-weight:700;font-size:1.6rem;letter-spacing:-0.01em;padding-bottom:5px;border-bottom:2px solid var(--color-accent);color:var(--color-ink);">Quackenbush</span>
-          </p>
-          <code style="margin-top:10px;">.hero__wordmark</code>Name lockup
+    <section class="hero" aria-labelledby="page-title">
+      <div class="shell">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="../brand-identity.html">Brand Identity</a></li>
+            <li><span aria-current="page">Design System</span></li>
+          </ol>
+        </nav>
+        <div class="hero__grid hero__grid--single">
+          <div class="hero__text">
+            <p class="label label--accent hero__eyebrow">Design System</p>
+            <h1 class="hero__title" id="page-title">The tokens and components behind <em>this site.</em></h1>
+            <p class="hero__summary hero__summary--wide">Every sample on this page renders from <code>css/redesign.css</code>, the live stylesheet. If it looks wrong here, it looks wrong in production. The <a href="../brand-identity.html">Brand Identity</a> page covers the thinking.</p>
+          <nav class="toc" aria-label="On this page">
+            <a href="#color">Color</a><a href="#type">Type</a><a href="#spacing">Spacing</a><a href="#buttons">Buttons</a><a href="#results">Results</a><a href="#pipeline">Steps</a><a href="#rows">Rows</a><a href="#more">Cards</a><a href="#lists">Links</a><a href="#nav">Navigation</a><a href="#illus">Illustrations</a><a href="#states">States</a><a href="#a11y">Accessibility</a>
+          </nav>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="about-block" id="mark-process">
-      <h2 class="label-mono">Mark Process</h2>
-      <p class="lede">Two rectangles, equal thickness, fused where they meet: a spine and a bar. That's the whole mark, a sideways T, for Tyler. No illustrated icon, no gradient, no third color standing in for detail the shape doesn't need.</p>
-      <p class="lede">White on Navy, because the mark carries its own background and has to read at 16 pixels as clearly as it does at billboard scale. Equal stroke weight on both bars keeps it looking like a built shape. Centered exactly, the same discipline this site asks of a sentence, applied to a rectangle.</p>
-    </section>
-
-    <section class="about-block" id="spacing">
-      <h2 class="label-mono">Spacing &amp; Radius</h2>
-      <div class="ds-row">
-        <div class="ds-token"><code>--radius-sm</code>4px</div>
-        <div class="ds-token"><code>--radius-md</code>8px</div>
-        <div class="ds-token"><code>--radius-lg</code>12px</div>
-        <div class="ds-token"><code>--radius-xl</code>16px</div>
-        <div class="ds-token"><code>--radius-pill</code>999px</div>
-        <div class="ds-token"><code>--section-padding-x</code>clamp(24px, 6vw, 96px)</div>
-        <div class="ds-token"><code>--section-padding-y</code>clamp(56px, 9vh, 100px)</div>
-        <div class="ds-token"><code>--content-max-width</code>1120px</div>
-      </div>
-      <p class="lede" style="margin-top:4px;">Two breakpoints do almost all the work: 780px collapses multi-column grids to one and swaps the nav to its mobile dropdown, 700px (occasionally 600px, where a component needs the extra room) handles smaller components, like case-study stat grids.</p>
-    </section>
-
-    <section class="about-block" id="buttons">
-      <h2 class="label-mono">Buttons</h2>
-      <div class="ds-row" style="align-items:center;">
-        <a href="#" class="btn btn--primary" onclick="return false;">Primary button</a>
-        <a href="#" class="btn btn--outline" onclick="return false;">Outline button</a>
-      </div>
-      <details>
-        <summary class="label-mono" style="cursor:pointer;">View markup</summary>
-        <div class="ds-code">&lt;a href="#" class="btn btn--primary"&gt;Primary button&lt;/a&gt;
-&lt;a href="#" class="btn btn--outline"&gt;Outline button&lt;/a&gt;</div>
-      </details>
-    </section>
-
-    <section class="about-block" id="cards">
-      <h2 class="label-mono">Cards &amp; Tiles</h2>
-      <div class="cs-stats" style="max-width:600px;">
-        <div class="cs-stat">
-          <span class="cs-stat__value">4</span>
-          <p class="label-mono cs-stat__label">Stat card</p>
+    <section class="section" id="color" aria-labelledby="color-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">01 &middot; Color</span>
+          <h2 class="section__title" id="color-title">Three colors, many tints.</h2>
         </div>
-        <div class="cs-stat">
-          <span class="cs-stat__value">~1,500</span>
-          <p class="label-mono cs-stat__label">Stat card</p>
-        </div>
-      </div>
-      <p class="tools-grid__value" style="margin:8px 0 20px;">Used across case studies (<code>.cs-stat</code>) and the homepage results band (<code>.results-band__stat</code>).</p>
-
-      <ul class="tag-list" style="margin-bottom:20px;">
-        <li class="tag-list__item">Tag pill</li>
-        <li class="tag-list__item">Also a tag pill</li>
-      </ul>
-      <p class="tools-grid__value" style="margin-bottom:20px;">Pill-shaped, <code>--color-surface</code> fill (<code>.tag-list__item</code>). Competencies, skills, anything that's a flat list of nouns.</p>
-
-      <div class="approach__step" style="max-width:320px;">
-        <p class="label-mono approach__step-num">01</p>
-        <h3 class="approach__step-title">Process card</h3>
-        <p class="approach__step-desc">White surface, numbered label, used for the Approach page's three-step grid.</p>
-      </div>
-    </section>
-
-    <section class="about-block" id="bands">
-      <h2 class="label-mono">Callout Bands</h2>
-      <p class="lede">Full-bleed dark sections break up the page rhythm: <code>--color-ink</code> background, Skylight for the eyebrow label and any number that needs to stand out, everything else in white or a Cloud-tinted rgba for body text.</p>
-      <div style="background:var(--color-ink); border-radius:var(--radius-lg); padding:28px 24px;">
-        <p class="label-mono" style="color:var(--color-dark-accent); margin-bottom:10px;">Sample &middot; Band Label</p>
-        <h3 style="color:#fff; font-size:1.15rem; margin-bottom:8px;">Heading stays white</h3>
-        <p style="color:rgba(245,246,245,0.8); font-size:0.92rem;">Body copy on a dark band, used on the homepage results band and the Approach page's principles band.</p>
-      </div>
-    </section>
-
-    <section class="about-block" id="nav">
-      <h2 class="label-mono">Navigation</h2>
-      <p class="lede">Full-width bar, centered 1120px inner wrap (<code>.site-nav</code> / <code>.site-nav__wrap</code>). Mobile collapses to a hamburger-triggered dropdown below 780px, using <code>inert</code> to remove the closed menu from the tab order and accessibility tree.</p>
-    </section>
-
-    <section class="about-block" id="states">
-      <h2 class="label-mono">States &amp; Feedback</h2>
-      <p class="lede">Every interactive element (<code>.btn</code>, <code>.site-nav__link</code>, <code>.work-list__link</code>, <code>.cs-next__link</code>, <code>.cta-band__link</code>) pairs <code>:hover</code> with <code>:focus-visible</code> so keyboard users get the same feedback as mouse users. The stat counter (<code>[data-count-to]</code>) respects <code>prefers-reduced-motion</code> and jumps straight to the final value for users who've opted out.</p>
-    </section>
-
-    <section class="about-block" id="a11y">
-      <h2 class="label-mono">Accessibility</h2>
-      <p class="lede">Built to WCAG 2.1 AA, verified by the numbers above. Every text/background pairing on this site clears 4.5:1 for normal text, most clear AAA's 7:1. The one color that sat close to a floor, muted meta text, was widened from an original 4.6:1 (too close to the 4.5:1 line for comfort) to 8.3:1.</p>
-      <div class="ds-row">
-        <div class="ds-token" style="min-width:260px;">
-          <code>Focus</code>
-          Native browser outline, never suppressed. No custom focus ring anywhere on the site, because the default already works and a hand-rolled one is one more chance to get it wrong.
-        </div>
-        <div class="ds-token" style="min-width:260px;">
-          <code>aria-current</code>
-          The active nav link gets an aria-current="page" attribute alongside its visual active state, so screen reader users get the same "you are here" signal sighted users get from the underline.
-        </div>
-        <div class="ds-token" style="min-width:260px;">
-          <code>Touch targets</code>
-          The mobile hamburger is 44&times;44px, and each nav row's tap target spans the full row. An earlier version left dead space that looked clickable but did nothing.
-        </div>
-        <div class="ds-token" style="min-width:260px;">
-          <code>Reduced motion</code>
-          The stat counter checks prefers-reduced-motion and jumps straight to the final number.
+        <div class="section__body">
+          <div class="prose">
+            <p>Charcoal, ivory and cobalt are the only brand colors. Every other tone is charcoal or ivory at a lower opacity, defined once as a token.</p>
+          </div>
+          <div class="swatches">
+            <div class="swatch"><div class="swatch__chip swatch__chip--ink"></div><p class="swatch__name"><code>--color-ink</code></p><p class="swatch__use">#292929, charcoal</p></div>
+            <div class="swatch"><div class="swatch__chip swatch__chip--paper"></div><p class="swatch__name"><code>--color-paper</code></p><p class="swatch__use">#F7F4ED, warm ivory</p></div>
+            <div class="swatch"><div class="swatch__chip swatch__chip--accent"></div><p class="swatch__name"><code>--color-accent</code></p><p class="swatch__use">#315BDB, cobalt</p></div>
+          </div>
+          <div class="ds-table-wrap">
+            <table class="ds-table">
+              <caption class="sr-only">Color tokens that are tints of charcoal and ivory</caption>
+              <thead><tr><th scope="col">Token</th><th scope="col">Value</th><th scope="col">Contrast</th><th scope="col">Used for</th></tr></thead>
+              <tbody><tr><td><code>--ink-soft</code></td><td>Charcoal at 82%</td><td>7.59:1 on ivory</td><td>Body copy</td></tr><tr><td><code>--ink-muted</code></td><td>Charcoal at 72%</td><td>5.55:1 on ivory</td><td>Labels and captions</td></tr><tr><td><code>--rule</code></td><td>Charcoal at 20%</td><td>Not text</td><td>Hairlines between rows</td></tr><tr><td><code>--rule-strong</code></td><td>Charcoal at 90%</td><td>Not text</td><td>Table tops, outlines, panels</td></tr><tr><td><code>--paper-soft</code></td><td>Ivory at 78%</td><td>8.63:1 on charcoal</td><td>Secondary text on dark bands</td></tr></tbody>
+            </table>
+          </div>
+          <p class="ds-note">Cobalt on ivory is 5.24:1, so cobalt is used for links and emphasis on ivory. Cobalt on charcoal is 2.53:1, so it is never used for text on dark bands.</p>
         </div>
       </div>
     </section>
 
-    <section class="about-block" id="future">
-      <h2 class="label-mono">Future Components</h2>
-      <p class="lede">Not yet built, but the visual language already implies these if they're ever needed: a form/input pattern (this site has no forms yet: contact is mailto-only, deliberately, to avoid collecting data this site has no server to handle securely), a loading/skeleton state for the stat counter's pre-animation moment, and a toast/inline-confirmation pattern for a future "copy to clipboard" affordance.</p>
+    <section class="section" id="type" aria-labelledby="type-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">02 &middot; Typography</span>
+          <h2 class="section__title" id="type-title">One family, four weights.</h2>
+        </div>
+        <div class="section__body">
+          <div class="prose">
+            <p>Plus Jakarta Sans, loaded from <code>assets/fonts/PlusJakartaSans.ttf</code> with a system sans serif fallback. Four weights, each with one job.</p>
+          </div>          <div class="ds-table-wrap">
+            <table class="ds-table">
+              <caption class="sr-only">Font weight tokens</caption>
+              <thead><tr><th scope="col">Token</th><th scope="col">Weight</th><th scope="col">Used for</th></tr></thead>
+              <tbody><tr><td><code>--w-head</code></td><td>800</td><td>Headings</td></tr><tr><td><code>--w-sub</code></td><td>700</td><td>Subheadings, buttons, stat labels</td></tr><tr><td><code>--w-label</code></td><td>600</td><td>Navigation and uppercase labels</td></tr><tr><td><code>--w-body</code></td><td>400</td><td>Body copy</td></tr></tbody>
+            </table>
+          </div>
+          <div class="ds-table-wrap">
+            <table class="ds-table">
+              <caption class="sr-only">Type styles</caption>
+              <thead><tr><th scope="col">Style</th><th scope="col">Size</th><th scope="col">Notes</th></tr></thead>
+              <tbody><tr><td>Body</td><td>1.125rem, line height 1.6</td><td>Prose is capped at 65 characters per line</td></tr><tr><td>Hero title (<code>.hero__title</code>)</td><td>clamp(2.5rem, 1.2rem + 5.4vw, 4.5rem)</td><td>Weight 800, tight tracking, balanced wrapping</td></tr><tr><td>Section title (<code>.section__title</code>)</td><td>clamp(1.75rem, 1.1rem + 2.4vw, 2.625rem)</td><td>Weight 800</td></tr><tr><td>Label (<code>.label</code>)</td><td>0.8125rem</td><td>Weight 600, uppercase, wide tracking</td></tr></tbody>
+            </table>
+          </div>          <div class="ds-sample">
+<p class="label label--accent">Label, accent</p>
+<p class="label label--muted">Label, muted</p>
+<p class="subhead">Subhead style</p>
+<div class="prose"><p>Body copy in 400 at 82% charcoal, held to a readable line length.</p></div>
+          </div>
+          <details class="ds-details"><summary>View markup</summary><pre class="ds-code">&lt;p class=&quot;label label--accent&quot;&gt;Label, accent&lt;/p&gt;
+&lt;p class=&quot;label label--muted&quot;&gt;Label, muted&lt;/p&gt;
+&lt;p class=&quot;subhead&quot;&gt;Subhead style&lt;/p&gt;
+&lt;div class=&quot;prose&quot;&gt;&lt;p&gt;Body copy in 400 at 82% charcoal, held to a readable line length.&lt;/p&gt;&lt;/div&gt;</pre></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="spacing" aria-labelledby="spacing-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">03 &middot; Spacing</span>
+          <h2 class="section__title" id="spacing-title">A short scale, in rem.</h2>
+        </div>
+        <div class="section__body">
+          <div class="prose">
+            <p>Spacing is a short scale in rem, so it follows the reader's text size. Content sits in a shell capped at 75rem with a fluid gutter.</p>
+          </div>          <div class="ds-table-wrap">
+            <table class="ds-table">
+              <caption class="sr-only">Spacing tokens</caption>
+              <thead><tr><th scope="col">Token</th><th scope="col">Value</th></tr></thead>
+              <tbody><tr><td><code>--s1</code> to <code>--s7</code></td><td>0.5, 1, 1.5, 2, 3, 4 and 6 rem</td></tr><tr><td><code>--shell</code></td><td>75rem, the maximum content width</td></tr><tr><td><code>--gutter</code></td><td>clamp(1.25rem, 0.4rem + 3.6vw, 4rem)</td></tr><tr><td><code>--radius</code></td><td>4px, used sparingly</td></tr></tbody>
+            </table>
+          </div>
+          <p class="ds-note">Layouts change at three widths, chosen by content: 40rem, 48rem and 64rem. Nothing relies on a fixed device size.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="buttons" aria-labelledby="buttons-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">04 &middot; Buttons</span>
+          <h2 class="section__title" id="buttons-title">Two buttons.</h2>
+        </div>
+        <div class="section__body">
+          <div class="prose">
+            <p>Two button styles, plus the closing call to action. All keep a 44 px minimum height.</p>
+          </div>          <div class="ds-sample">
+<div class="actions">
+  <a class="button" href="#buttons">Primary button</a>
+  <a class="button button--outline" href="#buttons">Outline button</a>
+</div>
+          </div>
+          <details class="ds-details"><summary>View markup</summary><pre class="ds-code">&lt;div class=&quot;actions&quot;&gt;
+  &lt;a class=&quot;button&quot; href=&quot;#buttons&quot;&gt;Primary button&lt;/a&gt;
+  &lt;a class=&quot;button button--outline&quot; href=&quot;#buttons&quot;&gt;Outline button&lt;/a&gt;
+&lt;/div&gt;</pre></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="results" aria-labelledby="results-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">05 &middot; Results</span>
+          <h2 class="section__title" id="results-title">Numbers that sit still.</h2>
+        </div>
+        <div class="section__body">
+          <div class="prose">
+            <p>The dark band shows a few verified results. Numbers are static text, so they are available without JavaScript. Approximate figures carry a tilde.</p>
+          </div>          <div class="ds-sample ds-sample--flush">
+<section class="results" aria-label="Results sample">
+  <div class="shell">
+    <div class="results__grid results__grid--two">
+      <div class="results__item"><p class="results__value">~1,500</p><p class="results__sub">Employees reached through AI training</p></div>
+      <div class="results__item"><p class="results__value">10 days</p><p class="results__sub">Pre-Discovery sprint</p></div>
+    </div>
+    <p class="results__note">A note under the numbers says what they are and are not.</p>
+  </div>
+</section>
+          </div>
+          <details class="ds-details"><summary>View markup</summary><pre class="ds-code">&lt;section class=&quot;results&quot; aria-label=&quot;Results sample&quot;&gt;
+  &lt;div class=&quot;shell&quot;&gt;
+    &lt;div class=&quot;results__grid results__grid--two&quot;&gt;
+      &lt;div class=&quot;results__item&quot;&gt;&lt;p class=&quot;results__value&quot;&gt;~1,500&lt;/p&gt;&lt;p class=&quot;results__sub&quot;&gt;Employees reached through AI training&lt;/p&gt;&lt;/div&gt;
+      &lt;div class=&quot;results__item&quot;&gt;&lt;p class=&quot;results__value&quot;&gt;10 days&lt;/p&gt;&lt;p class=&quot;results__sub&quot;&gt;Pre-Discovery sprint&lt;/p&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p class=&quot;results__note&quot;&gt;A note under the numbers says what they are and are not.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</pre></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pipeline" aria-labelledby="pipeline-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">06 &middot; Steps</span>
+          <h2 class="section__title" id="pipeline-title">Short processes, built natively.</h2>
+        </div>
+        <div class="section__body">
+          <div class="prose">
+            <p>Numbered steps for short processes, built in HTML and CSS rather than as images. One step can be flagged.</p>
+          </div>          <div class="ds-sample">
+<ol class="pipeline">
+  <li class="pipeline__step"><strong>Audit</strong><span>Read what is already live</span></li>
+  <li class="pipeline__step"><strong>Draft</strong><span>Build the first real version</span></li>
+  <li class="pipeline__step pipeline__step--changed"><span class="pipeline__flag">What changed</span><strong>Ship</strong><span>Test it with the people who push back</span></li>
+</ol>
+          </div>
+          <details class="ds-details"><summary>View markup</summary><pre class="ds-code">&lt;ol class=&quot;pipeline&quot;&gt;
+  &lt;li class=&quot;pipeline__step&quot;&gt;&lt;strong&gt;Audit&lt;/strong&gt;&lt;span&gt;Read what is already live&lt;/span&gt;&lt;/li&gt;
+  &lt;li class=&quot;pipeline__step&quot;&gt;&lt;strong&gt;Draft&lt;/strong&gt;&lt;span&gt;Build the first real version&lt;/span&gt;&lt;/li&gt;
+  &lt;li class=&quot;pipeline__step pipeline__step--changed&quot;&gt;&lt;span class=&quot;pipeline__flag&quot;&gt;What changed&lt;/span&gt;&lt;strong&gt;Ship&lt;/strong&gt;&lt;span&gt;Test it with the people who push back&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;</pre></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="rows" aria-labelledby="rows-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">07 &middot; Rows</span>
+          <h2 class="section__title" id="rows-title">Decisions and facts.</h2>
+        </div>
+        <div class="section__body">
+          <div class="prose">
+            <p>Decisions use a title and a labeled reason. Facts use a term and a detail, and both stack on narrow screens.</p>
+          </div>          <div class="ds-sample">
+<div class="decisions">
+  <div class="decision">
+    <h3 class="decision__title">A decision, stated plainly</h3>
+    <p class="decision__why"><span class="label label--muted">Why</span>The reason, in a sentence or two.</p>
+  </div>
+  <div class="decision">
+    <h3 class="decision__title">A decision with a cost</h3>
+    <p class="decision__why"><span class="label label--accent">Tradeoff</span>What was given up, and why it was worth it.</p>
+  </div>
+</div>
+          </div>
+          <details class="ds-details"><summary>View markup</summary><pre class="ds-code">&lt;div class=&quot;decisions&quot;&gt;
+  &lt;div class=&quot;decision&quot;&gt;
+    &lt;h3 class=&quot;decision__title&quot;&gt;A decision, stated plainly&lt;/h3&gt;
+    &lt;p class=&quot;decision__why&quot;&gt;&lt;span class=&quot;label label--muted&quot;&gt;Why&lt;/span&gt;The reason, in a sentence or two.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;decision&quot;&gt;
+    &lt;h3 class=&quot;decision__title&quot;&gt;A decision with a cost&lt;/h3&gt;
+    &lt;p class=&quot;decision__why&quot;&gt;&lt;span class=&quot;label label--accent&quot;&gt;Tradeoff&lt;/span&gt;What was given up, and why it was worth it.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre></details>
+          <div class="ds-sample">
+<dl class="facts">
+  <div class="facts__row"><dt>Role</dt><dd>Senior UX Designer</dd></div>
+  <div class="facts__row"><dt>Context</dt><dd>A short line of context</dd></div>
+</dl>
+          </div>
+          <details class="ds-details"><summary>View markup</summary><pre class="ds-code">&lt;dl class=&quot;facts&quot;&gt;
+  &lt;div class=&quot;facts__row&quot;&gt;&lt;dt&gt;Role&lt;/dt&gt;&lt;dd&gt;Senior UX Designer&lt;/dd&gt;&lt;/div&gt;
+  &lt;div class=&quot;facts__row&quot;&gt;&lt;dt&gt;Context&lt;/dt&gt;&lt;dd&gt;A short line of context&lt;/dd&gt;&lt;/div&gt;
+&lt;/dl&gt;</pre></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="more" aria-labelledby="more-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">08 &middot; Cards</span>
+          <h2 class="section__title" id="more-title">Tags, cards, comparisons and quotes.</h2>
+        </div>
+        <div class="section__body">
+          <div class="prose">
+            <p>Smaller pieces: tags for flat lists of nouns, project cards, a before and after comparison, and a pull quote.</p>
+          </div>          <div class="ds-sample">
+<ul class="tags">
+  <li>Information Architecture</li>
+  <li>Rapid Concept Prototyping</li>
+</ul>
+          </div>
+          <details class="ds-details"><summary>View markup</summary><pre class="ds-code">&lt;ul class=&quot;tags&quot;&gt;
+  &lt;li&gt;Information Architecture&lt;/li&gt;
+  &lt;li&gt;Rapid Concept Prototyping&lt;/li&gt;
+&lt;/ul&gt;</pre></details>
+          <div class="ds-sample">
+<div class="projects">
+  <div class="project"><h3 class="project__name">Project name</h3><p class="project__desc">One sentence on what it is.</p></div>
+  <div class="project"><h3 class="project__name">Another project</h3><p class="project__desc">One sentence on what it is.</p></div>
+</div>
+          </div>
+          <details class="ds-details"><summary>View markup</summary><pre class="ds-code">&lt;div class=&quot;projects&quot;&gt;
+  &lt;div class=&quot;project&quot;&gt;&lt;h3 class=&quot;project__name&quot;&gt;Project name&lt;/h3&gt;&lt;p class=&quot;project__desc&quot;&gt;One sentence on what it is.&lt;/p&gt;&lt;/div&gt;
+  &lt;div class=&quot;project&quot;&gt;&lt;h3 class=&quot;project__name&quot;&gt;Another project&lt;/h3&gt;&lt;p class=&quot;project__desc&quot;&gt;One sentence on what it is.&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;</pre></details>
+          <div class="ds-sample">
+<div class="compare">
+  <div class="compare__panel">
+    <span class="label label--muted">Before</span>
+    <p class="compare__title">The old way</p>
+    <ul class="compare__list compare__list--before"><li>One short item</li><li>Another short item</li></ul>
+  </div>
+  <div class="compare__panel compare__panel--after">
+    <span class="label label--accent">After</span>
+    <p class="compare__title">The new way</p>
+    <ul class="compare__list"><li>One short item</li><li>Another short item</li></ul>
+  </div>
+</div>
+          </div>
+          <details class="ds-details"><summary>View markup</summary><pre class="ds-code">&lt;div class=&quot;compare&quot;&gt;
+  &lt;div class=&quot;compare__panel&quot;&gt;
+    &lt;span class=&quot;label label--muted&quot;&gt;Before&lt;/span&gt;
+    &lt;p class=&quot;compare__title&quot;&gt;The old way&lt;/p&gt;
+    &lt;ul class=&quot;compare__list compare__list--before&quot;&gt;&lt;li&gt;One short item&lt;/li&gt;&lt;li&gt;Another short item&lt;/li&gt;&lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;compare__panel compare__panel--after&quot;&gt;
+    &lt;span class=&quot;label label--accent&quot;&gt;After&lt;/span&gt;
+    &lt;p class=&quot;compare__title&quot;&gt;The new way&lt;/p&gt;
+    &lt;ul class=&quot;compare__list&quot;&gt;&lt;li&gt;One short item&lt;/li&gt;&lt;li&gt;Another short item&lt;/li&gt;&lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre></details>
+          <div class="ds-sample">
+<figure class="pullquote"><blockquote><p>A line worth repeating.</p></blockquote><figcaption>Attribution, when there is one</figcaption></figure>
+          </div>
+          <details class="ds-details"><summary>View markup</summary><pre class="ds-code">&lt;figure class=&quot;pullquote&quot;&gt;&lt;blockquote&gt;&lt;p&gt;A line worth repeating.&lt;/p&gt;&lt;/blockquote&gt;&lt;figcaption&gt;Attribution, when there is one&lt;/figcaption&gt;&lt;/figure&gt;</pre></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="lists" aria-labelledby="lists-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">09 &middot; Links</span>
+          <h2 class="section__title" id="lists-title">Whole rows are the target.</h2>
+        </div>
+        <div class="section__body">
+          <div class="prose">
+            <p>Related work and next steps use full-width link rows with an arrow. The whole row is the target.</p>
+          </div>          <div class="ds-sample">
+<ul class="related__list">
+  <li class="related__item"><a class="related__link" href="#lists"><span><span class="label label--accent">Deep dive</span>A link row with a short title</span><span class="related__arrow" aria-hidden="true">&rarr;</span></a></li>
+  <li class="related__item"><a class="related__link" href="#lists"><span><span class="label label--accent">Next case study</span>Another link row</span><span class="related__arrow" aria-hidden="true">&rarr;</span></a></li>
+</ul>
+          </div>
+          <details class="ds-details"><summary>View markup</summary><pre class="ds-code">&lt;ul class=&quot;related__list&quot;&gt;
+  &lt;li class=&quot;related__item&quot;&gt;&lt;a class=&quot;related__link&quot; href=&quot;#lists&quot;&gt;&lt;span&gt;&lt;span class=&quot;label label--accent&quot;&gt;Deep dive&lt;/span&gt;A link row with a short title&lt;/span&gt;&lt;span class=&quot;related__arrow&quot; aria-hidden=&quot;true&quot;&gt;&amp;rarr;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;related__item&quot;&gt;&lt;a class=&quot;related__link&quot; href=&quot;#lists&quot;&gt;&lt;span&gt;&lt;span class=&quot;label label--accent&quot;&gt;Next case study&lt;/span&gt;Another link row&lt;/span&gt;&lt;span class=&quot;related__arrow&quot; aria-hidden=&quot;true&quot;&gt;&amp;rarr;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="nav" aria-labelledby="nav-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">10 &middot; Navigation</span>
+          <h2 class="section__title" id="nav-title">One header, one menu.</h2>
+        </div>
+        <div class="section__body">
+          <div class="prose">
+            <p>A header with the wordmark and the main links, collapsing to a menu button below 48rem when JavaScript is available. Without JavaScript the links stay visible. The current page is marked with <code>aria-current</code> and a charcoal underline.</p>
+          </div>          <div class="ds-sample">
+<ul class="nav__list">
+  <li><a class="nav__link" href="#nav" aria-current="page">Current</a></li>
+  <li><a class="nav__link" href="#nav">Link</a></li>
+  <li><a class="nav__link" href="#nav">Link</a></li>
+</ul>
+          </div>
+          <details class="ds-details"><summary>View markup</summary><pre class="ds-code">&lt;ul class=&quot;nav__list&quot;&gt;
+  &lt;li&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#nav&quot; aria-current=&quot;page&quot;&gt;Current&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#nav&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#nav&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="illus" aria-labelledby="illus-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">11 &middot; Illustrations</span>
+          <h2 class="section__title" id="illus-title">Labeled when they are not originals.</h2>
+        </div>
+        <div class="section__body">
+          <div class="prose">
+            <p>Illustrations that are not original project artifacts are labeled as conceptual reconstructions, with a caption that says what is example content. Dense images open in a native dialog with a scrollable full-size view, which takes focus, closes with Escape, and returns focus to the button that opened it.</p>
+          </div>          <div class="ds-sample">
+<p><span class="artifact__tag">Conceptual reconstruction</span></p>
+<p class="figure-caption">Illustrative example with synthetic content. Not an original project screenshot.</p>
+          </div>
+          <details class="ds-details"><summary>View markup</summary><pre class="ds-code">&lt;p&gt;&lt;span class=&quot;artifact__tag&quot;&gt;Conceptual reconstruction&lt;/span&gt;&lt;/p&gt;
+&lt;p class=&quot;figure-caption&quot;&gt;Illustrative example with synthetic content. Not an original project screenshot.&lt;/p&gt;</pre></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="states" aria-labelledby="states-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">12 &middot; States</span>
+          <h2 class="section__title" id="states-title">Clear without relying on color.</h2>
+        </div>
+        <div class="section__body">
+          <div class="prose">
+            <p>Links are underlined, so they are not identified by color alone. Visited links turn charcoal. Hover thickens the underline, and keyboard focus draws a 3px cobalt outline offset by 3px, or an ivory outline on dark bands.</p>
+          </div>          <div class="ds-table-wrap">
+            <table class="ds-table">
+              <caption class="sr-only">Interaction states</caption>
+              <thead><tr><th scope="col">State</th><th scope="col">Treatment</th></tr></thead>
+              <tbody><tr><td>Link</td><td>Cobalt, underlined</td></tr><tr><td>Visited link</td><td>Charcoal, with a cobalt underline</td></tr><tr><td>Hover</td><td>Thicker underline. Buttons and the closing call to action turn cobalt.</td></tr><tr><td>Focus visible</td><td>3px cobalt outline, 3px offset. Ivory on dark bands.</td></tr><tr><td>Current page</td><td><code>aria-current="page"</code> with a charcoal underline</td></tr><tr><td>Reduced motion</td><td>Transitions and smooth scrolling are switched off</td></tr></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="a11y" aria-labelledby="a11y-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">13 &middot; Accessibility</span>
+          <h2 class="section__title" id="a11y-title">What is built and measured.</h2>
+        </div>
+        <div class="section__body">
+          <div class="prose">
+            <p>The target is WCAG 2.2 AA. The checks below describe what is built and measured, not a formal audit.</p>
+          </div>          <div class="ds-table-wrap">
+            <table class="ds-table">
+              <caption class="sr-only">Accessibility measures</caption>
+              <thead><tr><th scope="col">Area</th><th scope="col">What is in place</th></tr></thead>
+              <tbody><tr><td>Contrast</td><td>Every text and background pairing is listed with its ratio on the Brand Identity page. The lowest used for text is 5.24:1.</td></tr><tr><td>Structure</td><td>A skip link, labeled landmarks, one h1 per page, and headings in order.</td></tr><tr><td>Keyboard</td><td>The mobile menu reports <code>aria-expanded</code> and closes with Escape. The enlarged image dialog manages focus.</td></tr><tr><td>Targets</td><td>Navigation, footer links and buttons are at least 44 px tall.</td></tr><tr><td>Layout</td><td>Pages reflow to a single column with no sideways scroll at 320 px.</td></tr><tr><td>Not yet done</td><td>A full keyboard-only pass and screen reader testing.</td></tr></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="future" aria-labelledby="future-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">14 &middot; Future</span>
+          <h2 class="section__title" id="future-title">Not built yet.</h2>
+        </div>
+        <div class="section__body">
+          <div class="prose">
+            <p>Not built yet: a form pattern. Contact is email only, on purpose, because the site has no server to handle form data safely.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" aria-labelledby="contact-title">
+      <div class="shell">
+        <h2 class="contact__title" id="contact-title">Have a messy problem? Let's make it simple.</h2>
+        <a class="contact__link" href="mailto:tyler.qbush@gmail.com">Get in touch</a>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="site-footer__wrap">
-      <span class="site-footer__name">Tyler Quackenbush</span>
-      <div class="site-footer__links">
-        <a href="../design-system/index.html" class="site-footer__link">Design System</a>
-        <a href="../beyond-the-resume.html" class="site-footer__link">Beyond the Resume</a>
-        <a href="../tools.html" class="site-footer__link">Tools</a>
-        <a href="../podcast.html" class="site-footer__link">Podcast</a>
-        <a href="mailto:tyler.qbush@gmail.com" class="site-footer__email">tyler.qbush@gmail.com</a>
-      </div>
+    <div class="shell site-footer__grid">
+      <a class="lockup" href="../index.html" aria-label="tquack, Tyler Quackenbush, home"><img src="../assets/brand/tquack-wordmark-charcoal.svg" alt="" width="1245" height="424" /><span class="lockup__name">Tyler Quackenbush</span></a>
+      <nav aria-label="Footer">
+        <ul class="site-footer__links">
+          <li><a href="../design-system/index.html">Design System</a></li>
+          <li><a href="../beyond-the-resume.html">Beyond the Resume</a></li>
+          <li><a href="../tools.html">Tools</a></li>
+          <li><a href="../podcast.html">Podcast</a></li>
+          <li><a href="mailto:tyler.qbush@gmail.com">tyler.qbush@gmail.com</a></li>
+        </ul>
+      </nav>
     </div>
   </footer>
 
-  <script src="../js/main.js?v=20261013a"></script>
+
+  <script src="../js/redesign.js"></script>
 </body>
 </html>
