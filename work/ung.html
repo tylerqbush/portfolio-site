@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>University of North Georgia | Tyler Quackenbush</title>
   <meta name="description" content="Led UX/UI design on a site-wide redesign of a 5,000+ page public university site." />
-  <link rel="icon" href="../assets/favicon.svg?v=20260726f" type="image/svg+xml" />
   <meta property="og:title" content="University of North Georgia | Tyler Quackenbush" />
   <meta property="og:description" content="Led UX/UI design on a site-wide redesign of a 5,000+ page public university site." />
   <meta property="og:type" content="website" />
@@ -16,117 +15,144 @@
   <meta name="twitter:title" content="University of North Georgia | Tyler Quackenbush" />
   <meta name="twitter:description" content="Led UX/UI design on a site-wide redesign of a 5,000+ page public university site." />
   <meta name="twitter:image" content="../assets/images/og-image.jpg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Lora:ital,wght@1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/styles.css?v=20261013a" />
+  <link rel="icon" href="../assets/brand/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="../assets/brand/favicon.ico" sizes="48x48" />
+  <link rel="apple-touch-icon" href="../assets/brand/favicon-180.png" />
+  <link rel="preload" href="../assets/fonts/PlusJakartaSans.ttf" as="font" type="font/ttf" crossorigin />
+  <script>document.documentElement.className += ' js';</script>
+  <link rel="stylesheet" href="../css/redesign.css" />
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to content</a>
 
-  <nav class="site-nav">
-    <div class="site-nav__wrap">
-      <a href="../index.html" class="site-nav__brand">
-        <svg class="site-nav__mark" width="34" height="34" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="40" height="40" rx="9" fill="#25476B"/>
-          <rect x="6" y="17" width="28" height="6" rx="3" fill="#FFFFFF"/>
-          <rect x="6" y="6" width="6" height="28" rx="3" fill="#FFFFFF"/>
-        </svg>
-        <span class="site-nav__name">Tyler Quackenbush</span>
-      </a>
-      <ul class="site-nav__list" id="site-nav-list">
-        <li><a href="../work.html" class="site-nav__link active" aria-current="page">Work</a></li>
-        <li><a href="../about.html" class="site-nav__link">About</a></li>
-        <li><a href="../approach.html" class="site-nav__link">Approach</a></li>
-        <li><a href="../ai.html" class="site-nav__link">How I Use AI</a></li>
-        <li><a href="../contact.html" class="site-nav__link">Contact</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav-list">
-        <span></span><span></span><span></span>
-      </button>
+  <header class="site-header">
+    <div class="shell site-header__bar">
+      <a href="../index.html" class="brand" aria-label="tquack, Tyler Quackenbush, home"><img src="../assets/brand/tquack-wordmark-charcoal.svg" alt="" width="1245" height="424" /></a>
+      <nav aria-label="Main">
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav-list"><span class="nav__toggle-text">Menu</span></button>
+        <ul class="nav__list" id="site-nav-list">
+          <li><a class="nav__link" href="../work.html" aria-current="page">Work</a></li>
+          <li><a class="nav__link" href="../about.html">About</a></li>
+          <li><a class="nav__link" href="../approach.html">Approach</a></li>
+          <li><a class="nav__link" href="../ai.html">How I Use AI</a></li>
+          <li><a class="nav__link" href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </nav>
+  </header>
 
   <main id="main-content">
-    <section class="cs">
-      <a href="../work.html" class="label-mono cs__back">&larr; All case studies</a>
-      <p class="label-mono cs__eyebrow">02 &middot; Higher Ed</p>
-      <h1 class="cs__title">Cutting 20-plus navigation menus down to one a student could use</h1>
-      <p class="cs__meta">Web Designer &middot; University of North Georgia &middot; 2016&ndash;2021</p>
-
-      <div class="cs-stats">
-        <div class="cs-stat">
-          <span class="cs-stat__value" data-count-to="5000" data-count-suffix="+">0+</span>
-          <p class="label-mono cs-stat__label">Pages in the site-wide redesign</p>
-        </div>
-        <div class="cs-stat">
-          <span class="cs-stat__value" data-count-to="20000" data-count-suffix="+">0+</span>
-          <p class="label-mono cs-stat__label">Users on the 2FA onboarding flow</p>
-        </div>
-        <div class="cs-stat">
-          <span class="cs-stat__value" data-count-to="20" data-count-suffix="+">0+</span>
-          <p class="label-mono cs-stat__label">Navigation menus consolidated</p>
-        </div>
-      </div>
-
-      <div class="cs-section">
-        <h2 class="label-mono cs-section__label">Situation</h2>
-        <p class="cs-section__body">A public university site grows one department at a time: a page, then a menu, then a sub-menu, and nobody's responsible for the whole thing. By the time I got there, the site had grown past 5,000 pages and 20-plus separate navigation structures, and the admissions section ran through a maze nobody had audited since the university's consolidation, when two institutions were fitted into one site.</p>
-      </div>
-
-      <div class="cs-section">
-        <h2 class="label-mono cs-section__label">Approach</h2>
-        <p class="cs-section__body">Redesigning a nav is an information-architecture decision every time: what belongs together, what is load-bearing, what is only old, and what a student can find in two clicks.</p>
-        <div class="cs-project-grid">
-          <div class="cs-project">
-            <h3 class="cs-project__name">Navigation &amp; IA</h3>
-            <p class="cs-project__desc">Helped decide what to keep, merge, or cut across 20-plus navigation menus, and worked on new content templates, landing pages, and custom iconography so visitors could scan the admissions section.</p>
-          </div>
-          <div class="cs-project">
-            <h3 class="cs-project__name">2FA onboarding</h3>
-            <p class="cs-project__desc">Designed the 2FA landing page and instructions that helped over 20,000 students, faculty and staff use the new software, with no spike in support tickets after launch.</p>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="shell">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="../work.html">Work</a></li>
+            <li><span aria-current="page">University of North Georgia</span></li>
+          </ol>
+        </nav>
+        <div class="hero__grid hero__grid--single">
+          <div class="hero__text">
+            <p class="label label--accent hero__eyebrow">Case study &middot; Higher Ed</p>
+            <h1 class="hero__title" id="page-title">From 20-plus menus to <em>one a student could use.</em></h1>
+            <p class="hero__summary">I helped decide what stayed, what merged, and what finally got cut on a 5,000+ page university site.</p>
+            <dl class="meta"><div class="meta__row"><dt>Role</dt><dd>Web Designer</dd></div><div class="meta__row"><dt>Organization</dt><dd>University of North Georgia</dd></div><div class="meta__row"><dt>Dates</dt><dd>2016&ndash;2021</dd></div><div class="meta__row"><dt>Focus</dt><dd>Navigation and information architecture, content templates, landing pages, iconography, and 2FA onboarding</dd></div></dl>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="cs-section">
-        <h2 class="label-mono cs-section__label">Outcome</h2>
-        <p class="cs-section__body">The redesign gave the 5,000-plus page site a new structure, and twenty-plus menus became one structure people could navigate. I still think about that project whenever someone asks to add one more link to a navigation bar.</p>
-        <ul class="cs-outcome-list">
-          <li>UX/UI design led on a 5,000+ page site redesign</li>
-          <li>20+ navigation menus consolidated into one structure</li>
-          <li>2FA landing page designed for 20,000+ users</li>
+    <section class="results" aria-labelledby="results-title">
+      <div class="shell">
+        <h2 class="sr-only" id="results-title">Results</h2>
+        <div class="results__grid "><div class="results__item"><p class="results__value">5,000+</p><p class="results__sub">Pages in the site-wide redesign</p></div><div class="results__item"><p class="results__value">20,000+</p><p class="results__sub">Users on the 2FA onboarding flow</p></div><div class="results__item"><p class="results__value">20+</p><p class="results__sub">Navigation menus consolidated</p></div></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="situation-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">01 &middot; The situation</span>
+          <h2 class="section__title" id="situation-title">A site that grew one department at a time.</h2>
+        </div>
+        <div class="section__body">
+          <div class="prose">
+            <p>A public university site grows one department at a time: a page, then a menu, then a sub-menu, and nobody's responsible for the whole thing. By the time I got there, the site had grown past 5,000 pages and 20-plus separate navigation structures, and the admissions section ran through a maze nobody had audited since the university's consolidation, when two institutions were fitted into one site.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="approach-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">02 &middot; The approach</span>
+          <h2 class="section__title" id="approach-title">Decide what belongs together.</h2>
+        </div>
+        <div class="section__body">
+          <div class="prose">
+            <p>Redesigning a nav is an information-architecture decision every time: what belongs together, what is load-bearing, what is only old, and what a student can find in two clicks.</p>
+          </div>
+          <div class="projects">
+            <div class="project"><h3 class="project__name">Navigation &amp; IA</h3><p class="project__desc">Helped decide what to keep, merge, or cut across 20-plus navigation menus, and worked on new content templates, landing pages, and custom iconography so visitors could scan the admissions section.</p></div>
+            <div class="project"><h3 class="project__name">2FA onboarding</h3><p class="project__desc">Designed the 2FA landing page and instructions that helped over 20,000 students, faculty and staff use the new software, with no spike in support tickets after launch.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="outcome-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">03 &middot; The outcome</span>
+          <h2 class="section__title" id="outcome-title">One structure people could navigate.</h2>
+        </div>
+        <div class="section__body">
+          <div class="prose">
+            <p>The redesign gave the 5,000-plus page site a new structure, and twenty-plus menus became one structure people could navigate. I still think about that project whenever someone asks to add one more link to a navigation bar.</p>
+          </div>
+          <ul class="outcomes">
+            <li>UX/UI design led on a 5,000+ page site redesign</li>
+            <li>20+ navigation menus consolidated into one structure</li>
+            <li>2FA landing page designed for 20,000+ users</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="related" aria-labelledby="related-title">
+      <div class="shell">
+        <h2 class="label label--muted" id="related-title">Keep reading</h2>
+        <ul class="related__list">
+          <li class="related__item"><a class="related__link" href="novant-health.html"><span><span class="label label--accent">Next case study</span>Novant Health</span><span class="related__arrow" aria-hidden="true">&rarr;</span></a></li>
+          <li class="related__item"><a class="related__link" href="../work.html"><span><span class="label label--accent">All work</span>Every case study in one place</span><span class="related__arrow" aria-hidden="true">&rarr;</span></a></li>
         </ul>
       </div>
+    </section>
 
-      <div class="cs-next">
-        <p class="label-mono">Next case study</p>
-        <a href="novant-health.html" class="cs-next__link">Novant Health &rarr;</a>
-      </div>
-
-      <div class="cs-cta">
-        <p>Want to talk about a role like this?</p>
-        <div class="cs-cta__links">
-          <a href="mailto:tyler.qbush@gmail.com" class="btn btn--primary">Get in touch</a>
-          <a href="../work.html" class="label-mono cs-cta__all">All case studies &rarr;</a>
-        </div>
+    <section class="contact" aria-labelledby="contact-title">
+      <div class="shell">
+        <h2 class="contact__title" id="contact-title">Have a messy problem? Let's make it simple.</h2>
+        <a class="contact__link" href="mailto:tyler.qbush@gmail.com">Get in touch</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="site-footer__wrap">
-      <span class="site-footer__name">Tyler Quackenbush</span>
-      <div class="site-footer__links">
-        <a href="../design-system/index.html" class="site-footer__link">Design System</a>
-        <a href="../beyond-the-resume.html" class="site-footer__link">Beyond the Resume</a>
-        <a href="../tools.html" class="site-footer__link">Tools</a>
-        <a href="../podcast.html" class="site-footer__link">Podcast</a>
-        <a href="mailto:tyler.qbush@gmail.com" class="site-footer__email">tyler.qbush@gmail.com</a>
-      </div>
+    <div class="shell site-footer__grid">
+      <a class="lockup" href="../index.html" aria-label="tquack, Tyler Quackenbush, home"><img src="../assets/brand/tquack-wordmark-charcoal.svg" alt="" width="1245" height="424" /><span class="lockup__name">Tyler Quackenbush</span></a>
+      <nav aria-label="Footer">
+        <ul class="site-footer__links">
+          <li><a href="../design-system/index.html">Design System</a></li>
+          <li><a href="../beyond-the-resume.html">Beyond the Resume</a></li>
+          <li><a href="../tools.html">Tools</a></li>
+          <li><a href="../podcast.html">Podcast</a></li>
+          <li><a href="mailto:tyler.qbush@gmail.com">tyler.qbush@gmail.com</a></li>
+        </ul>
+      </nav>
     </div>
   </footer>
 
-  <script src="../js/main.js?v=20261013a"></script>
+
+  <script src="../js/redesign.js"></script>
 </body>
 </html>

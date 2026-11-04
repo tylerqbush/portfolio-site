@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Adventure Careers | Tyler Quackenbush</title>
   <meta name="description" content="Building the brand and the site at once for a mobile-first outdoor-industry job board." />
-  <link rel="icon" href="../assets/favicon.svg?v=20260726f" type="image/svg+xml" />
   <meta property="og:title" content="Adventure Careers | Tyler Quackenbush" />
   <meta property="og:description" content="Building the brand and the site at once for a mobile-first outdoor-industry job board." />
   <meta property="og:type" content="website" />
@@ -16,91 +15,136 @@
   <meta name="twitter:title" content="Adventure Careers | Tyler Quackenbush" />
   <meta name="twitter:description" content="Building the brand and the site at once for a mobile-first outdoor-industry job board." />
   <meta name="twitter:image" content="../assets/images/og-image.jpg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Lora:ital,wght@1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/styles.css?v=20261013a" />
+  <link rel="icon" href="../assets/brand/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="../assets/brand/favicon.ico" sizes="48x48" />
+  <link rel="apple-touch-icon" href="../assets/brand/favicon-180.png" />
+  <link rel="preload" href="../assets/fonts/PlusJakartaSans.ttf" as="font" type="font/ttf" crossorigin />
+  <script>document.documentElement.className += ' js';</script>
+  <link rel="stylesheet" href="../css/redesign.css" />
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to content</a>
 
-  <nav class="site-nav">
-    <div class="site-nav__wrap">
-      <a href="../index.html" class="site-nav__brand">
-        <svg class="site-nav__mark" width="34" height="34" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="40" height="40" rx="9" fill="#25476B"/>
-          <rect x="6" y="17" width="28" height="6" rx="3" fill="#FFFFFF"/>
-          <rect x="6" y="6" width="6" height="28" rx="3" fill="#FFFFFF"/>
-        </svg>
-        <span class="site-nav__name">Tyler Quackenbush</span>
-      </a>
-      <ul class="site-nav__list" id="site-nav-list">
-        <li><a href="../work.html" class="site-nav__link active" aria-current="page">Work</a></li>
-        <li><a href="../about.html" class="site-nav__link">About</a></li>
-        <li><a href="../approach.html" class="site-nav__link">Approach</a></li>
-        <li><a href="../ai.html" class="site-nav__link">How I Use AI</a></li>
-        <li><a href="../contact.html" class="site-nav__link">Contact</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav-list">
-        <span></span><span></span><span></span>
-      </button>
+  <header class="site-header">
+    <div class="shell site-header__bar">
+      <a href="../index.html" class="brand" aria-label="tquack, Tyler Quackenbush, home"><img src="../assets/brand/tquack-wordmark-charcoal.svg" alt="" width="1245" height="424" /></a>
+      <nav aria-label="Main">
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav-list"><span class="nav__toggle-text">Menu</span></button>
+        <ul class="nav__list" id="site-nav-list">
+          <li><a class="nav__link" href="../work.html" aria-current="page">Work</a></li>
+          <li><a class="nav__link" href="../about.html">About</a></li>
+          <li><a class="nav__link" href="../approach.html">Approach</a></li>
+          <li><a class="nav__link" href="../ai.html">How I Use AI</a></li>
+          <li><a class="nav__link" href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </nav>
+  </header>
 
   <main id="main-content">
-    <section class="cs">
-      <a href="../work.html" class="label-mono cs__back">&larr; All case studies</a>
-      <p class="label-mono cs__eyebrow">Brand &amp; Web</p>
-      <h1 class="cs__title">Making a two-person outdoor-jobs startup look like a company worth trusting</h1>
-      <p class="cs__meta">Freelance &middot; Website and Brand &middot; Adventure Careers &middot; 2024</p>
-
-      <div class="cs-section">
-        <h2 class="label-mono cs-section__label">Situation</h2>
-        <p class="cs-section__body">Adventure Careers needed to look like a real company before it was one. Job boards for outdoor and experiential-ed work tend to look like a Craigslist post that got ambitious, and the stakeholders needed it to work on a phone, because the people checking listings do it between shifts.</p>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="shell">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="../work.html">Work</a></li>
+            <li><span aria-current="page">Adventure Careers</span></li>
+          </ol>
+        </nav>
+        <div class="hero__grid hero__grid--single">
+          <div class="hero__text">
+            <p class="label label--accent hero__eyebrow">Case study &middot; Brand and web</p>
+            <h1 class="hero__title" id="page-title">Making a two-person startup look like <em>a company worth trusting.</em></h1>
+            <p class="hero__summary">Building the brand and the site at once for a mobile-first outdoor-industry job board.</p>
+            <dl class="meta"><div class="meta__row"><dt>Role</dt><dd>Freelance, website and brand</dd></div><div class="meta__row"><dt>Client</dt><dd>Adventure Careers</dd></div><div class="meta__row"><dt>Year</dt><dd>2024</dd></div><div class="meta__row"><dt>Focus</dt><dd>A mobile-first job-search flow for job seekers and employers</dd></div></dl>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="cs-section">
-        <h2 class="label-mono cs-section__label">Approach</h2>
-        <p class="cs-section__body">I built the brand and the site at the same time, mobile-first from the start. That meant talking to users on both sides of the platform, job seekers and the employers posting listings, then designing a bold, youthful identity system and an intuitive job-search flow around what I heard, with specs and live support handed off to dev.</p>
+    <section class="section" aria-labelledby="situation-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">01 &middot; The situation</span>
+          <h2 class="section__title" id="situation-title">Look like a real company before being one.</h2>
+        </div>
+        <div class="section__body">
+          <div class="prose">
+            <p>Adventure Careers needed to look like a real company before it was one. Job boards for outdoor and experiential-ed work tend to look like a Craigslist post that got ambitious, and the stakeholders needed it to work on a phone, because the people checking listings do it between shifts.</p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="cs-section">
-        <h2 class="label-mono cs-section__label">Outcome</h2>
-        <p class="cs-section__body">The founder's reaction: "it looks and feels like a real company now."</p>
-        <ul class="cs-outcome-list">
-          <li>Mobile-first job-search flow shipped for both sides of the platform</li>
-          <li>Full brand and UI system handed off with dev specs and live support</li>
+    <section class="section" aria-labelledby="approach-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">02 &middot; The approach</span>
+          <h2 class="section__title" id="approach-title">Build the brand and the site at the same time.</h2>
+        </div>
+        <div class="section__body">
+          <div class="prose">
+            <p>I built the brand and the site at the same time, mobile-first from the start. That meant talking to users on both sides of the platform, job seekers and the employers posting listings, then designing a bold, youthful identity system and an intuitive job-search flow around what I heard, with specs and live support handed off to dev.</p>
+          </div>
+          <ol class="pipeline">
+            <li class="pipeline__step"><strong>Talk to both sides</strong><span>Job seekers and the employers posting listings</span></li>
+            <li class="pipeline__step"><strong>Identity</strong><span>A bold, youthful identity system</span></li>
+            <li class="pipeline__step"><strong>Job-search flow</strong><span>Intuitive, and mobile-first from the start</span></li>
+            <li class="pipeline__step"><strong>Handoff</strong><span>Specs and live support for dev</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="outcome-title">
+      <div class="shell section__grid">
+        <div class="section__head">
+          <span class="label label--accent">03 &middot; The outcome</span>
+          <h2 class="section__title" id="outcome-title">Shipped for both sides of the platform.</h2>
+        </div>
+        <div class="section__body">
+          <figure class="pullquote"><blockquote><p>&ldquo;it looks and feels like a real company now.&rdquo;</p></blockquote><figcaption>The founder</figcaption></figure>
+          <ul class="outcomes">
+            <li>Mobile-first job-search flow shipped for both sides of the platform</li>
+            <li>Full brand and UI system handed off with dev specs and live support</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="related" aria-labelledby="related-title">
+      <div class="shell">
+        <h2 class="label label--muted" id="related-title">Keep reading</h2>
+        <ul class="related__list">
+          <li class="related__item"><a class="related__link" href="agile-defense.html"><span><span class="label label--accent">Next case study</span>Agile Defense</span><span class="related__arrow" aria-hidden="true">&rarr;</span></a></li>
+          <li class="related__item"><a class="related__link" href="../work.html"><span><span class="label label--accent">All work</span>Every case study in one place</span><span class="related__arrow" aria-hidden="true">&rarr;</span></a></li>
         </ul>
       </div>
+    </section>
 
-      <div class="cs-next">
-        <p class="label-mono">Next case study</p>
-        <a href="agile-defense.html" class="cs-next__link">Agile Defense &rarr;</a>
-      </div>
-
-      <div class="cs-cta">
-        <p>Want to talk about a role like this?</p>
-        <div class="cs-cta__links">
-          <a href="mailto:tyler.qbush@gmail.com" class="btn btn--primary">Get in touch</a>
-          <a href="../work.html" class="label-mono cs-cta__all">All case studies &rarr;</a>
-        </div>
+    <section class="contact" aria-labelledby="contact-title">
+      <div class="shell">
+        <h2 class="contact__title" id="contact-title">Have a messy problem? Let's make it simple.</h2>
+        <a class="contact__link" href="mailto:tyler.qbush@gmail.com">Get in touch</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="site-footer__wrap">
-      <span class="site-footer__name">Tyler Quackenbush</span>
-      <div class="site-footer__links">
-        <a href="../design-system/index.html" class="site-footer__link">Design System</a>
-        <a href="../beyond-the-resume.html" class="site-footer__link">Beyond the Resume</a>
-        <a href="../tools.html" class="site-footer__link">Tools</a>
-        <a href="../podcast.html" class="site-footer__link">Podcast</a>
-        <a href="mailto:tyler.qbush@gmail.com" class="site-footer__email">tyler.qbush@gmail.com</a>
-      </div>
+    <div class="shell site-footer__grid">
+      <a class="lockup" href="../index.html" aria-label="tquack, Tyler Quackenbush, home"><img src="../assets/brand/tquack-wordmark-charcoal.svg" alt="" width="1245" height="424" /><span class="lockup__name">Tyler Quackenbush</span></a>
+      <nav aria-label="Footer">
+        <ul class="site-footer__links">
+          <li><a href="../design-system/index.html">Design System</a></li>
+          <li><a href="../beyond-the-resume.html">Beyond the Resume</a></li>
+          <li><a href="../tools.html">Tools</a></li>
+          <li><a href="../podcast.html">Podcast</a></li>
+          <li><a href="mailto:tyler.qbush@gmail.com">tyler.qbush@gmail.com</a></li>
+        </ul>
+      </nav>
     </div>
   </footer>
 
-  <script src="../js/main.js?v=20261013a"></script>
+
+  <script src="../js/redesign.js"></script>
 </body>
 </html>
