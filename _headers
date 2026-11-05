@@ -1,0 +1,7 @@
+# Cloudflare Pages: make browsers check for a new stylesheet or script on every visit.
+# The default keeps them for 4 hours, so a visitor can see new page markup styled by an old stylesheet.
+# Revalidation is cheap: an unchanged file returns a short 304 response.
+/css/*
+  Cache-Control: public, max-age=0, must-revalidate
+/js/*
+  Cache-Control: public, max-age=0, must-revalidate
