@@ -374,25 +374,46 @@ body.has-dialog { overflow: hidden; }
 
 /* ---- Related and contact ---- */
 .related { padding-block: var(--s6); }
-.related__list { margin-top: var(--s3); border-top: 1px solid var(--rule-strong); }
-.related__item { border-bottom: 1px solid var(--rule); }
+/* Link-off cards: charcoal means "this takes you to another page" (same as the buttons). */
+.related__list { margin-top: var(--s3); display: grid; gap: var(--s2); grid-template-columns: 1fr; }
+@media (min-width: 40rem) { .related__list { grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); } }
+/* Four items (Agile Defense): three deep dives in one row, the fourth case study full width below. */
+@media (min-width: 40rem) { .related__list:has(.related__item:nth-child(4)) { grid-template-columns: 1fr; } }
+@media (min-width: 64rem) {
+  .related__list:has(.related__item:nth-child(4)) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .related__list:has(.related__item:nth-child(4)) .related__item:nth-child(4) { grid-column: 1 / -1; }
+}
+.section__body .related__list { grid-template-columns: 1fr; }
+.related__item { display: flex; }
 .related__link {
+  flex: 1;
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: var(--s3);
-  padding-block: var(--s3);
-  font-size: clamp(1.1875rem, 1rem + 0.9vw, 1.625rem);
+  flex-direction: column;
+  gap: var(--s2);
+  padding: var(--s3);
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-size: clamp(1.125rem, 1rem + 0.45vw, 1.375rem);
   font-weight: var(--w-sub);
   line-height: 1.25;
   letter-spacing: -0.02em;
-  color: var(--color-ink);
   text-decoration: none;
+  transition: background-color 0.15s ease;
 }
-.related__link:visited { color: var(--color-ink); }
-.related__link .label { display: block; margin-bottom: 0.35rem; }
-.related__link:hover { color: var(--color-accent); text-decoration: none; }
-.related__arrow { flex: none; color: var(--color-accent); font-size: 1.5rem; }
+.related__link:visited { color: var(--color-paper); }
+.related__link:hover { background: #3b3b3b; color: var(--color-paper); text-decoration: none; }
+.related__link .label {
+  display: block;
+  width: fit-content;
+  margin-bottom: 0.6rem;
+  padding: 0.15rem 0.5rem;
+  border: 1px solid rgba(247, 244, 237, 0.55);
+  color: var(--color-paper);
+}
+.related__link .label--case { background: var(--color-paper); border-color: var(--color-paper); color: var(--color-ink); }
+.related__arrow { flex: none; margin-top: auto; align-self: flex-end; color: var(--color-paper); font-size: 1.5rem; line-height: 1; }
+.related__link:hover .related__arrow { transform: translateX(3px); }
+@media (prefers-reduced-motion: no-preference) { .related__arrow { transition: transform 0.15s ease; } }
 
 .contact { padding-block: var(--s6) var(--s7); border-top: 1px solid var(--rule-strong); }
 .contact__title { max-width: 20ch; font-size: clamp(1.875rem, 1rem + 3.6vw, 3.25rem); font-weight: var(--w-head); line-height: 1.08; letter-spacing: -0.04em; }
@@ -435,9 +456,20 @@ body.has-dialog { overflow: hidden; }
 @media (min-width: 64rem) { .results__grid--four { grid-template-columns: repeat(4, 1fr); } }
 .engagement__meta { margin-top: var(--s1); color: var(--ink-muted); font-size: 1rem; }
 .section__body > .subhead:first-child { margin-top: 0; }
-.link-arrow { display: inline-block; margin-top: var(--s2); padding-block: 0.5rem; font-weight: var(--w-sub); }
-.related__desc { display: block; margin-top: 0.35rem; font-weight: var(--w-body); font-size: 0.9375rem; line-height: 1.45; color: var(--ink-soft); }
-.related__link:hover .related__desc { color: var(--ink-soft); }
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  margin-top: var(--s2);
+  padding: 0.5rem 1.25rem;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-weight: var(--w-sub);
+  text-decoration: none;
+}
+.link-arrow:visited { color: var(--color-paper); }
+.link-arrow:hover { background: #3b3b3b; color: var(--color-paper); text-decoration: none; }
+.related__desc { display: block; margin-top: 0.5rem; font-weight: var(--w-body); font-size: 0.9375rem; line-height: 1.45; letter-spacing: 0; color: var(--paper-soft); }
 .projects { margin-top: var(--s4); display: grid; gap: var(--s2); }
 .project { border: 1px solid var(--rule-strong); padding: var(--s3); }
 .project__name { font-size: 1.125rem; font-weight: var(--w-sub); line-height: 1.25; letter-spacing: -0.02em; }
