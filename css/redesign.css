@@ -453,6 +453,7 @@ body.has-dialog { overflow: hidden; }
 
 /* ---- Home page ---- */
 .hero__summary--wide { max-width: 44ch; }
+.hero__note { margin-top: var(--s2); max-width: 44ch; font-size: 1.0625rem; line-height: 1.5; color: var(--ink-soft); }
 .actions { margin-top: var(--s4); display: flex; flex-wrap: wrap; gap: var(--s2); }
 .button {
   display: inline-flex; align-items: center; min-height: 2.75rem;
