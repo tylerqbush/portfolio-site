@@ -493,6 +493,8 @@ body.has-dialog { overflow: hidden; }
 .hero__name, .hero__role { display: block; }
 .hero__name { color: var(--color-ink); }
 .hero__role { margin-top: 0.25rem; }
+.essay .subhead { margin-top: var(--s5); }
+.essay .subhead + p { margin-top: var(--s2); }
 .prose + .tags { margin-top: var(--s3); }
 
 /* ---- Brand identity and design system pages ---- */
